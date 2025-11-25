@@ -1,263 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yuliia Chekhovska</title>
-    <style>
-        /* Your existing styles remain unchanged */
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yuliia Chekhovska</title>
+<style>
+/* Base */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f5f6fa;
+    color: #222;
+}
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: #ffffff; /* Set to animated intro background color */
-            color: #000000; /* Set to black */
-        }
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
-        header {
-            background-color: #000000;
-            padding: 20px;
-            text-align: center;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+/* Header with background image */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    background: url('background.jpg') center/cover no-repeat;
+    color: #fff;
+}
 
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #ffffff; /* Set to header background color */
-            padding: 10px;
-        }
+header img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
 
-        nav a {
-            color: #000000;
-            text-decoration: none;
-            margin: 0 20px;
-            font-size: 18px;
-            transition: color 0.3s;
-        }
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
 
-        nav a:hover {
-            color: #ecf0f1;
-        }
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
-        section {
-            text-align: center;
-            padding: 50px;
-            background-color: #ffffff; /* Set to animated intro background color */
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
+nav a {
+    margin: 0 25px;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #222;
+    transition: color 0.3s, transform 0.3s;
+}
 
-        #about {
-            background-image: url('background1.jpg'); /* Add your background image path */
-        }
+nav a:hover {
+    color: #007acc;
+    transform: translateY(-2px);
+}
 
+/* Intro */
+.intro-container {
+    text-align: center;
+    padding: 60px 20px;
+}
 
-        #contact {
-            background-image: url('background3.jpg'); /* Add your background image path */
-        }
+.script-animation {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
 
-        footer {
-            background-color: #000; /* Change to black */
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
+.script-animation.active {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-        .portfolio-images a {
-            display: block;
-            margin: 20px 0; /* Add space between images */
-            text-decoration: none; /* Remove hyperlink styling */
-        }
+/* Sections */
+section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
 
-        .portfolio-images img {
-            width: 300px; /* Make images larger */
-            margin: 0 auto; /* Center images */
-        }            
-        .contact-icons a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 24px;
-        }
+section:nth-child(even) {
+    background-color: #eef1f6;
+}
 
-        /* Added styles for the animated intro */
-        .intro-container {
-            text-align: center;
-            padding: 50px;
-            margin-top: 100px; /* Adjust as needed */
-            color: #000000; /* Set text color to black */
-        }
+#about p {
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
 
-        .script-animation {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 1s ease, transform 1s ease;
-            font-size: 20px; /* Set larger font size */
-            font-weight: bold; /* Set bold text */
-            color: #000000 !important; /* Set to black, important to override other styles */
-        }
+/* Portfolio */
+.portfolio-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
 
-        .script-animation.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
+.portfolio-item {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
 
-        /* Added styles for the profile picture */
-        .profile-picture {
-            max-width: 150px;
-            border-radius: 50%;
-            margin-right: 20px;
-        }
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
 
-        /* Added CSS perks for interactivity */
-        .hover-scale {
-            transition: transform 0.3s ease-in-out;
-        }
+.portfolio-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
 
-        .hover-scale:hover {
-            transform: scale(1.1);
-        }
-    </style>
+.portfolio-item h3 {
+    margin: 15px;
+    color: #007acc;
+}
+
+.portfolio-item p {
+    margin: 0 15px 15px;
+    font-size: 0.95rem;
+}
+
+.portfolio-item a {
+    margin: 0 15px 15px;
+    padding: 8px 15px;
+    background-color: #007acc;
+    color: #fff;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.portfolio-item a:hover {
+    background-color: #005fa3;
+}
+
+/* Contact */
+.contact-icons a {
+    margin: 0 15px;
+    font-size: 1.2rem;
+    color: #007acc;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.contact-icons a:hover {
+    color: #005fa3;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media(max-width:600px){
+    nav a { margin:0 10px; }
+    header h1 { font-size:1.7rem; }
+}
+</style>
 </head>
 <body>
 
-    <header>
-        <!-- Add profile picture to the header -->
-        <div>
-            <img src="yuliia.jpg" alt="Yuliia Chekhovska" class="profile-picture hover-scale">
+<header>
+    <img src="yuliia.jpg" alt="Yuliia Chekhovska">
+    <h1>Yuliia Chekhovska</h1>
+</header>
+
+<nav>
+    <a href="#about" class="hover-scale">About Me</a>
+    <a href="#portfolio" class="hover-scale">Portfolio</a>
+    <a href="#contact" class="hover-scale">Contact</a>
+</nav>
+
+<div class="intro-container">
+    <h1 class="script-animation">
+        Experienced in data manipulation and predictive analysis. Skilled in R, Python, Excel, and Tableau.
+    </h1>
+</div>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        Data manager and analyst with 2+ years of experience in predictive analysis, outreach coordination, and data-driven strategy.
+        Skilled in Python, R, SQL, Tableau, and Excel. Fluent in Japanese (N2), German (C1) and English (C1).
+    </p>
+</section>
+
+<section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="portfolio-images">
+
+        <div class="portfolio-item">
+            <img src="portfolio_image1.png" alt="A Visual ESL Novel">
+            <h3>A Visual ESL Novel</h3>
+            <p>Interactive Python visual novel enhancing high school students' willingness to communicate in English.</p>
+            <a href="https://yuriyajp.itch.io/esl-game">Play on Itch</a>
+            <a href="https://github.com/YuriyaJP/Python-Ren-Py-made-ESL-Visual-Novel">GitHub</a>
         </div>
-        <h1>Yuliia Chekhovska</h1>
-    </header>
 
-    <nav>
-        <a href="#about" class="hover-scale">About me</a>
-        <a href="#portfolio" class="hover-scale">My portfolio</a>
-        <a href="#contact" class="hover-scale">Contact me</a>
-    </nav>
-
-    <!-- Animated intro added here -->
-    <div class="intro-container">
-        <h1 class="script-animation">Hello, I'm Yuliia.</h1>
-        <p class="script-animation">Thank you for being on my website.</p>
-        <p class="script-animation">I am a Ukrainian enjoying life in Japan since 2020.</p>
-        <p class="script-animation">Since you are here, take a look at my portfolio below.</p>
-        <p class="script-animation">Thanks!</p>
-    </div>
-
-    <section id="about">
-        <h2>About me</h2>
-        <p id="about-text">2017 - a blog writer, Ukraine</p>
-        <p>2018 - a career counselor, Germany.</p>
-        <p>2020 - an academic researcher, Japan.</p>
-        <p>2021 - an educator, Japan.</p>
-        <p>2023 - an NLP engineer, Japan.</p>
-    </section>
-
-    <section id="portfolio">
-        <h2>My Portfolio</h2>
-        <div class="portfolio-images">
-            <div class="portfolio-item">
-                <img src="portfolio_image1.png" alt="A Visual ESL Novel" class="hover-scale">
-                <div class="project-description">
-                    <h3>A Visual ESL Novel</h3>
-                    <p>
-                        The purpose of this game is to enhance willingness to communicate in high school students in a playful manner. I created this game with Python in Ren'Py, which is a popular tool for making visual novels. I introduced it to my students and taught them the basics of code writing. Since the game has at least 8 outcomes, each path required a different label and two choices.
-                    </p>
-                    <style>
-                        .hover-scale {
-                          display: inline-block;
-                          padding: 10px 20px;
-                          background-color: rgb(26, 1, 19);
-                          color: #ffffff;
-                          text-align: center;
-                          text-decoration: none;
-                          font-size: 16px;
-                          cursor: pointer;
-                          border-radius: 3px;
-                          transition: transform 0.2s ease-in-out;
-                        }
-                      
-                        .hover-scale:hover {
-                          transform: scale(1.1);
-                        }
-                      </style>
-                      
-                      <a href="https://yuriyajp.itch.io/esl-game" class="hover-scale">Play on Itch</a>
-                      
-                    <a href="https://github.com/YuriyaJP/Python-Ren-Py-made-ESL-Visual-Novel" class="hover-scale">View on GitHub</a>
-
-                </div>
-            <div class="portfolio-item">
-                <img src="portfolio_image2.png" alt="Class-Feedback-NLP-Database-Japanese" class="hover-scale">
-                <div class="project-description">
-                    <h3>Japanese Class Satisfaction Feedback</h3>
-                    <p>
-                        I taught about 120 students over the course of one year, from 2022 to 2023, in a public high school. Our curriculum featured four major projects, and each student had the opportunity to share their thoughts on these projects. We delved into various aspects like project simplicity, implementation, usefulness, and recommendations for future improvements. Students answered in Japanese, using an online Google form.
-                    </p>
-                    <a href="https://github.com/YuriyaJP/Class-Feedback-NLP-Database-Japanese" class="hover-scale">View on GitHub</a>
-                </div>                
-            <div class="portfolio-item">
-                <img src="portfolio_image3.jpg" alt="Class-Feedback-NLP-Database-Japanese" class="hover-scale">
-                <div class="project-description">
-                    <h3>Speech Production PDF Reader</h3>
-                    <p>
-                        A PDF reader using system voice created with Python. This could be turned into a personal computer helper controlled with a voice.
-                    </p>
-                    <a href="https://github.com/YuriyaJP/Speech-Production-and-Recognition" class="hover-scale">View on GitHub</a>
-                </div>  
-    <!-- Add an audio player for the MP3 file -->
-    <audio controls>
-        <source src="PDFaudio.mp3" type="audio/mp3">
-        Your browser does not support the audio tag.
-    </audio>
-    </a>
-    </div>
-    </section>
-
-
-    <section id="contact">
-        <h2>Contact me</h2>
-        <p>Send me an email or connect with me through social media for a chat. </p>
-        <p>Email: <a href="mailto:julia.chekhovskaua@gmail.com">julia.chekhovskaua(at)gmail.com</a></p>
-        <div class="contact-icons">
-            <a href="https://www.linkedin.com/in/yuliia-che/" target="_blank" class="hover-scale">LinkedIn</a>
-            <a href="https://github.com/YuriyaJP" target="_blank" class="hover-scale">GitHub</a>
+        <div class="portfolio-item">
+            <img src="portfolio_image2.png" alt="Class Feedback NLP Database">
+            <h3>Japanese Class Satisfaction Feedback</h3>
+            <p>Analyzed survey responses from 120 students using Python to generate actionable curriculum insights.</p>
+            <a href="https://github.com/YuriyaJP/Class-Feedback-NLP-Database-Japanese">GitHub</a>
         </div>
-    </section>
 
-    <footer>
-        <p>&copy; 2023 Yuliia Chekhovska's Personal Website. All rights reserved.</p>
-    </footer>
+        <div class="portfolio-item">
+            <img src="portfolio_image3.jpg" alt="Speech Production PDF Reader">
+            <h3>Speech Production PDF Reader</h3>
+            <p>Python PDF reader with system voice for assisting personal study and research workflows.</p>
+            <a href="https://github.com/YuriyaJP/Speech-Production-and-Recognition">GitHub</a>
+            <audio controls>
+                <source src="PDFaudio.mp3" type="audio/mp3">
+                Your browser does not support the audio tag.
+            </audio>
+        </div>
 
-    <!-- JavaScript (optional, for additional interactivity) -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Add 'active' class to elements with 'script-animation' class after a delay
-            const scriptElements = document.querySelectorAll('.script-animation');
-            scriptElements.forEach((element, index) => {
-                setTimeout(() => {
-                    element.classList.add('active');
-                }, index * 500); // Adjust the delay (in milliseconds) between each element
-            });
+        <!-- Placeholder for new project -->
+        <div class="portfolio-item">
+            <img src="placeholder.png" alt="New Project">
+            <h3>Mental Health Intervention Impact and Cost-Effectiveness Analysis</h3>
+            <p>Description TBD.</p>
+            <a href="#">Link</a>
+        </div>
 
-            // Separate animation for the about me section
-            const aboutText = document.getElementById('about-text');
-            const aboutSentences = aboutText.innerHTML.split('.'); // Split the text into sentences
-            aboutText.innerHTML = ''; // Clear the original text
+    </div>
+</section>
 
-            aboutSentences.forEach((sentence, index) => {
-                setTimeout(() => {
-                    aboutText.innerHTML += sentence.trim() + '.';
-                }, index * 1000); // Adjust the delay between each sentence
-            });
-        });
-    </script>
+<section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-icons">
+        <a href="https://www.linkedin.com/in/yuliia-che/" target="_blank" class="hover-scale">LinkedIn</a>
+        <a href="https://github.com/YuriyaJP" target="_blank" class="hover-scale">GitHub</a>
+    </div>
+</section>
+
+<footer>
+    &copy; 2025 Yuliia Chekhovska. All rights reserved.
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const scriptElements = document.querySelectorAll('.script-animation');
+    scriptElements.forEach((el,i)=>setTimeout(()=>el.classList.add('active'),i*500));
+});
+</script>
+
 </body>
 </html>
