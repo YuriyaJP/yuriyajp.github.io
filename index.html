@@ -136,6 +136,15 @@ section:nth-child(even) {
     color: #007acc;
 }
 
+.portfolio-item h3 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.portfolio-item h3 a:hover {
+    color: #005fa3;
+}
+
 .portfolio-item p {
     margin: 0 15px 15px;
     font-size: 0.95rem;
@@ -206,51 +215,168 @@ footer {
 
 <section id="about">
     <h2>About Me</h2>
-    <p>
-        Data manager and analyst with 2+ years of experience in predictive analysis, outreach coordination, and data-driven strategy.
-        Skilled in Python, R, SQL, Tableau, and Excel. Fluent in Japanese (N2), German (C1) and English (C1).
-    </p>
+    <ul>
+        <li>Data manager and analyst with 2+ years of experience in predictive analysis, outreach coordination, and data-driven strategy.</li>
+        <li>Skilled in Python, R, SQL, Tableau, and Excel.</li>
+        <li>Fluent in Japanese (N2), German (C1), and English (C1).</li>
+        <li><strong>Education & Training:</strong>
+            <ul>
+                <li>ML4Good AI Safety Bootcamp, Sept 2025, Singapore</li>
+                <li>Data Science and AI Bootcamp, Le Wagon, Tokyo, Mar–Sep 2025 (Predictive Modeling, NLP, Marketing Analytics; project: ML-based air pollution detection)</li>
+                <li>M.A. Psycholinguistics, Heinrich Heine University, Germany, 2018–2022</li>
+                <li>Fellowship in Behavioral Analysis Research, Chiba University; coursework in behavioral analysis</li>
+            </ul>
+        </li>
+    </ul>
+
+    <style>
+        #about {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        #about h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: #007acc;
+        }
+
+        #about ul {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: #333;
+            padding-left: 20px;
+        }
+
+        #about ul ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        #about li {
+            margin-bottom: 15px;
+        }
+    </style>
 </section>
+
 
 <section id="portfolio">
     <h2>Portfolio</h2>
     <div class="portfolio-images">
 
         <div class="portfolio-item">
+            <strong class="project-title">A Visual ESL Novel</strong>
             <img src="portfolio_image1.png" alt="A Visual ESL Novel">
-            <h3>A Visual ESL Novel</h3>
-            <p>Interactive Python visual novel enhancing high school students' willingness to communicate in English. Python, Ren’Py.</p>
-            <a href="https://yuriyajp.itch.io/esl-game">Play on Itch</a>
-            <a href="https://github.com/YuriyaJP/Python-Ren-Py-made-ESL-Visual-Novel">GitHub</a>
+            <p>Interactive Python visual novel enhancing high school students' willingness to communicate in English.</p>
+            <a href="project-esl.html" class="view-button">View Project</a>
         </div>
 
         <div class="portfolio-item">
+            <strong class="project-title">Japanese Class Satisfaction Feedback</strong>
             <img src="portfolio_image2.png" alt="Class Feedback NLP Database">
-            <h3>Japanese Class Satisfaction Feedback</h3>
-            <p>Analyzed survey responses from 120 students to generate actionable curriculum insights. Python, Pandas, Google Forms.</p>
-            <a href="https://github.com/YuriyaJP/Class-Feedback-NLP-Database-Japanese">GitHub</a>
+            <p>Analyzed survey responses from 120 students to generate actionable curriculum insights.</p>
+            <a href="project-feedback.html" class="view-button">View Project</a>
         </div>
 
         <div class="portfolio-item">
+            <strong class="project-title">Speech Production PDF Reader</strong>
             <img src="portfolio_image3.jpg" alt="Speech Production PDF Reader">
-            <h3>Speech Production PDF Reader</h3>
-            <p>Python PDF reader with system voice for assisting personal study and research workflows. Python, VS Code, system voice.</p>
-            <a href="https://github.com/YuriyaJP/Speech-Production-and-Recognition">GitHub</a>
-            <audio controls>
-                <source src="PDFaudio.mp3" type="audio/mp3">
-                Your browser does not support the audio tag.
-            </audio>
+            <p>Python PDF reader with system voice for assisting personal study and research workflows.</p>
+            <a href="project-speech.html" class="view-button">View Project</a>
         </div>
 
         <div class="portfolio-item">
+            <strong class="project-title">Mental Health Intervention Impact and Cost-Effectiveness Analysis</strong>
             <img src="placeholder.png" alt="New Project">
-            <h3>Mental Health Intervention Impact and Cost-Effectiveness Analysis</h3>
-            <p>Description TBD. Tableau.</p>
-            <a href="#">Link</a>
+            <p>Description TBD.</p>
+            <a href="project-new.html" class="view-button">View Project</a>
         </div>
 
     </div>
+
+    <style>
+        /* Portfolio Section Styles */
+        #portfolio {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        #portfolio h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2rem;
+            color: #007acc;
+        }
+
+        .portfolio-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .portfolio-item {
+            background-color: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+        }
+
+        .project-title {
+            display: block;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+            color: #007acc;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            max-width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .portfolio-item p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .view-button {
+            padding: 12px 25px;
+            background-color: #007acc;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .view-button:hover {
+            background-color: #005fa3;
+            transform: translateY(-2px);
+        }
+    </style>
 </section>
+
+
+
 
 
 <section id="contact">
