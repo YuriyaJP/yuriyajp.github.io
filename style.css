@@ -161,5 +161,14 @@
 .media-modal-close { position:absolute; top:8px; right:10px; background:transparent; border:none; font-size:1.6rem; cursor:pointer; }
 
 @media (max-width:600px) {
-    .media-thumb { height: 110px; }
+    .media-thumb {
+        width: 100%;
+        max-width: 300px;   /* match portfolio item width */
+        height: 200px;      /* match portfolio item height */
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+        display: block;
+        margin: 0 auto;
+    }
 }
