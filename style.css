@@ -1,10 +1,12 @@
+/* GRID FOR PROJECTS */
 .portfolio-images {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 40px;
-    margin-top: 40px;
+    gap: 30px;
+    margin-top: 30px;
 }
 
+/* PROJECT CARD */
 .portfolio-item {
     background-color: #fff;
     border-radius: 12px;
@@ -23,27 +25,31 @@
     box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
+/* TITLE */
 .project-title {
     display: block;
     font-size: 1.2rem;
-    margin-bottom: 15px;
-    color: #000000;
+    margin-bottom: 12px;
+    color: #000;
 }
 
+/* PROJECT IMAGES – RESTORED TO NORMAL */
 .portfolio-item img {
     width: 100%;
-    max-width: 300px;
-    height: 200px;
-    object-fit: cover;
+    height: auto;
+    max-width: 260px;        /* consistent, same size as other project images */
+    object-fit: contain;     /* prevents cutting */
     border-radius: 8px;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
+/* TEXT */
 .portfolio-item p {
     font-size: 0.95rem;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
+/* BUTTON */
 .view-button {
     padding: 10px 20px;
     background-color: #007acc;
@@ -59,12 +65,12 @@
     transform: translateY(-2px);
 }
 
-/* Profile video and controls */
+/* PROFILE IMAGE AND CONTROLS */
 .profile-media {
     width: 130px;
     height: 130px;
     object-fit: cover;
-    border-radius: 50%; /* keep circular */
+    border-radius: 50%;
     border: 3px solid rgba(255,255,255,0.9);
     box-shadow: 0 8px 20px rgba(0,0,0,0.12);
     display: block;
@@ -79,7 +85,7 @@
 }
 
 .video-toggle {
-    background: #ffffff;
+    background: #fff;
     color: #222;
     border: 1px solid rgba(0,0,0,0.06);
     padding: 6px 10px;
@@ -87,7 +93,7 @@
     border-radius: 8px;
     cursor: pointer;
     box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-    transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
 
 .video-toggle:hover {
@@ -100,8 +106,12 @@
     .video-toggle { padding: 6px 8px; font-size: 0.85rem; }
 }
 
-/* Tag filter styles */
-.tag-filter { text-align: center; margin-bottom: 18px; }
+/* TAG STYLES */
+.tag-filter { 
+    text-align: center; 
+    margin-bottom: 18px; 
+}
+
 .tag-btn {
     display: inline-block;
     margin: 6px 6px 6px 0;
@@ -112,24 +122,31 @@
     cursor: pointer;
     font-size: 0.9rem;
 }
+
 .tag-btn.active {
     background: #007acc;
     color: #fff;
-    border-color: rgba(0,0,0,0.08);
 }
-.clear-tags { background: transparent; border: none; color: #666; cursor: pointer; }
+
+.clear-tags { 
+    background: transparent; 
+    border: none; 
+    color: #666; 
+    cursor: pointer; 
+}
 
 .tag-label { font-weight: 600; margin-right: 6px; }
 .tag-count { color: rgba(0,0,0,0.6); font-size: 0.9rem; }
 
-/* Tag badges shown on project cards */
+/* TAG BADGES ON PROJECT CARDS */
 .tag-badges {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 12px;
+    margin-top: 10px;
 }
+
 .tag-badge {
     display: inline-block;
     padding: 4px 8px;
@@ -138,9 +155,8 @@
     border-radius: 999px;
     font-size: 0.85rem;
 }
-.portfolio-item[style*="opacity: 0.45"] .tag-badge { opacity: 0.6; }
 
-/* Media section styles */
+/* MEDIA SECTION */
 #media {
     max-width: 1000px;
     margin: 0 auto;
@@ -149,36 +165,35 @@
 
 #media .media-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
-    align-items: start;
-    justify-items: center; /* prevents stretching */
+    justify-items: center;
 }
 
-
+/* FIXED MEDIA ITEM SIZE – MATCH PROJECT IMAGES */
 .media-item {
     text-align: center;
-    max-width: 260px; /* updated */
+    max-width: 260px; 
     margin: 0 auto;
 }
 
+/* MEDIA THUMBNAILS – RESTORED */
 .media-thumb {
     width: 100%;
-    height: 160px; /* updated */
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    display: block;
 }
 
-/* Caption */
+/* CAPTION */
 .media-item figcaption {
     margin-top: 8px;
     font-size: 0.95rem;
     color: #333;
 }
 
-/* Modal */
+/* MODAL */
 .media-modal {
     position: fixed;
     inset: 0;
@@ -202,7 +217,6 @@
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 20px 50px rgba(0,0,0,0.35);
-    z-index: 1210;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -225,14 +239,8 @@
     cursor: pointer;
 }
 
-/* Mobile adjustments */
+/* MOBILE */
 @media (max-width: 600px) {
-    .media-item {
-        max-width: 300px; /* match desktop size */
-    }
-
-    .media-thumb {
-        height: 180px; /* slightly smaller for mobile */
-    }
+    .media-item { max-width: 260px; }
+    .media-thumb { height: auto; }
 }
-
