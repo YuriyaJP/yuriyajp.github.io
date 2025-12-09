@@ -99,3 +99,22 @@
     .profile-media { width: 96px; height: 96px; }
     .video-toggle { padding: 6px 8px; font-size: 0.85rem; }
 }
+
+/* Tag filter styles */
+.tag-filter { text-align: center; margin-bottom: 18px; }
+.tag-btn {
+    display: inline-block;
+    margin: 6px 6px 6px 0;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(0,0,0,0.06);
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.tag-btn.active {
+    background: #007acc;
+    color: #fff;
+    border-color: rgba(0,0,0,0.08);
+}
+.clear-tags { background: transparent; border: none; color: #666; cursor: pointer; }

@@ -338,30 +338,35 @@ footer {
 
 <section id="portfolio">
     <h2>Portfolio</h2>
+    <div class="tag-filter" aria-label="Filter projects by tags">
+        <strong>Filter by tags:</strong>
+        <div id="tag-list" style="display:inline-block;margin-left:12px"></div>
+        <button id="clear-tags" class="clear-tags" style="margin-left:12px;padding:6px 10px;border-radius:6px;border:1px solid rgba(0,0,0,0.06);background:#fff;cursor:pointer">Clear</button>
+    </div>
     <div class="portfolio-images">
 
-        <div class="portfolio-item">
+        <div class="portfolio-item" data-tags="python,nlp,gamification,education">
             <strong class="project-title">Psycholinguistic Language Learning Digital Novel</strong>
             <img src="portfolio_image1.png" alt="A Visual ESL Novel">
             <p>Interactive Python gamification project enhancing high school students' willingness to communicate in English. Based on psycholinguistic principles and branching narrative design.</p>
             <a href="project-esl.html" class="view-button">View Project</a>
         </div>
 
-        <div class="portfolio-item">
+        <div class="portfolio-item" data-tags="python,nlp,bert,shap,japanese">
             <strong class="project-title">Japanese Class Feedback NLP Sentiment & Aspect Analysis</strong>
             <img src="portfolio_image2.png" alt="Class Feedback NLP Database">
             <p>Transformer-backed pipeline (Japanese BERT fine-tune) for sentiment classification, aspect extraction, and explainable insights (SHAP) from student survey responses.</p>
             <a href="project-feedback.html" class="view-button">View Project</a>
         </div>
 
-        <div class="portfolio-item">
+        <div class="portfolio-item" data-tags="sheets,apps-script,dashboard,automation,javascript">
             <strong class="project-title">Grants Operations Dashboard</strong>
             <img src="portfolio_image3.jpg" alt="Grants Operations Dashboard Screenshot">
             <p>Sheet-integrated dashboard demonstrating operational workflows used in grantmaking: data intake, record maintenance, compliance checks, communication readiness, and round tracking.</p>
             <a href="project-grants-ops.html" class="view-button">View Project</a>
         </div>
 
-        <div class="portfolio-item">
+        <div class="portfolio-item" data-tags="ml,audio,nlp,mental-health,privacy">
             <strong class="project-title">Multimodal Fairness-Aware Mental Health Journaling Agent</strong>
             <img src="portfolio_image_mlmentalhealth.jpg" alt="Mental Health ML Project">
             <p>A voice journaling assistant that transcribes speech, analyzes vocal tone and helps catch early symptoms of mental health issues.</p>
@@ -505,18 +510,88 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
 
-        if (soundBtn) {
-            soundBtn.addEventListener('click', () => {
-                // Toggle muted state
-                video.muted = !video.muted;
-                // Some browsers require a user gesture to unmute and/or to play with sound
-                if (!video.muted) {
-                    video.play().catch(() => {});
-                }
-                setSoundLabel();
-            });
+            if (soundBtn) {
+                soundBtn.addEventListener('click', () => {
+                    // Toggle muted state
+                    video.muted = !video.muted;
+                    // Some browsers require a user gesture to unmute and/or to play with sound
+                    if (!video.muted) {
+                        video.play().catch(() => {});
+                    }
+                    setSoundLabel();
+                });
+            }
         }
-    }
+
+        // --- Project tag filtering ---
+        const portfolioGrid = document.querySelector('.portfolio-images');
+        if (portfolioGrid) {
+            const items = Array.from(portfolioGrid.querySelectorAll('.portfolio-item'));
+
+            // Collect tag set from data-tags attributes
+            const tagSet = new Set();
+            items.forEach(it => {
+                const t = (it.getAttribute('data-tags') || '').split(',').map(s => s.trim()).filter(Boolean);
+                it._tags = t;
+                t.forEach(tag => tagSet.add(tag));
+            });
+
+            const tagListEl = document.getElementById('tag-list');
+            const clearBtn = document.getElementById('clear-tags');
+            const selected = new Set();
+
+            // Create tag buttons
+            Array.from(tagSet).sort().forEach(tag => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'tag-btn';
+                btn.textContent = `#${tag}`;
+                btn.dataset.tag = tag;
+                btn.addEventListener('click', () => {
+                    if (selected.has(tag)) {
+                        selected.delete(tag);
+                        btn.classList.remove('active');
+                    } else {
+                        selected.add(tag);
+                        btn.classList.add('active');
+                    }
+                    applyFilterSort();
+                });
+                tagListEl.appendChild(btn);
+            });
+
+            if (clearBtn) clearBtn.addEventListener('click', () => {
+                selected.clear();
+                tagListEl.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
+                applyFilterSort();
+            });
+
+            function applyFilterSort() {
+                const sel = Array.from(selected);
+                // Compute match count for each item
+                const withScore = items.map(it => {
+                    if (sel.length === 0) return {it, score: 0};
+                    const score = it._tags.reduce((acc, t) => acc + (sel.includes(t) ? 1 : 0), 0);
+                    return {it, score};
+                });
+
+                // Sort by score desc, keep original order for ties
+                withScore.sort((a,b) => b.score - a.score);
+
+                // Re-append in sorted order
+                withScore.forEach(({it, score}) => {
+                    portfolioGrid.appendChild(it);
+                    // Visual de-emphasis for non-matching when selection is active
+                    if (sel.length > 0 && score === 0) {
+                        it.style.opacity = '0.45';
+                        it.style.filter = 'grayscale(0.15)';
+                    } else {
+                        it.style.opacity = '';
+                        it.style.filter = '';
+                    }
+                });
+            }
+        }
 });
 </script>
 
