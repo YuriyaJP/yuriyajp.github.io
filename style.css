@@ -58,3 +58,44 @@
     background-color: #005fa3;
     transform: translateY(-2px);
 }
+
+/* Profile video and controls */
+.profile-media {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%; /* keep circular */
+    border: 3px solid rgba(255,255,255,0.9);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    display: block;
+    margin: 12px auto 8px;
+}
+
+.profile-controls {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.video-toggle {
+    background: #ffffff;
+    color: #222;
+    border: 1px solid rgba(0,0,0,0.06);
+    padding: 6px 10px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s;
+}
+
+.video-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.10);
+}
+
+@media (max-width: 480px) {
+    .profile-media { width: 96px; height: 96px; }
+    .video-toggle { padding: 6px 8px; font-size: 0.85rem; }
+}
