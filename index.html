@@ -345,28 +345,28 @@ footer {
     </div>
     <div class="portfolio-images">
 
-        <div class="portfolio-item" data-tags="python,nlp,gamification,education">
+        <div class="portfolio-item" data-tags="python,pytorch">
             <strong class="project-title">Psycholinguistic Language Learning Digital Novel</strong>
             <img src="portfolio_image1.png" alt="A Visual ESL Novel">
             <p>Interactive Python gamification project enhancing high school students' willingness to communicate in English. Based on psycholinguistic principles and branching narrative design.</p>
             <a href="project-esl.html" class="view-button">View Project</a>
         </div>
 
-        <div class="portfolio-item" data-tags="python,nlp,bert,shap,japanese">
+        <div class="portfolio-item" data-tags="python,nlp,transformers,bert,shap">
             <strong class="project-title">Japanese Class Feedback NLP Sentiment & Aspect Analysis</strong>
             <img src="portfolio_image2.png" alt="Class Feedback NLP Database">
             <p>Transformer-backed pipeline (Japanese BERT fine-tune) for sentiment classification, aspect extraction, and explainable insights (SHAP) from student survey responses.</p>
             <a href="project-feedback.html" class="view-button">View Project</a>
         </div>
 
-        <div class="portfolio-item" data-tags="sheets,apps-script,dashboard,automation,javascript">
+        <div class="portfolio-item" data-tags="sheets,appscript">
             <strong class="project-title">Grants Operations Dashboard</strong>
             <img src="portfolio_image3.jpg" alt="Grants Operations Dashboard Screenshot">
             <p>Sheet-integrated dashboard demonstrating operational workflows used in grantmaking: data intake, record maintenance, compliance checks, communication readiness, and round tracking.</p>
             <a href="project-grants-ops.html" class="view-button">View Project</a>
         </div>
 
-        <div class="portfolio-item" data-tags="ml,audio,nlp,mental-health,privacy">
+        <div class="portfolio-item" data-tags="ml,audio,nlp">
             <strong class="project-title">Multimodal Fairness-Aware Mental Health Journaling Agent</strong>
             <img src="portfolio_image_mlmentalhealth.jpg" alt="Mental Health ML Project">
             <p>A voice journaling assistant that transcribes speech, analyzes vocal tone and helps catch early symptoms of mental health issues.</p>
@@ -540,13 +540,20 @@ document.addEventListener("DOMContentLoaded", function () {
             const clearBtn = document.getElementById('clear-tags');
             const selected = new Set();
 
-            // Create tag buttons
+            // Count tags across items
+            const tagCounts = {};
+            items.forEach(it => {
+                (it._tags || []).forEach(t => { tagCounts[t] = (tagCounts[t] || 0) + 1; });
+            });
+
+            // Create tag buttons with counts
             Array.from(tagSet).sort().forEach(tag => {
                 const btn = document.createElement('button');
                 btn.type = 'button';
                 btn.className = 'tag-btn';
-                btn.textContent = `#${tag}`;
                 btn.dataset.tag = tag;
+                const count = tagCounts[tag] || 0;
+                btn.innerHTML = `<span class="tag-label">#${tag}</span> <span class="tag-count">(${count})</span>`;
                 btn.addEventListener('click', () => {
                     if (selected.has(tag)) {
                         selected.delete(tag);

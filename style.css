@@ -118,3 +118,6 @@
     border-color: rgba(0,0,0,0.08);
 }
 .clear-tags { background: transparent; border: none; color: #666; cursor: pointer; }
+
+.tag-label { font-weight: 600; margin-right: 6px; }
+.tag-count { color: rgba(0,0,0,0.6); font-size: 0.9rem; }
