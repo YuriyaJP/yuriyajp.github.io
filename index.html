@@ -534,6 +534,24 @@ document.addEventListener("DOMContentLoaded", function () {
                 const t = (it.getAttribute('data-tags') || '').split(',').map(s => s.trim()).filter(Boolean);
                 it._tags = t;
                 t.forEach(tag => tagSet.add(tag));
+                // Render visible tag badges on the project card
+                let badges = it.querySelector('.tag-badges');
+                if (!badges) {
+                    badges = document.createElement('div');
+                    badges.className = 'tag-badges';
+                    // insert badges before the view button (if present) or at end
+                    const view = it.querySelector('.view-button');
+                    if (view) it.insertBefore(badges, view);
+                    else it.appendChild(badges);
+                }
+                // clear existing and add badges
+                badges.innerHTML = '';
+                t.forEach(tag => {
+                    const b = document.createElement('span');
+                    b.className = 'tag-badge';
+                    b.textContent = `#${tag}`;
+                    badges.appendChild(b);
+                });
             });
 
             const tagListEl = document.getElementById('tag-list');

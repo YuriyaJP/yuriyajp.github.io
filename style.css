@@ -121,3 +121,21 @@
 
 .tag-label { font-weight: 600; margin-right: 6px; }
 .tag-count { color: rgba(0,0,0,0.6); font-size: 0.9rem; }
+
+/* Tag badges shown on project cards */
+.tag-badges {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 12px;
+}
+.tag-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    background: rgba(0,0,0,0.06);
+    color: #222;
+    border-radius: 999px;
+    font-size: 0.85rem;
+}
+.portfolio-item[style*="opacity: 0.45"] .tag-badge { opacity: 0.6; }
