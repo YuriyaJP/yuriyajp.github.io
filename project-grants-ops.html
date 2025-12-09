@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grants Operations Dashboard | Yuliia Chekhovska</title>
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; padding:0; background:#f5f6fa; color:#222; }
+header { text-align:center; padding:50px 20px; background:linear-gradient(120deg,#0b557a 0%,#2b9bd7 100%); color:#fff; }
+header img { width:130px; height:130px; border-radius:50%; border:3px solid rgba(255,255,255,0.2); object-fit:cover; margin-bottom:15px; }
+header h1 { font-size:2rem; font-weight:700; }
+nav { text-align:center; margin:20px 0; }
+nav a { color:#007acc; text-decoration:none; font-weight:500; margin:0 15px; transition:color 0.3s; }
+nav a:hover { color:#005fa3; }
+section { max-width:1000px; margin:0 auto; padding:30px 20px; background:#fff; border-radius:10px; box-shadow:0 6px 15px rgba(0,0,0,0.08); }
+section img { width:100%; max-width:800px; display:block; margin:20px auto; border-radius:8px; }
+h2 { color:#0b557a; margin-top:24px; }
+ul { padding-left:20px; }
+.button { display:inline-block; margin:10px 8px 10px 0; padding:8px 15px; background-color:#0b557a; color:#fff; border-radius:5px; text-decoration:none; transition:background-color 0.3s; }
+.button:hover { background-color:#094b68; }
+.sheet-embed { width:100%; height:520px; border:1px solid #e6eef6; border-radius:8px; }
+footer { text-align:center; padding:25px 20px; background:#111; color:#fff; margin-top:30px; }
+</style>
+</head>
+<body>
+
+<header>
+    <img src="yuliia.jpg" alt="Yuliia Chekhovska">
+    <h1>Grants Operations Dashboard</h1>
+    <p style="max-width:800px;margin:8px auto 0;opacity:0.95">A sheet-integrated dashboard demonstrating operational workflows used in grantmaking: data intake, record maintenance, compliance checks, communication readiness, and round tracking.</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+</nav>
+
+<section>
+    <img src="portfolio_image3.jpg" alt="Grants Operations Dashboard Screenshot">
+
+    <h2>Goal</h2>
+    <p>Build a lightweight, transparent operations dashboard that integrates with a collaborative sheet (Google Sheets / Excel Online) to showcase the workflows teams use to intake applications, maintain records, run compliance checks, prepare communication packages, and manage grant rounds.</p>
+
+    <h2>Tools Used</h2>
+    <p>Google Sheets (or Excel Online), Apps Script / Office Scripts, HTML/CSS, lightweight JS for embedding, GitHub for code and automation scripts.</p>
+
+    <h2>Key Features</h2>
+    <ul>
+        <li><strong>Data intake:</strong> structured intake form that populates the sheet and creates a normalized applicant record.</li>
+        <li><strong>Record maintenance:</strong> canonical records with status fields, ownership, and history notes.</li>
+        <li><strong>Compliance checks:</strong> formula-driven checks and flags (attachments, eligibility, budget thresholds).</li>
+        <li><strong>Communication readiness:</strong> templated email/letter generation columns and readiness indicators.</li>
+        <li><strong>Round tracking:</strong> configurable rounds with roll-forward of eligible applications and summary KPIs.</li>
+    </ul>
+
+    <h2>Sheet Integration</h2>
+    <p>The live dashboard is driven by a shared spreadsheet. Below is a placeholder embed — replace the <em>src</em> with your sheet's published/embed URL or use the Sheet ID for direct linking.</p>
+
+    <!-- Replace the src with the published Google Sheet embed URL or an iframe-friendly view -->
+    <iframe class="sheet-embed" src="https://docs.google.com/spreadsheets/d/e/PLACEHOLDER_PUBLISHED_EMBED_URL/pubhtml?widget=true&amp;headers=false" title="Grants Ops Sheet Embed"></iframe>
+
+    <p style="margin-top:14px">Quick links:</p>
+    <a href="#" class="button" onclick="window.open('https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID','_blank')">Open Sheet</a>
+    <a href="https://github.com/YuriyaJP/grants-ops-dashboard" class="button" target="_blank">View Code</a>
+
+    <h2>Timeframe</h2>
+    <p>2025 — conceptual prototype and sheet templates.</p>
+
+    <h2>Setup notes</h2>
+    <ul>
+        <li>Publish or share the sheet with view/embed permissions to use the iframe embed.</li>
+        <li>Use Apps Script or Office Scripts to add automation: intake triggers, automated emails, and scheduled compliance reports.</li>
+        <li>Replace the placeholder iframe src with the real published sheet URL and add screenshots in the `projects/` folder for richer visuals.</li>
+    </ul>
+
+</section>
+
+<footer>
+    &copy; 2025 Yuliia Chekhovska
+</footer>
+
+</body>
+</html>
