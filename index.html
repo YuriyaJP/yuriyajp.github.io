@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yulia Chekhovska</title>
-<style>
-/* Base */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    <video id="profile-video" class="profile-media" autoplay muted playsinline poster="Yulia.jpg">
+        <source src="portfolio.mp4" type="video/mp4">
+        <!-- Fallback image if video is not supported -->
+        <img src="Yulia.jpg" alt="Yulia Chekhovska">
+    </video>
+    <div class="profile-controls" aria-hidden="false">
+        <button id="video-toggle" class="video-toggle" aria-pressed="false">Pause</button>
+        <button id="sound-toggle" class="video-toggle" aria-pressed="false">Unmute</button>
+    </div>
+    <h1>Yulia Chekhovska</h1>
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -43,11 +46,12 @@ header img {
 header .profile-media {
     width: 130px;
     height: 130px;
-    border-radius: 50%;
+        border-radius: 0; /* square */
     border: 3px solid #fff;
     object-fit: cover;
     margin-bottom: 15px;
     display: block;
+        /* Profile video (replaces header img) - now square with white border */
 }
 
 .video-toggle {
@@ -58,8 +62,15 @@ header .profile-media {
     border-radius: 6px;
     cursor: pointer;
     font-size: 0.95rem;
-    margin-bottom: 8px;
+        margin: 6px 6px 8px 6px;
 }
+
+    .profile-controls {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+    }
 
 .video-toggle:focus {
     outline: 2px solid rgba(255,255,255,0.9);
@@ -480,10 +491,15 @@ document.addEventListener("DOMContentLoaded", function () {
     // Profile video toggle (single Pause/Play button only)
     const video = document.getElementById('profile-video');
     const btn = document.getElementById('video-toggle');
+    const soundBtn = document.getElementById('sound-toggle');
     if (video && btn) {
         const setLabel = () => {
             btn.textContent = video.paused ? 'Play' : 'Pause';
             btn.setAttribute('aria-pressed', String(!video.paused));
+            if (soundBtn) {
+                soundBtn.textContent = video.muted ? 'Unmute' : 'Mute';
+                soundBtn.setAttribute('aria-pressed', String(!video.muted));
+            }
         };
 
         // Try to play (muted autoplay should be allowed)
@@ -498,6 +514,15 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             setLabel();
         });
+
+        if (soundBtn) {
+            soundBtn.addEventListener('click', () => {
+                // toggle muted; user interaction allows unmuting
+                video.muted = !video.muted;
+                if (!video.muted) video.play().catch(() => {});
+                setLabel();
+            });
+        }
     }
 
     // Project modal logic: open project pages in an iframe popup
