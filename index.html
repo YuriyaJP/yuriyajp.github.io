@@ -228,7 +228,10 @@ footer {
         <!-- Fallback image if video is not supported -->
         <img src="Yulia.jpg" alt="Yulia Chekhovska">
     </video>
-    <button id="video-toggle" class="video-toggle" aria-pressed="false">Pause</button>
+    <div class="profile-controls">
+        <button id="video-toggle" class="video-toggle" aria-pressed="false">Pause</button>
+        <button id="sound-toggle" class="video-toggle" aria-pressed="false">Unmute</button>
+    </div>
     <h1>Yulia Chekhovska</h1>
 </header>
 
@@ -467,27 +470,52 @@ document.addEventListener("DOMContentLoaded", function () {
     const scriptElements = document.querySelectorAll('.script-animation');
     scriptElements.forEach((el,i)=>setTimeout(()=>el.classList.add('active'),i*500));
 
-    // Profile video toggle (single Pause/Play button only)
+    // Profile video controls: Pause/Play and Unmute/Mute
     const video = document.getElementById('profile-video');
     const btn = document.getElementById('video-toggle');
-    if (video && btn) {
-        const setLabel = () => {
-            btn.textContent = video.paused ? 'Play' : 'Pause';
-            btn.setAttribute('aria-pressed', String(!video.paused));
+    const soundBtn = document.getElementById('sound-toggle');
+    if (video) {
+        const setPlayLabel = () => {
+            if (btn) {
+                btn.textContent = video.paused ? 'Play' : 'Pause';
+                btn.setAttribute('aria-pressed', String(!video.paused));
+            }
+        };
+
+        const setSoundLabel = () => {
+            if (soundBtn) {
+                soundBtn.textContent = video.muted ? 'Unmute' : 'Mute';
+                soundBtn.setAttribute('aria-pressed', String(!video.muted));
+            }
         };
 
         // Try to play (muted autoplay should be allowed)
         video.play().catch(() => { /* ignore play errors */ });
-        setLabel();
+        setPlayLabel();
+        setSoundLabel();
 
-        btn.addEventListener('click', () => {
-            if (video.paused) {
-                video.play().catch(() => {});
-            } else {
-                video.pause();
-            }
-            setLabel();
-        });
+        if (btn) {
+            btn.addEventListener('click', () => {
+                if (video.paused) {
+                    video.play().catch(() => {});
+                } else {
+                    video.pause();
+                }
+                setPlayLabel();
+            });
+        }
+
+        if (soundBtn) {
+            soundBtn.addEventListener('click', () => {
+                // Toggle muted state
+                video.muted = !video.muted;
+                // Some browsers require a user gesture to unmute and/or to play with sound
+                if (!video.muted) {
+                    video.play().catch(() => {});
+                }
+                setSoundLabel();
+            });
+        }
     }
 });
 </script>
