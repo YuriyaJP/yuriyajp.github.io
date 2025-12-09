@@ -40,6 +40,32 @@ header img {
     margin-bottom: 15px;
 }
 
+/* Profile video (replaces header img) */
+header .profile-media {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    object-fit: cover;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.video-toggle {
+    background: rgba(0,0,0,0.45);
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+
+.video-toggle:focus {
+    outline: 2px solid rgba(255,255,255,0.9);
+}
+
 header h1 {
     font-size: 2rem;
     font-weight: 700;
@@ -197,7 +223,12 @@ footer {
 <body>
 
 <header>
-    <img src="yuliia.jpg" alt="Yuliia Chekhovska">
+    <video id="profile-video" class="profile-media" autoplay muted playsinline poster="yuliia.jpg">
+        <source src="profile_video.mp4" type="video/mp4">
+        <!-- Fallback image if video is not supported -->
+        <img src="yuliia.jpg" alt="Yuliia Chekhovska">
+    </video>
+    <button id="video-toggle" class="video-toggle" aria-pressed="false">Pause</button>
     <h1>Yuliia Chekhovska</h1>
 </header>
 
@@ -267,30 +298,31 @@ footer {
     <div class="portfolio-images">
 
         <div class="portfolio-item">
-            <strong class="project-title">A Visual ESL Novel</strong>
+            <strong class="project-title">Psycholinguistic Language Learning Digital Novel</strong>
             <img src="portfolio_image1.png" alt="A Visual ESL Novel">
-            <p>Interactive Python visual novel enhancing high school students' willingness to communicate in English.</p>
+            <p>Interactive Python gamification project enhancing high school students' willingness to communicate in English. Based on psycholinguistic principles and branching narrative design.</p>
             <a href="project-esl.html" class="view-button">View Project</a>
         </div>
 
         <div class="portfolio-item">
-            <strong class="project-title">Japanese Class Satisfaction Feedback</strong>
+            <strong class="project-title">Japanese Class Feedback — NLP Sentiment & Aspect Analysis</strong>
+            <p class="project-meta">Transformer-backed pipeline (Japanese BERT fine-tune) for sentiment classification, aspect extraction, and explainable insights (SHAP) from student survey responses — 日本語</p>
             <img src="portfolio_image2.png" alt="Class Feedback NLP Database">
             <p>Analyzed survey responses from 120 students to generate actionable curriculum insights.</p>
             <a href="project-feedback.html" class="view-button">View Project</a>
         </div>
 
         <div class="portfolio-item">
-            <strong class="project-title">Speech Production PDF Reader</strong>
-            <img src="portfolio_image3.jpg" alt="Speech Production PDF Reader">
-            <p>Python PDF reader with system voice for assisting personal study and research workflows.</p>
-            <a href="project-speech.html" class="view-button">View Project</a>
+            <strong class="project-title">Grants Operations Dashboard</strong>
+            <img src="portfolio_image3.jpg" alt="Grants Operations Dashboard Screenshot">
+            <p>Sheet-integrated dashboard demonstrating operational workflows used in grantmaking: data intake, record maintenance, compliance checks, communication readiness, and round tracking.</p>
+            <a href="project-grants-ops.html" class="view-button">View Project</a>
         </div>
 
         <div class="portfolio-item">
-            <strong class="project-title">Mental Health Intervention Impact and Cost-Effectiveness Analysis</strong>
+            <strong class="project-title">Multimodal Fairness-Aware Mental Health Journaling Agent</strong>
             <img src="portfolio_image_mlmentalhealth.jpg" alt="Mental Health ML Project">
-            <p>Description TBD.</p>
+            <p>A voice journaling assistant that transcribes speech, analyzes vocal tone and helps catch early symptoms of mental health issues.</p>
             <a href="project-new.html" class="view-button">View Project</a>
         </div>
 
@@ -395,6 +427,29 @@ footer {
 document.addEventListener("DOMContentLoaded", function () {
     const scriptElements = document.querySelectorAll('.script-animation');
     scriptElements.forEach((el,i)=>setTimeout(()=>el.classList.add('active'),i*500));
+
+    // Profile video toggle (single Pause/Play button only)
+    const video = document.getElementById('profile-video');
+    const btn = document.getElementById('video-toggle');
+    if (video && btn) {
+        const setLabel = () => {
+            btn.textContent = video.paused ? 'Play' : 'Pause';
+            btn.setAttribute('aria-pressed', String(!video.paused));
+        };
+
+        // Try to play (muted autoplay should be allowed)
+        video.play().catch(() => { /* ignore play errors */ });
+        setLabel();
+
+        btn.addEventListener('click', () => {
+            if (video.paused) {
+                video.play().catch(() => {});
+            } else {
+                video.pause();
+            }
+            setLabel();
+        });
+    }
 });
 </script>
 
