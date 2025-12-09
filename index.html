@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yuliia Chekhovska</title>
+<title>Yulia Chekhovska</title>
 <style>
 /* Base */
 body {
@@ -159,7 +159,7 @@ section:nth-child(even) {
 
 .portfolio-item h3 {
     margin: 15px;
-    color: #007acc;
+    color: #000000;
 }
 
 .portfolio-item h3 a {
@@ -223,13 +223,13 @@ footer {
 <body>
 
 <header>
-    <video id="profile-video" class="profile-media" autoplay muted playsinline poster="yuliia.jpg">
-        <source src="profile_video.mp4" type="video/mp4">
+    <video id="profile-video" class="profile-media" autoplay muted playsinline poster="yulia.jpg">
+        <source src="portfolio.mp4" type="video/mp4">
         <!-- Fallback image if video is not supported -->
-        <img src="yuliia.jpg" alt="Yuliia Chekhovska">
+        <img src="Yulia.jpg" alt="Yulia Chekhovska">
     </video>
     <button id="video-toggle" class="video-toggle" aria-pressed="false">Pause</button>
-    <h1>Yuliia Chekhovska</h1>
+    <h1>Yulia Chekhovska</h1>
 </header>
 
 <nav>
@@ -238,27 +238,27 @@ footer {
     <a href="#contact" class="hover-scale">Contact</a>
 </nav>
 
-<div class="intro-container">
-    <h1 class="script-animation">
-        Experienced in data manipulation and predictive analysis. Skilled in R, Python, Excel, and Tableau.
-    </h1>
-</div>
 
 <section id="about">
     <h2>About Me</h2>
-    <ul>
-        <li>Data manager and analyst with 2+ years of experience in predictive analysis, outreach coordination, and data-driven strategy.</li>
-        <li>Skilled in Python, R, SQL, Tableau, and Excel.</li>
-        <li>Fluent in Japanese (N2), German (C1), and English (C1).</li>
-        <li><strong>Education & Training:</strong>
-            <ul>
-                <li>ML4Good AI Safety Bootcamp, Sept 2025, Singapore</li>
-                <li>Data Science and AI Bootcamp, Le Wagon, Tokyo, Mar–Sep 2025 (Predictive Modeling, NLP, Marketing Analytics; project: ML-based air pollution detection)</li>
-                <li>M.A. Psycholinguistics, Heinrich Heine University, Germany, 2018–2022</li>
-                <li>Fellowship in Behavioral Analysis Research, Chiba University; coursework in behavioral analysis</li>
-            </ul>
-        </li>
-    </ul>
+
+    <div class="about-list"></div>
+        <p>Data manager based in Tokyo, Japan.</p>
+        <p>Skilled in Python, SQL, Tableau, and Excel.</p>
+        <p>Fluent in Japanese (N2), German (C1), and English (C1).</p>
+
+        <div class="education"></div>
+            <p class="edu-heading"><strong>Education &amp; Training:</strong></p>
+            <div class="edu-items"></div>
+                <p>ML4Good AI Safety Bootcamp — Sept 2025, Singapore</p>
+                <p>Data Science &amp; AI Bootcamp, Le Wagon, Tokyo — Mar–Sep 2025 (Predictive Modeling, NLP, Marketing Analytics; project: ML-based air pollution detection)</p>
+                <p>M.A. Psycholinguistics, Heinrich Heine University, Germany — 2018–2022</p>
+                <p>Fellowship in Behavioral Analysis Research, Chiba University — coursework in behavioral analysis</p>
+            </div>
+        </div>
+
+        <p class="places">✈️ Places lived: Rivne, Ukraine (1995) &gt; Kyiv, Ukraine (2013) &gt; Brussels, Belgium (2017) &gt; Düsseldorf, Germany (2018) &gt; Chiba, Japan (2020) &gt; Tokyo, Japan (2024) and now</p>
+    </div>
 
     <style>
         #about {
@@ -271,23 +271,63 @@ footer {
             text-align: center;
             margin-bottom: 40px;
             font-size: 2rem;
-            color: #007acc;
+            color: #000000;
         }
 
-        #about ul {
+        .about-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
             font-size: 1.05rem;
             line-height: 1.6;
             color: #333;
-            padding-left: 20px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(250,250,250,0.9));
+            border-radius: 10px;
+            padding: 22px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.04);
         }
 
-        #about ul ul {
+        .about-list > p {
+            margin: 0;
+            padding: 12px 0;
+            border-top: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .about-list > p:first-of-type {
+            border-top: none;
+            padding-top: 0;
+        }
+
+        .education .edu-heading {
+            margin: 0;
+            padding-top: 6px;
+            color: #222;
+        }
+
+        .edu-items p {
+            margin: 8px 0 0 0;
+            padding: 6px 0;
+            font-size: 1rem;
+            color: #444;
+            border-top: 1px dashed rgba(0,0,0,0.04);
+        }
+
+        .edu-items p:first-child {
+            border-top: none;
             margin-top: 10px;
-            padding-left: 20px;
         }
 
-        #about li {
-            margin-bottom: 15px;
+        .places {
+            margin-top: 6px;
+            padding-top: 10px;
+            font-weight: 500;
+            color: #005fa3;
+            border-top: 1px solid rgba(0,95,163,0.08);
+        }
+
+        @media(max-width:600px){
+            .about-list { padding: 16px; }
+            .edu-items p { font-size: 0.98rem; }
         }
     </style>
 </section>
@@ -305,10 +345,9 @@ footer {
         </div>
 
         <div class="portfolio-item">
-            <strong class="project-title">Japanese Class Feedback — NLP Sentiment & Aspect Analysis</strong>
-            <p class="project-meta">Transformer-backed pipeline (Japanese BERT fine-tune) for sentiment classification, aspect extraction, and explainable insights (SHAP) from student survey responses — 日本語</p>
+            <strong class="project-title">Japanese Class Feedback NLP Sentiment & Aspect Analysis</strong>
             <img src="portfolio_image2.png" alt="Class Feedback NLP Database">
-            <p>Analyzed survey responses from 120 students to generate actionable curriculum insights.</p>
+            <p>Transformer-backed pipeline (Japanese BERT fine-tune) for sentiment classification, aspect extraction, and explainable insights (SHAP) from student survey responses.</p>
             <a href="project-feedback.html" class="view-button">View Project</a>
         </div>
 
@@ -340,7 +379,7 @@ footer {
             text-align: center;
             margin-bottom: 50px;
             font-size: 2rem;
-            color: #007acc;
+            color: #000000;
         }
 
         .portfolio-images {
@@ -372,7 +411,7 @@ footer {
             font-size: 1.3rem;
             margin-bottom: 15px;
             font-weight: bold;
-            color: #007acc;
+            color: #000000;
         }
 
         .portfolio-item img {
@@ -401,7 +440,7 @@ footer {
         }
 
         .view-button:hover {
-            background-color: #005fa3;
+            background-color: #000000;
             transform: translateY(-2px);
         }
     </style>
@@ -414,13 +453,13 @@ footer {
 <section id="contact">
     <h2>Contact</h2>
     <div class="contact-icons">
-        <a href="https://www.linkedin.com/in/yuliia-che/" target="_blank" class="hover-scale">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/Yulia-che/" target="_blank" class="hover-scale">LinkedIn</a>
         <a href="https://github.com/YuriyaJP" target="_blank" class="hover-scale">GitHub</a>
     </div>
 </section>
 
 <footer>
-    &copy; 2025 Yuliia Chekhovska. All rights reserved.
+    &copy; 2025 Yulia Chekhovska. All rights reserved.
 </footer>
 
 <script>
