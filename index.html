@@ -118,15 +118,7 @@ section {
     margin: 0 auto;
     padding: 60px 20px;
 }
-
-section:nth-child(even) {
-    background-color: #eef1f6;
-}
-
-#about p {
-    line-height: 1.7;
-    font-size: 1.1rem;
-}
+ 
 
 /* Portfolio */
 .portfolio-images {
@@ -465,6 +457,64 @@ footer {
 
 
 
+<!-- Media & Appearances -->
+<section id="media">
+    <h2>Media & Appearances</h2>
+
+    <div class="media-intro" style="max-width:900px;margin:0 auto 18px;text-align:center;color:#333;">
+        <p style="margin:0 0 8px;">Selected media appearances, talks and recordings. Click a photo to open a larger view. Photos will be published here (replace the filenames with your originals).</p>
+    </div>
+
+    <div class="media-grid">
+        <figure class="media-item">
+            <img class="media-thumb" src="media_peace.jpg" data-full="media_peace.jpg" alt="Peace Advocacy - Global Voyage">
+            <figcaption>Peace Advocacy — Global Voyage</figcaption>
+        </figure>
+
+        <figure class="media-item">
+            <img class="media-thumb" src="media_disinfo.jpg" data-full="media_disinfo.jpg" alt="Talks on Disinformation - Guest Speaker at Chiba University">
+            <figcaption>Talks on Disinformation — Guest Speaker, Chiba University</figcaption>
+        </figure>
+
+        <figure class="media-item">
+            <img class="media-thumb" src="media_multicultural.jpg" data-full="media_multicultural.jpg" alt="Promoting Understanding for a Multicultural Society (Aired: Jan 28, 2024)">
+            <figcaption>Promoting Understanding for a Multicultural Society — Aired Jan 28, 2024</figcaption>
+        </figure>
+
+        <figure class="media-item">
+            <img class="media-thumb" src="media_behavioral.jpg" data-full="media_behavioral.jpg" alt="Behavioural Academic Research - JACET 60th Convention Recording">
+            <figcaption>Behavioural Academic Research — JACET 60th Convention recording</figcaption>
+        </figure>
+
+        <figure class="media-item">
+            <img class="media-thumb" src="media_chiba_mag.jpg" data-full="media_chiba_mag.jpg" alt="Featured in Chiba International Bureau Magazine, Nov 2021">
+            <figcaption>Featured — Chiba International Bureau Magazine (Nov 2021)</figcaption>
+        </figure>
+    </div>
+
+    <div class="media-timeline" style="max-width:900px;margin:24px auto 0;">
+        <h3 style="color:#007acc;margin-bottom:10px;">Selected timeline</h3>
+        <ul>
+            <li><strong>Peace Advocacy - Global Voyage</strong></li>
+            <li><strong>Talks on Disinformation</strong> — Guest Speaker at Chiba University</li>
+            <li><strong>Promoting Understanding for a Multicultural Society</strong> — Aired: Jan 28, 2024</li>
+            <li><strong>Behavioural Academic Research</strong> — JACET 60th Commemorative International Convention Video Recording</li>
+            <li><strong>Featured in Chiba International Bureau Magazine</strong> — November 2021 Edition</li>
+        </ul>
+    </div>
+
+</section>
+
+<!-- Image lightbox modal -->
+<div id="media-modal" class="media-modal" aria-hidden="true">
+    <div class="media-modal-backdrop"></div>
+    <div class="media-modal-content" role="dialog" aria-modal="true">
+        <button class="media-modal-close" aria-label="Close">×</button>
+        <img id="media-modal-img" src="" alt="">
+        <div class="caption" id="media-modal-caption"></div>
+    </div>
+</div>
+
 <section id="contact">
     <h2>Contact</h2>
     <div class="contact-icons">
@@ -623,6 +673,38 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                 });
             }
+        }
+
+        // Media gallery: lightbox modal
+        const mediaModal = document.getElementById('media-modal');
+        const mediaModalImg = document.getElementById('media-modal-img');
+        const mediaModalCaption = document.getElementById('media-modal-caption');
+        if (mediaModal) {
+            const thumbs = Array.from(document.querySelectorAll('.media-thumb'));
+            thumbs.forEach(img => {
+                img.style.cursor = 'zoom-in';
+                img.addEventListener('click', () => {
+                    mediaModal.style.display = 'flex';
+                    mediaModal.setAttribute('aria-hidden', 'false');
+                    mediaModalImg.src = img.dataset.full || img.src;
+                    mediaModalImg.alt = img.alt || '';
+                    const cap = img.nextElementSibling ? img.nextElementSibling.textContent : img.alt;
+                    mediaModalCaption.textContent = cap || '';
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            const closeBtn = mediaModal.querySelector('.media-modal-close');
+            function closeMedia() {
+                mediaModal.style.display = 'none';
+                mediaModal.setAttribute('aria-hidden', 'true');
+                mediaModalImg.src = '';
+                mediaModalCaption.textContent = '';
+                document.body.style.overflow = '';
+            }
+            if (closeBtn) closeBtn.addEventListener('click', closeMedia);
+            mediaModal.addEventListener('click', (e) => { if (e.target === mediaModal || e.target.classList.contains('media-modal-backdrop')) closeMedia(); });
+            document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMedia(); });
         }
 });
 </script>
