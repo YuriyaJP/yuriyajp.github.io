@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Grants Operations Dashboard | Yulia Chekhovska</title>
+<title>Public Health Data Engineering | Yulia Chekhovska</title>
 <style>
 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; padding:0; background:#f5f6fa; color:#222; }
 header { text-align:center; padding:50px 20px; background:url('background.jpg') center/cover no-repeat; color:#fff; }
@@ -26,8 +26,10 @@ footer { text-align:center; padding:25px 20px; background:#111; color:#fff; marg
 
 <header>
     <img src="yulia.jpg" alt="Yulia Chekhovska">
-    <h1>Grants Operations Dashboard</h1>
-    <p style="max-width:800px;margin:8px auto 0;opacity:0.95">A sheet-integrated dashboard demonstrating operational workflows used in grantmaking: data intake, record maintenance, compliance checks, communication readiness, and round tracking.</p>
+    <h1>Public Health Data Engineering Japan Suicide Statistics Pipeline</h1>
+    <p style="max-width:800px;margin:8px auto 0;opacity:0.95">
+        Scraping, cleaning, and analyzing Japan police suicide statistics to provide interactive visualizations and time-series forecasts at the population level, supporting evidence-based public health insights.
+    </p>
 </header>
 
 <nav>
@@ -38,32 +40,25 @@ footer { text-align:center; padding:25px 20px; background:#111; color:#fff; marg
     <img src="japan-police-logo.png" alt="Japan Police Logo">
 
     <h2>Goal</h2>
-    <p>Build a lightweight, transparent operations dashboard that integrates with a collaborative sheet (Google Sheets / Excel Online) to showcase the workflows teams use to intake applications, maintain records, run compliance checks, prepare communication packages, and manage grant rounds.</p>
+    <p>Build a sustainable, automated pipeline for Japan police suicide statistics, visualize trends with interactive dashboards, and apply time-series modeling to understand population-level patterns over time.</p>
 
-    <h2>Tools Used</h2>
-    <p>Python for website scraping, Google Sheets, Apps Script JS, HTML/CSS, lightweight JS for embedding, GitHub for code and automation scripts.</p>
-
-    <h2>Key Features</h2>
+    <h2>Methods</h2>
     <ul>
-        <li><strong>Data intake:</strong> structured intake form that populates the sheet and creates a normalized applicant record.</li>
-        <li><strong>Record maintenance:</strong> canonical records with status fields, ownership, and history notes.</li>
-        <li><strong>Compliance checks:</strong> formula-driven checks and flags (attachments, eligibility, budget thresholds).</li>
-        <li><strong>Communication readiness:</strong> templated email/letter generation columns and readiness indicators.</li>
-        <li><strong>Round tracking:</strong> configurable rounds with roll-forward of eligible applications and summary KPIs.</li>
+        <li><strong>Data engineering:</strong> web scraping, cleaning, and building a self-updating pipeline</li>
+        <li><strong>Data visualization:</strong> interactive dashboards for trend analysis</li>
+        <li><strong>ML time-series forecasting:</strong> regression-based trend modeling for aggregated statistics</li>
     </ul>
 
-    <h2>Sheet Integration</h2>
-    <p>The live dashboard is driven by a shared spreadsheet.</p>
+    <h2>Outcome</h2>
+    <p>The pipeline and dashboard provide population-level insights and forecasts. Forecasts highlight trends that can inform preventive strategies and resource planning, helping public health centers target interventions where they are most needed.</p>
 
-    <!-- Replace the src with the published Google Sheet embed URL or an iframe-friendly view -->
-    <iframe class="sheet-embed" src="https://docs.google.com/spreadsheets/d/e/PLACEHOLDER_PUBLISHED_EMBED_URL/pubhtml?widget=true&amp;headers=false" title="Grants Ops Sheet Embed"></iframe>
+    <h2>Explore</h2>
+    <iframe class="sheet-embed" src="https://docs.google.com/spreadsheets/d/e/PLACEHOLDER_PUBLISHED_EMBED_URL/pubhtml?widget=true&amp;headers=false" title="Japan Suicide Data Dashboard"></iframe>
 
     <p style="margin-top:14px">Quick links:</p>
     <a href="#" class="button" onclick="window.open('https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID','_blank')">Open Sheet</a>
-    <a href="#" class="button" onclick="window.open('https://www.npa.go.jp/publications/statistics/safetylife/jisatsu.html','_blank')">View Japan Police Statistics</a>
-    <a href="https://github.com/YuriyaJP/grants-ops-dashboard" class="button" target="_blank">View Code</a>
-
-
+    <a href="https://www.npa.go.jp/publications/statistics/safetylife/jisatsu.html" class="button" target="_blank">View Japan Police Statistics</a>
+    <a href="https://github.com/YuriyaJP/Public-Health-Data-Engineering-Project-Japan-Suicide-Statistics-Pipeline" class="button" target="_blank">View Code</a>
 </section>
 
 <footer>
