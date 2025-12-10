@@ -4,221 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Yulia Chekhovska</title>
-<style>
-/* Base */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f5f6fa;
-    color: #222;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Header with background image */
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 50px 20px;
-    background: url('background.jpg') center/cover no-repeat;
-    color: #fff;
-}
-
-header img {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    border: 3px solid #fff;
-    object-fit: cover;
-    margin-bottom: 15px;
-}
-
-/* Profile video (replaces header img) */
-header .profile-media {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    border: 3px solid #fff;
-    object-fit: cover;
-    margin-bottom: 15px;
-    display: block;
-}
-
-.video-toggle {
-    background: rgba(0,0,0,0.45);
-    color: #fff;
-    border: none;
-    padding: 6px 10px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 0.95rem;
-    margin-bottom: 8px;
-}
-
-.video-toggle:focus {
-    outline: 2px solid rgba(255,255,255,0.9);
-}
-
-header h1 {
-    font-size: 2rem;
-    font-weight: 700;
-}
-
-/* Navigation */
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-nav a {
-    margin: 0 25px;
-    padding: 15px 0;
-    font-size: 18px;
-    font-weight: 500;
-    color: #222;
-    transition: color 0.3s, transform 0.3s;
-}
-
-nav a:hover {
-    color: #007acc;
-    transform: translateY(-2px);
-}
-
-/* Intro */
-.intro-container {
-    text-align: center;
-    padding: 60px 20px;
-}
-
-.script-animation {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease, transform 1s ease;
-    font-size: 1.3rem;
-    font-weight: 500;
-}
-
-.script-animation.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Sections */
-section {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 60px 20px;
-}
- 
-
-/* Portfolio */
-.portfolio-images {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
-}
-
-.portfolio-item {
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    display: flex;
-    flex-direction: column;
-}
-
-.portfolio-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-}
-
-.portfolio-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.portfolio-item h3 {
-    margin: 15px;
-    color: #000000;
-}
-
-.portfolio-item h3 a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.portfolio-item h3 a:hover {
-    color: #005fa3;
-}
-
-.portfolio-item p {
-    margin: 0 15px 15px;
-    font-size: 0.95rem;
-}
-
-.portfolio-item a {
-    margin: 0 15px 15px;
-    padding: 8px 15px;
-    background-color: #007acc;
-    color: #fff;
-    font-size: 0.9rem;
-    border-radius: 5px;
-    display: inline-block;
-    transition: background-color 0.3s;
-}
-
-.portfolio-item a:hover {
-    background-color: #005fa3;
-}
-
-/* Contact */
-.contact-icons a {
-    margin: 0 15px;
-    font-size: 1.2rem;
-    color: #007acc;
-    transition: color 0.3s, transform 0.3s;
-}
-
-.contact-icons a:hover {
-    color: #005fa3;
-    transform: translateY(-2px);
-}
-
-/* Footer */
-footer {
-    background-color: #111;
-    color: #fff;
-    text-align: center;
-    padding: 25px 20px;
-    font-size: 0.9rem;
-}
-
-/* Responsive */
-@media(max-width:600px){
-    nav a { margin:0 10px; }
-    header h1 { font-size:1.7rem; }
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
     <video id="profile-video" class="profile-media" autoplay muted playsinline poster="yulia.jpg">
         <source src="portfolio.mp4" type="video/mp4">
-        <!-- Fallback image if video is not supported -->
-        <img src="Yulia.jpg" alt="Yulia Chekhovska">
+        <img src="yulia.jpg" alt="Yulia Chekhovska">
     </video>
     <div class="profile-controls">
         <button id="video-toggle" class="video-toggle" aria-pressed="false">Pause</button>
@@ -233,98 +26,26 @@ footer {
     <a href="#contact" class="hover-scale">Contact</a>
 </nav>
 
-
 <section id="about">
     <h2>About Me</h2>
-
-    <div class="about-list"></div>
-        <p>Data manager based in Tokyo, Japan.</p>
-        <p>Skilled in Python, SQL, Tableau, and Excel.</p>
+    <div class="about-list">
+        <p>My journey began in psychology and linguistics, studying how humans communicate and behave. I developed my research skills as a behavioural analysis researcher at Chiba University, examining patterns of human behaviour and cognition.</p>
+        <p>I have since transitioned into social data science, analysing the cost-effectiveness of data-driven interventions in social contexts. I work with Python, SQL, Tableau, Excel and Machine Learning tools to extract insights from complex datasets.</p>
         <p>Fluent in Japanese (N2), German (C1), and English (C1).</p>
-
-        <div class="education"></div>
-            <p class="edu-heading"><strong>Education &amp; Training:</strong></p>
-            <div class="edu-items"></div>
-                <p>ML4Good AI Safety Bootcamp — Sept 2025, Singapore</p>
-                <p>Data Science &amp; AI Bootcamp, Le Wagon, Tokyo — Mar–Sep 2025 (Predictive Modeling, NLP, Marketing Analytics; project: ML-based air pollution detection)</p>
-                <p>M.A. Psycholinguistics, Heinrich Heine University, Germany — 2018–2022</p>
-                <p>Fellowship in Behavioral Analysis Research, Chiba University — coursework in behavioral analysis</p>
-            </div>
-        </div>
-
-        <p class="places">✈️ Places lived: Rivne, Ukraine (1995) &gt; Kyiv, Ukraine (2013) &gt; Brussels, Belgium (2017) &gt; Düsseldorf, Germany (2018) &gt; Chiba, Japan (2020) &gt; Tokyo, Japan (2024) and now</p>
     </div>
 
-    <style>
-        #about {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
+    <div class="education">
+        <p class="edu-heading"><strong>Education &amp; Training:</strong></p>
+        <div class="edu-items">
+            <p>Data Analysis for Social Scientists, MIT — ongoing course, online</p>
+            <p>ML4Good AI Safety Bootcamp — Sept 2025, Singapore</p>
+            <p>Data Science &amp; AI Bootcamp, Le Wagon, Tokyo — Mar–Sep 2025 (Predictive Modelling, NLP, Marketing Analytics; project: ML-based air pollution detection)</p>
+            <p>M.A. Psycholinguistics, Heinrich Heine University, Germany — 2018–2022</p>
+            <p>Fellowship in Behavioural Analysis Research, Chiba University — coursework in behavioural analysis</p>
+        </div>
+    </div>
 
-        #about h2 {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 2rem;
-            color: #000000;
-        }
-
-        .about-list {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-            font-size: 1.05rem;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(250,250,250,0.9));
-            border-radius: 10px;
-            padding: 22px;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.04);
-        }
-
-        .about-list > p {
-            margin: 0;
-            padding: 12px 0;
-            border-top: 1px solid rgba(0,0,0,0.05);
-        }
-
-        .about-list > p:first-of-type {
-            border-top: none;
-            padding-top: 0;
-        }
-
-        .education .edu-heading {
-            margin: 0;
-            padding-top: 6px;
-            color: #222;
-        }
-
-        .edu-items p {
-            margin: 8px 0 0 0;
-            padding: 6px 0;
-            font-size: 1rem;
-            color: #444;
-            border-top: 1px dashed rgba(0,0,0,0.04);
-        }
-
-        .edu-items p:first-child {
-            border-top: none;
-            margin-top: 10px;
-        }
-
-        .places {
-            margin-top: 6px;
-            padding-top: 10px;
-            font-weight: 500;
-            color: #005fa3;
-            border-top: 1px solid rgba(0,95,163,0.08);
-        }
-
-        @media(max-width:600px){
-            .about-list { padding: 16px; }
-            .edu-items p { font-size: 0.98rem; }
-        }
-    </style>
+    <p class="places">✈️ Places lived: Rivne, Ukraine (1995) &gt; Kyiv, Ukraine (2013) &gt; Brussels, Belgium (2017) &gt; Düsseldorf, Germany (2018) &gt; Chiba, Japan (2020) &gt; Tokyo, Japan (2024) and now</p>
 </section>
 
 
@@ -333,7 +54,7 @@ footer {
     <div class="tag-filter" aria-label="Filter projects by tags">
         <strong>Filter by tags:</strong>
         <div id="tag-list" style="display:inline-block;margin-left:12px"></div>
-        <button id="clear-tags" class="clear-tags" style="margin-left:12px;padding:6px 10px;border-radius:6px;border:1px solid rgba(0,0,0,0.06);background:#fff;cursor:pointer">Clear</button>
+        <button id="clear-tags" class="clear-tags">Clear</button>
     </div>
     <div class="portfolio-images">
 
@@ -354,169 +75,82 @@ footer {
         <div class="portfolio-item" data-tags="sheets,appscript">
             <strong class="project-title">Public Health Data Engineering Japan Suicide Statistics Pipeline</strong>
             <img src="japan-police-logo.png" alt="Japan Police Logo">
-            <p>.</p>
+            <p>Automated pipeline using Google Sheets and AppScript for tracking and visualizing suicide statistics in Japan for public health analysis.</p>
             <a href="project-japan-suicides.html" class="view-button">View Project</a>
         </div>
 
         <div class="portfolio-item" data-tags="ml,audio,nlp">
             <strong class="project-title">Multimodal Fairness-Aware Mental Health Journaling Agent</strong>
             <img src="portfolio_image_mlmentalhealth.jpg" alt="Mental Health ML Project">
-            <p>A voice journaling assistant that transcribes speech, analyzes vocal tone and helps catch early symptoms of mental health issues.</p>
+            <p>Voice journaling assistant that transcribes speech, analyzes vocal tone, and helps detect early symptoms of mental health issues with fairness-aware ML algorithms.</p>
             <a href="project-new.html" class="view-button">View Project</a>
         </div>
 
         <div class="portfolio-item" data-tags="tableau,sheets">
             <strong class="project-title">AI Usage in Japanese Workplace</strong>
             <img src="tableau-preview.png" alt="AI in Japanese Business">
-            <p>Prototype dashboards and sheet-based pipelines that help employers monitor employee engagement, productivity using generative AI tools.</p>
+            <p>Prototype dashboards and sheet-based pipelines to monitor employee engagement and productivity using generative AI tools.</p>
             <a href="project-ai-usage-japanese.html" class="view-button">View Project</a>
         </div>
 
     </div>
-
-    <style>
-        /* Portfolio Section Styles */
-        #portfolio {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
-
-        #portfolio h2 {
-            text-align: center;
-            margin-bottom: 50px;
-            font-size: 2rem;
-            color: #000000;
-        }
-
-        .portfolio-images {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-        }
-
-        .portfolio-item {
-            background-color: #fff;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .portfolio-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-        }
-
-        .project-title {
-            display: block;
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            font-weight: bold;
-            color: #000000;
-        }
-
-        .portfolio-item img {
-            width: 100%;
-            max-width: 300px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
-
-        .portfolio-item p {
-            font-size: 1rem;
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        .view-button {
-            padding: 12px 25px;
-            background-color: #007acc;
-            color: #fff;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        .view-button:hover {
-            background-color: #000000;
-            transform: translateY(-2px);
-        }
-    </style>
 </section>
 
-
-<!-- Media & Appearances -->
 <section id="media">
     <h2>Media & Appearances</h2>
-
-    <div class="media-intro" style="max-width:900px;margin:0 auto 18px;text-align:center;color:#333;">
-        <p style="margin:0 0 8px;">Selected media appearances, talks and recordings.</p>
-    </div>
-
     <div class="media-grid">
 
         <figure class="media-item">
             <img class="media-thumb" src="media_peace.jpeg" data-full="media_peace.jpeg" alt="Peace Advocacy - Global Voyage">
             <figcaption>
-                Peace Advocacy — Global Voyage<br>
-                <a href="https://peaceboat.org/english/news/ukraine-peace-action" class="button" style="margin-top:8px;display:inline-block;padding:6px 12px;background:#007acc;color:#fff;border-radius:5px;text-decoration:none;">View</a>
+                <strong class="project-title">Peace Advocacy — Global Voyage</strong>
+                <div class="media-btn-wrapper">
+                    <a href="https://peaceboat.org/english/news/ukraine-peace-action" class="view-button">View</a>
+                </div>
             </figcaption>
         </figure>
 
         <figure class="media-item">
-            <img class="media-thumb" src="media_disinfo.png" data-full="media_disinfo.png" alt="Talks on Disinformation - Guest Speaker at Chiba University">
+            <img class="media-thumb" src="media_disinfo.png" data-full="media_disinfo.png" alt="Talks on Disinformation - Chiba University">
             <figcaption>
-                Talks on Disinformation — Guest Speaker, Chiba University (2023-2025)<br>
+                <strong class="project-title">Talks on Disinformation — Guest Speaker, Chiba University (2023-2025)</strong>
             </figcaption>
         </figure>
 
         <figure class="media-item">
-            <img class="media-thumb" src="media_multicultural.jpg" data-full="media_multicultural.jpg" alt="Promoting Understanding for a Multicultural Society (Aired: Jan 28, 2024)">
+            <img class="media-thumb" src="media_multicultural.jpg" data-full="media_multicultural.jpg" alt="Promoting Understanding Multicultural Society">
             <figcaption>
-                Promoting Understanding for a Multicultural Society — Aired Jan 28, 2024<br>
-                <a href="https://www.youtube.com/watch?v=pMyqlSq2knc&list=PLWdhLg9WU4qKPu3QTVTeYXMWvcIiTKcbc&index=3" class="button" style="margin-top:8px;display:inline-block;padding:6px 12px;background:#007acc;color:#fff;border-radius:5px;text-decoration:none;">View</a>
+                <strong class="project-title">Promoting Understanding for a Multicultural Society — Jan 28, 2024</strong>
+                <div class="media-btn-wrapper">
+                    <a href="https://www.youtube.com/watch?v=pMyqlSq2knc&list=PLWdhLg9WU4qKPu3QTVTeYXMWvcIiTKcbc&index=3" class="view-button">View</a>
+                </div>
             </figcaption>
         </figure>
 
         <figure class="media-item">
-            <img class="media-thumb" src="media_behavioral.jpg" data-full="media_behavioral.jpg" alt="Behavioural Academic Research - JACET 60th Convention Recording">
+            <img class="media-thumb" src="media_behavioral.jpg" data-full="media_behavioral.jpg" alt="Behavioural Academic Research - JACET">
             <figcaption>
-                Behavioural Academic Research — JACET 60th Convention Recording<br>
-                <a href="https://youtu.be/-qLAWglXBs8" class="button" style="margin-top:8px;display:inline-block;padding:6px 12px;background:#007acc;color:#fff;border-radius:5px;text-decoration:none;">View</a>
+                <strong class="project-title">Behavioural Academic Research — JACET 60th Convention Recording</strong>
+                <div class="media-btn-wrapper">
+                    <a href="https://youtu.be/-qLAWglXBs8" class="view-button">View</a>
+                </div>
             </figcaption>
         </figure>
 
         <figure class="media-item">
-            <img class="media-thumb" src="media_chiba_mag.jpg" data-full="media_chiba_mag.jpg" alt="Featured in Chiba International Bureau Magazine, Nov 2021">
+            <img class="media-thumb" src="media_chiba_mag.jpg" data-full="media_chiba_mag.jpg" alt="Featured in Chiba International Bureau Magazine">
             <figcaption>
-                Featured — Chiba International Bureau Magazine (Nov 2021)<br>
-                <a href="https://drive.google.com/file/d/1YopozC-wpRjBDK2Ni3T4cpvM1hmkRfGC/view?usp=sharing" class="button" style="margin-top:8px;display:inline-block;padding:6px 12px;background:#007acc;color:#fff;border-radius:5px;text-decoration:none;">View</a>
+                <strong class="project-title">Featured — Chiba International Bureau Magazine (Nov 2021)</strong>
+                <div class="media-btn-wrapper">
+                    <a href="https://drive.google.com/file/d/1YopozC-wpRjBDK2Ni3T4cpvM1hmkRfGC/view?usp=sharing" class="view-button">View</a>
+                </div>
             </figcaption>
         </figure>
 
     </div>
-
 </section>
 
 
-<!-- Image lightbox modal -->
-<div id="media-modal" class="media-modal" aria-hidden="true">
-    <div class="media-modal-backdrop"></div>
-    <div class="media-modal-content" role="dialog" aria-modal="true">
-        <button class="media-modal-close" aria-label="Close">×</button>
-        <img id="media-modal-img" src="" alt="">
-        <div class="caption" id="media-modal-caption"></div>
-    </div>
-</div>
 
 <section id="contact">
     <h2>Contact</h2>
@@ -531,186 +165,103 @@ footer {
 </footer>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const scriptElements = document.querySelectorAll('.script-animation');
-    scriptElements.forEach((el,i)=>setTimeout(()=>el.classList.add('active'),i*500));
+// Profile video controls
+const video = document.getElementById('profile-video');
+const btn = document.getElementById('video-toggle');
+const soundBtn = document.getElementById('sound-toggle');
 
-    // Profile video controls: Pause/Play and Unmute/Mute
-    const video = document.getElementById('profile-video');
-    const btn = document.getElementById('video-toggle');
-    const soundBtn = document.getElementById('sound-toggle');
-    if (video) {
-        const setPlayLabel = () => {
-            if (btn) {
-                btn.textContent = video.paused ? 'Play' : 'Pause';
-                btn.setAttribute('aria-pressed', String(!video.paused));
-            }
-        };
+const setPlayLabel = () => { btn.textContent = video.paused ? 'Play' : 'Pause'; btn.setAttribute('aria-pressed', String(!video.paused)); }
+const setSoundLabel = () => { soundBtn.textContent = video.muted ? 'Unmute' : 'Mute'; soundBtn.setAttribute('aria-pressed', String(!video.muted)); }
 
-        const setSoundLabel = () => {
-            if (soundBtn) {
-                soundBtn.textContent = video.muted ? 'Unmute' : 'Mute';
-                soundBtn.setAttribute('aria-pressed', String(!video.muted));
-            }
-        };
+video.play().catch(()=>{});
+setPlayLabel();
+setSoundLabel();
 
-        // Try to play (muted autoplay should be allowed)
-        video.play().catch(() => { /* ignore play errors */ });
-        setPlayLabel();
-        setSoundLabel();
+btn.addEventListener('click', ()=>{ video.paused? video.play(): video.pause(); setPlayLabel(); });
+soundBtn.addEventListener('click', ()=>{ video.muted=!video.muted; if(!video.muted) video.play().catch(()=>{}); setSoundLabel(); });
 
-        if (btn) {
-            btn.addEventListener('click', () => {
-                if (video.paused) {
-                    video.play().catch(() => {});
-                } else {
-                    video.pause();
-                }
-                setPlayLabel();
-            });
-        }
+// Portfolio tag filtering
+const portfolioGrid = document.querySelector('.portfolio-images');
+const items = Array.from(portfolioGrid.querySelectorAll('.portfolio-item'));
+const tagSet = new Set();
+items.forEach(it=>{ const t=(it.getAttribute('data-tags')||'').split(',').map(s=>s.trim()).filter(Boolean); it._tags=t; t.forEach(tag=>tagSet.add(tag)); });
 
-            if (soundBtn) {
-                soundBtn.addEventListener('click', () => {
-                    // Toggle muted state
-                    video.muted = !video.muted;
-                    // Some browsers require a user gesture to unmute and/or to play with sound
-                    if (!video.muted) {
-                        video.play().catch(() => {});
-                    }
-                    setSoundLabel();
-                });
-            }
-        }
+const tagListEl = document.getElementById('tag-list');
+const clearBtn = document.getElementById('clear-tags');
+const selected = new Set();
 
-        // --- Project tag filtering ---
-        const portfolioGrid = document.querySelector('.portfolio-images');
-        if (portfolioGrid) {
-            const items = Array.from(portfolioGrid.querySelectorAll('.portfolio-item'));
+const tagCounts = {};
+items.forEach(it=>{ (it._tags||[]).forEach(t=>{ tagCounts[t]=(tagCounts[t]||0)+1; }); });
 
-            // Collect tag set from data-tags attributes
-            const tagSet = new Set();
-            items.forEach(it => {
-                const t = (it.getAttribute('data-tags') || '').split(',').map(s => s.trim()).filter(Boolean);
-                it._tags = t;
-                t.forEach(tag => tagSet.add(tag));
-                // Render visible tag badges on the project card
-                let badges = it.querySelector('.tag-badges');
-                if (!badges) {
-                    badges = document.createElement('div');
-                    badges.className = 'tag-badges';
-                    // insert badges before the view button (if present) or at end
-                    const view = it.querySelector('.view-button');
-                    if (view) it.insertBefore(badges, view);
-                    else it.appendChild(badges);
-                }
-                // clear existing and add badges
-                badges.innerHTML = '';
-                t.forEach(tag => {
-                    const b = document.createElement('span');
-                    b.className = 'tag-badge';
-                    b.textContent = `#${tag}`;
-                    badges.appendChild(b);
-                });
-            });
-
-            const tagListEl = document.getElementById('tag-list');
-            const clearBtn = document.getElementById('clear-tags');
-            const selected = new Set();
-
-            // Count tags across items
-            const tagCounts = {};
-            items.forEach(it => {
-                (it._tags || []).forEach(t => { tagCounts[t] = (tagCounts[t] || 0) + 1; });
-            });
-
-            // Create tag buttons with counts
-            Array.from(tagSet).sort().forEach(tag => {
-                const btn = document.createElement('button');
-                btn.type = 'button';
-                btn.className = 'tag-btn';
-                btn.dataset.tag = tag;
-                const count = tagCounts[tag] || 0;
-                btn.innerHTML = `<span class="tag-label">#${tag}</span> <span class="tag-count">(${count})</span>`;
-                btn.addEventListener('click', () => {
-                    if (selected.has(tag)) {
-                        selected.delete(tag);
-                        btn.classList.remove('active');
-                    } else {
-                        selected.add(tag);
-                        btn.classList.add('active');
-                    }
-                    applyFilterSort();
-                });
-                tagListEl.appendChild(btn);
-            });
-
-            if (clearBtn) clearBtn.addEventListener('click', () => {
-                selected.clear();
-                tagListEl.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
-                applyFilterSort();
-            });
-
-            function applyFilterSort() {
-                const sel = Array.from(selected);
-                // Compute match count for each item
-                const withScore = items.map(it => {
-                    if (sel.length === 0) return {it, score: 0};
-                    const score = it._tags.reduce((acc, t) => acc + (sel.includes(t) ? 1 : 0), 0);
-                    return {it, score};
-                });
-
-                // Sort by score desc, keep original order for ties
-                withScore.sort((a,b) => b.score - a.score);
-
-                // Re-append in sorted order
-                withScore.forEach(({it, score}) => {
-                    portfolioGrid.appendChild(it);
-                    // Visual de-emphasis for non-matching when selection is active
-                    if (sel.length > 0 && score === 0) {
-                        it.style.opacity = '0.45';
-                        it.style.filter = 'grayscale(0.15)';
-                    } else {
-                        it.style.opacity = '';
-                        it.style.filter = '';
-                    }
-                });
-            }
-        }
-
-        // Media gallery: lightbox modal
-        const mediaModal = document.getElementById('media-modal');
-        const mediaModalImg = document.getElementById('media-modal-img');
-        const mediaModalCaption = document.getElementById('media-modal-caption');
-        if (mediaModal) {
-            const thumbs = Array.from(document.querySelectorAll('.media-thumb'));
-            thumbs.forEach(img => {
-                img.style.cursor = 'zoom-in';
-                img.addEventListener('click', () => {
-                    mediaModal.style.display = 'flex';
-                    mediaModal.setAttribute('aria-hidden', 'false');
-                    mediaModalImg.src = img.dataset.full || img.src;
-                    mediaModalImg.alt = img.alt || '';
-                    const cap = img.nextElementSibling ? img.nextElementSibling.textContent : img.alt;
-                    mediaModalCaption.textContent = cap || '';
-                    document.body.style.overflow = 'hidden';
-                });
-            });
-
-            const closeBtn = mediaModal.querySelector('.media-modal-close');
-            function closeMedia() {
-                mediaModal.style.display = 'none';
-                mediaModal.setAttribute('aria-hidden', 'true');
-                mediaModalImg.src = '';
-                mediaModalCaption.textContent = '';
-                document.body.style.overflow = '';
-            }
-            if (closeBtn) closeBtn.addEventListener('click', closeMedia);
-            mediaModal.addEventListener('click', (e) => { if (e.target === mediaModal || e.target.classList.contains('media-modal-backdrop')) closeMedia(); });
-            document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMedia(); });
-        }
+Array.from(tagSet).sort().forEach(tag=>{
+    const b=document.createElement('button');
+    b.type='button';
+    b.className='tag-btn';
+    b.dataset.tag=tag;
+    const count = tagCounts[tag]||0;
+    b.innerHTML=`<span class="tag-label">#${tag}</span> <span class="tag-count">(${count})</span>`;
+    b.addEventListener('click',()=>{
+        selected.has(tag)? selected.delete(tag): selected.add(tag);
+        b.classList.toggle('active');
+        applyFilterSort();
+    });
+    tagListEl.appendChild(b);
 });
+
+clearBtn.addEventListener('click', ()=>{
+    selected.clear();
+    tagListEl.querySelectorAll('.tag-btn').forEach(b=>b.classList.remove('active'));
+    applyFilterSort();
+});
+
+function applyFilterSort(){
+    const sel=Array.from(selected);
+    const withScore=items.map(it=>{
+        if(sel.length===0) return {it,score:0};
+        const score=it._tags.reduce((acc,t)=>acc+(sel.includes(t)?1:0),0);
+        return {it,score};
+    });
+    withScore.sort((a,b)=>b.score-a.score);
+    withScore.forEach(({it,score})=>{
+        portfolioGrid.appendChild(it);
+        if(sel.length>0 && score===0){ it.style.opacity='0.45'; it.style.filter='grayscale(0.15)'; }
+        else{ it.style.opacity=''; it.style.filter=''; }
+    });
+}
+
+// Media modal
+const mediaModal=document.getElementById('media-modal');
+const mediaModalImg=document.getElementById('media-modal-img');
+const mediaModalCaption=document.getElementById('media-modal-caption');
+if(mediaModal){
+    const thumbs=Array.from(document.querySelectorAll('.media-thumb'));
+    thumbs.forEach(img=>{
+        img.style.cursor='zoom-in';
+        img.addEventListener('click', ()=>{
+            mediaModal.style.display='flex';
+            mediaModal.setAttribute('aria-hidden','false');
+            mediaModalImg.src=img.dataset.full||img.src;
+            mediaModalImg.alt=img.alt||'';
+            mediaModalCaption.textContent=img.nextElementSibling? img.nextElementSibling.textContent: img.alt;
+            document.body.style.overflow='hidden';
+        });
+    });
+    const closeBtn=document.createElement('button');
+    closeBtn.textContent='×';
+    closeBtn.className='media-modal-close';
+    closeBtn.addEventListener('click',()=>{ mediaModal.style.display='none'; mediaModal.setAttribute('aria-hidden','true'); mediaModalImg.src=''; mediaModalCaption.textContent=''; document.body.style.overflow=''; });
+    mediaModal.appendChild(closeBtn);
+}
 </script>
+
+<!-- Media modal container -->
+<div id="media-modal" class="media-modal" aria-hidden="true">
+    <div class="media-modal-backdrop"></div>
+    <div class="media-modal-content">
+        <img id="media-modal-img" src="" alt="">
+        <div class="caption" id="media-modal-caption"></div>
+    </div>
+</div>
 
 </body>
 </html>
