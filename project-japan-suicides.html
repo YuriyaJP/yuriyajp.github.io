@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Public Health Data Engineering | Yulia Chekhovska</title>
+
 <style>
 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; padding:0; background:#f5f6fa; color:#222; }
 header { text-align:center; padding:50px 20px; background:url('background.jpg') center/cover no-repeat; color:#fff; }
@@ -13,7 +14,6 @@ nav { text-align:center; margin:20px 0; }
 nav a { color:#007acc; text-decoration:none; font-weight:500; margin:0 15px; transition:color 0.3s; }
 nav a:hover { color:#005fa3; }
 section { max-width:900px; margin:0 auto; padding:40px 20px; background:#fff; border-radius:10px; box-shadow:0 6px 15px rgba(0,0,0,0.1); }
-section img { width:100%; max-width:600px; display:block; margin:20px auto; border-radius:10px; }
 h2 { color:#007acc; margin-top:30px; }
 ul { padding-left:20px; }
 a.button { display:inline-block; margin:10px 0; padding:8px 15px; background-color:#007acc; color:#fff; border-radius:5px; text-decoration:none; transition:background-color 0.3s; }
@@ -22,13 +22,14 @@ a.button:hover { background-color:#005fa3; }
 footer { text-align:center; padding:25px 20px; background:#111; color:#fff; margin-top:40px; }
 </style>
 </head>
+
 <body>
 
 <header>
     <img src="yulia.jpg" alt="Yulia Chekhovska">
-    <h1>Public Health Data Engineering Japan Suicide Statistics Pipeline</h1>
+    <h1>Japan Suicide Statistics Data Engineering & Economic Impact Pipeline</h1>
     <p style="max-width:800px;margin:8px auto 0;opacity:0.95">
-        Scraping, cleaning, and analyzing Japan police suicide statistics to provide interactive visualizations and time-series forecasts at the population level, supporting evidence-based public health insights.
+        A full-stack data engineering and analytics project integrating scraping, cleaning, forecasting, and economic modeling to support evidence-based public health interventions in Japan.
     </p>
 </header>
 
@@ -37,29 +38,78 @@ footer { text-align:center; padding:25px 20px; background:#111; color:#fff; marg
 </nav>
 
 <section>
-    <img src="japan-police-logo.png" alt="Japan Police Logo">
 
-    <h2>Goal</h2>
-    <p>Build a sustainable, automated pipeline for Japan police suicide statistics, visualize trends with interactive dashboards, and apply time-series modeling to understand population-level patterns over time.</p>
+    <img src="japan-police-logo.png" alt="Japan Police Logo" style="width:140px; display:block; margin:0 auto; opacity:0.9">
 
-    <h2>Methods</h2>
+    <h2>Summary</h2>
+    <p>
+        This project builds a complete, automated pipeline for Japan’s police suicide statistics.  
+        It spans ingestion, data cleaning, cross-sectional analysis, time-series forecasting, and an economic loss model that simulates policy scenarios such as a 15 percent reduction in suicide rates.  
+        The output is a decision-support tool for public health teams assessing where interventions are most cost-effective.
+    </p>
+
+    <h2>Situation</h2>
+    <p>
+        Japan publishes detailed suicide statistics, but raw data is fragmented across PDFs, HTML tables, and annual police reports.  
+        Public health teams require a unified, analyzable dataset and interpretable outputs to evaluate trends and quantify economic consequences.
+    </p>
+
+    <h2>Task</h2>
+    <p>
+        Engineer a reproducible dataset, analyze demographic patterns, attempt forecasting across age groups, and quantify economic losses using lifetime productivity models.  
+        Produce policy scenarios to demonstrate potential ROI of targeted interventions.
+    </p>
+
+    <h2>Action</h2>
     <ul>
-        <li><strong>Data engineering:</strong> web scraping, cleaning, and building a self-updating pipeline</li>
-        <li><strong>Data visualization:</strong> interactive dashboards for trend analysis</li>
-        <li><strong>ML time-series forecasting:</strong> regression-based trend modeling for aggregated statistics</li>
-        <li><strong>Economic Impact:</strong> estimating lost lifetime tax revenue and productivity to illustrate cost-effectiveness of prevention</li>
+        <li><strong>Data Engineering:</strong> web scraping, PDF extraction, Japanese era conversion, missing-value resolution, category normalization, and merge logic for age, gender, and reason-of-suicide data.</li>
+        <li><strong>Exploratory Visualization:</strong> demographic heatmaps, multi-year trends, and cross-analysis of age and cause categories.</li>
+        <li><strong>Modeling Attempts:</strong> Linear Regression, XGBoost, Prophet, and ARIMA for age-specific forecasting (limited performance due to sparse time series).</li>
+        <li><strong>Economic Modeling:</strong> lifetime earnings, tax revenue estimates, and discounted productivity loss per suicide case.</li>
+        <li><strong>Policy Engine:</strong> scenario simulations adjusting suicide rates and productivity, generating age-specific loss differentials.</li>
     </ul>
 
-    <h2>Outcome</h2>
-    <p>The pipeline and dashboard provide population-level insights and forecasts. Forecasts highlight trends that can inform preventive strategies and resource planning, helping public health centers target interventions where they are most needed.</p>
+    <h2>Tools & ML Libraries</h2>
+    <ul>
+        <li>Pandas, NumPy, BeautifulSoup4, Requests, PyPDF2</li>
+        <li>Matplotlib, Seaborn</li>
+        <li>Scikit-learn (Linear Regression), XGBoost</li>
+        <li>Prophet, Statsmodels (ARIMA, SARIMA)</li>
+        <li>Custom NPV-based economic loss modeling</li>
+    </ul>
+
+    <h2>Results</h2>
+    <p>
+        The pipeline consolidates more than two decades of demographic suicide data.  
+        Economic modeling shows that working-age cohorts 20–59 generate the highest productivity losses, with middle-age brackets contributing over ¥300B annually.  
+        A simulated 15 percent reduction in suicide rates produces multi-billion yen savings across all age groups.
+    </p>
+
+    <div style="background:#f0f4ff; padding:15px; border-radius:8px; margin:20px 0; text-align:center;">
+        <img src="highest-suicides.png" alt="Highest Suicides by Age Group 1978-2024"
+            style="max-width:100%; border-radius:8px;">
+    </div>
+
+    <div style="background:#f0f4ff; padding:15px; border-radius:8px; margin:20px 0; text-align:center;">
+        <img src="economic_loss_table.png" alt="Final Economic Loss Table"
+            style="max-width:100%; border-radius:8px;">
+    </div>
+
+
+    <h2>Limitations</h2>
+    <p>
+        Age-specific forecasting remains statistically unstable due to short time spans and category volatility.  
+        Further improvement requires either more granular data or hierarchical time-series models.
+    </p>
 
     <h2>Explore</h2>
-    <iframe class="sheet-embed" src="https://docs.google.com/document/d/1j34JIiakTalFC_5zKhkkThVc4CLGtmdByHE1w_yWmIc/edit?usp=sharing" title="Japan Suicide Data Dashboard"></iframe>
+    <iframe class="sheet-embed" src="https://docs.google.com/document/d/1j34JIiakTalFC_5zKhkkThVc4CLGtmdByHE1w_yWmIc/edit?usp=sharing"></iframe>
 
     <p style="margin-top:14px">Quick links:</p>
-    <a href="#" class="button" onclick="window.open('https://docs.google.com/document/d/1j34JIiakTalFC_5zKhkkThVc4CLGtmdByHE1w_yWmIc/edit?usp=sharing','_blank')">Open Sheet</a>
-    <a href="https://www.npa.go.jp/publications/statistics/safetylife/jisatsu.html" class="button" target="_blank">View Japan Police Statistics</a>
+    <a href="https://docs.google.com/document/d/1j34JIiakTalFC_5zKhkkThVc4CLGtmdByHE1w_yWmIc/edit?usp=sharing" class="button" target="_blank">Open Report</a>
+    <a href="https://www.npa.go.jp/publications/statistics/safetylife/jisatsu.html" class="button" target="_blank">Japan Police Statistics</a>
     <a href="https://github.com/YuriyaJP/Public-Health-Data-Engineering-Project-Japan-Suicide-Statistics-Pipeline" class="button" target="_blank">View Code</a>
+
 </section>
 
 <footer>
