@@ -65,9 +65,16 @@ header {
     transform: scale(1.05);
 }
 
+
 .control-btn img {
-    width: 50%;
-    height: 50%;
+    width: 28px;        /* fixed size so swap is immediate */
+    height: 28px;
+    display: block;
+    transition: transform 0.1s ease; /* subtle click feedback */
+}
+
+.control-btn:active img {
+    transform: scale(0.9);  /* small “press” effect */
 }
 
 .control-btn-wrapper {

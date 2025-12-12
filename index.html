@@ -18,15 +18,16 @@
     </div>
 
 
-
 <div class="control-btn-wrapper">
     <button id="play-toggle" class="control-btn">
         <img id="play-icon" src="play-icon.png" alt="Play/Stop">
     </button>
     <button id="sound-toggle" class="control-btn">
-        <img id="sound-icon" src="unmute-icon.png" alt="Mute/Unmute">
+        <!-- show muted icon if video starts muted -->
+        <img id="sound-icon" src="mute-icon.png" alt="Mute/Unmute">
     </button>
 </div>
+
 
 
 
@@ -219,6 +220,11 @@ const pauseImg = 'pause-icon.png';
 const muteImg = 'mute-icon.png';
 const unmuteImg = 'unmute-icon.png';
 
+// Initialize icons based on current state
+playIcon.src = video.paused ? playImg : pauseImg;
+soundIcon.src = video.muted ? muteImg : unmuteImg;
+
+// Play/pause toggle
 playToggle.addEventListener('click', () => {
     if (video.paused) {
         video.play();
@@ -229,10 +235,13 @@ playToggle.addEventListener('click', () => {
     }
 });
 
+// Mute/unmute toggle
 soundToggle.addEventListener('click', () => {
     video.muted = !video.muted;
     soundIcon.src = video.muted ? muteImg : unmuteImg;
 });
+
+
 
 
 // Portfolio tag filtering
