@@ -20,14 +20,14 @@
 
 <div class="control-btn-wrapper">
     <button id="play-toggle" class="control-btn">
-        <img id="play-icon" src="play-icon.png" alt="Play/Stop">
+        <!-- video is playing → show pause icon -->
+        <img id="play-icon" src="pause-icon.png" alt="Play/Stop">
     </button>
     <button id="sound-toggle" class="control-btn">
-        <!-- show muted icon if video starts muted -->
+        <!-- video is muted → show mute icon -->
         <img id="sound-icon" src="mute-icon.png" alt="Mute/Unmute">
     </button>
 </div>
-
 
 
 
@@ -220,9 +220,13 @@ const pauseImg = 'pause-icon.png';
 const muteImg = 'mute-icon.png';
 const unmuteImg = 'unmute-icon.png';
 
-// Initialize icons based on current state
-playIcon.src = video.paused ? playImg : pauseImg;
-soundIcon.src = video.muted ? muteImg : unmuteImg;
+// Ensure video starts muted and autoplay
+video.muted = true;
+video.play();
+
+// Initialize icons
+playIcon.src = pauseImg;  // playing → pause icon
+soundIcon.src = muteImg;   // muted → mute icon
 
 // Play/pause toggle
 playToggle.addEventListener('click', () => {
