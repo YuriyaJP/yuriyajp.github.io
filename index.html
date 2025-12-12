@@ -19,10 +19,16 @@
 
 
 
-    <div class="profile-controls">
-        <button id="video-toggle" class="video-toggle">Pause</button>
-        <button id="sound-toggle" class="video-toggle">Unmute</button>
-    </div>
+<div class="control-btn-wrapper">
+    <button id="play-toggle" class="control-btn">
+        <img id="play-icon" src="play-icon.png" alt="Play/Stop">
+    </button>
+    <button id="sound-toggle" class="control-btn">
+        <img id="sound-icon" src="unmute-icon.png" alt="Mute/Unmute">
+    </button>
+</div>
+
+
 
     <h1>Yulia Chekhovska</h1>
 </header>
@@ -178,18 +184,33 @@
 
 // Profile video controls
 const video = document.getElementById('profile-video');
-const videoToggle = document.getElementById('video-toggle');
+const playToggle = document.getElementById('play-toggle');
 const soundToggle = document.getElementById('sound-toggle');
 
-videoToggle.addEventListener('click', () => {
-    video.paused ? video.play() : video.pause();
-    videoToggle.textContent = video.paused ? 'Play' : 'Pause';
+const playIcon = document.getElementById('play-icon');
+const soundIcon = document.getElementById('sound-icon');
+
+// Clipart sources
+const playImg = 'play-icon.png';
+const pauseImg = 'pause-icon.png';
+const muteImg = 'mute-icon.png';
+const unmuteImg = 'unmute-icon.png';
+
+playToggle.addEventListener('click', () => {
+    if (video.paused) {
+        video.play();
+        playIcon.src = pauseImg;
+    } else {
+        video.pause();
+        playIcon.src = playImg;
+    }
 });
 
 soundToggle.addEventListener('click', () => {
     video.muted = !video.muted;
-    soundToggle.textContent = video.muted ? 'Unmute' : 'Mute';
+    soundIcon.src = video.muted ? muteImg : unmuteImg;
 });
+
 
 // Portfolio tag filtering
 const items = document.querySelectorAll('.portfolio-item');

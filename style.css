@@ -46,6 +46,37 @@ header {
     margin-top: 10px;
 }
 
+.control-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,0.12);
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.control-btn:hover {
+    transform: scale(1.05);
+}
+
+.control-btn img {
+    width: 50%;
+    height: 50%;
+}
+
+.control-btn-wrapper {
+    display: flex;
+    justify-content: center; /* centers buttons horizontally */
+    gap: 20px; /* space between buttons */
+    margin-top: 15px;
+}
+
 .video-toggle {
     background: #444;
     color: #fff;
