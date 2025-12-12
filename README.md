@@ -14,13 +14,15 @@ Data-driven researcher focusing on:
 
 ---
 
-## GitHub Stats
+<!-- GitHub Stats -->
+![GitHub stats](https://yuriyajp-github-n1rij5wmc-yuriyajps-projects.vercel.app/api?username=YuriyaJP&show_icons=true&theme=radical)
 
-![GitHub Stats](https://yuriyajp-github-n1rij5wmc-yuriyajps-projects.vercel.app/api?username=YuriyaJP&show_icons=true&theme=radical)
+<!-- Top Languages -->
+![Top Langs](https://yuriyajp-github-n1rij5wmc-yuriyajps-projects.vercel.app/api/top-langs/?username=YuriyaJP&layout=compact&theme=radical)
 
-![Top Languages](https://yuriyajp-github-n1rij5wmc-yuriyajps-projects.vercel.app/api/top-langs/?username=YuriyaJP&layout=compact&theme=radical)
+<!-- Visitor badge -->
+![Visitors](https://img.shields.io/badge/visitors-YuriyaJP-blue)
 
-![Visitors](https://img.shields.io/badge/visitors-tracking-blue)
 
 ---
 
