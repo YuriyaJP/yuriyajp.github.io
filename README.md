@@ -1,7 +1,29 @@
-# yuliia.github.io
+# Yuliia | Portfolio & Research
 
-![GitHub stats](https://github-readme-stats.vercel.app/api?username=YuriyaJP&show_icons=true&theme=radical)
+Welcome to my public portfolio repository.  
+This repo hosts my personal website, research projects, interactive data visualizations, and publications.
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=YuriyaJP&layout=compact&theme=radical)
+---
 
-![Visitors] (https://img.shields.io/badge/glitch.me%2Fbadge%3Fpage_id%3DYuriyaJP.visitor-badge) 
+## About Me
+Data-driven researcher focusing on:
+- Social issues in Japan
+- Forecasting and predictive modeling
+- Behavioral insights
+- Machine learning, visualization, and policy simulation
+
+---
+
+## GitHub Stats
+*(Requires Vercel deployment – replace URL below with yours)*
+
+![GitHub Stats](https://yuriyajp-github-n1rij5wmc-yuriyajps-projects.vercel.app/api?username=YuriyaJP&show_icons=true&theme=radical)
+
+![Top Languages](https://yuriyajp-github-n1rij5wmc-yuriyajps-projects.vercel.app/api/top-langs/?username=YuriyaJP&layout=compact&theme=radical)
+
+![Visitors](https://img.shields.io/badge/visitors-tracking-blue)
+
+---
+
+## Portfolio Website
+This repository contains the source for my website:
