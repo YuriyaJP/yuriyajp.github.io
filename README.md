@@ -15,7 +15,6 @@ Data-driven researcher focusing on:
 ---
 
 ## GitHub Stats
-*(Requires Vercel deployment – replace URL below with yours)*
 
 ![GitHub Stats](https://yuriyajp-github-n1rij5wmc-yuriyajps-projects.vercel.app/api?username=YuriyaJP&show_icons=true&theme=radical)
 
