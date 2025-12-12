@@ -1,11 +1,15 @@
-/* GLOBAL RESET */
+/* =========================
+   GLOBAL RESET
+   ========================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* GLOBAL TYPOGRAPHY AND BODY */
+/* =========================
+   GLOBAL TYPOGRAPHY & BODY
+   ========================= */
 body {
     font-family: Arial, sans-serif;
     background: url('background.jpg') no-repeat center center fixed;
@@ -14,14 +18,16 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     overflow-y: auto; /* remove double scrolling */
-    font-weight: 600; /* stronger text across site */
+    font-weight: 600;
 }
 
 h1, h2 {
     font-weight: 800;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+   ========================= */
 header {
     text-align: center;
     padding-top: 20px;
@@ -52,22 +58,23 @@ header {
 }
 
 .video-wrapper {
-    width: 200px;                   /* same size as the video */
+    width: 200px;
     height: 200px;
-    border-radius: 50%;             /* perfect circle */
-    padding: 6px;                   /* glow border */
+    border-radius: 50%;
+    padding: 6px;
     display: flex;
     justify-content: center;
     align-items: center;
-
     background: rgba(255,255,255,0.12);
     backdrop-filter: blur(4px);
     box-shadow: 0 0 25px rgba(255,255,255,0.25);
-    margin: 0 auto;                 /* keeps it centered */
+    margin: 0 auto;
 }
 
-
-/* NAVIGATION TABS */
+/* =========================
+   NAVIGATION TABS
+   ========================= */
+   
 .nav-tabs {
     display: flex;
     justify-content: center;
@@ -103,9 +110,11 @@ header {
     box-shadow: 0 0 10px rgba(255,255,255,0.9);
 }
 
-/* PANEL SYSTEM */
+/* =========================
+   PANEL SYSTEM
+   ========================= */
 section {
-    display: none;
+    display: none;  /* used for tabbed content only */
     opacity: 0;
     transition: opacity 0.35s ease-in-out;
     width: 100%;
@@ -118,12 +127,14 @@ section.active-section {
     opacity: 1;
 }
 
-/* tighten spacing between tabs and content */
 section h2 {
     margin-top: 10px;
     margin-bottom: 15px;
 }
-//* ABOUT SECTION */
+
+/* =========================
+   ABOUT SECTION
+   ========================= */
 #about {
     padding: 20px;
     font-family: sans-serif;
@@ -134,8 +145,8 @@ section h2 {
     background-color: #0000006b;
     border-radius: 15px;
     padding: 20px;
-    width: 100%;      /* spans entire page width */
-    box-sizing: border-box; /* ensures padding doesn't overflow */
+    width: 100%;
+    box-sizing: border-box;
     line-height: 1.6;
     margin-bottom: 20px;
 }
@@ -153,15 +164,15 @@ section h2 {
     line-height: 1.5;
 }
 
-
-
-/* PORTFOLIO */
+/* =========================
+   PORTFOLIO
+   ========================= */
 .tag-filter {
     margin-bottom: 20px;
 }
 
 .tag-btn {
-    background: #010a01a8;
+    background: #0a0101a8;
     border: 1px solid rgba(255, 255, 255, 0.849);
     padding: 8px 16px;
     border-radius: 25px;
@@ -200,24 +211,22 @@ section h2 {
 
 .project-title {
     font-weight: bold;
-    font-size: 1rem; /* slightly smaller */
+    font-size: 1rem;
     display: inline-block;
-    margin-top: 6px; /* tighter spacing */
-    padding: 4px 10px; /* thinner padding to fit text */
-    background: rgba(0,0,0,0.6); /* semi-transparent instead of full black */
-    color: #f1f1f1; /* lighter text */
-    border-radius: 12px; /* slightly smaller rounding */
+    margin-top: 6px;
+    padding: 4px 10px;
+    background: rgba(0,0,0,0.6);
+    color: #f1f1f1;
+    border-radius: 12px;
     text-decoration: none;
     transition: all 0.25s ease;
-    text-shadow: 0 0 4px rgba(255,255,255,0.35); /* lighter shadow */
+    text-shadow: 0 0 4px rgba(255,255,255,0.35);
 }
 
 .project-title:hover {
-    transform: scale(1.05); /* subtler zoom */
-    box-shadow: 0 0 10px rgba(255,255,255,0.6); /* softer glow */
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255,255,255,0.6);
 }
-
-
 
 .view-button {
     display: inline-block;
@@ -236,8 +245,9 @@ section h2 {
     box-shadow: 0 0 14px rgba(255,255,255,0.8);
 }
 
-
-/* MEDIA GRID */
+/* =========================
+   MEDIA GRID
+   ========================= */
 .media-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -254,7 +264,6 @@ figcaption strong {
     font-weight: 800;
 }
 
-/* MEDIA MODAL */
 .media-modal {
     display: none;
     position: fixed;
@@ -284,7 +293,9 @@ figcaption strong {
     cursor: pointer;
 }
 
-/* CONTACT */
+/* =========================
+   CONTACT
+   ========================= */
 .contact-icons {
     display: flex;
     gap: 20px;
@@ -309,7 +320,6 @@ figcaption strong {
     border-radius: 25px;
     text-decoration: none;
     transition: all 0.25s ease;
-
 }
 
 .contact-icons a:hover {
@@ -317,12 +327,124 @@ figcaption strong {
     box-shadow: 0 0 14px rgba(255,255,255,0.8);
 }
 
-
-/* FOOTER */
+/* =========================
+   FOOTER
+   ========================= */
 footer {
     text-align: center;
     margin-top: 20px;
     padding: 10px 0;
     opacity: 0.75;
+    font-weight: 700;
+}
+
+/* =========================
+   PROJECT PAGES
+   ========================= */
+body.project-page {
+    color: #222;
+}
+
+body.project-page section {
+    display: block;             /* override tab sections */
+    opacity: 1;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    padding: 40px 20px;
+    background: #fff;
+    color: #111;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    line-height: 1.6;
+}
+
+body.project-page header {
+    text-align: center;
+    padding-top: 20px;
+    color: #fff; /* make all text inside header white */
+}
+
+body.project-page section h2 {
+    color: #000000;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+
+body.project-page section img {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* Make nav links on project pages match project buttons */
+body.project-page nav {
+    text-align: center;  /* center the nav links */
+    margin: 20px 0;      /* spacing above and below */
+}
+
+body.project-page nav a {
+    display: inline-block;
+    margin: 12px 8px;  /* spacing between links */
+    padding: 10px 24px;
+    background: linear-gradient(135deg, #60666e, #000000);
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 50px; /* pill shape */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+}
+
+body.project-page nav a:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    background: linear-gradient(135deg, #6e757c, #d0e3f0);
+}
+
+
+body.project-page a.button,
+body.project-page .view-button {
+    display: inline-block;
+    margin: 12px 0;
+    padding: 10px 24px;
+    background: linear-gradient(135deg, #60666e, #000000);
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 50px; /* pill shape */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+}
+
+body.project-page a.button:hover,
+body.project-page .view-button:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    background: linear-gradient(135deg,  #6e757c, #d0e3f0);
+}
+
+
+
+body.project-page .pdf-embed {
+    display: block;
+    margin: 20px auto;  /* center horizontally */
+    width: 100%;        /* fills section width */
+    max-width: 1000px;  /* optional max-width */
+    height: 650px;
+    border: 1px solid #e6eef6;
+    border-radius: 8px;
+}
+
+
+body.project-page footer {
+    background: #111;
+    color: #fff;
+    opacity: 0.85;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
     font-weight: 700;
 }
