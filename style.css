@@ -1,20 +1,46 @@
-/* =========================
-   GLOBAL RESET
-   ========================= */
+/* =========================================================
+   0. GLOBAL RESET
+   ========================================================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* =========================
-   GLOBAL TYPOGRAPHY & BODY
-   ========================= */
+/* =========================================================
+   1. GLOBAL DESIGN TOKENS (professional maintainability)
+   ========================================================= */
+:root {
+    /* Colors */
+    --white: #ffffff;
+    --black: #000000;
+    --text-light: #f1f1f1;
+
+    --glass-light: rgba(255,255,255,0.25);
+    --glass-medium: rgba(255,255,255,0.4);
+    --glass-strong: rgba(255,255,255,0.6);
+
+    --project-green-1: #0f3d2e;
+    --project-green-2: #1c5f45;
+    --project-green-3: #247758;
+
+    /* Shadows */
+    --soft-shadow: 0 0 10px rgba(255,255,255,0.6);
+    --img-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    --card-shadow: 0 8px 30px rgba(0,0,0,0.25);
+
+    /* Transitions */
+    --trans: 0.25s ease;
+}
+
+/* =========================================================
+   2. GLOBAL BODY & TYPOGRAPHY
+   ========================================================= */
 body {
     font-family: Arial, sans-serif;
     background: url('assets/images/profile/background.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: #fff;
+    color: var(--white);
     line-height: 1.6;
     overflow-x: hidden;
     overflow-y: auto;
@@ -25,9 +51,16 @@ h1, h2 {
     font-weight: 800;
 }
 
-/* =========================
-   HEADER
-   ========================= */
+/* =========================================================
+   3. UTILITIES
+   ========================================================= */
+.hidden {
+    display: none !important;
+}
+
+/* =========================================================
+   4. HEADER
+   ========================================================= */
 header {
     text-align: center;
     padding-top: 20px;
@@ -42,35 +75,28 @@ header {
     object-fit: cover;
 }
 
+/* Control Btns */
 .control-btn {
     width: 60px;
     height: 60px;
     border-radius: 50%;
     padding: 6px;
+    background: rgba(255,255,255,0.12);
+    border: none;
+    margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(255,255,255,0.12);
-    margin: 10px;
-    border: none;
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform .2s, box-shadow .2s;
 }
-
-.control-btn:hover {
-    transform: scale(1.05);
-}
-
+.control-btn:hover { transform: scale(1.05); }
 .control-btn img {
     width: 28px;
     height: 28px;
-    display: block;
-    transition: transform 0.1s ease;
+    transition: transform .1s ease;
 }
-
-.control-btn:active img {
-    transform: scale(0.9);
-}
+.control-btn:active img { transform: scale(0.9); }
 
 .control-btn-wrapper {
     display: flex;
@@ -93,51 +119,50 @@ header {
     margin: 0 auto;
 }
 
-/* =========================
-   NAVIGATION TABS
-   ========================= */
+/* =========================================================
+   5. TOP NAVIGATION (HOME PAGE)
+   ========================================================= */
 .nav-tabs {
     display: flex;
     justify-content: center;
     gap: 18px;
-    margin: 20px auto 10px auto;
+    margin: 20px auto 10px;
     padding: 10px 0;
     z-index: 3;
 }
 
 .tab-btn {
-    background: rgba(255,255,255,0.25);
-    border: 1px solid rgba(255,255,255,0.4);
+    background: var(--glass-light);
+    border: 1px solid var(--glass-medium);
     padding: 10px 18px;
     border-radius: 6px;
-    color: white;
-    cursor: pointer;
+    color: var(--white);
     font-size: 1.05rem;
     font-weight: 700;
+    cursor: pointer;
     backdrop-filter: blur(6px);
-    transition: background 0.2s ease, transform 0.2s ease;
+    transition: background .2s, transform .2s;
 }
 
 .tab-btn:hover {
-    background: rgba(255,255,255,0.4);
+    background: var(--glass-medium);
     transform: translateY(-2px);
 }
 
 .tab-btn.active {
-    background: white;
-    color: black;
-    transform: translateY(-2px);
-    box-shadow: 0 0 10px rgba(255,255,255,0.9);
+    background: var(--white);
+    color: var(--black);
+    box-shadow: 0 0 10px var(--white);
 }
 
-/* =========================
-   PANEL SYSTEM
-   ========================= */
+/* =========================================================
+   6. PANEL SYSTEM
+   ========================================================= */
 section {
     display: none;
     opacity: 0;
-    transition: opacity 0.35s ease-in-out;
     padding: 20px 10vw;
+    transition: opacity .35s ease-in-out;
 }
 
 section.active-section {
@@ -145,48 +170,51 @@ section.active-section {
     opacity: 1;
 }
 
-/* =========================
-   ABOUT
-   ========================= */
+/* Ensure project pages always show content AND remove home-page padding */
+body.project-page section {
+    display: block !important;
+    opacity: 1 !important;
+    padding: 40px 28px !important;  /* matches your project-page card styling */
+}
+
+/* =========================================================
+   7. ABOUT
+   ========================================================= */
 .about-card {
-    background-color: #0000006b;
+    background: rgba(0,0,0,0.42);
     border-radius: 15px;
     padding: 20px;
-    width: 100%;
     line-height: 1.6;
     margin-bottom: 20px;
 }
 
-.places {
-    margin-bottom: 1rem;
-}
+.places { margin-bottom: 1rem; }
 
-/* =========================
-   PORTFOLIO
-   ========================= */
+/* =========================================================
+   8. PORTFOLIO
+   ========================================================= */
 .tag-btn {
-    background: #0a0101a8;
+    background: rgba(10,1,1,0.66);
     border: 1px solid rgba(255,255,255,0.85);
     padding: 8px 16px;
     border-radius: 25px;
-    color: #fff;
+    color: var(--white);
     font-weight: bold;
-    cursor: pointer;
     opacity: 0.85;
-    transition: all 0.25s ease;
+    cursor: pointer;
+    transition: var(--trans);
 }
 
 .tag-btn:hover {
     opacity: 1;
-    border-color: #fff;
-    text-shadow: 0 0 8px rgba(255,255,255,0.6);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.77);
+    border-color: var(--white);
+    text-shadow: 0 0 8px var(--white);
+    box-shadow: 0 0 10px rgba(255,255,255,0.77);
 }
 
 .tag-btn.active {
-    background: #fff;
-    color: #111;
-    opacity: 1;
+    background: var(--white);
+    color: var(--black);
     box-shadow: 0 0 14px rgba(255,255,255,0.85);
 }
 
@@ -200,7 +228,7 @@ section.active-section {
 .portfolio-item img {
     width: 100%;
     border-radius: 8px;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition: transform .25s, box-shadow .25s;
 }
 
 .portfolio-item img:hover {
@@ -209,43 +237,41 @@ section.active-section {
 }
 
 .project-title {
-    font-weight: bold;
-    font-size: 1rem;
     display: inline-block;
     margin-top: 6px;
     padding: 4px 10px;
     background: rgba(0,0,0,0.6);
-    color: #f1f1f1;
+    color: var(--text-light);
     border-radius: 12px;
+    font-weight: bold;
     text-decoration: none;
-    transition: all 0.25s ease;
+    transition: var(--trans);
 }
 
 .project-title:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(255,255,255,0.6);
+    box-shadow: var(--soft-shadow);
 }
 
 .view-button {
     display: inline-block;
     margin-top: 12px;
     padding: 8px 18px;
-    background: #fff;
-    color: #111;
+    background: var(--white);
+    color: var(--black);
     font-weight: bold;
     border-radius: 25px;
     text-decoration: none;
-    transition: all 0.25s ease;
+    transition: var(--trans);
 }
-
 .view-button:hover {
     transform: scale(1.08);
-    box-shadow: 0 0 14px rgba(255,255,255,0.8);
+    box-shadow: 0 0 14px var(--white);
 }
 
-/* =========================
-   MEDIA CAROUSEL
-   ========================= */
+/* =========================================================
+   9. MEDIA CAROUSEL
+   ========================================================= */
 .media-carousel {
     position: relative;
     width: 100%;
@@ -253,21 +279,16 @@ section.active-section {
     margin: 30px 0;
 }
 
-.carousel-window {
-    width: 100%;
-    overflow: hidden;
-}
+.carousel-window { overflow: hidden; }
 
 .carousel-track {
     display: flex;
     gap: 20px;
-    transition: transform 0.2s ease;
+    transition: transform .2s ease;
     will-change: transform;
 }
 
-.media-item {
-    flex: 0 0 300px;
-}
+.media-item { flex: 0 0 300px; }
 
 .media-thumb {
     width: 100%;
@@ -275,7 +296,7 @@ section.active-section {
     object-fit: cover;
     border-radius: 8px;
     cursor: zoom-in;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform .3s, box-shadow .3s;
 }
 
 .media-thumb:hover {
@@ -289,20 +310,20 @@ section.active-section {
     top: 50%;
     transform: translateY(-50%);
     background: rgba(0,0,0,0.4);
-    color: #fff;
+    color: var(--white);
     border: none;
-    font-size: 2rem;
     padding: 12px 18px;
     border-radius: 50%;
+    font-size: 2rem;
     cursor: pointer;
 }
 
 .carousel-prev { left: 10px; }
 .carousel-next { right: 10px; }
 
-/* =========================
-   CONTACT
-   ========================= */
+/* =========================================================
+   10. CONTACT
+   ========================================================= */
 .contact-icons {
     display: flex;
     gap: 20px;
@@ -311,22 +332,22 @@ section.active-section {
 
 .contact-icons a {
     padding: 8px 18px;
-    background: #fff;
-    color: #111;
+    background: var(--white);
+    color: var(--black);
     font-weight: bold;
     border-radius: 25px;
     text-decoration: none;
-    transition: all 0.25s ease;
+    transition: var(--trans);
 }
 
 .contact-icons a:hover {
     transform: scale(1.08);
-    box-shadow: 0 0 14px rgba(255,255,255,0.8);
+    box-shadow: 0 0 14px var(--white);
 }
 
-/* =========================
-   FOOTER
-   ========================= */
+/* =========================================================
+   11. FOOTER
+   ========================================================= */
 footer {
     text-align: center;
     margin-top: 20px;
@@ -335,43 +356,38 @@ footer {
     font-weight: 700;
 }
 
-/* =========================
-   PROJECT PAGES
-   ========================= */
+/* =========================================================
+   12. PROJECT PAGES BASE
+   ========================================================= */
 body.project-page {
-    background: url('assets/images/profile/background.jpg') no-repeat center center fixed;
+    background: url('../assets/images/profile/background.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: #fff;
+    color: var(--white);
 }
 
-/* Home nav link on project pages */
-body.project-page nav a {
-    display: inline-block;
-    margin: 18px auto 25px;
-    text-align: center;
-    padding: 10px 22px;
-
-    background: rgba(255,255,255,0.22);
-    color: white;
-
-    border: 1px solid rgba(255,255,255,0.5);
-    border-radius: 8px;
-
-    backdrop-filter: blur(6px);
-
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.05rem;
-
-    transition: background 0.2s ease, transform 0.2s ease;
-
-}
-
-/* Center nav on project pages */
+/* Navigation */
 body.project-page nav {
     text-align: center;
     margin-top: 25px;
     margin-bottom: -10px;
+}
+
+body.project-page nav a {
+    display: inline-block;
+    padding: 10px 22px;
+    margin: 18px auto 25px;
+
+    background: rgba(255,255,255,0.22);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 8px;
+
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-decoration: none;
+    backdrop-filter: blur(6px);
+
+    transition: background .2s, transform .2s;
 }
 
 body.project-page nav a:hover {
@@ -380,15 +396,11 @@ body.project-page nav a:hover {
     box-shadow: 0 0 14px rgba(255,255,255,0.6);
 }
 
-
-/* Project page header */
+/* Header */
 body.project-page header h1 {
     margin-top: 18px;
     font-size: 2rem;
-    font-weight: 800;
     letter-spacing: 0.5px;
-
-    color: #ffffff;
     text-shadow:
         0 2px 6px rgba(0,0,0,0.45),
         0 0 10px rgba(255,255,255,0.3);
@@ -399,100 +411,87 @@ body.project-page header img {
     height: 170px;
     border-radius: 50%;
     object-fit: cover;
-
     box-shadow:
         0 4px 14px rgba(0,0,0,0.4),
         0 0 10px rgba(255,255,255,0.4);
 }
 
-/* Project page images must fit inside card */
-body.project-page section img {
-    width: 100%;
-    max-width: 700px;
-    height: auto;
-    display: block;
-    margin: 0 auto 25px auto;
-    border-radius: 10px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-}
-
-
-
-/* Project content card */
+/* Content card */
 body.project-page section {
-    display: block;
-    opacity: 1;
     max-width: 900px;
     margin: 40px auto;
     padding: 40px 28px;
-
     background: rgba(255,255,255,0.92);
     color: #111;
     border-radius: 14px;
-
     box-shadow:
-        0 8px 30px rgba(0,0,0,0.25),
+        var(--card-shadow),
         inset 0 1px 6px rgba(255,255,255,0.5);
 }
 
-/* Full-width PDF embed */
+/* Page images */
+body.project-page section img {
+    width: 100%;
+    max-width: 700px;
+    display: block;
+    margin: 0 auto 25px;
+    border-radius: 10px;
+    box-shadow: var(--img-shadow);
+}
+
+/* PDF embed */
 body.project-page .pdf-embed {
     width: 100%;
     height: 90vh;
     border: none;
-    margin: 20px 0;
     border-radius: 10px;
+    margin: 20px 0;
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 
-
-
-/* Modern gradient button for project pages */
+/* Project page button (green gradient) */
 body.project-page .project-button {
     display: inline-block;
-    margin-top: 12px;
     padding: 10px 22px;
+    margin-top: 12px;
 
-    /* Gradient */
-    background: linear-gradient(135deg, #0f3d2e, #1c5f45 60%, #247758);
+    background: linear-gradient(135deg, var(--project-green-1), var(--project-green-2) 60%, var(--project-green-3));
     color: #e9f9f1;
-
     font-weight: 700;
-    border-radius: 28px;
-    text-decoration: none;
     letter-spacing: 0.5px;
 
-    /* Subtle border + depth */
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 28px;
+    border: 1px solid rgba(255,255,255,0.15);
+
+    text-decoration: none;
+
     box-shadow:
-        0 2px 6px rgba(0, 0, 0, 0.35),
-        inset 0 1px 2px rgba(255, 255, 255, 0.1);
+        0 2px 6px rgba(0,0,0,0.35),
+        inset 0 1px 2px rgba(255,255,255,0.1);
 
-    transition: 
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        background 0.25s ease;
+    transition: transform var(--trans), box-shadow var(--trans), background var(--trans);
 }
-
 
 body.project-page .project-button:hover {
     transform: scale(1.07) translateY(-2px);
     background: linear-gradient(135deg, #1a5740, #267d5b 60%, #2d8f6c);
     box-shadow:
-        0 4px 14px rgba(0, 0, 0, 0.45),
-        0 0 12px rgba(36, 119, 88, 0.55); /* green glow */
+        0 4px 14px rgba(0,0,0,0.45),
+        0 0 12px rgba(36,119,88,0.55);
 }
 
 body.project-page .project-button:active {
     transform: scale(0.96);
     box-shadow:
-        0 2px 6px rgba(0, 0, 0, 0.35),
-        inset 0 2px 4px rgba(0, 0, 0, 0.4);
+        0 2px 6px rgba(0,0,0,0.35),
+        inset 0 2px 4px rgba(0,0,0,0.4);
 }
 
-/* Hide modal by default and style it */
+/* =========================================================
+   13. MEDIA MODAL
+   ========================================================= */
 .media-modal {
-    display: none; /* critical: prevents the stray × */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -504,7 +503,6 @@ body.project-page .project-button:active {
     z-index: 9999;
 }
 
-/* Modal content */
 .media-modal-content {
     position: relative;
     max-width: 90%;
@@ -513,17 +511,15 @@ body.project-page .project-button:active {
 
 #media-modal-img {
     width: 100%;
-    height: auto;
     border-radius: 10px;
 }
 
-/* Close button */
 .media-modal-close {
     position: absolute;
     top: 25px;
     right: 30px;
     font-size: 42px;
-    color: white;
+    color: var(--white);
     background: none;
     border: none;
     cursor: pointer;

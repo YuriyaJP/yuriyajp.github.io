@@ -9,27 +9,28 @@
 
 <body>
 
-<header>
+<header role="banner">
     <div class="video-wrapper">
         <video id="profile-video" class="profile-media" autoplay muted playsinline poster="assets/images/profile/yulia.jpg">
             <source src="assets/video/portfolio.mp4" type="video/mp4">
-            <img src="assets/images/profile/yulia.jpg" alt="Yulia Chekhovska">
+            <img src="assets/images/profile/yulia.jpg" alt="Profile image of Yulia Chekhovska">
         </video>
     </div>
 
-    <div class="control-btn-wrapper">
-        <button id="play-toggle" class="control-btn">
-            <img id="play-icon" src="assets/icons/pause-icon.png" alt="Play/Stop">
+    <div class="control-btn-wrapper" role="group" aria-label="Video controls">
+        <button id="play-toggle" class="control-btn" aria-label="Play or pause video">
+            <img id="play-icon" src="assets/icons/pause-icon.png" alt="">
         </button>
-        <button id="sound-toggle" class="control-btn">
-            <img id="sound-icon" src="assets/icons/mute-icon.png" alt="Mute/Unmute">
+        <button id="sound-toggle" class="control-btn" aria-label="Mute or unmute video">
+            <img id="sound-icon" src="assets/icons/mute-icon.png" alt="">
         </button>
     </div>
 
-    <h1>Yulia Chekhovska</h1>
+    <h1 class="site-title">Yulia Chekhovska</h1>
 </header>
 
-<nav class="nav-tabs">
+
+<nav class="nav-tabs" role="navigation" aria-label="Main sections">
     <button data-target="about" class="tab-btn active">About</button>
     <button data-target="portfolio" class="tab-btn">Portfolio</button>
     <button data-target="media" class="tab-btn">Media</button>
@@ -37,9 +38,13 @@
 </nav>
 
 
-<section id="about">
-    <div class="about-card">
-        <h2>About Me</h2>
+<main>
+
+<!-- ABOUT -->
+<section id="about" class="active-section" aria-labelledby="about-title">
+    <article class="about-card">
+        <h2 id="about-title">About Me</h2>
+
         <p>My journey spans psychology, linguistics, and social data science. I began studying human communication and behaviour, researching cognition patterns at Chiba University. Now, I analyse the cost-effectiveness of data-driven social interventions using <strong>Python, SQL, Tableau, Excel, and ML tools</strong>.</p>
 
         <p><strong>Languages:</strong> Japanese N2 | German C1 | English C1 | Ukrainian Native</p>
@@ -51,17 +56,18 @@
         - M.A. Psycholinguistics, Heinrich Heine University, 2018–2022<br>
         - Behavioural Analysis Research Fellowship, Chiba University, 2021
         </p>
-    </div>
+    </article>
 
-    <p class="places">✈️ Places lived: Rivne (1995-2013) - Kyiv (2013-2017)- Brussels (2017-2018) - Düsseldorf (2018-2020) - Chiba (2020-2024) - Tokyo (2024-present)</p>
+    <p class="places">✈️ Places lived: Rivne (1995–2013) – Kyiv (2013–2017) – Brussels (2017–2018) – Düsseldorf (2018–2020) – Chiba (2020–2024) – Tokyo (2024–present)</p>
 </section>
 
 
 
-<section id="portfolio">
-    <h2>Portfolio</h2>
+<!-- PORTFOLIO -->
+<section id="portfolio" aria-labelledby="portfolio-title">
+    <h2 id="portfolio-title">Portfolio</h2>
 
-    <div class="tag-filter">
+    <div class="tag-filter" role="region" aria-label="Tag filters">
         <strong>Filter by tags:</strong>
         <div id="tag-list" style="display:inline-block;margin-left:12px"></div>
         <button id="clear-tags" class="clear-tags">Clear</button>
@@ -69,57 +75,84 @@
 
     <div class="portfolio-images">
 
-        <div class="portfolio-item" data-tags="python,pytorch">
-            <strong class="project-title">Psycholinguistic Language Learning Digital Novel</strong>
-            <img src="assets/images/projects/portfolio_image1.png" alt="Language Learning Digital Novel">
+        <article class="portfolio-item" data-tags="python,pytorch">
+            <h3 class="project-title">Psycholinguistic Language Learning Digital Novel</h3>
+
+            <figure>
+                <img src="assets/images/projects/portfolio_image1.png" alt="Language Learning Digital Novel">
+            </figure>
+
             <p>Interactive Python gamification project enhancing high school students’ willingness to communicate.</p>
             <a href="pages/project-esl.html" class="view-button">View Project</a>
-        </div>
+        </article>
 
-        <div class="portfolio-item" data-tags="python,nlp,transformers,bert,shap">
-            <strong class="project-title">Class Feedback NLP Sentiment Analysis</strong>
-            <img src="assets/images/projects/portfolio_image2.png" alt="Class Feedback NLP Analysis">
+
+        <article class="portfolio-item" data-tags="python,nlp,transformers,bert,shap">
+            <h3 class="project-title">Class Feedback NLP Sentiment Analysis</h3>
+
+            <figure>
+                <img src="assets/images/projects/portfolio_image2.png" alt="Class Feedback NLP Analysis">
+            </figure>
+
             <p>BERT-based sentiment and aspect analysis pipeline.</p>
             <a href="pages/project-feedback.html" class="view-button">View Project</a>
-        </div>
+        </article>
 
-        <div class="portfolio-item" data-tags="sheets,appscript">
-            <strong class="project-title">Japan Suicide Statistics Data Pipeline</strong>
-            <img src="assets/images/projects/japan-police-logo.png" alt="Japan Police Logo">
+
+        <article class="portfolio-item" data-tags="sheets,appscript">
+            <h3 class="project-title">Japan Suicide Statistics Data Pipeline</h3>
+
+            <figure>
+                <img src="assets/images/projects/japan-police-logo.png" alt="Japan Suicide Data Pipeline">
+            </figure>
+
             <p>Automated Google Sheets + AppScript public health pipeline.</p>
             <a href="pages/project-japan-suicides.html" class="view-button">View Project</a>
-        </div>
+        </article>
 
-        <div class="portfolio-item" data-tags="ml,audio,nlp">
-            <strong class="project-title">Multimodal Mental Health Journaling Agent</strong>
-            <img src="assets/images/projects/portfolio_image_mlmentalhealth.jpg" alt="Mental Health ML Project">
+
+        <article class="portfolio-item" data-tags="ml,audio,nlp">
+            <h3 class="project-title">Multimodal Mental Health Journaling Agent</h3>
+
+            <figure>
+                <img src="assets/images/projects/portfolio_image_mlmentalhealth.jpg" alt="Multimodal Mental Health ML Project">
+            </figure>
+
             <p>Voice transcription, tone analysis, fairness-aware ML.</p>
             <a href="pages/project-mental-health.html" class="view-button">View Project</a>
-        </div>
+        </article>
 
-        <div class="portfolio-item" data-tags="tableau,sheets">
-            <strong class="project-title">AI Usage in Japanese Workplace</strong>
-            <img src="assets/images/projects/tableau-preview.png" alt="AI in Japanese Business">
+
+        <article class="portfolio-item" data-tags="tableau,sheets">
+            <h3 class="project-title">AI Usage in Japanese Workplace</h3>
+
+            <figure>
+                <img src="assets/images/projects/tableau-preview.png" alt="AI usage Tableau project">
+            </figure>
+
             <p>Dashboard analytics and sheet-based data pipelines.</p>
             <a href="pages/project-ai-usage-japanese.html" class="view-button">View Project</a>
-        </div>
+        </article>
 
     </div>
 </section>
 
 
 
-<section id="media">
-    <h2>Media & Appearances</h2>
+<!-- MEDIA -->
+<section id="media" aria-labelledby="media-title">
+    <h2 id="media-title">Media & Appearances</h2>
 
-    <div class="media-carousel">
-        <button class="carousel-prev">&#10094;</button>
-        
+    <div class="media-carousel" aria-live="polite">
+        <button class="carousel-prev" aria-label="Scroll left">&#10094;</button>
+
         <div class="carousel-window">
             <div class="carousel-track">
 
                 <figure class="media-item">
-                    <img class="media-thumb" src="assets/images/media/media_peace.jpeg" data-full="assets/images/media/media_peace.jpeg" alt="Peace Advocacy">
+                    <img class="media-thumb" src="assets/images/media/media_peace.jpeg"
+                         data-full="assets/images/media/media_peace.jpeg"
+                         alt="Peace Advocacy Global Voyage">
                     <figcaption>
                         <strong>Peace Advocacy Global Voyage 2024</strong>
                         <div class="media-btn-wrapper">
@@ -129,12 +162,18 @@
                 </figure>
 
                 <figure class="media-item">
-                    <img class="media-thumb" src="assets/images/media/media_disinfo.png" data-full="assets/images/media/media_disinfo.png" alt="Disinformation Talk">
-                    <figcaption><strong>Talks on Fake News and Disinformation 2023–2025</strong></figcaption>
+                    <img class="media-thumb" src="assets/images/media/media_disinfo.png"
+                         data-full="assets/images/media/media_disinfo.png"
+                         alt="Talks on Fake News and Disinformation">
+                    <figcaption>
+                        <strong>Talks on Fake News and Disinformation 2023–2025</strong>
+                    </figcaption>
                 </figure>
 
                 <figure class="media-item">
-                    <img class="media-thumb" src="assets/images/media/media_multicultural.jpg" data-full="assets/images/media/media_multicultural.jpg" alt="Multicultural TV">
+                    <img class="media-thumb" src="assets/images/media/media_multicultural.jpg"
+                         data-full="assets/images/media/media_multicultural.jpg"
+                         alt="TV appearance about multicultural society">
                     <figcaption>
                         <strong>TV Appearance on Multicultural Society, Chiba TV</strong>
                         <div class="media-btn-wrapper">
@@ -144,7 +183,9 @@
                 </figure>
 
                 <figure class="media-item">
-                    <img class="media-thumb" src="assets/images/media/media_behavioral.jpg" data-full="assets/images/media/media_behavioral.jpg" alt="Behavioral Research">
+                    <img class="media-thumb" src="assets/images/media/media_behavioral.jpg"
+                         data-full="assets/images/media/media_behavioral.jpg"
+                         alt="Behavioural research project recording">
                     <figcaption>
                         <strong>Behavioural Academic Research Recording</strong>
                         <div class="media-btn-wrapper">
@@ -154,7 +195,9 @@
                 </figure>
 
                 <figure class="media-item">
-                    <img class="media-thumb" src="assets/images/media/media_chiba_mag.jpg" data-full="assets/images/media/media_chiba_mag.jpg" alt="Magazine Feature">
+                    <img class="media-thumb" src="assets/images/media/media_chiba_mag.jpg"
+                         data-full="assets/images/media/media_chiba_mag.jpg"
+                         alt="Magazine feature at Chiba International Bureau">
                     <figcaption>
                         <strong>Featured in Chiba International Bureau Magazine</strong>
                         <div class="media-btn-wrapper">
@@ -164,7 +207,9 @@
                 </figure>
 
                 <figure class="media-item">
-                    <img class="media-thumb" src="assets/images/media/media_ascent.png" data-full="assets/images/media/media_ascent.png" alt="ASCENT Program">
+                    <img class="media-thumb" src="assets/images/media/media_ascent.png"
+                         data-full="assets/images/media/media_ascent.png"
+                         alt="ASCENT Science Program Report">
                     <figcaption>
                         <strong>ASCENT Science Research Program Report</strong>
                         <div class="media-btn-wrapper">
@@ -174,7 +219,9 @@
                 </figure>
 
                 <figure class="media-item">
-                    <img class="media-thumb" src="assets/images/media/media_hackathon.png" data-full="assets/images/media/media_hackathon.png" alt="Hackathon">
+                    <img class="media-thumb" src="assets/images/media/media_hackathon.png"
+                         data-full="assets/images/media/media_hackathon.png"
+                         alt="AI Agent Hackathon Tokyo">
                     <figcaption>
                         <strong>AI Agent Hackathon by Melting Pot Tokyo</strong>
                         <div class="media-btn-wrapper">
@@ -186,24 +233,29 @@
             </div>
         </div>
 
-        <button class="carousel-next">&#10095;</button>
+        <button class="carousel-next" aria-label="Scroll right">&#10095;</button>
     </div>
 </section>
 
 
 
-<section id="contact">
-    <h2>Contact</h2>
-    <div class="contact-icons">
-        <a href="https://www.linkedin.com/in/Yulia-che/" class="hover-scale">LinkedIn</a>
-        <a href="https://github.com/YuriyaJP" class="hover-scale">GitHub</a>
-        <a href="https://calendly.com/julia-chekhovskaua/consultancy" class="hover-scale">Book a Call</a>
+<!-- CONTACT -->
+<section id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title">Contact</h2>
+    <div class="contact-icons" role="list">
+        <a href="https://www.linkedin.com/in/Yulia-che/" class="hover-scale" role="listitem">LinkedIn</a>
+        <a href="https://github.com/YuriyaJP" class="hover-scale" role="listitem">GitHub</a>
+        <a href="https://calendly.com/julia-chekhovskaua/consultancy" class="hover-scale" role="listitem">Book a Call</a>
     </div>
 </section>
 
-<footer>
+</main>
+
+
+<footer role="contentinfo">
     &copy; 2025 Made by Yulia Chekhovska. All rights reserved.
 </footer>
+
 
 
 <!-- ========================================================= -->
