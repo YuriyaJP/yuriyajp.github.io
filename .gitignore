@@ -80,3 +80,36 @@ drafts/
 notes/
 local-only/
 do-not-upload/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE and editor folders
+.vscode/
+.idea/
+*.iml
+
+# Cache, temp, build
+dist/
+build/
+tmp/
+cache/
+*.log
+
+# Python environment (if created for data work)
+.venv/
+env/
+__pycache__/
+*.pyc
+
+# Node modules (if ever used)
+node_modules/
+
+# Sensitive or private work
+private/
+*.key
+*.pem
+*.cert
+*.p12
