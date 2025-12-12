@@ -6,89 +6,97 @@
 <title>Yulia Chekhovska</title>
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
-    <video id="profile-video" class="profile-media" autoplay muted playsinline poster="yulia.jpg">
-        <source src="portfolio.mp4" type="video/mp4">
-        <img src="yulia.jpg" alt="Yulia Chekhovska">
-    </video>
-    <div class="profile-controls">
-        <button id="video-toggle" class="video-toggle" aria-pressed="false">Pause</button>
-        <button id="sound-toggle" class="video-toggle" aria-pressed="false">Unmute</button>
+    <div class="video-wrapper">
+        <video id="profile-video" class="profile-media" autoplay muted playsinline poster="yulia.jpg">
+            <source src="portfolio.mp4" type="video/mp4">
+            <img src="yulia.jpg" alt="Yulia Chekhovska">
+        </video>
     </div>
+
+
+
+    <div class="profile-controls">
+        <button id="video-toggle" class="video-toggle">Pause</button>
+        <button id="sound-toggle" class="video-toggle">Unmute</button>
+    </div>
+
     <h1>Yulia Chekhovska</h1>
 </header>
 
-<nav>
-    <a href="#about" class="hover-scale">About Me</a>
-    <a href="#portfolio" class="hover-scale">Portfolio</a>
-    <a href="#contact" class="hover-scale">Contact</a>
+<nav class="nav-tabs">
+    <button data-target="about" class="tab-btn active">About</button>
+    <button data-target="portfolio" class="tab-btn">Portfolio</button>
+    <button data-target="media" class="tab-btn">Media</button>
+    <button data-target="contact" class="tab-btn">Contact</button>
 </nav>
 
+
 <section id="about">
+    <div class="about-card">
     <h2>About Me</h2>
-    <div class="about-list">
-        <p>My journey began in psychology and linguistics, studying how humans communicate and behave. I developed my research skills as a behavioural analysis researcher at Chiba University, examining patterns of human behaviour and cognition. I have since transitioned into social data science, analysing the cost-effectiveness of data-driven interventions in social contexts. I work with Python, SQL, Tableau, Excel and Machine Learning tools to extract insights from complex datasets.</p>
-        <p>Fluent in Japanese (N2), German (C1), English (C1) and Ukrainian (Native).</p>
+    <p>My journey spans psychology, linguistics, and social data science. I began studying human communication and behaviour, researching cognition patterns at Chiba University. Now, I analyse the cost-effectiveness of data-driven social interventions using <strong>Python, SQL, Tableau, Excel, and ML tools</strong>.</p>
+
+    <p><strong>Languages:</strong> Japanese N2 | German C1 | English C1 | Ukrainian Native</p>
+
+    <p><strong>Education & Training:</strong><br>
+    - Data Analysis for Social Scientists, MITxT 14.310x, Dec 2025<br>
+    - ML4Good AI Safety Bootcamp, Singapore, Sept 2025<br>
+    - Data Science Bootcamp, Le Wagon Tokyo, Mar–Sep 2025<br>
+    - M.A. Psycholinguistics, Heinrich Heine University, 2018–2022<br>
+    - Behavioural Analysis Research Fellowship, Chiba University, 2021
+    </p>
     </div>
 
-    <div class="education">
-        <p class="edu-heading"><strong>Education &amp; Training:</strong></p>
-        <div class="edu-items">
-            <p>Data Analysis for Social Scientists, MIT — ongoing course, online</p>
-            <p>ML4Good AI Safety Bootcamp — Sept 2025, Singapore</p>
-            <p>Data Science &amp; AI Bootcamp, Le Wagon, Tokyo — Mar–Sep 2025 (Predictive Modelling, NLP, Marketing Analytics; project: ML-based air pollution detection)</p>
-            <p>M.A. Psycholinguistics, Heinrich Heine University, Germany — 2018–2022</p>
-            <p>Fellowship in Behavioural Analysis Research, Chiba University — coursework in behavioural analysis 2021</p>
-        </div>
-    </div>
-
-    <p class="places">✈️ Places lived: Rivne, Ukraine (1995) &gt; Kyiv, Ukraine (2013) &gt; Brussels, Belgium (2017) &gt; Düsseldorf, Germany (2018) &gt; Chiba, Japan (2020) &gt; Tokyo, Japan (2024) and now</p>
+    <p class="places">✈️ Places lived: Rivne (1995-2013) - Kyiv (2013-2017)- Brussels (2017-2018) - Düsseldorf (2018-2020) - Chiba (2020-2024) - Tokyo (2024-present)</p>
 </section>
-
 
 <section id="portfolio">
     <h2>Portfolio</h2>
-    <div class="tag-filter" aria-label="Filter projects by tags">
+
+    <div class="tag-filter">
         <strong>Filter by tags:</strong>
         <div id="tag-list" style="display:inline-block;margin-left:12px"></div>
         <button id="clear-tags" class="clear-tags">Clear</button>
     </div>
+
     <div class="portfolio-images">
 
         <div class="portfolio-item" data-tags="python,pytorch">
             <strong class="project-title">Psycholinguistic Language Learning Digital Novel</strong>
-            <img src="portfolio_image1.png" alt="A Visual ESL Novel">
-            <p>Interactive Python gamification project enhancing high school students' willingness to communicate in English. Based on psycholinguistic principles and branching narrative design.</p>
+            <img src="portfolio_image1.png" alt="Language Learning Digital Novel">
+            <p>Interactive Python gamification project enhancing high school students’ willingness to communicate.</p>
             <a href="project-esl.html" class="view-button">View Project</a>
         </div>
 
         <div class="portfolio-item" data-tags="python,nlp,transformers,bert,shap">
-            <strong class="project-title">Japanese Class Feedback NLP Sentiment & Aspect Analysis</strong>
-            <img src="portfolio_image2.png" alt="Class Feedback NLP Database">
-            <p>Transformer-backed pipeline (Japanese BERT fine-tune) for sentiment classification, aspect extraction, and explainable insights (SHAP) from student survey responses.</p>
+            <strong class="project-title">Class Feedback NLP Sentiment Analysis</strong>
+            <img src="portfolio_image2.png" alt="Class Feedback NLP Analysis">
+            <p>BERT-based sentiment and aspect analysis pipeline.</p>
             <a href="project-feedback.html" class="view-button">View Project</a>
         </div>
 
         <div class="portfolio-item" data-tags="sheets,appscript">
-            <strong class="project-title">Public Health Data Engineering Japan Suicide Statistics Pipeline</strong>
+            <strong class="project-title">Japan Suicide Statistics Data Pipeline</strong>
             <img src="japan-police-logo.png" alt="Japan Police Logo">
-            <p>Automated pipeline using Google Sheets and AppScript for tracking and visualizing suicide statistics in Japan for public health analysis.</p>
+            <p>Automated Google Sheets + AppScript public health pipeline.</p>
             <a href="project-japan-suicides.html" class="view-button">View Project</a>
         </div>
 
         <div class="portfolio-item" data-tags="ml,audio,nlp">
-            <strong class="project-title">Multimodal Fairness-Aware Mental Health Journaling Agent</strong>
+            <strong class="project-title">Multimodal Mental Health Journaling Agent</strong>
             <img src="portfolio_image_mlmentalhealth.jpg" alt="Mental Health ML Project">
-            <p>Voice journaling assistant that transcribes speech, analyzes vocal tone, and helps detect early symptoms of mental health issues with fairness-aware ML algorithms.</p>
+            <p>Voice transcription, tone analysis, fairness-aware ML.</p>
             <a href="project-mental-health.html" class="view-button">View Project</a>
         </div>
 
         <div class="portfolio-item" data-tags="tableau,sheets">
             <strong class="project-title">AI Usage in Japanese Workplace</strong>
             <img src="tableau-preview.png" alt="AI in Japanese Business">
-            <p>Prototype dashboards and sheet-based pipelines to monitor employee engagement and productivity using generative AI tools.</p>
+            <p>Dashboard analytics and sheet-based data pipelines.</p>
             <a href="project-ai-usage-japanese.html" class="view-button">View Project</a>
         </div>
 
@@ -98,56 +106,66 @@
 <section id="media">
     <h2>Media & Appearances</h2>
 
-    <div class="media-feature">
-        <img src="media_peace.jpeg" alt="Peace Advocacy Global Voyage 2024">
-        <h3>Peace Advocacy Global Voyage 2024</h3>
-        <p>Participated in and promoted peace-building initiatives as part of an international voyage focused on global cooperation and intercultural dialogue.</p>
-        <a href="https://peaceboat.org/english/news/ukraine-peace-action" class="media-link-btn">View</a>
-    </div>
+    <div class="media-grid">
+        <figure class="media-item">
+            <img class="media-thumb" src="media_peace.jpeg" data-full="media_peace.jpeg" alt="Peace Advocacy">
+            <figcaption>
+                <strong>Peace Advocacy Global Voyage 2024</strong>
+                <div class="media-btn-wrapper">
+                    <a href="https://peaceboat.org/english/news/ukraine-peace-action" class="view-button">View</a>
+                </div>
+            </figcaption>
+        </figure>
 
-    <div class="media-feature">
-        <img src="media_disinfo.png" alt="Talks on Fake News and Disinformation at Chiba University">
-        <h3>Guest Speaker: Fake News and Disinformation (Chiba University, 2023–2025)</h3>
-        <p>Delivered lectures and workshops on digital misinformation, cognitive bias, and online behavioural manipulation.</p>
-    </div>
+        <figure class="media-item">
+            <img class="media-thumb" src="media_disinfo.png" data-full="media_disinfo.png" alt="Disinformation Talk">
+            <figcaption><strong>Talks on Fake News and Disinformation 2023–2025</strong></figcaption>
+        </figure>
 
-    <div class="media-feature">
-        <img src="media_multicultural.jpg" alt="TV Appearance: Understanding Multicultural Society">
-        <h3>TV Appearance: Promoting Understanding for a Multicultural Society (Jan 28, 2024)</h3>
-        <p>Featured on national TV discussing integration, multicultural communication, and cross-cultural understanding in Japan.</p>
-        <a href="https://www.youtube.com/watch?v=pMyqlSq2knc&list=PLWdhLg9WU4qKPu3QTVTeYXMWvcIiTKcbc&index=3" class="media-link-btn">Watch</a>
-    </div>
+        <figure class="media-item">
+            <img class="media-thumb" src="media_multicultural.jpg" data-full="media_multicultural.jpg" alt="Multicultural TV">
+            <figcaption>
+                <strong>TV Appearance on Multicultural Society</strong>
+                <div class="media-btn-wrapper">
+                    <a href="https://www.youtube.com/watch?v=pMyqlSq2knc" class="view-button">View</a>
+                </div>
+            </figcaption>
+        </figure>
 
-    <div class="media-feature">
-        <img src="media_behavioral.jpg" alt="Behavioural Academic Research Presentation at JACET 60th Convention">
-        <h3>Behavioural Academic Research Presentation (JACET 60th Convention)</h3>
-        <p>Recorded presentation on behavioural analysis, cognitive processing in language learning, and empirical research findings.</p>
-        <a href="https://youtu.be/-qLAWglXBs8" class="media-link-btn">View Recording</a>
-    </div>
+        <figure class="media-item">
+            <img class="media-thumb" src="media_behavioral.jpg" data-full="media_behavioral.jpg" alt="Behavioral Research">
+            <figcaption>
+                <strong>Behavioural Academic Research Recording</strong>
+                <div class="media-btn-wrapper">
+                    <a href="https://youtu.be/-qLAWglXBs8" class="view-button">View</a>
+                </div>
+            </figcaption>
+        </figure>
 
-    <div class="media-feature">
-        <img src="media_chiba_mag.jpg" alt="Featured article in Chiba International Bureau Magazine">
-        <h3>Feature Article: Chiba International Bureau Magazine (Nov 2021)</h3>
-        <p>Published essay on Ukraine, cross-cultural understanding, and social resilience in international communities.</p>
-        <a href="https://drive.google.com/file/d/1YopozC-wpRjBDK2Ni3T4cpvM1hmkRfGC/view?usp=sharing" class="media-link-btn">Read</a>
-    </div>
+        <figure class="media-item">
+            <img class="media-thumb" src="media_chiba_mag.jpg" data-full="media_chiba_mag.jpg" alt="Magazine Feature">
+            <figcaption>
+                <strong>Featured in Chiba International Bureau Magazine</strong>
+                <div class="media-btn-wrapper"><a href="https://drive.google.com" class="view-button">View</a></div>
+            </figcaption>
+        </figure>
 
-    <div class="media-feature">
-        <img src="media_ascent.png" alt="ASCENT Chiba University Science Research Program Report 2021">
-        <h3>ASCENT Science Research Program Report (March 2021)</h3>
-        <p>Research report prepared as part of the ASCENT science training program, focusing on behavioural analysis and scientific communication.</p>
-        <a href="https://drive.google.com/file/d/1Nieb43eknv-IgUyjuyN4JCSCxdPvcItq/view?usp=drive_link" class="media-link-btn">View Report</a>
+        <figure class="media-item">
+            <img class="media-thumb" src="media_ascent.png" data-full="media_ascent.png" alt="ASCENT Program">
+            <figcaption>
+                <strong>ASCENT Science Research Program Report</strong>
+                <div class="media-btn-wrapper"><a href="https://drive.google.com" class="view-button">View</a></div>
+            </figcaption>
+        </figure>
     </div>
-
 </section>
-
-
 
 <section id="contact">
     <h2>Contact</h2>
     <div class="contact-icons">
-        <a href="https://www.linkedin.com/in/Yulia-che/" target="_blank" class="hover-scale">LinkedIn</a>
-        <a href="https://github.com/YuriyaJP" target="_blank" class="hover-scale">GitHub</a>
+        <a href="https://www.linkedin.com/in/Yulia-che/" class="hover-scale">LinkedIn</a>
+        <a href="https://github.com/YuriyaJP" class="hover-scale">GitHub</a>
+        <a href="https://calendly.com/julia-chekhovskaua/consultancy" class="hover-scale">Book a Call</a>
     </div>
 </section>
 
@@ -155,104 +173,111 @@
     &copy; 2025 Yulia Chekhovska. All rights reserved.
 </footer>
 
+<!-- FULL JAVASCRIPT MOVED HERE -->
 <script>
+
 // Profile video controls
 const video = document.getElementById('profile-video');
-const btn = document.getElementById('video-toggle');
-const soundBtn = document.getElementById('sound-toggle');
+const videoToggle = document.getElementById('video-toggle');
+const soundToggle = document.getElementById('sound-toggle');
 
-const setPlayLabel = () => { btn.textContent = video.paused ? 'Play' : 'Pause'; btn.setAttribute('aria-pressed', String(!video.paused)); }
-const setSoundLabel = () => { soundBtn.textContent = video.muted ? 'Unmute' : 'Mute'; soundBtn.setAttribute('aria-pressed', String(!video.muted)); }
+videoToggle.addEventListener('click', () => {
+    video.paused ? video.play() : video.pause();
+    videoToggle.textContent = video.paused ? 'Play' : 'Pause';
+});
 
-video.play().catch(()=>{});
-setPlayLabel();
-setSoundLabel();
-
-btn.addEventListener('click', ()=>{ video.paused? video.play(): video.pause(); setPlayLabel(); });
-soundBtn.addEventListener('click', ()=>{ video.muted=!video.muted; if(!video.muted) video.play().catch(()=>{}); setSoundLabel(); });
+soundToggle.addEventListener('click', () => {
+    video.muted = !video.muted;
+    soundToggle.textContent = video.muted ? 'Unmute' : 'Mute';
+});
 
 // Portfolio tag filtering
-const portfolioGrid = document.querySelector('.portfolio-images');
-const items = Array.from(portfolioGrid.querySelectorAll('.portfolio-item'));
-const tagSet = new Set();
-items.forEach(it=>{ const t=(it.getAttribute('data-tags')||'').split(',').map(s=>s.trim()).filter(Boolean); it._tags=t; t.forEach(tag=>tagSet.add(tag)); });
+const items = document.querySelectorAll('.portfolio-item');
+const tagList = document.getElementById('tag-list');
+const clearTagsBtn = document.getElementById('clear-tags');
+let activeTags = new Set();
+let allTags = new Set();
 
-const tagListEl = document.getElementById('tag-list');
-const clearBtn = document.getElementById('clear-tags');
-const selected = new Set();
+items.forEach(item => item.dataset.tags.split(',').forEach(tag => allTags.add(tag)));
 
-const tagCounts = {};
-items.forEach(it=>{ (it._tags||[]).forEach(t=>{ tagCounts[t]=(tagCounts[t]||0)+1; }); });
-
-Array.from(tagSet).sort().forEach(tag=>{
-    const b=document.createElement('button');
-    b.type='button';
-    b.className='tag-btn';
-    b.dataset.tag=tag;
-    const count = tagCounts[tag]||0;
-    b.innerHTML=`<span class="tag-label">#${tag}</span> <span class="tag-count">(${count})</span>`;
-    b.addEventListener('click',()=>{
-        selected.has(tag)? selected.delete(tag): selected.add(tag);
-        b.classList.toggle('active');
-        applyFilterSort();
-    });
-    tagListEl.appendChild(b);
+allTags.forEach(tag => {
+    const btn = document.createElement('button');
+    btn.className = 'tag-btn';
+    btn.textContent = tag;
+    btn.dataset.tag = tag;
+    tagList.appendChild(btn);
 });
 
-clearBtn.addEventListener('click', ()=>{
-    selected.clear();
-    tagListEl.querySelectorAll('.tag-btn').forEach(b=>b.classList.remove('active'));
-    applyFilterSort();
+tagList.addEventListener('click', e => {
+    if (!e.target.classList.contains('tag-btn')) return;
+    const tag = e.target.dataset.tag;
+
+    activeTags.has(tag) ? activeTags.delete(tag) : activeTags.add(tag);
+    e.target.classList.toggle('active');
+    filterProjects();
 });
 
-function applyFilterSort(){
-    const sel=Array.from(selected);
-    const withScore=items.map(it=>{
-        if(sel.length===0) return {it,score:0};
-        const score=it._tags.reduce((acc,t)=>acc+(sel.includes(t)?1:0),0);
-        return {it,score};
-    });
-    withScore.sort((a,b)=>b.score-a.score);
-    withScore.forEach(({it,score})=>{
-        portfolioGrid.appendChild(it);
-        if(sel.length>0 && score===0){ it.style.opacity='0.45'; it.style.filter='grayscale(0.15)'; }
-        else{ it.style.opacity=''; it.style.filter=''; }
+clearTagsBtn.addEventListener('click', () => {
+    activeTags.clear();
+    document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
+    filterProjects();
+});
+
+function filterProjects() {
+    items.forEach(item => {
+        const tags = item.dataset.tags.split(',');
+        const match = [...activeTags].every(tag => tags.includes(tag));
+        item.style.display = activeTags.size === 0 || match ? 'block' : 'none';
     });
 }
 
 // Media modal
-const mediaModal=document.getElementById('media-modal');
-const mediaModalImg=document.getElementById('media-modal-img');
-const mediaModalCaption=document.getElementById('media-modal-caption');
-if(mediaModal){
-    const thumbs=Array.from(document.querySelectorAll('.media-thumb'));
-    thumbs.forEach(img=>{
-        img.style.cursor='zoom-in';
-        img.addEventListener('click', ()=>{
-            mediaModal.style.display='flex';
-            mediaModal.setAttribute('aria-hidden','false');
-            mediaModalImg.src=img.dataset.full||img.src;
-            mediaModalImg.alt=img.alt||'';
-            mediaModalCaption.textContent=img.nextElementSibling? img.nextElementSibling.textContent: img.alt;
-            document.body.style.overflow='hidden';
+const mediaModal = document.createElement('div');
+mediaModal.className = 'media-modal';
+mediaModal.innerHTML = `
+    <button class="media-modal-close">&times;</button>
+    <div class="media-modal-content">
+        <img id="media-modal-img">
+        <div id="media-modal-caption" class="caption"></div>
+    </div>
+`;
+document.body.appendChild(mediaModal);
+
+const modalImg = document.getElementById('media-modal-img');
+const modalCaption = document.getElementById('media-modal-caption');
+const modalClose = document.querySelector('.media-modal-close');
+
+document.querySelectorAll('.media-thumb').forEach(img => {
+    img.addEventListener('click', () => {
+        modalImg.src = img.dataset.full;
+        modalCaption.textContent = img.alt;
+        mediaModal.style.display = 'flex';
+    });
+});
+modalClose.addEventListener('click', () => { mediaModal.style.display = 'none'; });
+
+// Panel switching
+const tabButtons2 = document.querySelectorAll('.tab-btn');
+const sections2 = document.querySelectorAll('section');
+
+tabButtons2.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const target = btn.dataset.target;
+
+        tabButtons2.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        sections2.forEach(sec => {
+            sec.id === target
+                ? sec.classList.add('active-section')
+                : sec.classList.remove('active-section');
         });
     });
-    const closeBtn=document.createElement('button');
-    closeBtn.textContent='×';
-    closeBtn.className='media-modal-close';
-    closeBtn.addEventListener('click',()=>{ mediaModal.style.display='none'; mediaModal.setAttribute('aria-hidden','true'); mediaModalImg.src=''; mediaModalCaption.textContent=''; document.body.style.overflow=''; });
-    mediaModal.appendChild(closeBtn);
-}
-</script>
+});
 
-<!-- Media modal container -->
-<div id="media-modal" class="media-modal" aria-hidden="true">
-    <div class="media-modal-backdrop"></div>
-    <div class="media-modal-content">
-        <img id="media-modal-img" src="" alt="">
-        <div class="caption" id="media-modal-caption"></div>
-    </div>
-</div>
+document.querySelector('#about').classList.add('active-section');
+
+</script>
 
 </body>
 </html>
