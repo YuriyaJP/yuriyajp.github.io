@@ -339,18 +339,193 @@ footer {
    PROJECT PAGES
    ========================= */
 body.project-page {
-    color: #222;
-    background: #f5f7fa;
+    background: url('assets/images/profile/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
 }
 
+/* Home nav link on project pages */
+body.project-page nav a {
+    display: inline-block;
+    margin: 18px auto 25px;
+    text-align: center;
+    padding: 10px 22px;
+
+    background: rgba(255,255,255,0.22);
+    color: white;
+
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 8px;
+
+    backdrop-filter: blur(6px);
+
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+
+    transition: background 0.2s ease, transform 0.2s ease;
+
+}
+
+/* Center nav on project pages */
+body.project-page nav {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: -10px;
+}
+
+body.project-page nav a:hover {
+    background: rgba(255,255,255,0.38);
+    transform: translateY(-2px);
+    box-shadow: 0 0 14px rgba(255,255,255,0.6);
+}
+
+
+/* Project page header */
+body.project-page header h1 {
+    margin-top: 18px;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+
+    color: #ffffff;
+    text-shadow:
+        0 2px 6px rgba(0,0,0,0.45),
+        0 0 10px rgba(255,255,255,0.3);
+}
+
+body.project-page header img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    box-shadow:
+        0 4px 14px rgba(0,0,0,0.4),
+        0 0 10px rgba(255,255,255,0.4);
+}
+
+/* Project page images must fit inside card */
+body.project-page section img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    display: block;
+    margin: 0 auto 25px auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+
+
+/* Project content card */
 body.project-page section {
     display: block;
     opacity: 1;
     max-width: 900px;
-    margin: 0 auto 40px auto;
-    padding: 40px 20px;
-    background: #fff;
+    margin: 40px auto;
+    padding: 40px 28px;
+
+    background: rgba(255,255,255,0.92);
     color: #111;
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 30px rgba(0,0,0,0.25),
+        inset 0 1px 6px rgba(255,255,255,0.5);
+}
+
+/* Full-width PDF embed */
+body.project-page .pdf-embed {
+    width: 100%;
+    height: 90vh;
+    border: none;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+
+
+/* Modern gradient button for project pages */
+body.project-page .project-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 22px;
+
+    /* Gradient */
+    background: linear-gradient(135deg, #0f3d2e, #1c5f45 60%, #247758);
+    color: #e9f9f1;
+
+    font-weight: 700;
+    border-radius: 28px;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+
+    /* Subtle border + depth */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.35),
+        inset 0 1px 2px rgba(255, 255, 255, 0.1);
+
+    transition: 
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+body.project-page .project-button:hover {
+    transform: scale(1.07) translateY(-2px);
+    background: linear-gradient(135deg, #1a5740, #267d5b 60%, #2d8f6c);
+    box-shadow:
+        0 4px 14px rgba(0, 0, 0, 0.45),
+        0 0 12px rgba(36, 119, 88, 0.55); /* green glow */
+}
+
+body.project-page .project-button:active {
+    transform: scale(0.96);
+    box-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.35),
+        inset 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Hide modal by default and style it */
+.media-modal {
+    display: none; /* critical: prevents the stray × */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Modal content */
+.media-modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+#media-modal-img {
+    width: 100%;
+    height: auto;
     border-radius: 10px;
 }
 
+/* Close button */
+.media-modal-close {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-size: 42px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10000;
+}
