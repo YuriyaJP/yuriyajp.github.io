@@ -11,25 +11,20 @@
 
 <header>
     <div class="video-wrapper">
-        <video id="profile-video" class="profile-media" autoplay muted playsinline poster="yulia.jpg">
-            <source src="portfolio.mp4" type="video/mp4">
-            <img src="yulia.jpg" alt="Yulia Chekhovska">
+        <video id="profile-video" class="profile-media" autoplay muted playsinline poster="assets/images/profile/yulia.jpg">
+            <source src="assets/video/portfolio.mp4" type="video/mp4">
+            <img src="assets/images/profile/yulia.jpg" alt="Yulia Chekhovska">
         </video>
     </div>
 
-
-<div class="control-btn-wrapper">
-    <button id="play-toggle" class="control-btn">
-        <!-- video is playing → show pause icon -->
-        <img id="play-icon" src="pause-icon.png" alt="Play/Stop">
-    </button>
-    <button id="sound-toggle" class="control-btn">
-        <!-- video is muted → show mute icon -->
-        <img id="sound-icon" src="mute-icon.png" alt="Mute/Unmute">
-    </button>
-</div>
-
-
+    <div class="control-btn-wrapper">
+        <button id="play-toggle" class="control-btn">
+            <img id="play-icon" src="assets/icons/pause-icon.png" alt="Play/Stop">
+        </button>
+        <button id="sound-toggle" class="control-btn">
+            <img id="sound-icon" src="assets/icons/mute-icon.png" alt="Mute/Unmute">
+        </button>
+    </div>
 
     <h1>Yulia Chekhovska</h1>
 </header>
@@ -44,22 +39,24 @@
 
 <section id="about">
     <div class="about-card">
-    <h2>About Me</h2>
-    <p>My journey spans psychology, linguistics, and social data science. I began studying human communication and behaviour, researching cognition patterns at Chiba University. Now, I analyse the cost-effectiveness of data-driven social interventions using <strong>Python, SQL, Tableau, Excel, and ML tools</strong>.</p>
+        <h2>About Me</h2>
+        <p>My journey spans psychology, linguistics, and social data science. I began studying human communication and behaviour, researching cognition patterns at Chiba University. Now, I analyse the cost-effectiveness of data-driven social interventions using <strong>Python, SQL, Tableau, Excel, and ML tools</strong>.</p>
 
-    <p><strong>Languages:</strong> Japanese N2 | German C1 | English C1 | Ukrainian Native</p>
+        <p><strong>Languages:</strong> Japanese N2 | German C1 | English C1 | Ukrainian Native</p>
 
-    <p><strong>Education & Training:</strong><br>
-    - Data Analysis for Social Scientists, MITxT 14.310x, Dec 2025<br>
-    - ML4Good AI Safety Bootcamp, Singapore, Sept 2025<br>
-    - Data Science Bootcamp, Le Wagon Tokyo, Mar–Sep 2025<br>
-    - M.A. Psycholinguistics, Heinrich Heine University, 2018–2022<br>
-    - Behavioural Analysis Research Fellowship, Chiba University, 2021
-    </p>
+        <p><strong>Education & Training:</strong><br>
+        - Data Analysis for Social Scientists, MITxT 14.310x, Dec 2025<br>
+        - ML4Good AI Safety Bootcamp, Singapore, Sept 2025<br>
+        - Data Science Bootcamp, Le Wagon Tokyo, Mar–Sep 2025<br>
+        - M.A. Psycholinguistics, Heinrich Heine University, 2018–2022<br>
+        - Behavioural Analysis Research Fellowship, Chiba University, 2021
+        </p>
     </div>
 
     <p class="places">✈️ Places lived: Rivne (1995-2013) - Kyiv (2013-2017)- Brussels (2017-2018) - Düsseldorf (2018-2020) - Chiba (2020-2024) - Tokyo (2024-present)</p>
 </section>
+
+
 
 <section id="portfolio">
     <h2>Portfolio</h2>
@@ -74,41 +71,43 @@
 
         <div class="portfolio-item" data-tags="python,pytorch">
             <strong class="project-title">Psycholinguistic Language Learning Digital Novel</strong>
-            <img src="portfolio_image1.png" alt="Language Learning Digital Novel">
+            <img src="assets/images/projects/portfolio_image1.png" alt="Language Learning Digital Novel">
             <p>Interactive Python gamification project enhancing high school students’ willingness to communicate.</p>
-            <a href="project-esl.html" class="view-button">View Project</a>
+            <a href="pages/project-esl.html" class="view-button">View Project</a>
         </div>
 
         <div class="portfolio-item" data-tags="python,nlp,transformers,bert,shap">
             <strong class="project-title">Class Feedback NLP Sentiment Analysis</strong>
-            <img src="portfolio_image2.png" alt="Class Feedback NLP Analysis">
+            <img src="assets/images/projects/portfolio_image2.png" alt="Class Feedback NLP Analysis">
             <p>BERT-based sentiment and aspect analysis pipeline.</p>
-            <a href="project-feedback.html" class="view-button">View Project</a>
+            <a href="pages/project-feedback.html" class="view-button">View Project</a>
         </div>
 
         <div class="portfolio-item" data-tags="sheets,appscript">
             <strong class="project-title">Japan Suicide Statistics Data Pipeline</strong>
-            <img src="japan-police-logo.png" alt="Japan Police Logo">
+            <img src="assets/images/projects/japan-police-logo.png" alt="Japan Police Logo">
             <p>Automated Google Sheets + AppScript public health pipeline.</p>
-            <a href="project-japan-suicides.html" class="view-button">View Project</a>
+            <a href="pages/project-japan-suicides.html" class="view-button">View Project</a>
         </div>
 
         <div class="portfolio-item" data-tags="ml,audio,nlp">
             <strong class="project-title">Multimodal Mental Health Journaling Agent</strong>
-            <img src="portfolio_image_mlmentalhealth.jpg" alt="Mental Health ML Project">
+            <img src="assets/images/projects/portfolio_image_mlmentalhealth.jpg" alt="Mental Health ML Project">
             <p>Voice transcription, tone analysis, fairness-aware ML.</p>
-            <a href="project-mental-health.html" class="view-button">View Project</a>
+            <a href="pages/project-mental-health.html" class="view-button">View Project</a>
         </div>
 
         <div class="portfolio-item" data-tags="tableau,sheets">
             <strong class="project-title">AI Usage in Japanese Workplace</strong>
-            <img src="tableau-preview.png" alt="AI in Japanese Business">
+            <img src="assets/images/projects/tableau-preview.png" alt="AI in Japanese Business">
             <p>Dashboard analytics and sheet-based data pipelines.</p>
-            <a href="project-ai-usage-japanese.html" class="view-button">View Project</a>
+            <a href="pages/project-ai-usage-japanese.html" class="view-button">View Project</a>
         </div>
 
     </div>
 </section>
+
+
 
 <section id="media">
     <h2>Media & Appearances</h2>
@@ -118,8 +117,9 @@
         
         <div class="carousel-window">
             <div class="carousel-track">
+
                 <figure class="media-item">
-                    <img class="media-thumb" src="media_peace.jpeg" data-full="media_peace.jpeg" alt="Peace Advocacy">
+                    <img class="media-thumb" src="assets/images/media/media_peace.jpeg" data-full="assets/images/media/media_peace.jpeg" alt="Peace Advocacy">
                     <figcaption>
                         <strong>Peace Advocacy Global Voyage 2024</strong>
                         <div class="media-btn-wrapper">
@@ -129,12 +129,12 @@
                 </figure>
 
                 <figure class="media-item">
-                    <img class="media-thumb" src="media_disinfo.png" data-full="media_disinfo.png" alt="Disinformation Talk">
+                    <img class="media-thumb" src="assets/images/media/media_disinfo.png" data-full="assets/images/media/media_disinfo.png" alt="Disinformation Talk">
                     <figcaption><strong>Talks on Fake News and Disinformation 2023–2025</strong></figcaption>
                 </figure>
 
                 <figure class="media-item">
-                    <img class="media-thumb" src="media_multicultural.jpg" data-full="media_multicultural.jpg" alt="Multicultural TV">
+                    <img class="media-thumb" src="assets/images/media/media_multicultural.jpg" data-full="assets/images/media/media_multicultural.jpg" alt="Multicultural TV">
                     <figcaption>
                         <strong>TV Appearance on Multicultural Society, Chiba TV</strong>
                         <div class="media-btn-wrapper">
@@ -144,7 +144,7 @@
                 </figure>
 
                 <figure class="media-item">
-                    <img class="media-thumb" src="media_behavioral.jpg" data-full="media_behavioral.jpg" alt="Behavioral Research">
+                    <img class="media-thumb" src="assets/images/media/media_behavioral.jpg" data-full="assets/images/media/media_behavioral.jpg" alt="Behavioral Research">
                     <figcaption>
                         <strong>Behavioural Academic Research Recording</strong>
                         <div class="media-btn-wrapper">
@@ -154,40 +154,42 @@
                 </figure>
 
                 <figure class="media-item">
-                    <img class="media-thumb" src="media_chiba_mag.jpg" data-full="media_chiba_mag.jpg" alt="Magazine Feature">
+                    <img class="media-thumb" src="assets/images/media/media_chiba_mag.jpg" data-full="assets/images/media/media_chiba_mag.jpg" alt="Magazine Feature">
                     <figcaption>
                         <strong>Featured in Chiba International Bureau Magazine</strong>
                         <div class="media-btn-wrapper">
-                            <a href="https://drive.google.com/file/d/1YopozC-wpRjBDK2Ni3T4cpvM1hmkRfGC/view?usp=drive_link" class="view-button">View</a>
+                            <a href="https://drive.google.com/file/d/1YopozC-wpRjBDK2Ni3T4cpvM1hmkRfGC/view" class="view-button">View</a>
                         </div>
                     </figcaption>
                 </figure>
 
                 <figure class="media-item">
-                    <img class="media-thumb" src="media_ascent.png" data-full="media_ascent.png" alt="ASCENT Program">
+                    <img class="media-thumb" src="assets/images/media/media_ascent.png" data-full="assets/images/media/media_ascent.png" alt="ASCENT Program">
                     <figcaption>
                         <strong>ASCENT Science Research Program Report</strong>
                         <div class="media-btn-wrapper">
-                            <a href="https://drive.google.com/file/d/1Nieb43eknv-IgUyjuyN4JCSCxdPvcItq/view?usp=drive_link" class="view-button">View</a>
+                            <a href="https://drive.google.com/file/d/1Nieb43eknv-IgUyjuyN4JCSCxdPvcItq/view" class="view-button">View</a>
                         </div>
                     </figcaption>
                 </figure>
 
                 <figure class="media-item">
-                    <img class="media-thumb" src="media-hackathon.png" data-full="media-hackathon.png" alt="Hackathon">
+                    <img class="media-thumb" src="assets/images/media/media_hackathon.png" data-full="assets/images/media/media_hackathon.png" alt="Hackathon">
                     <figcaption>
-                        <strong>AI Agent Hackathon by Meting Pot Tokyo</strong>
+                        <strong>AI Agent Hackathon by Melting Pot Tokyo</strong>
                         <div class="media-btn-wrapper">
-                            <a href="https://drive.google.com/file/d/1GrNM1FUElC-b9ttu_akurB3PSnP6Qzn8/view?usp=sharing" class="view-button">View</a>
+                            <a href="https://drive.google.com/file/d/1GrNM1FUElC-b9ttu_akurB3PSnP6Qzn8/view" class="view-button">View</a>
                         </div>
                     </figcaption>
                 </figure>
+
             </div>
         </div>
 
         <button class="carousel-next">&#10095;</button>
     </div>
 </section>
+
 
 
 <section id="contact">
@@ -203,32 +205,33 @@
     &copy; 2025 Made by Yulia Chekhovska. All rights reserved.
 </footer>
 
-<!-- FULL JAVASCRIPT MOVED HERE -->
-<script>
 
-// Profile video controls
+<!-- ========================================================= -->
+<!-- JAVASCRIPT SECTION                                        -->
+<!-- ========================================================= -->
+
+<script>
+// VIDEO CONTROLS
 const video = document.getElementById('profile-video');
 const playToggle = document.getElementById('play-toggle');
 const soundToggle = document.getElementById('sound-toggle');
-
 const playIcon = document.getElementById('play-icon');
 const soundIcon = document.getElementById('sound-icon');
 
-// Clipart sources
-const playImg = 'play-icon.png';
-const pauseImg = 'pause-icon.png';
-const muteImg = 'mute-icon.png';
-const unmuteImg = 'unmute-icon.png';
+const playImg = 'assets/icons/play-icon.png';
+const pauseImg = 'assets/icons/pause-icon.png';
+const muteImg = 'assets/icons/mute-icon.png';
+const unmuteImg = 'assets/icons/unmute-icon.png';
 
-// Ensure video starts muted and autoplay
+// Start muted and autoplay
 video.muted = true;
 video.play();
 
-// Initialize icons
-playIcon.src = pauseImg;  // playing → pause icon
-soundIcon.src = muteImg;   // muted → mute icon
+// Correct startup icons
+playIcon.src = pauseImg;
+soundIcon.src = muteImg;
 
-// Play/pause toggle
+// Play / pause
 playToggle.addEventListener('click', () => {
     if (video.paused) {
         video.play();
@@ -239,16 +242,17 @@ playToggle.addEventListener('click', () => {
     }
 });
 
-// Mute/unmute toggle
+// Mute / unmute
 soundToggle.addEventListener('click', () => {
     video.muted = !video.muted;
     soundIcon.src = video.muted ? muteImg : unmuteImg;
 });
+</script>
 
 
 
-
-// Portfolio tag filtering
+<script>
+// TAG FILTERING
 const items = document.querySelectorAll('.portfolio-item');
 const tagList = document.getElementById('tag-list');
 const clearTagsBtn = document.getElementById('clear-tags');
@@ -287,8 +291,12 @@ function filterProjects() {
         item.style.display = activeTags.size === 0 || match ? 'block' : 'none';
     });
 }
+</script>
 
-// Media modal
+
+
+<script>
+// MEDIA MODAL
 const mediaModal = document.createElement('div');
 mediaModal.className = 'media-modal';
 mediaModal.innerHTML = `
@@ -312,8 +320,12 @@ document.querySelectorAll('.media-thumb').forEach(img => {
     });
 });
 modalClose.addEventListener('click', () => { mediaModal.style.display = 'none'; });
+</script>
 
-// Panel switching
+
+
+<script>
+// PANEL SWITCHING
 const tabButtons2 = document.querySelectorAll('.tab-btn');
 const sections2 = document.querySelectorAll('section');
 
@@ -331,16 +343,14 @@ tabButtons2.forEach(btn => {
         });
     });
 });
-
 document.querySelector('#about').classList.add('active-section');
-
-
-
 </script>
 
-<script>
 
-// --- Infinite / Full-Width Auto-Scrolling Carousel ---
+
+<script>
+// INFINITE CAROUSEL (unchanged except for path fixes)
+
 const track = document.querySelector('.carousel-track');
 const thumbs = Array.from(document.querySelectorAll('.media-thumb'));
 const prevBtn = document.querySelector('.carousel-prev');
@@ -348,7 +358,6 @@ const nextBtn = document.querySelector('.carousel-next');
 const carouselWindow = document.querySelector('.carousel-window');
 let windowWidth = carouselWindow.offsetWidth;
 
-// Clone first and last for infinite effect
 const firstClone = thumbs[0].parentElement.cloneNode(true);
 const lastClone = thumbs[thumbs.length - 1].parentElement.cloneNode(true);
 
@@ -358,7 +367,6 @@ track.insertBefore(lastClone, track.firstChild);
 let allItems = Array.from(track.querySelectorAll('.media-item'));
 let index = 1;
 
-// Center first item
 function updateCarousel(skipTransition = false) {
     const thumbWidth = allItems[0].offsetWidth + 20;
     const offset = thumbWidth * index - (windowWidth / 2 - thumbWidth / 2);
@@ -371,14 +379,13 @@ function updateCarousel(skipTransition = false) {
     });
 }
 
-// --- Arrow Navigation ---
 function moveLeft() { 
-    index -= 2; // jump faster
+    index -= 2;
     updateCarousel();
     pauseAutoScroll();
 }
 function moveRight() { 
-    index += 2; 
+    index += 2;
     updateCarousel();
     pauseAutoScroll();
 }
@@ -386,14 +393,12 @@ function moveRight() {
 prevBtn.addEventListener('click', moveLeft);
 nextBtn.addEventListener('click', moveRight);
 
-// --- Infinite jump after transition ---
 track.addEventListener('transitionend', () => {
     if (index <= 0) index = thumbs.length;
     else if (index >= allItems.length - 1) index = 1;
     updateCarousel(true);
 });
 
-// --- Swipe Support ---
 let startX = 0, isDragging = false;
 carouselWindow.addEventListener('touchstart', e => { startX = e.touches[0].clientX; isDragging = true; });
 carouselWindow.addEventListener('touchmove', e => {
@@ -404,35 +409,33 @@ carouselWindow.addEventListener('touchmove', e => {
 });
 carouselWindow.addEventListener('touchend', () => { isDragging = false; });
 
-// --- Auto-Scroll ---
-let autoScrollSpeed = 0.5; // pixels per frame
+let autoScrollSpeed = 0.5;
 let autoScrollPaused = false;
 let autoScrollPauseTimeout;
 
 function pauseAutoScroll() {
     autoScrollPaused = true;
     clearTimeout(autoScrollPauseTimeout);
-    autoScrollPauseTimeout = setTimeout(() => { autoScrollPaused = false; }, 2000); // resume after 2s
+    autoScrollPauseTimeout = setTimeout(() => { autoScrollPaused = false; }, 2000);
 }
 
 function autoScroll() {
     if (!autoScrollPaused) {
         const matrix = new WebKitCSSMatrix(getComputedStyle(track).transform);
         let currentX = matrix.m41;
-        currentX -= autoScrollSpeed; // scroll left
+        currentX -= autoScrollSpeed;
         track.style.transition = 'none';
         track.style.transform = `translateX(${currentX}px)`;
 
         const thumbWidth = allItems[0].offsetWidth + 20;
         if (Math.abs(currentX) >= thumbWidth * (allItems.length - 1)) {
             index = 1;
-            updateCarousel(true); // instant jump
+            updateCarousel(true);
         }
     }
     requestAnimationFrame(autoScroll);
 }
 
-// --- Click to activate ---
 allItems.forEach((item, i) => {
     item.querySelector('.media-thumb').addEventListener('click', () => {
         index = i;
@@ -441,15 +444,10 @@ allItems.forEach((item, i) => {
     });
 });
 
-// --- Resize Handling ---
 window.addEventListener('resize', () => { windowWidth = carouselWindow.offsetWidth; updateCarousel(true); });
 
-// --- Initialize ---
 updateCarousel();
-autoScroll(); // start auto-scroll automatically
-
-
-
+autoScroll();
 </script>
 
 </body>

@@ -12,12 +12,12 @@
    ========================= */
 body {
     font-family: Arial, sans-serif;
-    background: url('background.jpg') no-repeat center center fixed;
+    background: url('assets/images/profile/background.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
     line-height: 1.6;
     overflow-x: hidden;
-    overflow-y: auto; /* remove double scrolling */
+    overflow-y: auto;
     font-weight: 600;
 }
 
@@ -42,10 +42,6 @@ header {
     object-fit: cover;
 }
 
-.profile-controls {
-    margin-top: 10px;
-}
-
 .control-btn {
     width: 60px;
     height: 60px;
@@ -65,34 +61,22 @@ header {
     transform: scale(1.05);
 }
 
-
 .control-btn img {
-    width: 28px;        /* fixed size so swap is immediate */
+    width: 28px;
     height: 28px;
     display: block;
-    transition: transform 0.1s ease; /* subtle click feedback */
+    transition: transform 0.1s ease;
 }
 
 .control-btn:active img {
-    transform: scale(0.9);  /* small “press” effect */
+    transform: scale(0.9);
 }
 
 .control-btn-wrapper {
     display: flex;
-    justify-content: center; /* centers buttons horizontally */
-    gap: 20px; /* space between buttons */
+    justify-content: center;
+    gap: 20px;
     margin-top: 15px;
-}
-
-.video-toggle {
-    background: #444;
-    color: #fff;
-    border: none;
-    padding: 8px 14px;
-    cursor: pointer;
-    border-radius: 4px;
-    margin: 0 4px;
-    font-weight: 700;
 }
 
 .video-wrapper {
@@ -112,19 +96,17 @@ header {
 /* =========================
    NAVIGATION TABS
    ========================= */
-   
 .nav-tabs {
     display: flex;
     justify-content: center;
     gap: 18px;
     margin: 20px auto 10px auto;
     padding: 10px 0;
-    position: relative;
     z-index: 3;
 }
 
 .tab-btn {
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(255,255,255,0.25);
     border: 1px solid rgba(255,255,255,0.4);
     padding: 10px 18px;
     border-radius: 6px;
@@ -152,11 +134,9 @@ header {
    PANEL SYSTEM
    ========================= */
 section {
-    display: none;  /* used for tabbed content only */
+    display: none;
     opacity: 0;
     transition: opacity 0.35s ease-in-out;
-    width: 100%;
-    position: relative;
     padding: 20px 10vw;
 }
 
@@ -165,53 +145,28 @@ section.active-section {
     opacity: 1;
 }
 
-section h2 {
-    margin-top: 10px;
-    margin-bottom: 15px;
-}
-
 /* =========================
-   ABOUT SECTION
+   ABOUT
    ========================= */
-#about {
-    padding: 20px;
-    font-family: sans-serif;
-    color: #fff;
-}
-
 .about-card {
     background-color: #0000006b;
     border-radius: 15px;
     padding: 20px;
     width: 100%;
-    box-sizing: border-box;
     line-height: 1.6;
     margin-bottom: 20px;
 }
 
-.about-card h2 {
-    margin-top: 0;
-}
-
-.about-card p {
-    margin-bottom: 1rem;
-}
-
 .places {
     margin-bottom: 1rem;
-    line-height: 1.5;
 }
 
 /* =========================
    PORTFOLIO
    ========================= */
-.tag-filter {
-    margin-bottom: 20px;
-}
-
 .tag-btn {
     background: #0a0101a8;
-    border: 1px solid rgba(255, 255, 255, 0.849);
+    border: 1px solid rgba(255,255,255,0.85);
     padding: 8px 16px;
     border-radius: 25px;
     color: #fff;
@@ -225,7 +180,7 @@ section h2 {
     opacity: 1;
     border-color: #fff;
     text-shadow: 0 0 8px rgba(255,255,255,0.6);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.774);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.77);
 }
 
 .tag-btn.active {
@@ -245,6 +200,12 @@ section h2 {
 .portfolio-item img {
     width: 100%;
     border-radius: 8px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.portfolio-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 18px rgba(255,255,255,0.4);
 }
 
 .project-title {
@@ -258,7 +219,6 @@ section h2 {
     border-radius: 12px;
     text-decoration: none;
     transition: all 0.25s ease;
-    text-shadow: 0 0 4px rgba(255,255,255,0.35);
 }
 
 .project-title:hover {
@@ -289,89 +249,56 @@ section h2 {
 .media-carousel {
     position: relative;
     width: 100%;
-    max-width: 100%;
-    margin: 40px 0;
-    overflow: hidden; /* hide overflow */
-    padding: 20px 0;
+    overflow: hidden;
+    margin: 30px 0;
 }
 
 .carousel-window {
-    overflow: hidden;
     width: 100%;
-    position: relative;
-    padding: 0; /* full width */
+    overflow: hidden;
 }
 
 .carousel-track {
     display: flex;
     gap: 20px;
-    transition: transform 0.02s linear;
+    transition: transform 0.2s ease;
     will-change: transform;
 }
 
 .media-item {
-    flex: 0 0 300px; /* bigger items */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex: 0 0 300px;
 }
 
 .media-thumb {
     width: 100%;
-    height: 220px; 
+    height: 220px;
     object-fit: cover;
     border-radius: 8px;
     cursor: zoom-in;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.media-thumb.active {
+.media-thumb:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
-/* Buttons */
 .carousel-prev,
 .carousel-next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.4);
     color: #fff;
     border: none;
     font-size: 2rem;
-    padding: 14px 18px;
-    cursor: pointer;
-    z-index: 10;
+    padding: 12px 18px;
     border-radius: 50%;
-    transition: background 0.3s ease;
+    cursor: pointer;
 }
 
 .carousel-prev { left: 10px; }
 .carousel-next { right: 10px; }
-
-.carousel-prev:hover,
-.carousel-next:hover {
-    background: rgba(0,0,0,0.8);
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-    .media-item { flex: 0 0 250px; }
-    .media-thumb { height: 200px; }
-}
-
-@media (max-width: 768px) {
-    .media-item { flex: 0 0 200px; }
-    .media-thumb { height: 160px; }
-}
-
-@media (max-width: 480px) {
-    .media-item { flex: 0 0 150px; }
-    .media-thumb { height: 120px; }
-}
-
-
 
 /* =========================
    CONTACT
@@ -382,17 +309,7 @@ section h2 {
     margin-top: 20px;
 }
 
-.hover-scale {
-    transition: transform 0.2s;
-}
-
-.hover-scale:hover {
-    transform: scale(1.05);
-}
-
 .contact-icons a {
-    display: inline-block;
-    margin-top: 12px;
     padding: 8px 18px;
     background: #fff;
     color: #111;
@@ -423,10 +340,11 @@ footer {
    ========================= */
 body.project-page {
     color: #222;
+    background: #f5f7fa;
 }
 
 body.project-page section {
-    display: block;             /* override tab sections */
+    display: block;
     opacity: 1;
     max-width: 900px;
     margin: 0 auto 40px auto;
@@ -434,97 +352,5 @@ body.project-page section {
     background: #fff;
     color: #111;
     border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    line-height: 1.6;
 }
 
-body.project-page header {
-    text-align: center;
-    padding-top: 20px;
-    color: #fff; /* make all text inside header white */
-}
-
-body.project-page section h2 {
-    color: #000000;
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-
-body.project-page section img {
-    width: 100%;
-    max-width: 600px;
-    display: block;
-    margin: 20px auto;
-    border-radius: 10px;
-}
-
-/* Make nav links on project pages match project buttons */
-body.project-page nav {
-    text-align: center;  /* center the nav links */
-    margin: 20px 0;      /* spacing above and below */
-}
-
-body.project-page nav a {
-    display: inline-block;
-    margin: 12px 8px;  /* spacing between links */
-    padding: 10px 24px;
-    background: linear-gradient(135deg, #60666e, #000000);
-    color: #fff;
-    font-weight: 700;
-    text-decoration: none;
-    border-radius: 50px; /* pill shape */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
-}
-
-body.project-page nav a:hover {
-    transform: translateY(-2px) scale(1.03);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-    background: linear-gradient(135deg, #6e757c, #d0e3f0);
-}
-
-
-body.project-page a.button,
-body.project-page .view-button {
-    display: inline-block;
-    margin: 12px 0;
-    padding: 10px 24px;
-    background: linear-gradient(135deg, #60666e, #000000);
-    color: #fff;
-    font-weight: 700;
-    text-decoration: none;
-    border-radius: 50px; /* pill shape */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
-}
-
-body.project-page a.button:hover,
-body.project-page .view-button:hover {
-    transform: translateY(-2px) scale(1.03);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-    background: linear-gradient(135deg,  #6e757c, #d0e3f0);
-}
-
-
-
-body.project-page .pdf-embed {
-    display: block;
-    margin: 20px auto;  /* center horizontally */
-    width: 100%;        /* fills section width */
-    max-width: 1000px;  /* optional max-width */
-    height: 650px;
-    border: 1px solid #e6eef6;
-    border-radius: 8px;
-}
-
-
-body.project-page footer {
-    background: #111;
-    color: #fff;
-    opacity: 0.85;
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px 0;
-    font-weight: 700;
-}
