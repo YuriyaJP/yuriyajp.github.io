@@ -7,11 +7,11 @@ This repo hosts my personal website, research projects, interactive data visuali
 
 ## About Me
 Data-driven researcher focusing on:
-- Social issues in Japan
 - Forecasting and predictive modeling
 - Behavioral insights
 - Machine learning, visualization, and policy simulation
 
+I build operational systems and analyze data to help mission-driven organizations work more effectively.
 ---
 
 <!-- GitHub Stats -->
