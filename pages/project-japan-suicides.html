@@ -11,203 +11,122 @@
 </head>
 <body class="project-page">
 
-<header>
-    <img src="../assets/images/profile/yulia.jpg" alt="Yulia Chekhovska" class="profile-media">
-    <h1>Japan Suicide Statistics Data Engineering & Economic Impact Pipeline</h1>
-    <p style="max-width:800px;margin:8px auto 0;opacity:0.95">
-        A full-stack data engineering and analytics project integrating scraping, cleaning, forecasting, and economic modeling to support evidence-based public health interventions in Japan.
-    </p>
-</header>
-
-<nav>
-    <a href="../index.html">Home</a>
-</nav>
-
 <section>
 
-    <img src="../assets/images/projects/japan-police-logo.png" alt="Japan Police Logo" style="width:140px; display:block; margin:0 auto; opacity:0.9">
+<img src="../assets/images/projects/japan-police-logo.png"
+     alt="Japan Police Logo"
+     style="width:130px; display:block; margin:0 auto; opacity:0.9">
 
 <div class="glass-panel summary-card">
-    <h2 class="summary-title">Quick Summary</h2>
+    <h2 class="summary-title">Project Summary</h2>
 
     <div class="summary-grid">
         <div class="summary-block">
-            <h3>What I Built</h3>
+            <h3>What This Is</h3>
             <ul>
-                <li>Data pipeline scraping 46 years of Japan police suicide statistics</li>
-                <li>Economic impact model calculating ¥300B+ annual productivity loss</li>
-                <li>Policy simulator showing ROI of suicide prevention interventions</li>
+                <li>End-to-end public health data engineering pipeline</li>
+                <li>46 years of Japan suicide statistics unified and cleaned</li>
+                <li>Economic impact and policy scenario analysis</li>
             </ul>
         </div>
 
         <div class="summary-block">
-            <h3>Key Findings</h3>
+            <h3>Key Insights</h3>
             <ul>
-                <li>Working-age groups (20–59) drive highest economic losses</li>
-                <li>15% reduction in suicide rates = ¥45B+ annual savings</li>
-                <li>Data-driven targeting of interventions maximizes public health ROI</li>
+                <li>Working-age groups (20–59) dominate economic loss</li>
+                <li>Annual productivity loss exceeds ¥300B</li>
+                <li>Targeted interventions show strong ROI potential</li>
             </ul>
         </div>
     </div>
+
     <div class="summary-footer">
-        <strong>Tech Stack:</strong> Python, BeautifulSoup, Pandas, XGBoost, Prophet, ARIMA, NPV modeling<br>
-        <strong>Relevance:</strong> Full-stack data engineering, economic modeling, policy impact analysis
+        <strong>Stack:</strong> Python, Pandas, BeautifulSoup, Plotly, NPV modeling<br>
+        <strong>Focus:</strong> Data engineering, analytics, public policy insight
     </div>
 </div>
-  
 
-    <!-- Interactive Data Exploration Section -->
-    <h2>Interactive Data Exploration</h2>
-    <p style="background: #fff3cd; padding: 12px; border-radius: 6px; border-left: 4px solid #ffc107; margin: 20px 0;">
-          <strong>Tip:</strong> These are fully interactive visualizations, not static images. Hover over charts for exact values, 
-        click legend items to toggle data series, and use the toolbar to zoom and pan. Try the time range selector to focus on specific periods.
-    </p>
+<h2>Interactive Data Exploration</h2>
 
-    <!-- Chart 1: Main Trends -->
-    <div style="margin: 40px 0;">
-        <h3 style="color: #056d30; border-bottom: 2px solid #056d30; padding-bottom: 8px;">
-              Suicide Trends by Age Group (1978-2024)
-        </h3>
-        <p style="color: #555; line-height: 1.6;">
-            Explore 46 years of suicide data across 9 age groups. Use the time range selector below the chart to focus on specific periods 
-            (5 years, 10 years, 20 years, or all data). Click legend items to show/hide specific age groups for easier comparison.
-        </p>
-        <iframe src="../pages/charts/suicide_trends_unified.html" 
-                width="100%" 
-                height="700px" 
-                frameborder="0"
-                style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); background: white;">
-        </iframe>
-    </div>
+<p style="background:#eef6f2; padding:10px 14px; border-left:4px solid #0b5d3b; border-radius:6px;">
+    Interactive charts — hover, zoom, and filter to explore long-term trends and policy scenarios.
+</p>
 
-    <!-- Placeholder Chart 2 -->
-    <div style="margin: 40px 0;">
-        <h3 style="color: #056d30; border-bottom: 2px solid #056d30; padding-bottom: 8px;">
-                Economic Loss by Age Group
-        </h3>
-        <p style="color: #555; line-height: 1.6;">
-            Working-age cohorts (20-59) generate the highest productivity losses. Interactive bar chart showing annual economic impact 
-            per age bracket with lifetime earnings calculations.
-        </p>
-        <div style="background: #f8f9fa; border: 2px dashed #dee2e6; border-radius: 8px; padding: 60px 20px; text-align: center; color: #6c757d;">
-            <p style="font-size: 18px; margin: 0;"><strong>📊 Chart Coming Soon</strong></p>
-            <p style="margin: 10px 0 0 0; font-size: 14px;">Economic loss visualization in development</p>
-        </div>
-    </div>
+<!-- Chart 1 -->
+<div style="margin:40px 0;">
+    <h3>Suicide Trends by Age Group (1978–2024)</h3>
+    <iframe src="../pages/charts/suicide_trends_unified.html"
+            width="100%" height="700" frameborder="0"></iframe>
+</div>
 
-    <!-- Placeholder Chart 3 -->
-    <div style="margin: 40px 0;">
-        <h3 style="color: #056d30; border-bottom: 2px solid #056d30; padding-bottom: 8px;">
-                Policy Impact Simulation
-        </h3>
-        <p style="color: #555; line-height: 1.6;">
-            Side-by-side comparison of current economic loss vs. 15% suicide rate reduction scenario. Shows potential savings 
-            from targeted public health interventions by age group.
-        </p>
-        <div style="background: #f8f9fa; border: 2px dashed #dee2e6; border-radius: 8px; padding: 60px 20px; text-align: center; color: #6c757d;">
-            <p style="font-size: 18px; margin: 0;"><strong>📊 Chart Coming Soon</strong></p>
-            <p style="margin: 10px 0 0 0; font-size: 14px;">Policy simulation visualization in development</p>
-        </div>
-    </div>
+<!-- Chart 2 -->
+<div style="margin:40px 0;">
+    <h3>Economic Loss by Age Group</h3>
+    <iframe src="../pages/charts/economic_loss_by_age.html"
+            width="100%" height="560" frameborder="0"></iframe>
+</div>
 
-    <!-- Placeholder Chart 4 -->
-    <div style="margin: 40px 0;">
-        <h3 style="color: #056d30; border-bottom: 2px solid #056d30; padding-bottom: 8px;">
-                Suicide Causes by Age Group
-        </h3>
-        <p style="color: #555; line-height: 1.6;">
-            Interactive heatmap showing primary causes of suicide across age demographics. Darker colors indicate higher frequency, 
-            revealing age-specific risk factors for targeted intervention design.
-        </p>
-        <div style="background: #f8f9fa; border: 2px dashed #dee2e6; border-radius: 8px; padding: 60px 20px; text-align: center; color: #6c757d;">
-            <p style="font-size: 18px; margin: 0;"><strong>📊 Chart Coming Soon</strong></p>
-            <p style="margin: 10px 0 0 0; font-size: 14px;">Cause analysis heatmap in development</p>
-        </div>
-    </div>
+<!-- Chart 3 -->
+<div style="margin:40px 0;">
+    <h3>Policy Impact Simulation</h3>
+    <iframe src="../pages/charts/roi_by_age.html"
+            width="100%" height="520" frameborder="0"></iframe>
+</div>
 
-    <!-- Placeholder Chart 5 -->
-    <div style="margin: 40px 0;">
-        <h3 style="color: #056d30; border-bottom: 2px solid #056d30; padding-bottom: 8px;">
-                Forecasting with Confidence Intervals
-        </h3>
-        <p style="color: #555; line-height: 1.6;">
-            Time series forecast showing projected suicide rates for the next 3-5 years with confidence intervals. 
-            Uses Prophet and ARIMA models to predict trends and identify early warning signals.
-        </p>
-        <div style="background: #f8f9fa; border: 2px dashed #dee2e6; border-radius: 8px; padding: 60px 20px; text-align: center; color: #6c757d;">
-            <p style="font-size: 18px; margin: 0;"><strong>📊 Chart Coming Soon</strong></p>
-            <p style="margin: 10px 0 0 0; font-size: 14px;">Forecasting visualization in development</p>
-        </div>
-    </div>
+<!-- Chart 4 -->
+<div style="margin:40px 0;">
+    <iframe src="../pages/charts/policy_scenario.html"
+            width="100%" height="560" frameborder="0"></iframe>
+</div>
+
+<!-- Chart 5 -->
+<div style="margin:40px 0;">
+    <h3>Suicide Causes by Age Group</h3>
+    <iframe src="../pages/charts/cause_heatmap.html"
+            width="100%" height="680" frameborder="0"></iframe>
+</div>
+
+<h2>Approach</h2>
+<p>
+    Raw suicide statistics were scraped from Japanese police publications,
+    cleaned, normalized, and merged across age, gender, and cause categories.
+    Analysis focuses on long-term trends, economic impact, and policy-relevant insights.
+</p>
+
+<h2>Modeling Note</h2>
+<p>
+    Forecasting methods (linear regression, ARIMA, gradient boosting) were tested,
+    but limited data volume and volatility produced unreliable results.
+    The project therefore emphasizes descriptive analytics and economic modeling,
+    where conclusions are statistically sound and interpretable.
+</p>
+
+<h2>Results</h2>
+<p>
+    Working-age populations account for the majority of economic loss.
+    Scenario analysis shows that even modest reductions in suicide rates
+    yield multi-billion yen savings annually.
+</p>
 
 
-    <h2>Situation</h2>
-    <p>
-        Japan publishes detailed suicide statistics, but raw data is fragmented across PDFs, HTML tables, and annual police reports.  
-        Public health teams require a unified, analyzable dataset and interpretable outputs to evaluate trends and quantify economic consequences.
-    </p>
+<div style="background:#f4f7fb; padding:14px; border-radius:8px; margin:20px 0; text-align:center;">
+    <img src="../assets/images/projects/economic_loss_table.png"
+         alt="Economic Loss Table"
+         style="max-width:100%; border-radius:6px;">
+</div>
 
-    <h2>Task</h2>
-    <p>
-        Engineer a reproducible dataset, analyze demographic patterns, attempt forecasting across age groups, and quantify economic losses using lifetime productivity models.  
-        Produce policy scenarios to demonstrate potential ROI of targeted interventions.
-    </p>
+<h2>Explore</h2>
+<iframe class="pdf-embed"
+        src="../assets/pdf/Japan Suicide Statistics_ Forecasting, Economic Impact, and Policy Simulation.pdf">
+</iframe>
 
-    <h2>Action</h2>
-    <ul>
-        <li><strong>Data Engineering:</strong> web scraping, PDF extraction, Japanese era conversion, missing-value resolution, category normalization, and merge logic for age, gender, and reason-of-suicide data.</li>
-        <li><strong>Exploratory Visualization:</strong> demographic heatmaps, multi-year trends, and cross-analysis of age and cause categories.</li>
-        <li><strong>Modeling Attempts:</strong> Linear Regression, XGBoost, Prophet, and ARIMA for age-specific forecasting (limited performance due to sparse time series).</li>
-        <li><strong>Economic Modeling:</strong> lifetime earnings, tax revenue estimates, and discounted productivity loss per suicide case.</li>
-        <li><strong>Policy Engine:</strong> scenario simulations adjusting suicide rates and productivity, generating age-specific loss differentials.</li>
-    </ul>
-
-    <h2>Tools & ML Libraries</h2>
-    <ul>
-        <li>Pandas, NumPy, BeautifulSoup4, Requests, PyPDF2</li>
-        <li>Matplotlib, Seaborn</li>
-        <li>Scikit-learn (Linear Regression), XGBoost</li>
-        <li>Prophet, Statsmodels (ARIMA, SARIMA)</li>
-        <li>Custom NPV-based economic loss modeling</li>
-    </ul>
-
-    <h2>Results</h2>
-    <p>
-        The pipeline consolidates more than two decades of demographic suicide data.  
-        Economic modeling shows that working-age cohorts 20–59 generate the highest productivity losses, with middle-age brackets contributing over ¥300B annually.  
-        A simulated 15 percent reduction in suicide rates produces multi-billion yen savings across all age groups.
-    </p>
-
-    <div style="background:#f0f4ff; padding:15px; border-radius:8px; margin:20px 0; text-align:center;">
-        <img src="../assets/images/projects/highest-suicides.png" alt="Highest Suicides by Age Group 1978-2024"
-            style="max-width:100%; border-radius:8px;">
-    </div>
-
-    <div style="background:#f0f4ff; padding:15px; border-radius:8px; margin:20px 0; text-align:center;">
-        <img src="../assets/images/projects/economic_loss_table.png" alt="Final Economic Loss Table"
-            style="max-width:100%; border-radius:8px;">
-    </div>
-
-
-    <h2>Limitations</h2>
-    <p>
-        Age-specific forecasting remains statistically unstable due to short time spans and category volatility.  
-        Further improvement requires either more granular data or hierarchical time-series models.
-    </p>
-
-    <h2>Explore</h2>
-    <iframe class="pdf-embed" src="../assets/pdf/Japan Suicide Statistics_ Forecasting, Economic Impact, and Policy Simulation.pdf"></iframe>
-
-    <p style="margin-top:14px">Quick links:</p>
-    <a href="https://docs.google.com/document/d/1j34JIiakTalFC_5zKhkkThVc4CLGtmdByHE1w_yWmIc/edit?usp=sharing" class="project-button" target="_blank">Open Report</a>
-    <a href="https://www.npa.go.jp/publications/statistics/safetylife/jisatsu.html" class="project-button" target="_blank">Japan Police Statistics</a>
-    <a href="https://github.com/YuriyaJP/Public-Health-Data-Engineering-Project-Japan-Suicide-Statistics-Pipeline" class="project-button" target="_blank">View Code</a>
+<p style="margin-top:14px">
+    <a href="https://docs.google.com/document/d/1j34JIiakTalFC_5zKhkkThVc4CLGtmdByHE1w_yWmIc/edit?usp=sharing"
+       class="project-button" target="_blank">Report</a>
+    <a href="https://www.npa.go.jp/publications/statistics/safetylife/jisatsu.html"
+       class="project-button" target="_blank">Source Data</a>
+    <a href="https://github.com/YuriyaJP/Public-Health-Data-Engineering-Project-Japan-Suicide-Statistics-Pipeline"
+       class="project-button" target="_blank">Code</a>
+</p>
 
 </section>
-
-<footer>
-    &copy; 2025 Made by Yulia Chekhovska. All rights reserved.
-</footer>
-
-</body>
-</html>

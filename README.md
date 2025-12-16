@@ -32,6 +32,10 @@ Code, data, and documentation are included selectively and intentionally. Some w
 
 ---
 
-## Contact
+### Economic Assumptions
 
-Additional context and background are available via the portfolio site linked from this repository.
+To estimate lifetime earnings and productivity loss by age group, we used Japanese salary benchmarks from publicly available sources:
+- GaijinPot: Average salaries by age in Japan (2025)  
+  https://blog.gaijinpot.com/what-is-the-average-salary-in-japan/  
+- A-Realty: Salary breakdown by age group (2025)  
+  https://arealty.jp/blog/average-salary-in-japan-a-2025/
