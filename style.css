@@ -525,3 +525,28 @@ body.project-page .project-button:active {
     cursor: pointer;
     z-index: 10000;
 }
+
+
+/* =========================================================
+   SUMMARY CARD SPECIALIZATION
+   ========================================================= */
+
+.summary-card {
+    padding: 26px;
+    margin: 26px 0;
+}
+
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    margin-top: 18px;
+}
+
+
+@keyframes gradient-shift {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
