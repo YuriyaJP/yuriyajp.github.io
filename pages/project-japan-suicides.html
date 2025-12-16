@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Japan Suicide Statistics: Forecasting, Economic Impact, and Policy Simulation | Yulia Chekhovska</title>
+<title>Disability-Adjusted Life Years (DALYs) in Japan Suicide Statistics: Economic Impact, and Policy Simulation | Yulia Chekhovska</title>
 
 
 
@@ -14,7 +14,7 @@
 <header>
     <img src="../assets/images/profile/yulia.jpg" alt="Yulia Chekhovska" class="profile-media">
     <p style="max-width:800px;margin:8px auto 0;opacity:0.95"></p>
-    <h1>Japan Suicide Statistics: Forecasting, Economic Impact, and Policy Simulation</h1>
+    <h1>Disability-Adjusted Life Years (DALYs) in Japan Suicide Statistics: Economic Impact, and Policy Simulation</h1>
 </header>
 
 <nav>
@@ -27,39 +27,96 @@
      alt="Japan Police Logo"
      style="width:130px; display:block; margin:0 auto; opacity:0.9">
 
-<div class="glass-panel summary-card">
-    <h2 class="summary-title">Project Summary</h2>
+<h2>The Problem</h2>
+<p>
+    A Tokyo-based mental health organization delivered crisis intervention services and prevention programs
+    but lacked a quantitative framework to demonstrate impact to grant evaluators. Proposals relied on 
+    activity metrics (number of contacts, workshops delivered) rather than outcome metrics that funders expect:
+    lives saved, health impact measured in Disability-Adjusted Life Years (DALYs), and cost-effectiveness ratios.
+</p>
 
-    <div class="summary-grid">
-        <div class="summary-block">
-            <h3>What This Is</h3>
-            <ul>
-                <li>End-to-end public health data engineering pipeline</li>
-                <li>46 years of Japan suicide statistics unified and cleaned</li>
-                <li>Economic impact and policy scenario analysis</li>
-            </ul>
-        </div>
+<h2>My Approach</h2>
+<p>
+    I independently designed a comprehensive cost-effectiveness analysis methodology that integrated:
+</p>
+<ul style="max-width:700px; margin:20px auto; line-height:1.8;">
+    <li><strong>Epidemiological baseline:</strong> Youth suicide rates and at-risk population data</li>
+    <li><strong>Intervention reach:</strong> 97+ prevention workshops and 9,000+ crisis contacts annually</li>
+    <li><strong>Evidence synthesis:</strong> Peer-reviewed effectiveness rates for early intervention</li>
+    <li><strong>DALY calculations:</strong> Health impact using global health standard methodology</li>
+    <li><strong>Cost modeling:</strong> Program costs per intervention and cost-per-DALY metrics</li>
+</ul>
 
-        <div class="summary-block">
-            <h3>Key Insights</h3>
-            <ul>
-                <li>Working-age groups (20–59) dominate economic loss</li>
-                <li>Annual productivity loss exceeds ¥300B</li>
-                <li>Targeted interventions show strong ROI potential</li>
-            </ul>
-        </div>
+    <h2>Key Insights</h2>
+    <ul style="max-width:700px; margin:20px auto; line-height:1.8;">
+        <li>Working-age groups (20–59) dominate economic loss</li>
+        <li>Annual productivity loss exceeds ¥300B</li>
+        <li>Targeted interventions show strong ROI potential</li>
+    </ul>
+
+<h2>DALY Calculation Methodology</h2>
+
+<div style="background:#f4f7fb; padding:24px; border-radius:8px; margin:30px auto; max-width:850px;">
+    <h3 style="margin-top:0;">The DALY Formula</h3>
+    <p>Disability-Adjusted Life Years (DALYs) measure the burden of disease by combining years of life lost (YLL) due to premature death and years lived with disability (YLD).</p>
+    
+    <div style="background:white; padding:20px; border-radius:6px; margin:20px 0; font-family:monospace; font-size:15px; text-align:center; border:2px solid #667eea;">
+        <strong>DALY = YLL + YLD</strong><br><br>
+        <strong>YLL = N × L</strong><br>
+        <span style="font-size:13px; font-family:sans-serif; color:#666;">
+            N = number of deaths<br>
+            L = standard life expectancy at age of death
+        </span>
     </div>
 
-    <div class="summary-footer">
-        <strong>Stack:</strong> Python, Pandas, BeautifulSoup, Plotly, NPV modeling<br>
-        <strong>Focus:</strong> Data engineering, analytics, public policy insight
+    <h4>My Implementation for Suicide Prevention</h4>
+    <p style="line-height:1.8;">For this mental health intervention analysis, I focused primarily on <strong>Years of Life Lost (YLL)</strong> from prevented suicides, as the intervention targets crisis prevention rather than chronic disability management.</p>
+
+    <h4>Key Assumptions Used</h4>
+    <div style="background:#eef6f2; padding:16px; border-left:4px solid #0b5d3b; border-radius:4px; margin:15px 0;">
+        <ul style="margin:8px 0; line-height:1.9;">
+            <li><strong>Life expectancy:</strong> Japan standard life tables by age (80+ years for youth)</li>
+            <li><strong>Intervention effectiveness:</strong> 15% reduction in suicide incidence based on peer-reviewed meta-analyses of crisis intervention programs</li>
+            <li><strong>At-risk population:</strong> Youth contacts through workshops (97 events) and crisis hotline (9,000+ contacts)</li>
+            <li><strong>Baseline risk:</strong> National youth suicide rates from Japan's Ministry of Health, Labour and Welfare</li>
+            <li><strong>Attribution model:</strong> Conservative estimate accounting for multiple protective factors beyond single intervention</li>
+        </ul>
     </div>
+
+    <h4>Calculation Steps</h4>
+    <ol style="line-height:2;">
+        <li><strong>Identify at-risk population:</strong> Youth reached through prevention programs (workshops + hotline contacts)</li>
+        <li><strong>Apply baseline risk:</strong> Expected deaths without intervention = Population × Baseline suicide rate</li>
+        <li><strong>Calculate prevented deaths:</strong> Baseline deaths × Intervention effectiveness (15%)</li>
+        <li><strong>Compute YLL:</strong> For each prevented death, YLL = Life expectancy at age of death</li>
+        <li><strong>Sum total DALYs averted:</strong> Aggregate across all age groups and intervention types</li>
+        <li><strong>Calculate cost-effectiveness:</strong> Total program cost ÷ DALYs averted = Cost per DALY</li>
+    </ol>
+
+    <h4>Example Calculation</h4>
+    <div style="background:white; padding:16px; border-radius:6px; margin:15px 0; border:1px solid #ddd;">
+        <p style="margin:0; font-family:monospace; font-size:14px; line-height:2;">
+            At-risk youth reached: 9,097 contacts<br>
+            Baseline suicide rate (15-24): 13.7 per 100,000<br>
+            Expected deaths without intervention: 9,097 × (13.7/100,000) = 1.25 deaths<br>
+            Prevented deaths (15% reduction): 1.25 × 0.15 = 0.19 deaths<br>
+            YLL per prevented death (age 20): 80 - 20 = 60 years<br>
+            <strong>Total DALYs averted: 0.19 × 60 = 11.4 DALYs</strong><br>
+            Program cost: ¥25,000,000<br>
+            <strong>Cost per DALY: ¥2,193,000 (~$14,600)</strong>
+        </p>
+    </div>
+
+    <p style="font-size:14px; color:#666; margin-top:20px;">
+        <strong>Note:</strong> This is a simplified example. The full analysis stratified by age groups, 
+        intervention types (workshops vs. hotline), and incorporated confidence intervals around effectiveness estimates.
+    </p>
 </div>
 
 <h2>Interactive Data Exploration</h2>
 
 <p style="background:#eef6f2; padding:10px 14px; border-left:4px solid #0b5d3b; border-radius:6px;">
-    Interactive charts — hover, zoom, and filter to explore long-term trends and policy scenarios.
+    Interactive charts: hover, zoom, and filter to explore long-term trends and policy scenarios.
 </p>
 
 <!-- Chart 1 -->
