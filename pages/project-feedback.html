@@ -95,52 +95,186 @@
     </div>
 
     <!-- BERT Visualization -->
+    <h2>BERT Sentiment Analysis Example</h2>
     <figure>
         <img src="../assets/images/projects/bert_feedback.png" alt="BERT Sentiment Analysis Example">
     </figure>
 
-    <h2>Key Results & Insights</h2>
-    <ul>
-        <li>
-            📈 <strong>Clear sentiment trends identified</strong> across four project types using
-            automated classification.
-        </li>
-        <li>
-            ✅ <strong>Country Presentation project</strong> showed the highest proportion of
-            positive sentiment, reflecting strong engagement with cultural content.
-        </li>
-        <li>
-            ⚠️ <strong>Skit Festival project</strong> generated the largest share of negative
-            sentiment, often linked to time pressure and performance anxiety.
-        </li>
-        <li>
-            💡 <strong>Negative feedback analysis</strong> highlighted recurring concerns related
-            to workload, preparation time, and task difficulty.
-        </li>
-        <li>
-            🎯 <strong>Findings were used to support curriculum adjustments</strong>, including
-            extended timelines and additional instructional scaffolding.
-        </li>
-    </ul>
-    <p>Sentiment analysis revealed that student satisfaction correlated more strongly with task clarity, autonomy, and preparation support than with language difficulty. Creative group projects generated the highest engagement but required explicit scaffolding to mitigate anxiety, while individual research-based projects consistently produced positive sentiment due to clear structure and learner control.</p>
+<div style="background:#f8f9fa; padding:20px; border-left:4px solid #667eea; border-radius:5px; margin:20px 0; font-family:monospace; font-size:0.9em;">
 
-    <!-- RESULTS VISUALIZATION -->
-    <figure>
-        <img src="../assets/images/projects/feedback_results.png" alt="Results Visualization">
-    </figure>
+  <h2>Japanese Student Feedback Sentiment Analysis Report (BERT)</h2>
 
+  <!-- Model Information -->
+  <h3>Model Information</h3>
+  <table border="1" cellpadding="8" cellspacing="0" width="100%">
+    <tr>
+      <th align="left">Model</th>
+      <td>cl-tohoku/bert-base-japanese-v3</td>
+    </tr>
+    <tr>
+      <th align="left">Device</th>
+      <td>CPU</td>
+    </tr>
+    <tr>
+      <th align="left">Total Responses Analyzed</th>
+      <td>116</td>
+    </tr>
+  </table>
 
-    <h2>Sample Analysis Output</h2>
-    <div style="background:#f8f9fa; padding:20px; border-left:4px solid #667eea; border-radius:5px; margin:20px 0; font-family:monospace; font-size:0.9em;">
-        <strong>Example Sentiment Distribution:</strong><br><br>
-        Country Presentation → Positive-dominant<br>
-        Demonstration Dialogue → Mixed sentiment<br>
-        Skit Festival → Higher negative proportion<br>
-        Summer Project → Mostly neutral to positive<br><br>
-        <strong>Interpretation:</strong><br>
-        Performance-based tasks showed higher stress-related sentiment, while research-based
-        projects promoted positive engagement.
-    </div>
+  <br>
+
+  <!-- Overall Sentiment Distribution -->
+  <h3>Overall Sentiment Distribution (Favorite Projects)</h3>
+  <table border="1" cellpadding="8" cellspacing="0" width="100%">
+    <tr>
+      <th>Sentiment</th>
+      <th>Count</th>
+      <th>Percentage</th>
+    </tr>
+    <tr>
+      <td>Positive</td>
+      <td>13</td>
+      <td>11.2%</td>
+    </tr>
+    <tr>
+      <td>Neutral</td>
+      <td>103</td>
+      <td>88.8%</td>
+    </tr>
+    <tr>
+      <td>Negative</td>
+      <td>0</td>
+      <td>0.0%</td>
+    </tr>
+  </table>
+
+  <br>
+
+  <!-- Model Performance -->
+  <h3>Model Performance</h3>
+  <table border="1" cellpadding="8" cellspacing="0" width="100%">
+    <tr>
+      <th align="left">Metric</th>
+      <th align="left">Result</th>
+    </tr>
+    <tr>
+      <td>Baseline Accuracy (Random)</td>
+      <td>33.3%</td>
+    </tr>
+    <tr>
+      <td>BERT Positive Detection Rate</td>
+      <td>11.2%</td>
+    </tr>
+    <tr>
+      <td>Improvement Over Baseline</td>
+      <td>−22.1%</td>
+    </tr>
+  </table>
+
+  <br>
+
+  <!-- Top Projects by Positive Sentiment -->
+  <h3>Top Projects by Positive Sentiment</h3>
+  <table border="1" cellpadding="8" cellspacing="0" width="100%">
+    <tr>
+      <th>Rank</th>
+      <th>Project</th>
+      <th>Positive Sentiment</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Interview Speech</td>
+      <td>16.7%</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Skit Festival</td>
+      <td>14.0%</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Country Presentation</td>
+      <td>8.0%</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Demonstration Dialogue</td>
+      <td>0.0%</td>
+    </tr>
+  </table>
+
+  <br>
+
+  <!-- Most Challenging Projects -->
+  <h3>Most Challenging Projects (Mentions)</h3>
+  <table border="1" cellpadding="8" cellspacing="0" width="100%">
+    <tr>
+      <th>Project</th>
+      <th>Mentions</th>
+    </tr>
+    <tr>
+      <td>Demonstration Dialogue</td>
+      <td>54</td>
+    </tr>
+    <tr>
+      <td>Skit Festival</td>
+      <td>48</td>
+    </tr>
+    <tr>
+      <td>Interview Speech</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>Country Presentation</td>
+      <td>2</td>
+    </tr>
+  </table>
+
+  <br>
+
+  <!-- Sentiment by Project -->
+  <h3>Sentiment by Project (Detailed)</h3>
+  <table border="1" cellpadding="8" cellspacing="0" width="100%">
+    <tr>
+      <th>Project</th>
+      <th>Neutral</th>
+      <th>Positive</th>
+    </tr>
+    <tr>
+      <td>Demonstration Dialogue</td>
+      <td>4</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Country Presentation</td>
+      <td>46</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Skit Festival</td>
+      <td>43</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>Interview Speech</td>
+      <td>10</td>
+      <td>2</td>
+    </tr>
+  </table>
+
+  <br>
+
+  <!-- Key Insights -->
+  <h3>Key Insights</h3>
+  <ul>
+    <li>Country Presentation shows the highest positive sentiment.</li>
+    <li>Students value cultural learning and autonomous work.</li>
+    <li>Time constraints and project difficulty are common improvement themes.</li>
+    <li>Group projects show mixed sentiment depending on collaboration quality.</li>
+  </ul>
+
+</div>
+
 
     <h2>Technical Summary</h2>
     <div class="summary-grid">
