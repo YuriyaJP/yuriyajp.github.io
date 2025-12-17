@@ -18,127 +18,176 @@
 </nav>
 
 <section>
+
     <!-- MAIN PROJECT IMAGE -->
-    <figure><img src="../assets/images/projects/portfolio_image2.png" alt="NLP Sentiment Analysis"><figure>
+    <figure>
+        <img src="../assets/images/projects/portfolio_image2.png" alt="Japanese NLP Sentiment Analysis">
+    </figure>
 
     <h2>Project Overview</h2>
-    <p>Developed a sentiment analysis system to classify 120+ Japanese student feedback responses into positive, negative, and neutral categories. Used natural language processing with Nagisa tokenization library to extract actionable insights from curriculum feedback, identifying key improvement areas and successful teaching strategies.</p>
-    <p>An earlier version of this project (2023) used morphological analysis for exploratory text analysis.
-In 2025, the project was redesigned to focus on sentiment analysis using a deep learning language model (BERT).</p>
-    <p><strong>Methodology:</strong></p>
-    <ul>
-        <li><strong>Data Collection:</strong> Designed and deployed Google Forms survey collecting feedback from 120 high school students across 4 project types</li>
-        <li><strong>Preprocessing:</strong> Tokenized Japanese text using Nagisa library, extracting nouns, verbs, and adjectives while filtering stopwords</li>
-        <li><strong>Sentiment Classification:</strong> Built lexicon-based classifier using positive/negative word dictionaries, categorizing responses into three sentiment classes</li>
-        <li><strong>Feature Extraction:</strong> Performed frequency analysis on tokens to identify most common themes in positive and negative feedback</li>
-        <li><strong>Visualization:</strong> Created word clouds, bar charts, and sentiment distribution graphs to communicate findings to stakeholders</li>
-    </ul>
+    <p>
+        This project applies a deep learning–based natural language processing approach to analyze
+        Japanese student feedback collected from project-based English classes. Using a pretrained
+        Japanese BERT model, free-text responses were automatically classified into positive,
+        negative, and neutral sentiment categories, enabling scalable and context-aware analysis of
+        student perceptions.
+    </p>
 
-    <!-- TOKENIZATION EXAMPLE IMAGE -->
-    <div style="width:100%; height:300px; background:linear-gradient(45deg, #667eea 0%, #764ba2 100%); border-radius:8px; display:flex; align-items:center; justify-content:center; color:white; margin:20px 0;">
-        💬 Insert Tokenization/Word Cloud Example Here
+    <p>
+        An earlier exploratory version of this project (2023) focused on morphological analysis and
+        keyword extraction. In 2025, the project was reviewed and redesigned to focus specifically
+        on sentiment analysis using a modern deep learning language model.
+    </p>
+
+    <h2>Project Details</h2>
+    <p>
+        <strong>Timeline:</strong> 2025 (project revision)<br>
+        <strong>Location:</strong> High School ESL Program, Japan<br>
+        <strong>Dataset:</strong> 120+ anonymized student feedback responses<br>
+        <strong>Language:</strong> Japanese
+    </p>
+
+
+    <h2>Methodology</h2>
+    <div class="summary-grid">
+
+        <div class="summary-card">
+    <ul>
+        <li>
+            <strong>Data Collection:</strong>
+            Student feedback was collected via Google Forms following project-based learning
+            activities across four curriculum units.
+        </li>
+            </div>
+
+            <div class="summary-card">
+        <li>
+            <strong>Preprocessing:</strong>
+            Responses were cleaned, anonymized, and standardized to prepare free-text Japanese input
+            for model inference.
+        </li>
+            </div>
+
+            <div class="summary-card">
+        <li>
+            <strong>Sentiment Classification:</strong>
+            A pretrained Japanese BERT model was used to classify each response into
+            positive, negative, or neutral sentiment categories based on sentence-level context.
+        </li>
+            </div>
+
+            <div class="summary-card">
+        <li>
+            <strong>Analysis:</strong>
+            Sentiment distributions were aggregated by project type to identify patterns in student
+            satisfaction and perceived difficulty.
+        </li>
+            </div>
+
+            <div class="summary-card">
+        <li>
+            <strong>Visualization:</strong>
+            Results were communicated using sentiment distribution charts and project-level
+            comparisons to support instructional decision-making.
+        </li>
+    </ul>
+            </div>
     </div>
 
-    <h2>Key Results & Impact</h2>
+    <!-- BERT Visualization -->
+    <figure>
+        <img src="../assets/images/projects/bert_feedback.png" alt="BERT Sentiment Analysis Example">
+    </figure>
+
+    <h2>Key Results & Insights</h2>
     <ul>
-        <li>📊 <strong>Achieved 78% accuracy</strong> in sentiment classification through manual validation of random sample subset</li>
-        <li>✅ <strong>Processed 120 student responses</strong> with automated tokenization and sentiment analysis pipeline</li>
-        <li>📈 <strong>Identified "Country Presentation" as highest-rated project</strong> (65% positive sentiment) due to cultural learning opportunities</li>
-        <li>⚠️ <strong>Discovered "Skit Festival" had 48% negative sentiment</strong> - students cited time constraints and difficulty with humor in English</li>
-        <li>💡 <strong>Extracted top 10 improvement keywords</strong> including "時間" (time), "難しい" (difficult), "練習" (practice) - informing curriculum adjustments</li>
-        <li>🎯 <strong>Delivered actionable insights to instructors</strong> resulting in extended project timelines and additional support materials</li>
+        <li>
+            📈 <strong>Clear sentiment trends identified</strong> across four project types using
+            automated classification.
+        </li>
+        <li>
+            ✅ <strong>Country Presentation project</strong> showed the highest proportion of
+            positive sentiment, reflecting strong engagement with cultural content.
+        </li>
+        <li>
+            ⚠️ <strong>Skit Festival project</strong> generated the largest share of negative
+            sentiment, often linked to time pressure and performance anxiety.
+        </li>
+        <li>
+            💡 <strong>Negative feedback analysis</strong> highlighted recurring concerns related
+            to workload, preparation time, and task difficulty.
+        </li>
+        <li>
+            🎯 <strong>Findings were used to support curriculum adjustments</strong>, including
+            extended timelines and additional instructional scaffolding.
+        </li>
     </ul>
+    <p>Sentiment analysis revealed that student satisfaction correlated more strongly with task clarity, autonomy, and preparation support than with language difficulty. Creative group projects generated the highest engagement but required explicit scaffolding to mitigate anxiety, while individual research-based projects consistently produced positive sentiment due to clear structure and learner control.</p>
 
     <!-- RESULTS VISUALIZATION -->
-    <div style="width:100%; height:350px; background:linear-gradient(45deg, #667eea 0%, #764ba2 100%); border-radius:8px; display:flex; align-items:center; justify-content:center; color:white; margin:20px 0;">
-        📈 Insert Sentiment Distribution or Project Comparison Chart Here
-    </div>
+    <figure>
+        <img src="../assets/images/projects/feedback_results.png" alt="Results Visualization">
+    </figure>
 
-    <h2>Technical Challenges & Solutions</h2>
-    
-    <h3>Challenge 1: Japanese Text Processing</h3>
-    <p><strong>Problem:</strong> Standard NLP libraries (NLTK, spaCy) lack robust Japanese language support.</p>
-    <p><strong>Solution:</strong> Implemented Nagisa library for tokenization and part-of-speech tagging, specifically designed for modern Japanese text. Configured MeCab dictionary for lemmatization.</p>
-
-    <h3>Challenge 2: Sentiment Lexicon Development</h3>
-    <p><strong>Problem:</strong> No pre-trained sentiment model available for Japanese educational feedback context.</p>
-    <p><strong>Solution:</strong> Manually curated domain-specific positive/negative word lists based on educational terminology. Validated lexicon through iterative testing with sample data.</p>
-
-    <h3>Challenge 3: Class Imbalance</h3>
-    <p><strong>Problem:</strong> Students naturally provided more positive feedback (68% positive) creating classification bias.</p>
-    <p><strong>Solution:</strong> Weighted sentiment scoring algorithm and implemented neutral category for balanced responses. Focused analysis on negative feedback patterns for maximum actionable insights.</p>
 
     <h2>Sample Analysis Output</h2>
     <div style="background:#f8f9fa; padding:20px; border-left:4px solid #667eea; border-radius:5px; margin:20px 0; font-family:monospace; font-size:0.9em;">
-        <strong>Top Positive Feedback Themes:</strong><br>
-        • 文化 (culture) - 24 mentions<br>
-        • 楽しい (fun/enjoyable) - 19 mentions<br>
-        • 知る (to learn/know) - 17 mentions<br>
-        • 友達 (friends) - 15 mentions<br>
-        • 理解 (understanding) - 12 mentions<br><br>
-        
-        <strong>Top Improvement Suggestions:</strong><br>
-        • 時間 (time) - 31 mentions → <em>Extend project deadlines</em><br>
-        • 難しい (difficult) - 28 mentions → <em>Provide scaffolding materials</em><br>
-        • 練習 (practice) - 22 mentions → <em>Increase in-class practice time</em><br>
-        • グループ (group) - 18 mentions → <em>Better team formation strategies</em><br>
-        • 発表 (presentation) - 15 mentions → <em>More presentation practice opportunities</em>
+        <strong>Example Sentiment Distribution:</strong><br><br>
+        Country Presentation → Positive-dominant<br>
+        Demonstration Dialogue → Mixed sentiment<br>
+        Skit Festival → Higher negative proportion<br>
+        Summer Project → Mostly neutral to positive<br><br>
+        <strong>Interpretation:</strong><br>
+        Performance-based tasks showed higher stress-related sentiment, while research-based
+        projects promoted positive engagement.
     </div>
 
-    <!-- CODE SNIPPET OR METHODOLOGY DIAGRAM -->
-    <div style="width:100%; height:300px; background:linear-gradient(45deg, #667eea 0%, #764ba2 100%); border-radius:8px; display:flex; align-items:center; justify-content:center; color:white; margin:20px 0;">
-        💻 Insert Code Snippet or Methodology Flowchart Here
-    </div>
-
-    <h2>Curriculum Impact</h2>
-    <p>Analysis findings directly informed the following curriculum improvements for the 2023-2024 academic year:</p>
-    <ul>
-        <li><strong>Extended Skit Festival timeline</strong> from 3 weeks to 5 weeks based on time constraint feedback</li>
-        <li><strong>Added reference materials library</strong> with sample skits after students requested more examples</li>
-        <li><strong>Maintained Country Presentation format</strong> as most successful project (65% positive sentiment)</li>
-        <li><strong>Introduced peer practice sessions</strong> for Demonstration Dialogue project to address collaboration needs</li>
-        <li><strong>Restructured summer vacation assignments</strong> to avoid holiday disruption (identified in qualitative analysis)</li>
-    </ul>
     <h2>Technical Summary</h2>
-<div class="summary-grid">
+    <div class="summary-grid">
 
-    <div class="summary-card">
-        <h3>Data Science Skills</h3>
-        <ul>
-            <li>Data Cleaning & Preprocessing</li>
-            <li>Natural Language Processing (NLP)</li>
-            <li>Sentiment Analysis</li>
-            <li>Statistical Analysis</li>
-            <li>Data Visualization</li>
-        </ul>
+        <div class="summary-card">
+            <h3>Data Science Skills</h3>
+            <ul>
+                <li>Natural Language Processing (NLP)</li>
+                <li>Sentiment Analysis</li>
+                <li>Data Cleaning & Analysis</li>
+                <li>Model Inference</li>
+                <li>Data Visualization</li>
+            </ul>
+        </div>
+
+        <div class="summary-card">
+            <h3>Programming & Frameworks</h3>
+            <ul>
+                <li>Python</li>
+                <li>Jupyter Notebook</li>
+                <li>Hugging Face Transformers</li>
+            </ul>
+        </div>
+
+        <div class="summary-card">
+            <h3>Libraries & Tools</h3>
+            <ul>
+                <li>Pandas</li>
+                <li>Transformers (BERT)</li>
+                <li>PyTorch</li>
+                <li>Matplotlib & Seaborn</li>
+            </ul>
+        </div>
+
     </div>
-    <div class="summary-card">
-        <h3>Programming Languages</h3>
-        <ul>
-            <li>Python</li>
-            <li>Jupyter Notebook</li>
-        </ul>
-    </div>
-    <div class="summary-card">
-        <h3>Libraries & Tools</h3>
-        <ul>
-            <li>Pandas</li>
-            <li>Nagisa (Japanese NLP)</li>
-            <li>MeCab</li>
-            <li>NLTK</li>
-            <li>Matplotlib & Seaborn</li>
-            <li>WordCloud</li>
-        </ul>
-    </div>
-</div>
 
     <h2>View the Project</h2>
-    <a href="https://github.com/YuriyaJP/Class-Feedback-NLP-Database-Japanese" class="project-button" target="_blank">View Source Code</a>
+    <a href="https://github.com/YuriyaJP/Class-Feedback-NLP-Database-Japanese" class="project-button" target="_blank">
+        View Source Code
+    </a>
 
     <p style="background:#fff3cd; border:2px solid #ffc107; padding:15px; border-radius:8px; margin-top:30px; color:#856404;">
         <strong>Data Privacy Notice</strong><br>
-        Student responses were anonymized and aggregated to protect privacy. All data collection followed institutional review board guidelines and student consent protocols.
+        All student responses were anonymized and analyzed in aggregate.
+        Data collection followed institutional consent and privacy guidelines.
     </p>
+
 </section>
 
 <footer>
