@@ -527,15 +527,54 @@ body.project-page .project-button:active {
 }
 
 
+
 /* =========================================================
    SUMMARY CARD SPECIALIZATION
    ========================================================= */
 
+/* =========================================================
+   SUMMARY CARD – STRONG PRESENTATION
+   ========================================================= */
+
 .summary-card {
-    padding: 26px;
-    margin: 26px 0;
+    padding: 32px;
+    background: linear-gradient(135deg, #ffffff, #f7f9fc);
+    border-radius: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.06),
+        0 2px 6px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.summary-card:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 14px 30px rgba(0, 0, 0, 0.08),
+        0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.summary-card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.summary-card p {
+    margin: 0 0 10px;
+    font-size: 0.95rem;
+    line-height: 1.55;
+}
+
+.summary-card p:last-child {
+    margin-bottom: 0;
+}
+
+.summary-card strong {
+    font-weight: 700;
+}
 
 .summary-grid {
     display: grid;
@@ -549,4 +588,20 @@ body.project-page .project-button:active {
     0%   { background-position: 0% 50%; }
     50%  { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
+}
+
+.summary-grid.four-col {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1200px) {
+    .summary-grid.four-col {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .summary-grid.four-col {
+        grid-template-columns: 1fr;
+    }
 }
