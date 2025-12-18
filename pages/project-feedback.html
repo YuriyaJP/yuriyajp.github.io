@@ -32,13 +32,15 @@
         negative, and neutral sentiment categories, enabling scalable and context-aware analysis of
         student perceptions.
     </p>
-
+    <br>
     <p>
         An earlier exploratory version of this project (2023) focused on morphological analysis and
         keyword extraction. In 2025, the project was reviewed and redesigned to focus specifically
         on sentiment analysis using a modern deep learning language model.
     </p>
-
+    <br>
+    <img src="../assets/images/projects/feedback_analysis_data.png" alt="Feedback Analysis Data">
+    <br>
     <h2>Project Details</h2>
     <p>
         <strong>Timeline:</strong> 2025 (project revision)<br>
@@ -104,26 +106,7 @@
 
   <h2>Japanese Student Feedback Sentiment Analysis Report (BERT)</h2>
 
-  <!-- Model Information -->
-  <h3>Model Information</h3>
-  <table border="1" cellpadding="8" cellspacing="0" width="100%">
-    <tr>
-      <th align="left">Model</th>
-      <td>cl-tohoku/bert-base-japanese-v3</td>
-    </tr>
-    <tr>
-      <th align="left">Device</th>
-      <td>CPU</td>
-    </tr>
-    <tr>
-      <th align="left">Total Responses Analyzed</th>
-      <td>116</td>
-    </tr>
-  </table>
-
-  <br>
-
-  <!-- Overall Sentiment Distribution -->
+  <!-- Overall Sentiment Distribution (Favorite Projects) -->
   <h3>Overall Sentiment Distribution (Favorite Projects)</h3>
   <table border="1" cellpadding="8" cellspacing="0" width="100%">
     <tr>
@@ -133,134 +116,122 @@
     </tr>
     <tr>
       <td>Positive</td>
-      <td>13</td>
-      <td>11.2%</td>
+      <td>15</td>
+      <td>11.3%</td>
     </tr>
     <tr>
       <td>Neutral</td>
-      <td>103</td>
-      <td>88.8%</td>
+      <td>92</td>
+      <td>79.3%</td>
     </tr>
     <tr>
       <td>Negative</td>
-      <td>0</td>
-      <td>0.0%</td>
+      <td>9</td>
+      <td>7.8%</td>
     </tr>
   </table>
 
   <br>
 
-  <!-- Model Performance -->
-  <h3>Model Performance</h3>
+  <!-- Overall Sentiment Distribution (Improvement Suggestions) -->
+  <h3>Overall Sentiment Distribution (Improvement Suggestions)</h3>
   <table border="1" cellpadding="8" cellspacing="0" width="100%">
     <tr>
-      <th align="left">Metric</th>
-      <th align="left">Result</th>
+      <th>Sentiment</th>
+      <th>Count</th>
+      <th>Percentage</th>
     </tr>
     <tr>
-      <td>Baseline Accuracy (Random)</td>
-      <td>33.3%</td>
-    </tr>
-    <tr>
-      <td>BERT Positive Detection Rate</td>
-      <td>11.2%</td>
-    </tr>
-    <tr>
-      <td>Improvement Over Baseline</td>
-      <td>−22.1%</td>
-    </tr>
-  </table>
-
-  <br>
-
-  <!-- Top Projects by Positive Sentiment -->
-  <h3>Top Projects by Positive Sentiment</h3>
-  <table border="1" cellpadding="8" cellspacing="0" width="100%">
-    <tr>
-      <th>Rank</th>
-      <th>Project</th>
-      <th>Positive Sentiment</th>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Interview Speech</td>
-      <td>16.7%</td>
-    </tr>
-    <tr>
+      <td>Positive</td>
       <td>2</td>
-      <td>Skit Festival</td>
-      <td>14.0%</td>
+      <td>1.6%</td>
     </tr>
     <tr>
-      <td>3</td>
-      <td>Country Presentation</td>
-      <td>8.0%</td>
+      <td>Neutral</td>
+      <td>22</td>
+      <td>18.9%</td>
     </tr>
     <tr>
-      <td>4</td>
-      <td>Demonstration Dialogue</td>
-      <td>0.0%</td>
-    </tr>
-  </table>
-
-  <br>
-
-  <!-- Most Challenging Projects -->
-  <h3>Most Challenging Projects (Mentions)</h3>
-  <table border="1" cellpadding="8" cellspacing="0" width="100%">
-    <tr>
-      <th>Project</th>
-      <th>Mentions</th>
-    </tr>
-    <tr>
-      <td>Demonstration Dialogue</td>
-      <td>54</td>
-    </tr>
-    <tr>
-      <td>Skit Festival</td>
-      <td>48</td>
-    </tr>
-    <tr>
-      <td>Interview Speech</td>
-      <td>12</td>
-    </tr>
-    <tr>
-      <td>Country Presentation</td>
-      <td>2</td>
+      <td>Negative</td>
+      <td>92</td>
+      <td>79.5%</td>
     </tr>
   </table>
 
   <br>
 
-  <!-- Sentiment by Project -->
-  <h3>Sentiment by Project (Detailed)</h3>
+  <!-- Project-Level Sentiment Counts -->
+  <h3>Project-Level Sentiment Counts</h3>
   <table border="1" cellpadding="8" cellspacing="0" width="100%">
     <tr>
       <th>Project</th>
-      <th>Neutral</th>
       <th>Positive</th>
+      <th>Negative</th>
+      <th>Neutral</th>
     </tr>
     <tr>
       <td>Demonstration Dialogue</td>
-      <td>4</td>
       <td>0</td>
+      <td>0</td>
+      <td>4</td>
     </tr>
     <tr>
       <td>Country Presentation</td>
-      <td>46</td>
-      <td>4</td>
+      <td>6</td>
+      <td>6</td>
+      <td>38</td>
     </tr>
     <tr>
       <td>Skit Festival</td>
-      <td>43</td>
-      <td>7</td>
+      <td>8</td>
+      <td>2</td>
+      <td>40</td>
     </tr>
     <tr>
       <td>Interview Speech</td>
+      <td>1</td>
+      <td>1</td>
       <td>10</td>
-      <td>2</td>
     </tr>
   </table>
+
+  <br>
+
+  <!-- Project-Level Sentiment Percentages -->
+  <h3>Project-Level Sentiment Percentages (%)</h3>
+  <table border="1" cellpadding="8" cellspacing="0" width="100%">
+    <tr>
+      <th>Project</th>
+      <th>Positive %</th>
+      <th>Negative %</th>
+      <th>Neutral %</th>
+    </tr>
+    <tr>
+      <td>Demonstration Dialogue</td>
+      <td>0%</td>
+      <td>0%</td>
+      <td>100%</td>
+    </tr>
+    <tr>
+      <td>Country Presentation</td>
+      <td>12%</td>
+      <td>12%</td>
+      <td>76%</td>
+    </tr>
+    <tr>
+      <td>Skit Festival</td>
+      <td>16%</td>
+      <td>4%</td>
+      <td>80%</td>
+    </tr>
+    <tr>
+      <td>Interview Speech</td>
+      <td>8.33%</td>
+      <td>8.33%</td>
+      <td>83.33%</td>
+    </tr>
+  </table>
+
 
   <br>
 
