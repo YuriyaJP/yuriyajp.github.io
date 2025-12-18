@@ -269,6 +269,13 @@ body.project-page section {
     box-shadow: 0 0 14px var(--white);
 }
 
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    margin-top: 18px;
+}
+
 /* =========================================================
    9. MEDIA CAROUSEL
    ========================================================= */
