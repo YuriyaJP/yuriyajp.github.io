@@ -28,89 +28,25 @@
      style="width:130px; display:block; margin:0 auto; opacity:0.9">
 
 <h2>The Problem</h2>
-<p> A Tokyo-based mental health organization provides crisis intervention services and prevention programs aimed at reducing psychological distress and supporting at-risk individuals. As the organization seeks to engage more extensively with grant funders and evaluators, there is an opportunity to complement existing activity-based reporting (such as service utilization and program delivery) with additional outcome-oriented measures that many funders increasingly request. These measures may include estimates of lives impacted, health outcomes expressed in Disability-Adjusted Life Years (DALYs), and cost-effectiveness indicators. </p>
+<p> A Tokyo-based mental health organization provides crisis intervention services and prevention programs aimed at reducing psychological distress and supporting at-risk individuals. As the organization seeks to engage more extensively with grant funders and evaluators, there is an opportunity to complement existing activity-based reporting (such as service utilization and program delivery) with additional outcome-oriented measures that many funders request.</p>
+<p> This project focuses on analyzing Japan's national suicide statistics and estimating the economic impact of youth suicide, with an emphasis on potential policy interventions and their effectiveness.</p>
+<br>
+<h2>Key Findings</h2>
+<p style="background:#c5ecbb; border:2px solid #020700; padding:15px; border-radius:8px; margin-top:30px; color:#031600;">
 
-<h2>My Approach</h2>
-<p>
-    I designed a comprehensive cost-effectiveness analysis methodology that integrated:
+    <strong>Youth population (Japan, age 10–19, 2024):</strong> ~11,000,000 individuals.<br>
+    <strong>Observed youth suicide deaths (2024):</strong> 799 cases nationwide.<br>
+    <strong>Estimated youth suicide rate (2024):</strong> ~7.3 deaths per 100,000 youths.<br><br>
+
+    <strong>Program reach:</strong> 79,700 youths (≈0.7% of the national youth population).<br>
+    <strong>Expected deaths without intervention:</strong> ~5.8 deaths per year within the reached population.<br><br>
+
+    <strong>After intervention (25% effectiveness):</strong><br>
+    Approximately <strong>1.45 youth lives saved per year</strong>, corresponding to a proportional reduction in suicide risk within the reached population.
 </p>
-<ul style="max-width:700px; margin:20px auto; line-height:1.8;">
-    <li><strong>Epidemiological baseline:</strong> Suicide rates and at-risk population data</li>
-    <li><strong>Intervention reach:</strong> 97+ prevention workshops and 9,000+ crisis contacts annually, for the purpose of this evaluation rated as 15% intervention</li>
-    <li><strong>Cost modeling:</strong> Lives saved costs per intervention and cost-per-DALY metrics</li>
-</ul>
 
-    <h2>Key Insights</h2>
-    <ul style="max-width:700px; margin:20px auto; line-height:1.8;">
-        <li>Working-age groups (20–59) dominate economic loss</li>
-        <li>Annual productivity loss exceeds ¥300B</li>
-        <li>Targeted interventions show strong ROI potential</li>
-    </ul>
-
-<h2>DALY Calculation Methodology</h2>
-
-<div style="background:#f4f7fb; padding:24px; border-radius:8px; margin:30px auto; max-width:850px;">
-    <h3 style="margin-top:0;">The DALY Formula</h3>
-    <p>Disability-Adjusted Life Years (DALYs) measure the burden of disease by combining years of life lost (YLL) due to premature death and years lived with disability (YLD).</p>
-    
-    <div style="background:white; padding:20px; border-radius:6px; margin:20px 0; font-family:monospace; font-size:15px; text-align:center; border:2px solid #667eea;">
-        <strong>DALY = YLL + YLD</strong><br><br>
-        <strong>YLL = N × L</strong><br>
-        <span style="font-size:13px; font-family:sans-serif; color:#666;">
-            N = number of deaths<br>
-            L = standard life expectancy at age of death
-        </span>
-    </div>
-
-    <h4>My Implementation for Suicide Prevention</h4>
-    <p style="line-height:1.8;">For this mental health intervention analysis, I focused primarily on <strong>Years of Life Lost (YLL)</strong> from prevented suicides, as the intervention targets crisis prevention rather than chronic disability management.</p>
-
-    <h4>Key Assumptions Used</h4>
-    <div style="background:#eef6f2; padding:16px; border-left:4px solid #0b5d3b; border-radius:4px; margin:15px 0;">
-        <ul style="margin:8px 0; line-height:1.9;">
-            <li><strong>Life expectancy:</strong> Japan standard life tables by age (80+ years for youth)</li>
-            <li><strong>Intervention effectiveness:</strong> 15% reduction in suicide incidence based on peer-reviewed meta-analyses of crisis intervention programs</li>
-            <li><strong>At-risk population:</strong> Youth contacts through workshops (97 events) and crisis hotline (9,000+ contacts)</li>
-            <li><strong>Baseline risk:</strong> National youth suicide rates from Japan's Ministry of Health, Labour and Welfare</li>
-            <li><strong>Attribution model:</strong> Conservative estimate accounting for multiple protective factors beyond single intervention</li>
-        </ul>
-    </div>
-
-    <h4>Calculation Steps</h4>
-    <ol style="line-height:2;">
-        <li><strong>Identify at-risk population:</strong> Youth reached through prevention programs (workshops + hotline contacts)</li>
-        <li><strong>Apply baseline risk:</strong> Expected deaths without intervention = Population × Baseline suicide rate</li>
-        <li><strong>Calculate prevented deaths:</strong> Baseline deaths × Intervention effectiveness (15%)</li>
-        <li><strong>Compute YLL:</strong> For each prevented death, YLL = Life expectancy at age of death</li>
-        <li><strong>Sum total DALYs averted:</strong> Aggregate across all age groups and intervention types</li>
-        <li><strong>Calculate cost-effectiveness:</strong> Total program cost ÷ DALYs averted = Cost per DALY</li>
-    </ol>
-
-    <h4>Example Calculation</h4>
-    <div style="background:white; padding:16px; border-radius:6px; margin:15px 0; border:1px solid #ddd;">
-        <p style="margin:0; font-family:monospace; font-size:14px; line-height:2;">
-            At-risk youth reached: 9,097 contacts<br>
-            Baseline suicide rate (15-24): 13.7 per 100,000<br>
-            Expected deaths without intervention: 9,097 × (13.7/100,000) = 1.25 deaths<br>
-            Prevented deaths (15% reduction): 1.25 × 0.15 = 0.19 deaths<br>
-            YLL per prevented death (age 20): 80 - 20 = 60 years<br>
-            <strong>Total DALYs averted: 0.19 × 60 = 11.4 DALYs</strong><br>
-            Program cost: ¥25,000,000<br>
-            <strong>Cost per DALY: ¥2,193,000 (~$14,600)</strong>
-        </p>
-    </div>
-
-    <p style="font-size:14px; color:#666; margin-top:20px;">
-        <strong>Note:</strong> This is a simplified example. The full analysis stratified by age groups, 
-        intervention types (workshops vs. hotline), and incorporated confidence intervals around effectiveness estimates.
-    </p>
-</div>
-
-<h2>Interactive Data Exploration</h2>
-
-<p style="background:#eef6f2; padding:10px 14px; border-left:4px solid #0b5d3b; border-radius:6px;">
-    Interactive charts: hover, zoom, and filter to explore long-term trends and policy scenarios.
-</p>
+<br>
+<h2>Interactive Data Charts: Age Group Analysis, Cost Loss Per Age Group, Suicide Leading Cause</h2>
 
 <!-- Chart 1 -->
 <div style="margin:40px 0;">
@@ -124,35 +60,276 @@
             width="100%" height="560" frameborder="0"></iframe>
 </div>
 
+
 <!-- Chart 3 -->
-<div style="margin:40px 0;">
-    <iframe src="../pages/charts/roi_by_age.html"
-            width="100%" height="520" frameborder="0"></iframe>
-</div>
-
-<!-- Chart 4 -->
-<div style="margin:40px 0;">
-    <iframe src="../pages/charts/policy_scenario_comparison.html"
-            width="100%" height="560" frameborder="0"></iframe>
-</div>
-
-<!-- Chart 5 -->
 <div style="margin:40px 0;">
     <iframe src="../pages/charts/cause_heatmap.html"
             width="100%" height="680" frameborder="0"></iframe>
 </div>
 
+<h2>Cost-Effectiveness of Non-Profit Outreach Youth Program</h2>
 
-<div style="background:#f4f7fb; padding:14px; border-radius:8px; margin:20px 0; text-align:center;">
-    <img src="../assets/images/projects/economic_loss_table.png"
-         alt="Economic Loss Table"
-         style="max-width:100%; border-radius:6px;">
+<div style="background:#f8f9fa; padding:20px; border-left:4px solid #667eea; border-radius:5px; margin:20px 0; font-family:monospace; font-size:0.9em;">
+
+<!-- Table 1: Annual Program Cost Calculation -->
+<h3>Table 1: Annual Program Cost Calculation (Number estimate)</h3>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%">
+
+  <!-- Staff Costs -->
+  <tr>
+    <th align="left">Workshop Facilitators (3 × Part-time)</th>
+    <td align="right">6,000,000 JPY</td>
+  </tr>
+  <tr>
+    <th align="left">Lead Outreach Coordinator (Full-time)</th>
+    <td align="right">3,000,000 JPY</td>
+  </tr>
+  <tr>
+    <th align="left">Program Coordinator (Full-time)</th>
+    <td align="right">1,500,000 JPY</td>
+  </tr>
+  <tr>
+    <th align="left">Administrative Support (10% allocation)</th>
+    <td align="right">500,000 JPY</td>
+  </tr>
+  <tr>
+    <th align="left"><strong>Subtotal — Staff Costs</strong></th>
+    <td align="right"><strong>11,000,000 JPY</strong></td>
+  </tr>
+
+  <!-- Benefits -->
+  <tr>
+    <th align="left">Benefits (15% of staff costs)</th>
+    <td align="right">1,650,000 JPY</td>
+  </tr>
+
+  <!-- Operating Costs -->
+  <tr>
+    <th align="left">Workshop Materials</th>
+    <td align="right">300,000 JPY</td>
+  </tr>
+  <tr>
+    <th align="left">Transportation</th>
+    <td align="right">400,000 JPY</td>
+  </tr>
+  <tr>
+    <th align="left">Hotline Infrastructure (Phone / Software)</th>
+    <td align="right">200,000 JPY</td>
+  </tr>
+  <tr>
+    <th align="left">Staff Training</th>
+    <td align="right">150,000 JPY</td>
+  </tr>
+  <tr>
+    <th align="left">Outreach Materials</th>
+    <td align="right">200,000 JPY</td>
+  </tr>
+  <tr>
+    <th align="left">Miscellaneous Supplies</th>
+    <td align="right">150,000 JPY</td>
+  </tr>
+  <tr>
+    <th align="left"><strong>Subtotal — Operating Costs</strong></th>
+    <td align="right"><strong>1,400,000 JPY</strong></td>
+  </tr>
+
+  <!-- Total -->
+  <tr>
+    <th align="left"><strong>TOTAL ANNUAL PROGRAM COST</strong></th>
+    <td align="right"><strong>14,050,000 JPY</strong></td>
+  </tr>
+
+</table>
+
+<br>
+
+<!-- Table 2: Program Outreach Calculation -->
+<h3>Table 2: Program Outreach Calculation</h3>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%">
+
+  <!-- School-Based Workshops -->
+  <tr>
+    <th align="left">Schools Reached (Workshops)</th>
+    <td align="right">145</td>
+  </tr>
+  <tr>
+    <th align="left">Average Students per School</th>
+    <td align="right">500</td>
+  </tr>
+  <tr>
+    <th align="left"><strong>Students Reached via Workshops</strong></th>
+    <td align="right"><strong>72,500</strong></td>
+  </tr>
+
+  <!-- Crisis Hotline -->
+  <tr>
+    <th align="left">Total Hotline Contacts (Raw)</th>
+    <td align="right">9,000</td>
+  </tr>
+  <tr>
+    <th align="left">Assumed Unique Contact Rate</th>
+    <td align="right">80%</td>
+  </tr>
+  <tr>
+    <th align="left"><strong>Unique Hotline Contacts</strong></th>
+    <td align="right"><strong>7,200</strong></td>
+  </tr>
+
+  <!-- Total Reach -->
+  <tr>
+    <th align="left"><strong>Total Individuals Reached</strong></th>
+    <td align="right"><strong>79,700</strong></td>
+  </tr>
+
+  <!-- National Coverage -->
+  <tr>
+    <th align="left">Total Junior & High Schools in Japan</th>
+    <td align="right">13,900</td>
+  </tr>
+  <tr>
+    <th align="left">School Coverage Rate</th>
+    <td align="right">1.04%</td>
+  </tr>
+  <tr>
+    <th align="left">Estimated National Student Population</th>
+    <td align="right">6,950,000</td>
+  </tr>
+  <tr>
+    <th align="left">Student Population Coverage Rate</th>
+    <td align="right">1.15%</td>
+  </tr>
+
+</table>
+<br>
+
+<!-- Table 3: Baseline Risk Calculation -->
+<h3>Table 3: Baseline Risk Calculation</h3>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%">
+
+  <tr>
+    <th align="left">Data Period</th>
+    <td align="right">2009–2024</td>
+  </tr>
+
+  <tr>
+    <th align="left">Total Youth Suicides (Age 10–19)</th>
+    <td align="right">36,769</td>
+  </tr>
+
+  <tr>
+    <th align="left">Annual Average Deaths</th>
+    <td align="right">2,298.1</td>
+  </tr>
+
+  <tr>
+    <th align="left">Most Recent Year (2024)</th>
+    <td align="right">799</td>
+  </tr>
+
+  <tr>
+    <th align="left">Youth Population in Japan (Age 10–19)</th>
+    <td align="right">11,000,000</td>
+  </tr>
+
+  <tr>
+    <th align="left"><strong>Youth Suicide Rate (per 100,000)</strong></th>
+    <td align="right"><strong>20,9</strong></td>
+  </tr>
+
+  <tr>
+    <th align="left">Individuals Reached by Program</th>
+    <td align="right">79,700</td>
+  </tr>
+
+  <tr>
+    <th align="left"><strong>Expected Deaths (Zero-Effect Baseline)</strong></th>
+    <td align="right"><strong>16,6</strong></td>
+  </tr>
+
+</table>
+
+<br>
+
+<!-- Table 4: Lives Saved Calculation (Moderate Scenario) -->
+<h3>Table 4: Lives Saved Calculation (Moderate Scenario)</h3>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%">
+
+  <tr>
+    <th align="left">Individuals Reached by Program</th>
+    <td align="right">79,700</td>
+  </tr>
+
+  <tr>
+    <th align="left">Youth Suicide Rate (per 100,000)</th>
+    <td align="right">20,9</td>
+  </tr>
+
+  <tr>
+    <th align="left"><strong>Expected Deaths (Zero-Effect Baseline)</strong></th>
+    <td align="right"><strong>16,6</strong></td>
+  </tr>
+
+  <tr>
+    <th align="left">Intervention Effectiveness (Moderate)</th>
+    <td align="right">25%</td>
+  </tr>
+
+  <tr>
+    <th align="left"><strong>Lives Saved per Year</strong></th>
+    <td align="right"><strong>0.42</strong></td>
+  </tr>
+
+  <tr>
+    <th align="left">Average Age at Prevention</th>
+    <td align="right">17 years</td>
+  </tr>
+
+  <tr>
+    <th align="left">Life Expectancy in Japan</th>
+    <td align="right">84 years</td>
+  </tr>
+
+  <tr>
+    <th align="left">Years of Life Saved per Person</th>
+    <td align="right">67 years</td>
+  </tr>
+
+  <tr>
+    <th align="left"><strong>Total DALYs Averted (Annual)</strong></th>
+    <td align="right"><strong>27.9</strong></td>
+  </tr>
+
+  <tr>
+    <th align="left">Annual Program Cost</th>
+    <td align="right">¥10,000,000</td>
+  </tr>
+
+  <tr>
+    <th align="left"><strong>Cost per Life Saved</strong></th>
+    <td align="right"><strong>¥2,390,000</strong></td>
+  </tr>
+
+  <tr>
+    <th align="left"><strong>Cost per DALY Averted</strong></th>
+    <td align="right"><strong>¥358,000</strong></td>
+  </tr>
+
+</table>
+<br>
+
+  <em>
+    Interpretation: Under a moderate effectiveness scenario (25% reduction in youth suicide rates), the program is expected to save approximately 4.2 lives per year, with a cost of ¥23,900,000 per life saved and ¥358,000 per DALY averted.
+  </em>
 </div>
 
-<h2>Explore Report</h2>
-<iframe class="pdf-embed"
-        src="../assets/pdf/Japan Suicide Statistics_ Forecasting, Economic Impact, and Policy Simulation.pdf">
-</iframe>
+<div style="margin:40px 0;">
+    <iframe src="../pages/charts/impact_contour_lives_saved.html"
+            width="100%" height="560" frameborder="0"></iframe>
+</div>
 
 <p style="margin-top:14px">
     <a href="https://docs.google.com/document/d/1j34JIiakTalFC_5zKhkkThVc4CLGtmdByHE1w_yWmIc/edit?usp=sharing"
