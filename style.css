@@ -181,14 +181,68 @@ body.project-page section {
    7. ABOUT
    ========================================================= */
 .about-card {
-    background: rgba(0,0,0,0.42);
-    border-radius: 15px;
-    padding: 20px;
-    line-height: 1.6;
+    background: linear-gradient(135deg, rgba(69, 70, 77, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 48px rgba(53, 55, 61, 0.15);
+}
+
+.about-card h2 {
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 15px;
+}
+
+.about-card p {
     margin-bottom: 20px;
 }
 
-.places { margin-bottom: 1rem; }
+.about-card p strong {
+    color: #ffffff;
+    font-size: 1.75em;
+}
+
+.about-card ul {
+    margin: 15px 0 25px 20px;
+    padding-left: 20px;
+}
+
+.about-card ul li {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-left: 3px solid rgba(0, 0, 0, 0.4);
+    padding-left: 15px;
+}
+
+.story-highlight {
+    background: rgba(102, 126, 234, 0.05);
+    border-left: 4px solid #41475e;
+    padding: 20px;
+    margin: 25px 0;
+    border-radius: 8px;
+}
+
+.places { 
+    margin-bottom: 1rem;
+    text-align: center;
+    font-style: italic;
+    opacity: 0.85;
+    padding: 15px;
+    background: rgba(102, 126, 234, 0.05);
+    border-radius: 10px;
+}
 
 /* =========================================================
    8. PORTFOLIO
