@@ -107,253 +107,404 @@ Estimates are model-based, illustrative, and do not imply causality; actual outc
             width="100%" height="680" frameborder="0"></iframe>
 </div>
 
-<h2>Program Costs Used in Analysis (Publicly Reported)</h2>
 
-<div style="background:#f8f9fa; padding:20px; border-left:4px solid #667eea; border-radius:5px; margin:20px 0; font-family:monospace; font-size:0.9em;">
+<!-- ============================= -->
+<!-- Section 1: Program Costs -->
+<!-- ============================= -->
+<h2>Program Costs Used in Analysis (Publicly Reported)</h2>
+<div style="background:#f8f9fa; padding:20px; border-left:4px solid #449966; border-radius:5px; margin:20px 0; font-family:monospace; font-size:0.9em;">
 
 <h3>Outreach & Prevention Expenditures (2024)</h3>
-
 <table border="1" cellpadding="8" cellspacing="0" width="100%">
-
   <tr>
     <th align="left">Public Education on Health & Promotional Activities</th>
     <td align="right">¥7,954,200</td>
   </tr>
-
   <tr>
     <th align="left">Collaboration with Other Institutions / Outreach</th>
     <td align="right">¥3,159,276</td>
   </tr>
-
   <tr>
     <th align="left"><strong>Total Outreach & Prevention Costs Used</strong></th>
     <td align="right"><strong>¥11,113,476</strong></td>
   </tr>
-
 </table>
+
 <br>
-<em>
-Program cost figures are derived from publicly disclosed nonprofit financial statements and are presented in aggregated form for analytical purposes.
-</em>
+<em>Program cost figures are derived from publicly disclosed nonprofit financial statements and are presented in aggregated form for analytical purposes.</em>
+
 </div>
 
 <!-- ============================= -->
-<!-- Cost-Effectiveness Analysis -->
+<!-- Section 2: Cost-Effectiveness Analysis -->
 <!-- ============================= -->
-
 <h2>Cost-Effectiveness of Youth Suicide Prevention Program (2024)</h2>
+<div style="background:#f8f9fa; padding:20px; border-left:4px solid #449966; border-radius:5px; margin:20px 0; font-family:monospace; font-size:0.9em;">
 
-<div style="background:#f8f9fa; padding:20px; border-left:4px solid #667eea; border-radius:5px; margin:20px 0; font-family:monospace; font-size:0.9em;">
-
-<!-- Table 1: How Youth Reach Was Counted (2024) -->
-<h3>Table 1: Youth Reach Calculation (2024, Approximate)</h3>
-
+<!-- Table 1: Youth Reach -->
+<h3>Table 1: Youth Reach Calculation (2024)</h3>
 <table border="1" cellpadding="8" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Channel</th>
+      <th>Calculation</th>
+      <th>Youths Reached</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>School Awareness Packages (Indirect)</td>
+      <td>145 schools × 300 students × 25% engagement</td>
+      <td align="right">10,875</td>
+    </tr>
+    <tr>
+      <td>Suicide Lifeline Workshops (Direct)</td>
+      <td>9 workshops, verified attendance</td>
+      <td align="right">500</td>
+    </tr>
+    <tr>
+      <td>Crisis Hotline – Youth Callers (Direct)</td>
+      <td>9,000 calls × 20% youth × 70% unique</td>
+      <td align="right">1,260</td>
+    </tr>
+    <tr>
+      <th><strong>Total Youths Reached</strong></th>
+      <th>10,875 + 500 + 1,260</th>
+      <th align="right"><strong>12,635</strong></th>
+    </tr>
+  </tbody>
+</table>
 
-  <tr>
-    <th align="left">Channel</th>
-    <th align="right">Assumption</th>
-    <th align="right">Estimated Youths</th>
-  </tr>
+<br><br>
 
-  <tr>
-    <td>School Awareness Packages (Indirect)</td>
-    <td align="right">145 schools × 300 students × 25% engagement</td>
-    <td align="right">~10,900</td>
-  </tr>
-
-  <tr>
-    <td>Suicide Lifeline Workshops (Direct)</td>
-    <td align="right">9 workshops, verified attendance</td>
-    <td align="right">500</td>
-  </tr>
-
-  <tr>
-    <td>Crisis Hotline – Youth Callers (Direct)</td>
-    <td align="right">9,000 calls × 20% youth × 70% unique callers</td>
-    <td align="right">~1,250</td>
-  </tr>
-
-  <tr>
-    <th align="left"><strong>Total Youths Reached (2024)</strong></th>
-    <th></th>
-    <th align="right"><strong>~12,650</strong></th>
-  </tr>
-
+<!-- Table 2: Complete Impact Calculation with Formulas -->
+<h3>Table 2: Impact Calculation with Explicit Formulas (2024)</h3>
+<table border="1" cellpadding="8" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Step</th>
+      <th>Parameter</th>
+      <th>Formula / Calculation</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- National Context -->
+    <tr>
+      <td colspan="4"><strong>A. National Baseline Data</strong></td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Youth population (ages 10-19)</td>
+      <td>Japan census data</td>
+      <td align="right">11,000,000</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Youth suicides (2024)</td>
+      <td>National Police Agency data</td>
+      <td align="right">799</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Youth suicide rate</td>
+      <td>(799 ÷ 11,000,000) × 100,000</td>
+      <td align="right"><strong>7.26 per 100,000</strong></td>
+    </tr>
+    
+    <!-- Baseline Risk -->
+    <tr>
+      <td colspan="4"><strong>B. Baseline Risk in Reached Population</strong></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Youths reached by program</td>
+      <td>From Table 1</td>
+      <td align="right">12,635</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Expected deaths (no intervention)</td>
+      <td>12,635 × (7.26 ÷ 100,000)</td>
+      <td align="right"><strong>0.917</strong></td>
+    </tr>
+    
+    <!-- Lives Saved -->
+    <tr>
+      <td colspan="4"><strong>C. Lives Saved Calculation</strong></td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Intervention effectiveness</td>
+      <td>Literature-based assumption</td>
+      <td align="right">25%</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td><strong>Lives saved</strong></td>
+      <td><strong>0.917 × 0.25</strong></td>
+      <td align="right"><strong>0.229</strong></td>
+    </tr>
+    
+    <!-- DALY Calculation -->
+    <tr>
+      <td colspan="4"><strong>D. DALY Calculation</strong></td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Average age at prevention</td>
+      <td>Assumption (youth program)</td>
+      <td align="right">17 years</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Life expectancy (Japan)</td>
+      <td>WHO/MHLW data</td>
+      <td align="right">84 years</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Years of life lost per death</td>
+      <td>84 - 17</td>
+      <td align="right">67 years</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td><strong>Total DALYs averted</strong></td>
+      <td><strong>0.229 × 67</strong></td>
+      <td align="right"><strong>15.34</strong></td>
+    </tr>
+    
+    <!-- Cost-Effectiveness -->
+    <tr>
+      <td colspan="4"><strong>E. Cost-Effectiveness Metrics</strong></td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>Program cost (2024)</td>
+      <td>Outreach + prevention expenditures</td>
+      <td align="right">¥11,113,476</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td><strong>Cost per life saved</strong></td>
+      <td><strong>¥11,113,476 ÷ 0.229</strong></td>
+      <td align="right"><strong>¥48,528,279</strong></td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td><strong>Cost per DALY averted (JPY)</strong></td>
+      <td><strong>¥11,113,476 ÷ 15.34</strong></td>
+      <td align="right"><strong>¥724,510</strong></td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td><strong>Cost per DALY averted (USD)</strong></td>
+      <td><strong>¥724,510 ÷ 150 (exchange rate)</strong></td>
+      <td align="right"><strong>$4,830</strong></td>
+    </tr>
+    
+    <!-- WHO Comparison -->
+    <tr>
+      <td colspan="4"><strong>F. WHO Cost-Effectiveness Threshold</strong></td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>WHO threshold (highly cost-effective)</td>
+      <td>1× GDP per capita (Japan)</td>
+      <td align="right">$34,000</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>Times below threshold</td>
+      <td>$34,000 ÷ $4,830</td>
+      <td align="right"><strong>7.0x below threshold</strong></td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>Classification</td>
+      <td>Cost per DALY < WHO threshold</td>
+      <td align="right"><strong>Highly Cost-Effective</strong></td>
+    </tr>
+  </tbody>
 </table>
 
 <br>
+<em>Interpretation: Program prevents 1 death every 4.37 years (0.23 deaths annually), averting 15.34 DALYs at $4,830 per DALY which is 7× below WHO's highly cost-effective threshold.</em>
 
-<!-- Table 2: Baseline Risk and Expected Deaths -->
-<h3>Table 2: Baseline Risk and Counterfactual (2024)</h3>
+</div>
 
+<!-- ============================= -->
+<!-- Section 3: Economic Value Calculation -->
+<!-- ============================= -->
+<h2>Economic Value Calculation (Per Life Saved)</h2>
+<div style="background:#f8f9fa; padding:20px; border-left:4px solid #449966; border-radius:5px; margin:20px 0; font-family:monospace; font-size:0.9em;">
+
+<h3>Table 3: Lifetime Economic Value and ROI Calculation</h3>
 <table border="1" cellpadding="8" cellspacing="0" width="100%">
-
-  <tr>
-    <th align="left">Youth Population (Age 10–19, Japan)</th>
-    <td align="right">~11,000,000</td>
-  </tr>
-
-  <tr>
-    <th align="left">Observed Youth Suicide Deaths (2024)</th>
-    <td align="right">799</td>
-  </tr>
-
-  <tr>
-    <th align="left"><strong>Youth Suicide Rate</strong></th>
-    <td align="right"><strong>~7.3 per 100,000</strong></td>
-  </tr>
-
-  <tr>
-    <th align="left">Youths Reached by Program (2024)</th>
-    <td align="right">~12,650</td>
-  </tr>
-
-  <tr>
-    <th align="left"><strong>Expected Deaths (No Intervention)</strong></th>
-    <td align="right"><strong>~0.92</strong></td>
-  </tr>
-
+  <thead>
+    <tr>
+      <th>Step</th>
+      <th>Parameter</th>
+      <th>Formula / Calculation</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="4"><strong>Per Life Saved</strong></td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Age at prevention</td>
+      <td>Average youth program participant</td>
+      <td align="right">17 years</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Retirement age (Japan)</td>
+      <td>Standard retirement</td>
+      <td align="right">65 years</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Working years remaining</td>
+      <td>65 - 17</td>
+      <td align="right">48 years</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Average annual salary</td>
+      <td>Career average (Japan)</td>
+      <td align="right">¥4,500,000</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><strong>Lifetime gross earnings</strong></td>
+      <td><strong>48 × ¥4,500,000</strong></td>
+      <td align="right"><strong>¥216,000,000</strong></td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Effective tax rate</td>
+      <td>Income + residence + social insurance</td>
+      <td align="right">25%</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td><strong>Lifetime tax revenue</strong></td>
+      <td><strong>¥216,000,000 × 0.25</strong></td>
+      <td align="right"><strong>¥54,000,000</strong></td>
+    </tr>
+    
+    <tr>
+      <td colspan="4"><strong>Aggregate Impact (2024)</strong></td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Lives saved (2024)</td>
+      <td>From Table 2, step 7</td>
+      <td align="right">0.229</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td><strong>Total economic value saved</strong></td>
+      <td><strong>0.229 × ¥216,000,000</strong></td>
+      <td align="right"><strong>¥49,464,000</strong></td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td><strong>Total tax revenue saved</strong></td>
+      <td><strong>0.229 × ¥54,000,000</strong></td>
+      <td align="right"><strong>¥12,366,000</strong></td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Program cost (2024)</td>
+      <td>From Table 2, step 12</td>
+      <td align="right">¥11,113,476</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td><strong>Net economic benefit</strong></td>
+      <td><strong>¥49,464,000 - ¥11,113,476</strong></td>
+      <td align="right"><strong>¥38,350,524</strong></td>
+    </tr>
+    
+    <tr>
+      <td colspan="4"><strong>Return on Investment</strong></td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td><strong>ROI (gross earnings basis)</strong></td>
+      <td><strong>¥49,464,000 ÷ ¥11,113,476</strong></td>
+      <td align="right"><strong>4.5x</strong></td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td><strong>ROI (tax revenue basis)</strong></td>
+      <td><strong>¥12,366,000 ÷ ¥11,113,476</strong></td>
+      <td align="right"><strong>1.1x</strong></td>
+    </tr>
+  </tbody>
 </table>
 
 <br>
+<em>Interpretation: Every ¥1 invested returns ¥4.5 in lifetime earnings and ¥1.1 in tax revenue. Net economic benefit: ¥38.4M.</em>
 
-<!-- Table 3: Lives Saved and DALYs (2024) -->
-<h3>Table 3: Estimated Lives Saved and DALYs Averted (2024)</h3>
+</div>
 
+<!-- ============================= -->
+<!-- Section 4: Scaling Scenarios -->
+<!-- ============================= -->
+<h2>Scaling Scenarios (Illustrative)</h2>
+<div style="background:#f8f9fa; padding:20px; border-left:4px solid #449966; border-radius:5px; margin:20px 0; font-family:monospace; font-size:0.9em;">
+
+<h3>Table 4: Impact at Different Program Scales</h3>
 <table border="1" cellpadding="8" cellspacing="0" width="100%">
-
-  <tr>
-    <th align="left">Expected Deaths (No Intervention)</th>
-    <td align="right">~0.92</td>
-  </tr>
-
-  <tr>
-    <th align="left">Assumed Intervention Effectiveness</th>
-    <td align="right">25% relative risk reduction</td>
-  </tr>
-
-  <tr>
-    <th align="left"><strong>Estimated Lives Saved (2024)</strong></th>
-    <td align="right"><strong>~0.23</strong></td>
-  </tr>
-
-  <tr>
-    <th align="left">Average Age at Prevention</th>
-    <td align="right">17 years</td>
-  </tr>
-
-  <tr>
-    <th align="left">Life Expectancy in Japan</th>
-    <td align="right">84 years</td>
-  </tr>
-
-  <tr>
-    <th align="left"><strong>DALYs Averted (2024)</strong></th>
-    <td align="right"><strong>~15.4</strong></td>
-  </tr>
-
+  <thead>
+    <tr>
+      <th>Scenario</th>
+      <th>Youths Reached</th>
+      <th>Formula</th>
+      <th>Lives Saved/Year</th>
+      <th>DALYs Averted</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2024 Actual</td>
+      <td align="right">12,635</td>
+      <td>12,635 × 7.26/100k × 0.25</td>
+      <td align="right">0.23</td>
+      <td align="right">15</td>
+    </tr>
+    <tr>
+      <td>2× Scale</td>
+      <td align="right">25,000</td>
+      <td>25,000 × 7.26/100k × 0.25</td>
+      <td align="right">0.45</td>
+      <td align="right">30</td>
+    </tr>
+    <tr>
+      <td>4× Scale (High-Risk Schools)</td>
+      <td align="right">50,000</td>
+      <td>50,000 × 7.26/100k × 0.25</td>
+      <td align="right">0.91</td>
+      <td align="right">61</td>
+    </tr>
+    <tr>
+      <td>8× Scale (Regional Program)</td>
+      <td align="right">100,000</td>
+      <td>100,000 × 7.26/100k × 0.25</td>
+      <td align="right">1.82</td>
+      <td align="right">122</td>
+    </tr>
+  </tbody>
 </table>
 
 <br>
-
-<!-- Table 4: Program Cost and Cost per DALY (2024) -->
-<h3>Table 4:Cost-Effectiveness Summary and Cost per DALY (2024)</h3>
-
-<table border="1" cellpadding="8" cellspacing="0" width="100%">
-
-  <tr>
-    <th align="left">Youths Reached</th>
-    <td align="right">~12,650</td>
-  </tr>
-
-  <tr>
-    <th align="left">Expected Deaths (No Intervention)</th>
-    <td align="right">~0.92</td>
-  </tr>
-
-  <tr>
-    <th align="left">Assumed Effectiveness</th>
-    <td align="right">25%</td>
-  </tr>
-
-  <tr>
-    <th align="left"><strong>Estimated Lives Saved</strong></th>
-    <td align="right"><strong>~0.23</strong></td>
-  </tr>
-
-  <tr>
-    <th align="left">DALYs Averted</th>
-    <td align="right">~15</td>
-  </tr>
-
-  <tr>
-    <th align="left">Total Program Cost (Outreach & Prevention)</th>
-    <td align="right">¥11,113,476</td>
-  </tr>
-
-  <tr>
-    <th align="left"><strong>Cost per Life Saved</strong></th>
-    <td align="right"><strong>~¥48,300,000</strong></td>
-  </tr>
-
-  <tr>
-    <th align="left"><strong>Cost per DALY Averted</strong></th>
-    <td align="right"><strong>~¥720,000</strong></td>
-  </tr>
-
-
-</table>
-
-<br>
-
-<!-- Table 5: Outreach Scale Scenarios -->
-<h3>Table 5: Outreach Scale Scenarios (Illustrative)</h3>
-
-<table border="1" cellpadding="8" cellspacing="0" width="100%">
-
-  <tr>
-    <th align="left">Scenario</th>
-    <th align="right">Youths Reached</th>
-    <th align="right">Lives Saved / Year</th>
-    <th align="right">DALYs / Year</th>
-  </tr>
-
-  <tr>
-    <td>2024 Actual</td>
-    <td align="right">~12,650</td>
-    <td align="right">~0.23</td>
-    <td align="right">~15</td>
-  </tr>
-
-  <tr>
-    <td>Expanded Workshops + Youth-Targeted Hotline</td>
-    <td align="right">~25,000</td>
-    <td align="right">~0.46</td>
-    <td align="right">~31</td>
-  </tr>
-
-  <tr>
-    <td>National Pilot (High-Risk Schools)</td>
-    <td align="right">~50,000</td>
-    <td align="right">~0.91</td>
-    <td align="right">~61</td>
-  </tr>
-
-  <tr>
-    <td>Large-Scale Targeted Program</td>
-    <td align="right">~100,000</td>
-    <td align="right">~1.8</td>
-    <td align="right">~120</td>
-  </tr>
-
-</table>
-
-<br>
-
-<em>
-Interpretation: 2024 results reflect a small but measurable suicide prevention impact driven primarily by direct engagement. 
-</em>
+<em>Note: Scaling assumes linear relationship and constant 25% effectiveness. Actual effectiveness may vary with program scale and implementation fidelity.</em>
 
 </div>
 
