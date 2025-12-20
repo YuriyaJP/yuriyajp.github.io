@@ -51,7 +51,7 @@
         </div>
 
         <div class="story-highlight">
-            <p><strong>The most rewarding thing I've done:</strong> Traveled the world in 2024 aboard a 3,000-passenger ship with Peace Boat, delivering peace advocacy talks across 18 countries on four continents. Standing in front of diverse audiences from UN Headquiarters in New York to community leaders in Central America.</p>
+            <p><strong>The most rewarding thing I've done:</strong> Traveled the world in 2024 aboard a 3,000-passenger ship with Peace Boat, delivering peace advocacy talks across 18 countries on four continents. Standing in front of diverse audiences from UN Headquarters in New York to community leaders in Central America.</p>
         </div>
         
         <div class="story-highlight">
@@ -292,6 +292,8 @@ const playImg = 'assets/icons/play-icon.png';
 const pauseImg = 'assets/icons/pause-icon.png';
 const muteImg = 'assets/icons/mute-icon.png';
 const unmuteImg = 'assets/icons/unmute-icon.png';
+
+video.onended = () => playIcon.src = playImg;
 
 // Start muted and autoplay
 video.muted = true;

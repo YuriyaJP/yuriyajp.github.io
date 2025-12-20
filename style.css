@@ -8,28 +8,45 @@
 }
 
 /* =========================================================
-   1. GLOBAL DESIGN TOKENS (professional maintainability)
+   1. GLOBAL DESIGN TOKENS (WHITE UI, DATA-FOCUSED)
    ========================================================= */
 :root {
-    /* Colors */
+    /* ===== Core Neutrals ===== */
     --white: #ffffff;
-    --black: #000000;
-    --text-light: #f1f1f1;
 
-    --glass-light: rgba(255,255,255,0.25);
-    --glass-medium: rgba(255,255,255,0.4);
-    --glass-strong: rgba(255,255,255,0.6);
+    --text-primary: #131515;    /* headings, primary labels */
+    --text-secondary: #102d29;  /* body text */
+    --text-muted: #4e7828;      /* captions, metadata */
 
-    --project-green-1: #0f3d2e;
-    --project-green-2: #1c5f45;
-    --project-green-3: #247758;
+    /* ===== Glass Surfaces (White Background Safe) ===== */
+    --glass-light: rgba(16, 45, 41, 0.04);
+    --glass-medium: rgba(16, 45, 41, 0.08);
+    --glass-strong: rgba(16, 45, 41, 0.14);
 
-    /* Shadows */
-    --soft-shadow: 0 0 10px rgba(255,255,255,0.6);
-    --img-shadow: 0 6px 18px rgba(0,0,0,0.25);
-    --card-shadow: 0 8px 30px rgba(0,0,0,0.25);
+    /* ===== Borders ===== */
+    --border-soft: rgba(19, 21, 21, 0.10);
+    --border-medium: rgba(19, 21, 21, 0.18);
 
-    /* Transitions */
+    /* ===== Accent System (Controlled Use) ===== */
+    --accent-primary: #104733;   /* primary actions */
+    --accent-secondary: #276033; /* hover / secondary actions */
+    --accent-muted: #7f8d13;     /* tags, indicators */
+
+    --accent-warm: #ba9d00;      /* warnings / highlights */
+    --accent-hot: #ffa600;       /* sparing emphasis only */
+
+    /* ===== Shadows (Elevation, Not Glow) ===== */
+    --soft-shadow:
+        0 2px 6px rgba(19, 21, 21, 0.06);
+
+    --card-shadow:
+        0 10px 26px rgba(19, 21, 21, 0.10);
+
+    --img-shadow:
+        0 6px 18px rgba(19, 21, 21, 0.14);
+
+    /* ===== Motion ===== */
+    --trans-fast: 0.15s ease;
     --trans: 0.25s ease;
 }
 
@@ -37,18 +54,43 @@
    2. GLOBAL BODY & TYPOGRAPHY
    ========================================================= */
 body {
-    font-family: Arial, sans-serif;
-    background: url('assets/images/profile/background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: var(--white);
-    line-height: 1.6;
-    overflow-x: hidden;
-    overflow-y: auto;
-    font-weight: 600;
+    background: #f7f6f2; /* warm white, neutral */
+    color: var(--text-secondary);
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-weight: 800;
+    color: var(--text-primary);
+}
+
+/* =========================================================
+   GLOBAL BUTTON ENHANCEMENT (PROJECT GREEN SYSTEM)
+   ========================================================= */
+
+.view-button,
+.control-btn,
+.contact-icons a,
+.tab-btn,
+body.project-page nav a {
+    background: linear-gradient(135deg, #1a5740, #267d5b 60%, #2d8f6c);
+    color: #e9f9f1;
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow:
+        0 2px 6px rgba(0,0,0,0.35),
+        inset 0 1px 2px rgba(255,255,255,0.1);
+}
+
+.view-button:hover,
+.contact-icons a:hover,
+.tab-btn:hover,
+body.project-page nav a:hover,
+body.project-page .project-button:hover {
+    transform: scale(1.07) translateY(-2px);
+    background: linear-gradient(135deg, #1a5740, #267d5b 60%, #2d8f6c);
+    box-shadow:
+        0 4px 14px rgba(0,0,0,0.45),
+        0 0 12px rgba(36,119,88,0.55);
 }
 
 /* =========================================================
@@ -81,8 +123,9 @@ header {
     height: 60px;
     border-radius: 50%;
     padding: 6px;
-    background: rgba(255,255,255,0.12);
-    border: none;
+    background: var(--glass-light);
+    border: 1px solid var(--border-soft);
+    box-shadow: var(--soft-shadow);
     margin: 10px;
     display: flex;
     justify-content: center;
@@ -90,6 +133,8 @@ header {
     cursor: pointer;
     transition: transform .2s, box-shadow .2s;
 }
+
+
 .control-btn:hover { transform: scale(1.05); }
 .control-btn img {
     width: 28px;
@@ -105,20 +150,29 @@ header {
     margin-top: 15px;
 }
 
-.video-wrapper {
+
+.video-wrapper video {
     width: 200px;
     height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
     border-radius: 50%;
     padding: 6px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(255,255,255,0.12);
     backdrop-filter: blur(4px);
-    box-shadow: 0 0 25px rgba(255,255,255,0.25);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.973);
     margin: 0 auto;
-}
 
+    filter:
+        brightness(1.05)
+        contrast(1.08)
+        saturate(1.05)
+        sepia(0.04);
+
+    transition: filter 0.3s ease;
+}
 /* =========================================================
    5. TOP NAVIGATION (HOME PAGE)
    ========================================================= */
@@ -132,28 +186,38 @@ header {
 }
 
 .tab-btn {
-    background: var(--glass-light);
     border: 1px solid var(--glass-medium);
     padding: 10px 18px;
-    border-radius: 6px;
+    background: linear-gradient(135deg, #1a5740, #267d5b 60%, #2d8f6c);
+    border-radius: 25px;
     color: var(--white);
     font-size: 1.05rem;
     font-weight: 700;
     cursor: pointer;
     backdrop-filter: blur(6px);
-    transition: background .2s, transform .2s;
+    transition: transform .2s, box-shadow .2s;
 }
 
+
 .tab-btn:hover {
-    background: var(--glass-medium);
     transform: translateY(-2px);
 }
 
+
 .tab-btn.active {
     background: var(--white);
-    color: var(--black);
-    box-shadow: 0 0 10px var(--white);
+    color: var(--text-primary);
+    box-shadow: var(--soft-shadow);
 }
+
+.tab-btn.active:hover,
+.tab-btn.active:active {
+    background: var(--white);
+    color: var(--text-primary);
+    transform: none;
+    box-shadow: var(--soft-shadow);
+}
+
 
 /* =========================================================
    6. PANEL SYSTEM
@@ -174,31 +238,46 @@ section.active-section {
 body.project-page section {
     display: block !important;
     opacity: 1 !important;
-    padding: 40px 28px !important;  /* matches your project-page card styling */
+    padding: 40px 28px !important;  /* project-page card styling */
 }
 
 /* =========================================================
    7. ABOUT
    ========================================================= */
 #about .about-card {
-    background: linear-gradient(135deg, rgba(69, 70, 77, 0.15) 0%, rgba(34, 21, 48, 0.15) 100%) !important;
-    border: 2px solid rgba(12, 26, 90, 0.3) !important;
-    border-radius: 20px !important;
-    padding: 40px !important;
-    line-height: 1.8 !important;
-    margin-bottom: 30px !important;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
-    backdrop-filter: blur(10px) !important;
-    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.78),
+            rgba(247,246,242,0.85)
+        );
+    border: 1px solid var(--border-medium);
+    border-left: 4px solid rgba(124, 128, 124, 0.45);
+    border-radius: 20px;
+    padding: 40px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 10px 28px rgba(19,21,21,0.12),
+        inset 0 1px 0 rgba(255,255,255,0.6);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 #about .about-card:hover {
-    transform: translateY(-5px) !important;
-    box-shadow: 0 12px 48px rgba(102, 126, 234, 0.25) !important;
+    transform: translateY(-4px);
+    box-shadow:
+        0 16px 40px rgba(19,21,21,0.16),
+        inset 0 1px 0 rgba(255,255,255,0.65);
 }
 
+
 #about .about-card h2 {
-    color: #ffffff !important;
+    color: var(--text-primary) !important;
     margin-bottom: 30px !important;
     font-size: 2.2em !important;
     border-bottom: 3px solid rgba(255, 255, 255, 0.3) !important;
@@ -207,11 +286,11 @@ body.project-page section {
 
 #about .about-card p {
     margin-bottom: 20px !important;
-    color: rgba(255, 255, 255, 0.9) !important;
+    color: var(--text-primary) !important;
 }
 
 #about .about-card p strong {
-    color: #d6d6d6 !important;
+    color: var(--text-primary) !important;
     font-size: 1.1em !important;
     font-weight: 600 !important;
 }
@@ -224,18 +303,18 @@ body.project-page section {
 #about .about-card ul li {
     margin-bottom: 10px !important;
     padding-left: 15px !important;
-    border-left: 3px solid rgba(62, 64, 82, 0.5) !important;
-    color: rgba(255, 255, 255, 0.85) !important;
+    color: var(--text-primary) !important;
 }
 
 #about .story-highlight {
-    background: rgba(102, 126, 234, 0.12) !important;
-    border-left: 4px solid #010414 !important;
+    background: var(--glass-light);
+    border-left: 4px solid var(--accent-muted);
     padding: 20px !important;
     margin: 25px 0 !important;
     border-radius: 10px !important;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
 }
+
 
 #about .story-highlight p {
     margin-bottom: 0 !important;
@@ -249,36 +328,12 @@ body.project-page section {
     padding: 15px !important;
     background: rgba(102, 126, 234, 0.08) !important;
     border-radius: 10px !important;
-    color: rgba(255, 255, 255, 0.8) !important;
+    color: var(--text-primary) !important;
 }
 
 /* =========================================================
    8. PORTFOLIO
    ========================================================= */
-.tag-btn {
-    background: rgba(10,1,1,0.66);
-    border: 1px solid rgba(255,255,255,0.85);
-    padding: 8px 16px;
-    border-radius: 25px;
-    color: var(--white);
-    font-weight: bold;
-    opacity: 0.85;
-    cursor: pointer;
-    transition: var(--trans);
-}
-
-.tag-btn:hover {
-    opacity: 1;
-    border-color: var(--white);
-    text-shadow: 0 0 8px var(--white);
-    box-shadow: 0 0 10px rgba(255,255,255,0.77);
-}
-
-.tag-btn.active {
-    background: var(--white);
-    color: var(--black);
-    box-shadow: 0 0 14px rgba(255,255,255,0.85);
-}
 
 .portfolio-images {
     display: grid;
@@ -289,7 +344,7 @@ body.project-page section {
 
 .portfolio-item img {
     width: 100%;
-    height: 200px; /* adjust as needed */
+    height: 200px;
     object-fit: cover; /* ensures the image fills the container */
     border-radius: 8px;
     transition: transform .25s, box-shadow .25s;
@@ -305,13 +360,14 @@ body.project-page section {
     display: inline-block;
     margin-top: 6px;
     padding: 4px 10px;
-    background: rgba(56, 55, 55, 0.062);
-    color: var(--text-light);
-    border-radius: 12px;
+    background: var(--glass-light);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-soft);
     font-weight: bold;
     text-decoration: none;
     transition: var(--trans);
 }
+
 
 .project-title:hover {
     transform: scale(1.05);
@@ -322,8 +378,8 @@ body.project-page section {
     display: inline-block;
     margin-top: 12px;
     padding: 8px 18px;
-    background: var(--white);
-    color: var(--black);
+    background: linear-gradient(135deg, #1a5740, #267d5b 60%, #2d8f6c);
+    color: var(--white);
     font-weight: bold;
     border-radius: 25px;
     text-decoration: none;
@@ -333,6 +389,7 @@ body.project-page section {
     transform: scale(1.08);
     box-shadow: 0 0 14px var(--white);
 }
+
 
 .portfolio-grid {
     display: grid;
@@ -404,8 +461,10 @@ body.project-page section {
 
 .contact-icons a {
     padding: 8px 18px;
-    background: var(--white);
-    color: var(--black);
+    background: linear-gradient(135deg, #1a5740, #267d5b 60%, #2d8f6c);
+    color: var(--white);
+    border: 1px solid var(--border-soft);
+    box-shadow: var(--soft-shadow);
     font-weight: bold;
     border-radius: 25px;
     text-decoration: none;
@@ -415,6 +474,7 @@ body.project-page section {
 .contact-icons a:hover {
     transform: scale(1.08);
     box-shadow: 0 0 14px var(--white);
+    color: var(--white);
 }
 
 @media (max-width: 640px) {
@@ -427,6 +487,7 @@ body.project-page section {
     .contact-icons a {
         width: 80%;          /* buttons stretch slightly for touch targets */
         text-align: center;
+        background: linear-gradient(135deg, #1a5740, #267d5b 60%, #2d8f6c);
         font-size: 1rem;
         padding: 10px 0;
     }
@@ -448,10 +509,10 @@ footer {
    12. PROJECT PAGES BASE
    ========================================================= */
 body.project-page {
-    background: url('../assets/images/profile/background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: var(--white);
+    background: #f7f6f2;
+    color: var(--text-secondary);
 }
+
 
 /* Navigation */
 body.project-page nav {
@@ -464,12 +525,9 @@ body.project-page nav a {
     display: inline-block;
     padding: 10px 22px;
     margin: 18px auto 25px;
-
-    background: rgba(255,255,255,0.22);
-    border: 1px solid rgba(255,255,255,0.5);
-    border-radius: 8px;
-
+    border: 1px solid var(--border-soft);
     color: var(--white);
+    border-radius: 25px;
     font-weight: 700;
     font-size: 1.05rem;
     text-decoration: none;
@@ -478,14 +536,19 @@ body.project-page nav a {
     transition: background .2s, transform .2s;
 }
 
+
+
 body.project-page nav a:hover {
-    background: rgba(255,255,255,0.38);
+    color: var(--white);
     transform: translateY(-2px);
-    box-shadow: 0 0 14px rgba(255,255,255,0.6);
+    box-shadow: 0 0 14px rgba(8, 5, 5, 0.6);
 }
 
 /* Header */
 body.project-page header h1 {
+    width: 700px;
+    max-width: 90%;
+    margin: 0 auto;
     margin-top: 18px;
     font-size: 2rem;
     letter-spacing: 0.5px;
@@ -542,9 +605,8 @@ body.project-page .project-button {
     display: inline-block;
     padding: 10px 22px;
     margin-top: 12px;
-
-    background: linear-gradient(135deg, var(--project-green-1), var(--project-green-2) 60%, var(--project-green-3));
-    color: #e9f9f1;
+    background: linear-gradient(135deg, #1a5740, #267d5b 60%, #2d8f6c);
+    color: #ffffff;
     font-weight: 700;
     letter-spacing: 0.5px;
 
