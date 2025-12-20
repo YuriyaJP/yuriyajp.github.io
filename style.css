@@ -69,6 +69,7 @@ h1, h2, h3 {
    ========================================================= */
 
 .view-button,
+.tag-btn,
 .control-btn,
 .contact-icons a,
 .tab-btn,
@@ -82,6 +83,7 @@ body.project-page nav a {
 }
 
 .view-button:hover,
+.control-btn:hover,
 .contact-icons a:hover,
 .tab-btn:hover,
 body.project-page nav a:hover,
@@ -173,6 +175,35 @@ header {
 
     transition: filter 0.3s ease;
 }
+
+.tag-btn {
+    background: var(--glass-medium);
+    border: 1px solid var(--border-soft);
+    color: var(--text-secondary);
+
+    padding: 6px 16px;
+    border-radius: 25px;
+
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+
+    backdrop-filter: blur(6px);
+    box-shadow: var(--soft-shadow);
+
+    transition: transform var(--trans-fast), box-shadow var(--trans-fast), background var(--trans-fast);
+}
+.tag-btn:hover {
+    transform: translateY(-1px);
+    box-shadow:
+        0 4px 12px rgba(19,21,21,0.12);
+}
+.tag-btn.active {
+    background: var( --accent-muted);
+    color: var(--white);
+    box-shadow: var(--soft-shadow);
+}
+
 /* =========================================================
    5. TOP NAVIGATION (HOME PAGE)
    ========================================================= */
