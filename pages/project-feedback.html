@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BERT-based Japanese Class Feedback Sentiment Analysis | Yulia Chekhovska</title>
+<title>BERT-Based Semantic Analysis of Japanese Student Curriculum Feedback | Yulia Chekhovska</title>
 <link rel="stylesheet" href="../style.css">
 </head>
 <body class="project-page">
 
 <header>
     <img src="../assets/images/profile/yulia.jpg" alt="Yulia Chekhovska" class="profile-media">
-    <h1>BERT-based Japanese Class Feedback Sentiment Analysis</h1>
+    <h1>BERT-Based Semantic Analysis of Japanese Student Curriculum Feedback</h1>
 </header>
 
 <nav>
@@ -22,265 +22,295 @@
     <!-- MAIN PROJECT IMAGE -->
     <figure>
         <img src="../assets/images/projects/portfolio_image2.png" alt="Japanese NLP Sentiment Analysis">
+        <figcaption>Image: Japanese NLP Sentiment Analysis from 2023</figcaption>
     </figure>
+    <br>
 
     <h2>Project Overview</h2>
     <p>
         This project applies a deep learning–based natural language processing approach to analyze
-        Japanese student feedback collected from project-based English classes. Using a pretrained
-        Japanese BERT model, free-text responses were automatically classified into positive,
-        negative, and neutral sentiment categories, enabling scalable and context-aware analysis of
-        student perceptions.
+        Japanese student feedback collected via Google Forms from project-based English classes, using a pretrained
+        Japanese BERT model. The analysis focuses on identifying students' favorite and least favorite projects,
+        reasons for their preferences, and suggestions for improvement. The goal is to extract actionable insights
+        to enhance curriculum design and student engagement.
     </p>
     <br>
     <p>
         An earlier exploratory version of this project (2023) focused on morphological analysis and
         keyword extraction. In 2025, the project was reviewed and redesigned to focus specifically
-        on sentiment analysis using a modern deep learning language model.
+        on a Japanese Sentence-BERT model to improvement responses to identify latent semantic themes
+        via unsupervised clustering (to identify meaning-based themes in student feedback).
     </p>
     <br>
     <img src="../assets/images/projects/feedback_analysis_data.png" alt="Feedback Analysis Data">
     <br>
-    <h2>Project Details</h2>
-    <p>
-        <strong>Timeline:</strong> 2025 (project revision)<br>
-        <strong>Location:</strong> High School ESL Program, Japan<br>
-        <strong>Dataset:</strong> 120+ anonymized student feedback responses<br>
-        <strong>Language:</strong> Japanese
-    </p>
 
 
-    <h2>Methodology</h2>
+    <h2>Key Findings</h2>
     <div class="summary-grid">
 
         <div class="summary-card">
     <ul>
         <li>
-            <strong>Data Collection:</strong>
-            Student feedback was collected via Google Forms following project-based learning
-            activities across four curriculum units.
+            <strong>Project Popularity Likelihood:</strong>
+            Results indicate that "Country Presentation" and "Skit Festival" projects are
+            most frequently favored by students, while "Demonstration Dialogue" is often least favored.
+            A curious detail is the the "Skit Festival" project appears in both favorite and least favorite
+            categories at high rates, suggesting polarized student experiences.
         </li>
             </div>
 
             <div class="summary-card">
         <li>
-            <strong>Preprocessing:</strong>
-            Responses were cleaned, anonymized, and standardized to prepare free-text Japanese input
-            for model inference.
+            <strong>Reason for Most Favorite Project:</strong>
+            Common themes for favorite projects include cultural learning, creativity, and
+            autonomous work. Students appreciate projects that allow them to explore new topics
+            and express themselves.
         </li>
             </div>
 
             <div class="summary-card">
         <li>
-            <strong>Sentiment Classification:</strong>
-            A pretrained Japanese BERT model was used to classify each response into
-            positive, negative, or neutral sentiment categories based on sentence-level context.
+            <strong>Areas of Improvement as Specified by the Students:</strong>
+            Frequent suggestions for improvement include time management, project difficulty,
+            and clearer instructions. Students often request more time to complete projects
+            and express challenges with group collaboration.
         </li>
             </div>
-
-            <div class="summary-card">
-        <li>
-            <strong>Analysis:</strong>
-            Sentiment distributions were aggregated by project type to identify patterns in student
-            satisfaction and perceived difficulty.
-        </li>
-            </div>
-
-            <div class="summary-card">
-        <li>
-            <strong>Visualization:</strong>
-            Results were communicated using sentiment distribution charts and project-level
-            comparisons to support instructional decision-making.
-        </li>
     </ul>
-            </div>
     </div>
+    <br>
 
-    <!-- BERT Visualization -->
-    <h2>BERT Sentiment Analysis Example</h2>
-    <figure>
-        <img src="../assets/images/projects/bert_feedback.png" alt="BERT Sentiment Analysis Example">
-    </figure>
+  <h2>Results</h2>
+    <!-- Overall Sentiment Distribution (Favorite Projects) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<div style="background:#f8f9fa; padding:20px; border-left:4px solid #667eea; border-radius:5px; margin:20px 0; font-family:monospace; font-size:0.9em;">
+  <style>
+    .chart-container {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      width: 100%;
+    }
 
-  <h2>Japanese Student Feedback Sentiment Analysis Report (BERT)</h2>
+    .chart-box {
+      width: 420px;   /* 1.5x larger */
+      height: 420px;
+    }
+  </style>
 
-  <!-- Overall Sentiment Distribution (Favorite Projects) -->
-  <h3>Overall Sentiment Distribution (Favorite Projects)</h3>
-  <table border="1" cellpadding="8" cellspacing="0" width="100%">
-    <tr>
-      <th>Sentiment</th>
-      <th>Count</th>
-      <th>Percentage</th>
-    </tr>
-    <tr>
-      <td>Positive</td>
-      <td>15</td>
-      <td>11.3%</td>
-    </tr>
-    <tr>
-      <td>Neutral</td>
-      <td>92</td>
-      <td>79.3%</td>
-    </tr>
-    <tr>
-      <td>Negative</td>
-      <td>9</td>
-      <td>7.8%</td>
-    </tr>
-  </table>
+  <div class="chart-container">
+    <div class="chart-box">
+      <canvas id="favoriteChart"></canvas>
+    </div>
+    <div class="chart-box">
+      <canvas id="leastFavoriteChart"></canvas>
+    </div>
+  </div>
 
-  <br>
+  <script>
+  const labels = [
+    "Interview Speech",
+    "Demonstration Dialogue",
+    "Country Presentation",
+    "Skit Festival"
+  ];
 
-  <!-- Overall Sentiment Distribution (Improvement Suggestions) -->
-  <h3>Overall Sentiment Distribution (Improvement Suggestions)</h3>
-  <table border="1" cellpadding="8" cellspacing="0" width="100%">
-    <tr>
-      <th>Sentiment</th>
-      <th>Count</th>
-      <th>Percentage</th>
-    </tr>
-    <tr>
-      <td>Positive</td>
-      <td>2</td>
-      <td>1.6%</td>
-    </tr>
-    <tr>
-      <td>Neutral</td>
-      <td>22</td>
-      <td>18.9%</td>
-    </tr>
-    <tr>
-      <td>Negative</td>
-      <td>92</td>
-      <td>79.5%</td>
-    </tr>
-  </table>
+  const favoriteData = [11.67, 5.00, 41.67, 41.67];
+  const leastFavoriteData = [10.00, 46.67, 1.67, 41.67];
 
-  <br>
+  /* 4 distinct green tones */
+  const greenPalette = [
+    "#1a5740", // deep green
+    "#267d5b", // medium green
+    "#2d8f6c", // fresh green
+    "#6fbfa3"  // light green
+  ];
 
-  <!-- Project-Level Sentiment Counts -->
-  <h3>Project-Level Sentiment Counts</h3>
-  <table border="1" cellpadding="8" cellspacing="0" width="100%">
-    <tr>
-      <th>Project</th>
-      <th>Positive</th>
-      <th>Negative</th>
-      <th>Neutral</th>
-    </tr>
-    <tr>
-      <td>Demonstration Dialogue</td>
-      <td>0</td>
-      <td>0</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <td>Country Presentation</td>
-      <td>6</td>
-      <td>6</td>
-      <td>38</td>
-    </tr>
-    <tr>
-      <td>Skit Festival</td>
-      <td>8</td>
-      <td>2</td>
-      <td>40</td>
-    </tr>
-    <tr>
-      <td>Interview Speech</td>
-      <td>1</td>
-      <td>1</td>
-      <td>10</td>
-    </tr>
-  </table>
+  const baseOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        position: "bottom"
+      }
+    }
+  };
 
-  <br>
+  new Chart(document.getElementById("favoriteChart"), {
+    type: "pie",
+    data: {
+      labels: labels,
+      datasets: [{
+        data: favoriteData,
+        backgroundColor: greenPalette
+      }]
+    },
+    options: {
+      ...baseOptions,
+      plugins: {
+        ...baseOptions.plugins,
+        title: {
+          display: true,
+          text: "Favorite Project"
+        }
+      }
+    }
+  });
 
-  <!-- Project-Level Sentiment Percentages -->
-  <h3>Project-Level Sentiment Percentages (%)</h3>
-  <table border="1" cellpadding="8" cellspacing="0" width="100%">
-    <tr>
-      <th>Project</th>
-      <th>Positive %</th>
-      <th>Negative %</th>
-      <th>Neutral %</th>
-    </tr>
-    <tr>
-      <td>Demonstration Dialogue</td>
-      <td>0%</td>
-      <td>0%</td>
-      <td>100%</td>
-    </tr>
-    <tr>
-      <td>Country Presentation</td>
-      <td>12%</td>
-      <td>12%</td>
-      <td>76%</td>
-    </tr>
-    <tr>
-      <td>Skit Festival</td>
-      <td>16%</td>
-      <td>4%</td>
-      <td>80%</td>
-    </tr>
-    <tr>
-      <td>Interview Speech</td>
-      <td>8.33%</td>
-      <td>8.33%</td>
-      <td>83.33%</td>
-    </tr>
-  </table>
+  new Chart(document.getElementById("leastFavoriteChart"), {
+    type: "pie",
+    data: {
+      labels: labels,
+      datasets: [{
+        data: leastFavoriteData,
+        backgroundColor: greenPalette
+      }]
+    },
+    options: {
+      ...baseOptions,
+      plugins: {
+        ...baseOptions.plugins,
+        title: {
+          display: true,
+          text: "Least Favorite Project"
+        }
+      }
+    }
+  });
+  </script>
 
 
   <br>
 
-  <!-- Key Insights -->
-  <h3>Key Insights</h3>
-  <ul>
-    <li>Country Presentation shows the highest positive sentiment.</li>
-    <li>Students value cultural learning and autonomous work.</li>
-    <li>Time constraints and project difficulty are common improvement themes.</li>
-    <li>Group projects show mixed sentiment depending on collaboration quality.</li>
-  </ul>
+  <div style="background:#f8f9fa; padding:20px; border-left:4px solid #449966; border-radius:5px; margin:20px 0; font-family:monospace; font-size:0.9em;">
+
+<h2>BERT-Based Semantic Clustering of Improvement Feedback</h2>
+<br>
+<h3>Identified Clusters and Themes</h3>
+<br>
+<table border="1" cellpadding="8" cellspacing="0" width="100%">
+  <tr>
+    <th>Cluster</th>
+    <th>Semantic Theme</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>Cluster 1</td>
+    <td>Practice Time & Preparation</td>
+    <td>
+      Requests for longer rehearsal periods, increased practice time,
+      and more opportunities to prepare or collaborate before presentations.
+    </td>
+  </tr>
+  <tr>
+    <td>Cluster 0</td>
+    <td>Task Structure & Instruction Clarity</td>
+    <td>
+      Feedback indicating unclear instructions, overly broad task scopes,
+      or a need for clearer examples, constraints, or scaffolding.
+    </td>
+  </tr>
+  <tr>
+    <td>Cluster -1</td>
+    <td>Miscellaneous / Individual Feedback</td>
+    <td>
+      Diverse, low-frequency suggestions that did not form a stable semantic cluster,
+      including scheduling concerns and project-specific difficulties.
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<h3>Cluster Distribution by Project</h3>
+<br>
+
+<table border="1" cellpadding="8" cellspacing="0" width="100%">
+  <tr>
+    <th>Favorite Project</th>
+    <th>Cluster -1<br>(Misc.)</th>
+    <th>Cluster 0<br>(Structure)</th>
+    <th>Cluster 1<br>(Practice)</th>
+  </tr>
+  <tr>
+    <td>Demonstration Dialogue</td>
+    <td>4</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>Country Presentation</td>
+    <td>36</td>
+    <td>11</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>Skit Festival</td>
+    <td>37</td>
+    <td>8</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Interview Speech</td>
+    <td>4</td>
+    <td>7</td>
+    <td>1</td>
+  </tr>
+</table>
 
 </div>
 
 
-    <h2>Technical Summary</h2>
-    <div class="summary-grid">
+  <br>
+      <!-- Favorite Project Reason Word Cloud -->
+    <h2>Favorite Project Reason Word Cloud</h2>
+    <br>
+    <figure>
+        <img src="../assets/images/projects/project_favorite_wordclouds_clean.png" alt="Favorite Project Word Cloud">
+    </figure>
 
-        <div class="summary-card">
-            <h3>Data Science Skills</h3>
+  <br>
+
+      <!-- Improvement Suggestion Word Cloud -->
+    <h2>Improvement Suggestion Word Cloud</h2>
+    <br>
+    <figure>
+        <img src="../assets/images/projects/project_improvement_wordclouds_clean.png" alt="Improvement Suggestion Word Cloud">
+    </figure>
+  <br>
+
+
+  <h2>Technical Summary</h2>
+  <div class="summary-grid">
+
+      <div class="summary-card">
+          <h3>Data Science Skills</h3>
             <ul>
-                <li>Natural Language Processing (NLP)</li>
-                <li>Sentiment Analysis</li>
-                <li>Data Cleaning & Analysis</li>
-                <li>Model Inference</li>
-                <li>Data Visualization</li>
-            </ul>
-        </div>
+              <li>Natural Language Processing (NLP)</li>
+              <li>Data Cleaning & Analysis</li>
+              <li>Data Visualization</li>
+          </ul>
+      </div>
 
-        <div class="summary-card">
-            <h3>Programming & Frameworks</h3>
-            <ul>
-                <li>Python</li>
-                <li>Jupyter Notebook</li>
-                <li>Hugging Face Transformers</li>
-            </ul>
-        </div>
+      <div class="summary-card">
+          <h3>Programming & Frameworks</h3>
+          <ul>
+              <li>Python</li>
+              <li>Jupyter Notebook</li>
+              <li>Google Colab</li>
+          </ul>
+      </div>
 
-        <div class="summary-card">
-            <h3>Libraries & Tools</h3>
-            <ul>
-                <li>Pandas</li>
-                <li>Transformers (BERT)</li>
-                <li>PyTorch</li>
-                <li>Matplotlib & Seaborn</li>
-            </ul>
-        </div>
-
-    </div>
+      <div class="summary-card">
+          <h3>Libraries & Tools</h3>
+          <ul>
+              <li>Pandas</li>
+              <li>Matplotlib & Seaborn</li>
+              <li>Transformers (Hugging Face)</li>
+          </ul>
+      </div>
+  </div>
 
     <h2>View the Project</h2>
     <a href="https://github.com/YuriyaJP/Class-Feedback-NLP-Database-Japanese" class="project-button" target="_blank">
