@@ -174,11 +174,11 @@ Estimates are model-based, illustrative, and do not imply causality; actual outc
         },
         tooltip: {
           callbacks: {
-            label: function(context) {
+            label: function (context) {
               const total = context.dataset.data.reduce((a, b) => a + b, 0);
               const value = context.raw;
               const percentage = ((value / total) * 100).toFixed(1);
-              return `${context.label}: ${value} (${percentage}%)`;
+              return `${value} (${percentage}%)`;
             }
           }
         }
@@ -186,8 +186,7 @@ Estimates are model-based, illustrative, and do not imply causality; actual outc
     }
   });
 </script>
-
-
+<br>
 
 <!-- ============================= -->
 <!-- Section 1: Program Costs -->
