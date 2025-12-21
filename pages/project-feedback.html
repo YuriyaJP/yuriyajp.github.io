@@ -81,34 +81,33 @@
     </div>
     <br>
 
-  <h2>Results</h2>
-    <!-- Overall Sentiment Distribution (Favorite Projects) -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <h2>Percentage Distribution of Favorite and Least Favorite Projects</h2>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-  <style>
-    .chart-container {
-      display: flex;
-      justify-content: center;
-      gap: 60px;
-      width: 100%;
-    }
+<style>
+  .chart-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    width: 100%;
+  }
 
-    .chart-box {
-      width: 420px;   /* 1.5x larger */
-      height: 420px;
-    }
-  </style>
+  .chart-box {
+    width: 420px;
+    height: 420px;
+  }
+</style>
 
-  <div class="chart-container">
-    <div class="chart-box">
-      <canvas id="favoriteChart"></canvas>
-    </div>
-    <div class="chart-box">
-      <canvas id="leastFavoriteChart"></canvas>
-    </div>
+<div class="chart-container">
+  <div class="chart-box">
+    <canvas id="favoriteChart"></canvas>
   </div>
+  <div class="chart-box">
+    <canvas id="leastFavoriteChart"></canvas>
+  </div>
+</div>
 
-  <script>
+<script>
   const labels = [
     "Interview Speech",
     "Demonstration Dialogue",
@@ -133,9 +132,17 @@
     plugins: {
       legend: {
         position: "bottom"
+      },
+      tooltip: {
+        callbacks: {
+          label: function (context) {
+            return context.raw.toFixed(2) + "%";
+          }
+        }
       }
     }
   };
+
 
   new Chart(document.getElementById("favoriteChart"), {
     type: "pie",
@@ -178,7 +185,7 @@
       }
     }
   });
-  </script>
+</script>
 
 
   <br>
