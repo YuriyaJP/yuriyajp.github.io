@@ -101,11 +101,95 @@ Estimates are model-based, illustrative, and do not imply causality; actual outc
 </div>
 
 
-<!-- Chart 3 -->
-<div style="margin:40px 0;">
-    <iframe src="../pages/charts/cause_heatmap.html"
-            width="100%" height="680" frameborder="0"></iframe>
+<!-- Youth (-19) Suicide Causes Pie Chart -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+  .chart-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .chart-box {
+    width: 420px;
+    height: 420px;
+  }
+</style>
+
+<div class="chart-container">
+  <div class="chart-box">
+    <canvas id="youthCauseChart"></canvas>
+  </div>
 </div>
+
+<script>
+  const labels = [
+    "Family Problems",
+    "Health Problems",
+    "Economic & Living Problems",
+    "Work-related Problems",
+    "Relationship Problems",
+    "School-related Problems",
+    "Other"
+  ];
+
+  // ～19 years old (計)
+  const youthCauseData = [
+    148, // Family Problems
+    286, // Health Problems
+    31,  // Economic & Living Problems
+    34,  // Work-related Problems
+    85,  // Relationship Problems
+    346, // School-related Problems
+    84   // Other
+  ];
+
+  const colorPalette = [
+    "#1a5740", // deep green
+    "#267d5b",
+    "#2d8f6c",
+    "#6fbfa3",
+    "#9fd6c3",
+    "#145a32",
+    "#4aa382"
+  ];
+
+  new Chart(document.getElementById("youthCauseChart"), {
+    type: "pie",
+    data: {
+      labels: labels,
+      datasets: [{
+        data: youthCauseData,
+        backgroundColor: colorPalette
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          position: "bottom"
+        },
+        title: {
+          display: true,
+          text: "Biggest Causes of Suicide Among Youth (10-19) in 2024"
+        },
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              const total = context.dataset.data.reduce((a, b) => a + b, 0);
+              const value = context.raw;
+              const percentage = ((value / total) * 100).toFixed(1);
+              return `${context.label}: ${value} (${percentage}%)`;
+            }
+          }
+        }
+      }
+    }
+  });
+</script>
+
 
 
 <!-- ============================= -->
@@ -521,6 +605,8 @@ Estimates are model-based, illustrative, and do not imply causality; actual outc
        class="project-button" target="_blank">Source Data</a>
     <a href="https://github.com/YuriyaJP/Public-Health-Data-Engineering-Project-Japan-Suicide-Statistics-Pipeline"
        class="project-button" target="_blank">View Source Code</a>
+    <a href="https://forum.effectivealtruism.org/posts/Sg7ovepZcmY8GKpo3/how-i-attempted-to-measure-the-impact-of-my-japan-nonprofit"
+       class="project-button" target="_blank">Read Full Article</a>
 </p>
 
 </section>
