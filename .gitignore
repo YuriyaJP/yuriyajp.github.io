@@ -113,3 +113,8 @@ private/
 *.pem
 *.cert
 *.p12
+
+# Python virtual environments
+venv/
+.venv/
+env/
