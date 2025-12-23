@@ -9,33 +9,40 @@
 
 <body>
 
-<header role="banner">
-    <div class="video-wrapper">
-        <video id="profile-video" class="profile-media" autoplay muted playsinline poster="assets/images/profile/yulia.jpg">
-            <source src="assets/video/portfolio.mp4" type="video/mp4">
-            <img src="assets/images/profile/yulia.jpg" alt="Profile image of Yulia Chekhovska">
-        </video>
+<header class="site-header" role="banner">
+    <div class="header-left">
+
+        <div class="video-wrapper">
+            <video id="profile-video" class="profile-media"
+                   autoplay muted playsinline
+                   poster="assets/images/profile/yulia.jpg">
+                <source src="assets/video/portfolio.mp4" type="video/mp4">
+                <img src="assets/images/profile/yulia.jpg" alt="Profile image of Yulia Chekhovska">
+            </video>
+        </div>
+
+        <div class="control-btn-wrapper" role="group" aria-label="Video controls">
+            <button id="play-toggle" class="control-btn" aria-label="Play or pause video">
+                <img id="play-icon" src="assets/icons/pause-icon.png" alt="">
+            </button>
+            <button id="sound-toggle" class="control-btn" aria-label="Mute or unmute video">
+                <img id="sound-icon" src="assets/icons/mute-icon.png" alt="">
+            </button>
+        </div>
+
     </div>
 
-    <div class="control-btn-wrapper" role="group" aria-label="Video controls">
-        <button id="play-toggle" class="control-btn" aria-label="Play or pause video">
-            <img id="play-icon" src="assets/icons/pause-icon.png" alt="">
-        </button>
-        <button id="sound-toggle" class="control-btn" aria-label="Mute or unmute video">
-            <img id="sound-icon" src="assets/icons/mute-icon.png" alt="">
-        </button>
+    <div class="header-right">
+        <nav class="nav-tabs" role="navigation" aria-label="Main sections">
+            <button data-target="about" class="tab-btn active">About</button>
+            <button data-target="portfolio" class="tab-btn">Portfolio</button>
+            <button data-target="media" class="tab-btn">Media</button>
+            <button data-target="contact" class="tab-btn">Contact</button>
+        </nav>
     </div>
-
-    <h1 class="site-title">Yulia Chekhovska</h1>
 </header>
 
 
-<nav class="nav-tabs" role="navigation" aria-label="Main sections">
-    <button data-target="about" class="tab-btn active">About</button>
-    <button data-target="portfolio" class="tab-btn">Portfolio</button>
-    <button data-target="media" class="tab-btn">Media</button>
-    <button data-target="contact" class="tab-btn">Contact</button>
-</nav>
 
 
 <main>
