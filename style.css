@@ -362,6 +362,7 @@ body.project-page section {
     color: var(--text-primary) !important;
 }
 
+
 /* =========================================================
    8. PORTFOLIO
    ========================================================= */
@@ -932,6 +933,45 @@ body.project-page .project-button:active {
         padding: 8px 14px;
     }
 }
+
+@media (max-width: 768px) {
+
+    section {
+        padding: 20px 16px;
+    }
+
+    #about .about-card {
+        padding: 24px;
+    }
+
+    #about .about-card h2 {
+        font-size: 1.6rem !important;
+        margin-bottom: 18px !important;
+    }
+
+    #about .about-card p,
+    #about .about-card li {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .project-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .project-section img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* =========================================================
    END OF STYLE.CSS
    ========================================================= */
