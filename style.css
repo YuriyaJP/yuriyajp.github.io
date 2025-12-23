@@ -891,3 +891,47 @@ body.project-page .project-button:active {
 .site-header .video-wrapper video {
     box-shadow: 0 8px 24px rgba(19,21,21,0.18);
 }
+
+/* =========================================================
+   MOBILE LAYOUT (HEADER + NAV)
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .site-header {
+        flex-direction: column;
+        align-items: center;
+        padding: 14px 16px;
+        gap: 12px;
+    }
+
+    .header-left {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .site-header .profile-media,
+    .site-header .video-wrapper video {
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+    .control-btn-wrapper {
+        gap: 10px;
+    }
+
+    .nav-tabs {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 6px;
+    }
+
+    .tab-btn {
+        font-size: 0.9rem;
+        padding: 8px 14px;
+    }
+}
+/* =========================================================
+   END OF STYLE.CSS
+   ========================================================= */
