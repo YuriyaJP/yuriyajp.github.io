@@ -96,6 +96,7 @@
 <!-- PORTFOLIO -->
 <section id="portfolio" aria-labelledby="portfolio-title">
     <h2 id="portfolio-title">Portfolio</h2>
+    <br>
 
     <div class="tag-filter" role="region" aria-label="Tag filters">
         <strong>Filter by tags:</strong>
@@ -105,7 +106,7 @@
 
     <div class="portfolio-images">
 
-        <article class="portfolio-item" data-tags="research,data-analysis">
+        <article class="portfolio-item" data-tags="research,data-analysis" data-date="2023-06-15">
 
             <figure>
                 <img src="assets/images/projects/portfolio_image1.png" alt="Language Learning Digital Novel">
@@ -116,7 +117,7 @@
         </article>
 
 
-        <article class="portfolio-item" data-tags="machine-learning">
+        <article class="portfolio-item" data-tags="machine-learning" data-date="2024-09-01">
 
             <figure>
                 <img src="assets/images/projects/portfolio_image2.png" alt="Class Feedback NLP Analysis">
@@ -126,8 +127,7 @@
             <a href="pages/project-feedback.html" class="view-button">View Project</a>
         </article>
 
-
-        <article class="portfolio-item" data-tags="data-analysis">
+        <article class="portfolio-item" data-tags="data-analysis" data-date="2025-12-20">
             <figure>
                 <img src="assets/images/projects/japan-police-logo.png" alt="Japan Suicide Data Pipeline">
             </figure>
@@ -137,7 +137,7 @@
         </article>
 
 
-        <article class="portfolio-item" data-tags="machine-learning">
+        <article class="portfolio-item" data-tags="machine-learning" data-date="2025-12-25">
             <figure>
                 <img src="assets/images/projects/consumer-review.jpg" alt="Analysis Consumer Video Reviews">
             </figure>
@@ -147,7 +147,7 @@
         </article>
 
 
-        <article class="portfolio-item" data-tags="data-analysis">
+        <article class="portfolio-item" data-tags="data-analysis" data-date="2024-02-28">
 
             <figure>
                 <img src="assets/images/projects/tableau-preview.png" alt="AI usage Tableau project">
@@ -159,7 +159,6 @@
 
     </div>
 </section>
-
 
 
 <!-- MEDIA -->
@@ -335,9 +334,12 @@ const tagList = document.getElementById('tag-list');
 const clearTagsBtn = document.getElementById('clear-tags');
 let activeTags = new Set();
 let allTags = new Set();
+const container = document.querySelector('.portfolio-images'); // needed for sorting
 
+// Collect all unique tags
 items.forEach(item => item.dataset.tags.split(',').forEach(tag => allTags.add(tag)));
 
+// Create tag buttons
 allTags.forEach(tag => {
     const btn = document.createElement('button');
     btn.className = 'tag-btn';
@@ -346,6 +348,7 @@ allTags.forEach(tag => {
     tagList.appendChild(btn);
 });
 
+// Tag button click
 tagList.addEventListener('click', e => {
     if (!e.target.classList.contains('tag-btn')) return;
     const tag = e.target.dataset.tag;
@@ -355,20 +358,58 @@ tagList.addEventListener('click', e => {
     filterProjects();
 });
 
+// Clear tags
 clearTagsBtn.addEventListener('click', () => {
     activeTags.clear();
     document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
     filterProjects();
 });
 
+// Filter + sort + new badge
 function filterProjects() {
+    const today = new Date();
+    const newThreshold = new Date();
+    newThreshold.setMonth(today.getMonth() - 6); // last 6 months
+
+    const visibleItems = [];
+
     items.forEach(item => {
         const tags = item.dataset.tags.split(',');
         const match = [...activeTags].every(tag => tags.includes(tag));
-        item.style.display = activeTags.size === 0 || match ? 'block' : 'none';
+
+        if (activeTags.size === 0 || match) {
+            item.style.display = 'block';
+            visibleItems.push(item);
+        } else {
+            item.style.display = 'none';
+        }
+
+        // Add or remove "NEW" badge
+        const itemDate = new Date(item.dataset.date);
+        let badge = item.querySelector('.new-badge');
+
+        if (itemDate >= newThreshold) {
+            if (!badge) {
+                badge = document.createElement('span');
+                badge.className = 'new-badge';
+                badge.textContent = 'NEW';
+                item.querySelector('figure').appendChild(badge);
+            }
+        } else {
+            if (badge) badge.remove();
+        }
     });
+
+    // Sort visible items by date (newest first)
+    visibleItems.sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
+    visibleItems.forEach(item => container.appendChild(item));
 }
+
+// Initial call on page load
+document.addEventListener('DOMContentLoaded', filterProjects);
 </script>
+
+
 
 
 
@@ -526,6 +567,28 @@ window.addEventListener('resize', () => { windowWidth = carouselWindow.offsetWid
 updateCarousel();
 autoScroll();
 </script>
+
+<script>
+function sortPortfolioByDate() {
+    const container = document.querySelector('.portfolio-images');
+    const items = Array.from(container.querySelectorAll('.portfolio-item'));
+
+    items.sort((a, b) => {
+        const dateA = new Date(a.getAttribute('data-date'));
+        const dateB = new Date(b.getAttribute('data-date'));
+        return dateB - dateA; // newest first
+    });
+
+    // Append sorted items back to container
+    items.forEach(item => container.appendChild(item));
+}
+
+// Call it on page load
+document.addEventListener('DOMContentLoaded', () => {
+    sortPortfolioByDate();
+});
+</script>
+
 
 </body>
 </html>
