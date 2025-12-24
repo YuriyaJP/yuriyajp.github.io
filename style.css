@@ -972,6 +972,24 @@ body.project-page .project-button:active {
     }
 }
 
+.new-badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background-color: #00ff00; /* bright green */
+    color: #000;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    box-shadow: 0 0 6px #00ff00aa;
+}
+
+.portfolio-item figure {
+    position: relative; /* needed so badge positions correctly */
+}
+
 /* =========================================================
    END OF STYLE.CSS
    ========================================================= */
