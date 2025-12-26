@@ -995,11 +995,6 @@ body.project-page .project-button:active {
    PROJECT PAGE ENHANCEMENTS (ANCHOR LINKS + CLEANER LAYOUT)
    ========================================================= */
 
-/* Project page uses same header as home */
-body.project-page .site-header {
-    /* inherits all styles from main .site-header */
-}
-
 /* Main project content wrapper */
 body.project-page .project-container {
     display: flex;
