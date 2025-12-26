@@ -3,80 +3,244 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Risk Analysis of Automated Health Narratives in Consumer Video Reviews | Yuliia Chekhovska</title>
-
+<title>Risk Analysis of Health Narratives in Consumer Video Reviews | Yuliia Chekhovska</title>
+<link rel="icon" type="image/png" href="../favicon.png">
 <link rel="stylesheet" href="../style.css">
 </head>
-
 <body class="project-page">
 
-<header>
-    <img src="../assets/images/profile/yulia.jpg" alt="Yuliia Chekhovska" class="profile-media">
-    <h1>Risk Analysis of Automated Health Narratives in Consumer Video Reviews</h1>
-    <p style="max-width:800px;margin:8px auto 0;opacity:0.9">
-        <strong>Status:</strong> Work in Progress
-    </p>
+<!-- SAME HEADER AS INDEX.HTML -->
+<header class="site-header" role="banner">
+    <div class="header-left">
+        <div class="video-wrapper">
+            <video id="profile-video" class="profile-media"
+                   autoplay muted playsinline
+                   poster="../assets/images/profile/yulia.jpg">
+                <source src="../assets/video/portfolio.mp4" type="video/mp4">
+                <img src="../assets/images/profile/yulia.jpg" alt="Profile image of Yulia Chekhovska">
+            </video>
+        </div>
+        <div class="control-btn-wrapper" role="group" aria-label="Video controls">
+            <button id="play-toggle" class="control-btn" aria-label="Play or pause video">
+                <img id="play-icon" src="../assets/icons/pause-icon.png" alt="">
+            </button>
+            <button id="sound-toggle" class="control-btn" aria-label="Mute or unmute video">
+                <img id="sound-icon" src="../assets/icons/mute-icon.png" alt="">
+            </button>
+        </div>
+    </div>
+    <div class="header-right">
+        <nav class="nav-tabs" role="navigation" aria-label="Main navigation">
+            <a href="../index.html#about" class="tab-btn">About</a>
+            <a href="../index.html#portfolio" class="tab-btn">Portfolio</a>
+            <a href="../index.html#media" class="tab-btn">Media</a>
+            <a href="../index.html#contact" class="tab-btn">Contact</a>
+        </nav>
+    </div>
 </header>
 
-<nav>
-    <a href="../index.html">Home</a>
-</nav>
+<!-- PROJECT CONTAINER -->
+<div class="project-container">
+    
+    <!-- ANCHOR NAVIGATION SIDEBAR -->
+    <nav class="anchor-nav" aria-label="Page sections">
+        <h3>On This Page</h3>
+        <ul>
+            <li><a href="#overview" class="anchor-link active">Overview</a></li>
+            <li><a href="#context" class="anchor-link">Problem & Context</a></li>
+            <li><a href="#methodology" class="anchor-link">Methodology</a></li>
+            <li><a href="#status" class="anchor-link">Current Status</a></li>
+            <li><a href="#resources" class="anchor-link">Resources</a></li>
+        </ul>
+    </nav>
 
-<section>
+    <!-- MAIN CONTENT -->
+    <main class="project-content">
+        
+        <!-- TITLE CARD -->
+        <div class="title-card">
+            <h1>Risk Analysis of Automated Health Narratives in Consumer Video Reviews</h1>
+            <p class="meta">
+                <span class="status-badge wip">Work in Progress</span>
+                <span style="margin-left: 12px;">Machine Learning, NLP, Risk Analysis</span>
+            </p>
+        </div>
 
-    <img src="../assets/images/projects/consumer-review.jpg" 
-         alt="Image: consumer video reviews" 
-         class="project-image">
-    <br>
-    <h2>Project Overview</h2>
+        <!-- PROJECT IMAGE -->
+        <figure style="text-align:center; margin-bottom:40px;">
+            <img src="../assets/images/projects/consumer-review.jpg"
+                alt="Consumer video reviews analysis"
+                style="max-width:520px; width:100%;">
+        </figure>
 
-    <p>
-    This project analyzes health-related narratives expressed in meal replacement product reviews 
-    published on the YouTube video platform.
-    </p>
+        <!-- OVERVIEW SECTION -->
+        <section id="overview" class="content-section">
+            <h2>Project Overview</h2>
+            <p>
+                This project analyzes health-related narratives expressed in meal replacement product reviews 
+                published on the YouTube video platform.
+            </p>
+            <p>
+                Using video transcripts and accompanying metadata, I examine how automated analytical systems 
+                interpret user-reported experiences such as digestion, taste, satiety, and perceived health effects, 
+                and where those systems risk misclassification or overgeneralization.
+            </p>
+            <p>
+                The emphasis is not on evaluating the truth of individual claims, but on identifying patterns, 
+                failure modes, and potential harm amplification when consumer health narratives are processed 
+                at scale by automated models.
+            </p>
+        </section>
 
-    <p>
-    Using video transcripts and accompanying metadata, I examine how automated analytical systems 
-    interpret user-reported experiences such as digestion, taste, satiety, and perceived health effects, 
-    and where those systems risk misclassification or overgeneralization.
-    </p>
+        <!-- CONTEXT SECTION -->
+        <section id="context" class="content-section">
+            <h2>Problem & Context</h2>
+            <ul>
+                <li>Analyzes publicly available consumer video reviews only</li>
+                <li>Does not provide medical, nutritional, or diagnostic advice</li>
+                <li>Does not assess the clinical validity of health claims</li>
+                <li>Focuses on risks in automated interpretation and aggregation</li>
+            </ul>
+        </section>
 
-    <p>
-    The emphasis is not on evaluating the truth of individual claims, but on identifying patterns, 
-    failure modes, and potential harm amplification when consumer health narratives are processed 
-    at scale by automated models.
-    </p>
+        <!-- METHODOLOGY SECTION -->
+        <section id="methodology" class="content-section">
+            <h2>Methodology</h2>
+            <h3>Data Collection</h3>
+            <p>
+                Video transcripts and metadata were collected using the YouTube Data API v3. 
+                The dataset focuses on reviews of meal replacement products published between 2020–2024.
+            </p>
+            
+            <h3>Analysis Framework</h3>
+            <p>
+                The analysis pipeline includes:
+            </p>
+            <ul>
+                <li><strong>Claim Extraction:</strong> Identifying health-related statements using regex patterns and NLP</li>
+                <li><strong>Sentiment & Intensity Scoring:</strong> Evaluating emotional tone and claim strength</li>
+                <li><strong>Risk Classification:</strong> Flagging potential misinterpretations or harmful generalizations</li>
+                <li><strong>Aggregation Effects:</strong> Studying how automated summaries could amplify bias</li>
+            </ul>
 
-    <br>
-    <h2>Important Positioning</h2>
+            <h3>Technical Stack</h3>
+            <p>
+                Python, pandas, scikit-learn, Hugging Face Transformers, YouTube Data API v3
+            </p>
+        </section>
 
-    <ul>
-        <li>Analyzes publicly available consumer video reviews only</li>
-        <li>Does not provide medical, nutritional, or diagnostic advice</li>
-        <li>Does not assess the clinical validity of health claims</li>
-        <li>Focuses on risks in automated interpretation and aggregation</li>
-    </ul>
-    <br>
-    <h2>Current Status</h2>
+        <!-- STATUS SECTION -->
+        <section id="status" class="content-section">
+            <h2>Current Status</h2>
+            <p>
+                This is an ongoing, exploratory project. Current work focuses on transcript collection, 
+                claim categorization, and early risk analysis of automated interpretation. 
+            </p>
+            <p>
+                Further modeling and evaluation will be added iteratively.
+            </p>
+        </section>
 
-    <p>
-    This is an ongoing, exploratory project. Current work focuses on transcript collection, 
-    claim categorization, and early risk analysis of automated interpretation. 
-    Further modeling and evaluation will be added iteratively.
-    </p>
+        <!-- CODE & RESOURCES SECTION -->
+        <section id="resources" class="content-section">
+            <h2>Code & Resources</h2>
+            <p>
+                The full analysis code, including data collection scripts and risk classification models, 
+                is available on GitHub.
+            </p>
+            <a href="https://github.com/YuriyaJP/youtube-meal-replacement-review-analysis" 
+               class="project-button" 
+               target="_blank">
+                View Code on GitHub
+            </a>
+        </section>
 
-    <a href="https://github.com/YuriyaJP/youtube-meal-replacement-review-analysis" 
-       class="project-button" 
-       target="_blank">
-        View Code
-    </a>
+    </main>
+</div>
 
-</section>
-
-<footer>
-    &copy; 2025 Made by Yuliia Chekhovska. All rights reserved.
+<footer role="contentinfo">
+    &copy; 2025 Made by Yulia Chekhovska. All rights reserved.
 </footer>
+
+<!-- VIDEO CONTROLS SCRIPT (same as index.html) -->
+<script>
+const video = document.getElementById('profile-video');
+const playToggle = document.getElementById('play-toggle');
+const soundToggle = document.getElementById('sound-toggle');
+const playIcon = document.getElementById('play-icon');
+const soundIcon = document.getElementById('sound-icon');
+
+const playImg = '../assets/icons/play-icon.png';
+const pauseImg = '../assets/icons/pause-icon.png';
+const muteImg = '../assets/icons/mute-icon.png';
+const unmuteImg = '../assets/icons/unmute-icon.png';
+
+video.muted = true;
+video.play();
+playIcon.src = pauseImg;
+soundIcon.src = muteImg;
+
+playToggle.addEventListener('click', () => {
+    if (video.paused) {
+        video.play();
+        playIcon.src = pauseImg;
+    } else {
+        video.pause();
+        playIcon.src = playImg;
+    }
+});
+
+soundToggle.addEventListener('click', () => {
+    video.muted = !video.muted;
+    soundIcon.src = video.muted ? muteImg : unmuteImg;
+});
+
+video.onended = () => playIcon.src = playImg;
+</script>
+
+<!-- ANCHOR LINK SMOOTH SCROLL & ACTIVE STATE -->
+<script>
+// Smooth scroll to anchor
+document.querySelectorAll('.anchor-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        
+        if (targetSection) {
+            targetSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Update active link on scroll
+const sections = document.querySelectorAll('.content-section');
+const navLinks = document.querySelectorAll('.anchor-link');
+
+window.addEventListener('scroll', () => {
+    let current = '';
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 150;
+        const sectionHeight = section.offsetHeight;
+        
+        if (window.pageYOffset >= sectionTop && 
+            window.pageYOffset < sectionTop + sectionHeight) {
+            current = section.getAttribute('id');
+        }
+    });
+    
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').substring(1) === current) {
+            link.classList.add('active');
+        }
+    });
+});
+</script>
 
 </body>
 </html>

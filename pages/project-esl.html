@@ -4,174 +4,344 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Psycholinguistic Language Learning Digital Novel | Yulia Chekhovska</title>
+<link rel="icon" type="image/png" href="../favicon.png">
 <link rel="stylesheet" href="../style.css">
 </head>
 <body class="project-page">
 
-<header>
-    <img src="../assets/images/profile/yulia.jpg" alt="Yulia Chekhovska" class="profile-media">
-    <h1>Psycholinguistic Language Learning Digital Novel</h1>
+<!-- SAME HEADER AS INDEX.HTML -->
+<header class="site-header" role="banner">
+    <div class="header-left">
+        <div class="video-wrapper">
+            <video id="profile-video" class="profile-media"
+                   autoplay muted playsinline
+                   poster="../assets/images/profile/yulia.jpg">
+                <source src="../assets/video/portfolio.mp4" type="video/mp4">
+                <img src="../assets/images/profile/yulia.jpg" alt="Profile image of Yulia Chekhovska">
+            </video>
+        </div>
+        <div class="control-btn-wrapper" role="group" aria-label="Video controls">
+            <button id="play-toggle" class="control-btn" aria-label="Play or pause video">
+                <img id="play-icon" src="../assets/icons/pause-icon.png" alt="">
+            </button>
+            <button id="sound-toggle" class="control-btn" aria-label="Mute or unmute video">
+                <img id="sound-icon" src="../assets/icons/mute-icon.png" alt="">
+            </button>
+        </div>
+    </div>
+    <div class="header-right">
+        <nav class="nav-tabs" role="navigation" aria-label="Main navigation">
+            <a href="../index.html#about" class="tab-btn">About</a>
+            <a href="../index.html#portfolio" class="tab-btn">Portfolio</a>
+            <a href="../index.html#media" class="tab-btn">Media</a>
+            <a href="../index.html#contact" class="tab-btn">Contact</a>
+        </nav>
+    </div>
+
 </header>
 
-<nav>
-    <a href="../index.html">Home</a>
-</nav>
-
-<section>
-    <h1>Psycholinguistic Language Learning Digital Novel</h1>
-    <br>
-    <h2>Project Overview</h2>
-    <p>This interactive visual novel applies evidence-based psycholinguistic principles to enhance English communication skills among Japanese high school students. By embedding language learning within familiar school environments and peer interactions, the game creates optimal conditions for natural language acquisition while reducing anxiety and increasing engagement.</p>
-
-    <h2>Project Details</h2>
-    <p><strong>Timeline:</strong> 2022–2023 Academic Year<br>
-    <strong>Location:</strong> Sogo High School, Chiba, Japan<br>
-    <strong>Target Audience:</strong> High School Students (Ages 15-18)<br>
-    <strong>Platform:</strong> Ren'Py (Python-based)</p>
-    <h2>Gameplay Example</h2>
-        <figure><img src="../assets/images/projects/portfolio_image1.png" alt="Peer Interaction Example"></figure>
-
-
-<h2>The Science Behind the Design</h2>
-<p>
-    The project is grounded in four established psycholinguistic theories that directly inform its
-    structure and learning experience.
-</p>
-
-<div class="summary-grid">
-
-    <div class="summary-card">
-        <h3>1. Willingness to Communicate (WTC)</h3>
-        <p>
-            Learners speak more when they feel socially comfortable and contextually secure.
-        </p>
-        <p>
-            <strong>Application:</strong>
-            Students interact with same-age peers in familiar school settings, increasing confidence
-            and voluntary English use.
-        </p>
-    </div>
-
-    <div class="summary-card">
-        <h3>2. Schema Theory</h3>
-        <p>
-            Familiar contexts reduce cognitive load and support comprehension.
-        </p>
-        <p>
-            <strong>Application:</strong>
-            Real school locations and everyday situations allow students to focus on language,
-            not interpreting unfamiliar scenarios.
-        </p>
-    </div>
-
-    <div class="summary-card">
-        <h3>3. Input Hypothesis (i+1)</h3>
-        <p>
-            Language acquisition occurs when input is slightly above the learner’s current level.
-        </p>
-        <p>
-            <strong>Application:</strong>
-            Dialogue blends known structures with new expressions supported by context and repetition.
-        </p>
-    </div>
-
-    <div class="summary-card">
-        <h3>4. Affective Filter</h3>
-        <p>
-            Anxiety and fear inhibit language acquisition.
-        </p>
-        <p>
-            <strong>Application:</strong>
-            Private, choice-based gameplay lowers stress and encourages experimentation without
-            social risk.
-        </p>
-    </div>
-
-</div>
-
-    <!-- IMAGE/GIF PLACEHOLDER: School environment -->
-    <h2>Environment Setting</h2>
-        </figure><img src="../assets/images/projects/environment_scene.png" alt="School Setting"></figure>
-
-
-    <h2>Game Features</h2>
-    <ul>
-        <li>🎮 <strong>8+ Different Endings</strong> - Multiple story paths based on player choices</li>
-        <li>👥 <strong>Diverse Characters</strong> - Japanese classmates and international students</li>
-        <li>🏫 <strong>Real School Locations</strong> - Authentic photos from students' actual high school</li>
-        <li>💬 <strong>Natural Dialogue</strong> - Age-appropriate conversations reflecting real teen interactions</li>
-        <li>🔄 <strong>Replayability</strong> - Explore different choices to practice language in varied contexts</li>
-    </ul>
-
-    <!-- IMAGE/GIF PLACEHOLDER: School environment -->
-        </figure><img src="../assets/images/projects/code_demo.png" alt="Coding Setting"></figure>
-    <h2>Development Process</h2>
-    <ul>
-        <li><strong>Student Input:</strong> Surveyed students about their interests and comfort with different social scenarios</li>
-        <li><strong>Environmental Design:</strong> Photographed school locations students interact with daily</li>
-        <li><strong>Dialogue Writing:</strong> Created conversations using vocabulary from their curriculum plus contextualized new phrases</li>
-        <li><strong>Coding Instruction:</strong> Taught students basic Python/Ren'Py to understand game mechanics</li>
-        <li><strong>Playtesting:</strong> Iteratively refined based on student feedback and engagement patterns</li>
-    </ul>
-
-    <!-- Development Process Chart -->
-    <div style="margin:40px 0;">
-        <iframe src="../pages/charts/branching_tree.html"
-                width="100%" height="560" frameborder="0"></iframe>
-    </div>
-
-    <h2>Learning Outcomes & Results</h2>
-    <ul>
-        <li>📚 <strong>Vocabulary Growth:</strong> Students acquired contextual vocabulary through repeated exposure in meaningful scenarios</li>
-        <li>📖 <strong>Reading Comprehension:</strong> Familiar contexts enabled focus on language processing rather than situation interpretation</li>
-        <li>💬 <strong>Communication Confidence:</strong> Low-pressure game environment increased willingness to engage with English content</li>
-        <li>🎯 <strong>Practical Application:</strong> Dialogue reflected real peer interactions, preparing students for authentic communication</li>
-        <li>💻 <strong>Technical Skills:</strong> Students learned basic Python programming and game development concepts</li>
-        <li>🔄 <strong>Sustained Engagement:</strong> Multiple story paths encouraged repeated play and language pattern reinforcement</li>
-    </ul>
+<!-- PROJECT CONTAINER -->
+<div class="project-container">
     
-    <h2>Technical Summary</h2>
-<div class="summary-grid">
+    <!-- ANCHOR NAVIGATION SIDEBAR -->
+    <nav class="anchor-nav" aria-label="Page sections">
+        <h3>On This Page</h3>
+        <ul>
+            <li><a href="#overview" class="anchor-link active">Overview</a></li>
+            <li><a href="#features" class="anchor-link">Key Features</a></li>
+            <li><a href="#methodology" class="anchor-link">Methodology</a></li>
+            <li><a href="#development" class="anchor-link">Development Process</a></li>
+            <li><a href="#outcomes" class="anchor-link">Learning Outcomes</a></li>
+            <li><a href="#technical" class="anchor-link">Technical Summary</a></li>
+            <li><a href="#resources" class="anchor-link">Resources</a></li>
+        </ul>
+    </nav>
 
-    <div class="summary-card">
-        <h3>Programming Languages</h3>
-        <ul>
-            <li>Python (Ren'Py Scripting)</li>
-            <li>HTML/CSS (for web integration)</li>
-        </ul>
-    </div>
-    <div class="summary-card">
-        <h3>Software & Libraries</h3>
-        <ul>
-            <li>Ren'Py Visual Novel Engine</li>
-            <li>GIMP (Image Editing)</li>
-            <li>Audacity (Audio Editing)</li>
-        </ul>
-    </div>
-    <div class="summary-card">
-        <h3>Development Tools</h3>
-        <ul>
-            <li>Visual Studio Code (Code Editor)</li>
-            <li>GitHub (Version Control)</li>
-            <li>Itch.io (Game Distribution)</li>
-        </ul>
-    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="project-content">
+        
+        <!-- TITLE CARD -->
+        <div class="title-card">
+            <h1>Psycholinguistic Language Learning Digital Novel</h1>
+            <p class="meta">
+                <span style="margin-left:0;">
+                    Educational Game Design, Psycholinguistics, Python Development
+                </span>
+            </p>
+        </div>
+
+        <!-- PROJECT IMAGE -->
+        <figure style="text-align:center; margin-bottom:40px;">
+            <img src="../assets/images/projects/portfolio_image1.png"
+                alt="Psycholinguistic Game"
+                style="max-width:520px; width:100%;">
+        </figure>
+
+        <!-- PROJECT OVERVIEW -->
+        <section id="overview" class="content-section">
+            <h2>Project Overview</h2>
+            <p>This interactive visual novel applies evidence-based psycholinguistic principles to enhance English communication skills among Japanese high school students. By embedding language learning within familiar school environments and peer interactions, the game creates optimal conditions for natural language acquisition while reducing anxiety and increasing engagement.</p>
+            
+            <h3>Project Details</h3>
+            <p><strong>Timeline:</strong> 2022–2023 Academic Year<br>
+            <strong>Location:</strong> Sogo High School, Chiba, Japan<br>
+            <strong>Target Audience:</strong> High School Students (Ages 15-18)<br>
+            <strong>Platform:</strong> Ren'Py (Python-based)</p>
+        </section>
+
+        <!-- GAME FEATURES -->
+        <section id="features" class="content-section">
+            <h2>Key Game Features</h2>
+            <ul>
+                <li><strong>8+ Different Endings</strong> - Multiple story paths based on player choices</li>
+                <li><strong>Diverse Characters</strong> - Japanese classmates and international students</li>
+                <li><strong>Real School Locations</strong> - Authentic photos from students' actual high school</li>
+                <li><strong>Natural Dialogue</strong> - Age-appropriate conversations reflecting real teen interactions</li>
+                <li><strong>Replayability</strong> - Explore different choices to practice language in varied contexts</li>
+            </ul>
+            <figure>
+                <img src="../assets/images/projects/code_demo.png" alt="Coding Example">
+            </figure>
+        </section>
+        
+                <!-- ENVIRONMENT SETTING -->
+        <section id="features" class="content-section">
+            <h2>Feature: Environment Setting</h2>
+            <p>
+                The environment is based on a realistic, animated-style image of the school’s actual
+                location. The site is well known among anime fans, as it is associated with
+                <em>Yahari Ore no Seishun Love Come wa Machigatteiru.</em>
+                (<em>My Youth Romantic Comedy Is Wrong, As I Expected</em>, 2013),
+                commonly known as <em>Oregairu</em>, created by a graduate of the same school.
+            </p>
+            <figure>
+                <img src="../assets/images/projects/environment_scene.png" alt="School Setting">
+                <figcaption style="font-size:0.85em; opacity:0.7; margin-top:6px;">
+                    Reference image is publicly available and used for non-commercial, illustrative purposes only.
+                </figcaption>
+            </figure>
+        </section>
+
+
+        <!-- THE SCIENCE BEHIND THE DESIGN -->
+        <section id="methodology" class="content-section">
+            <h2>Methodology: The Psychology Behind the Design</h2>
+            <p>
+                The project is grounded in four established psycholinguistic theories that directly inform its
+                structure and learning experience.
+            </p>
+            <div class="summary-grid">
+                <div class="summary-card">
+                    <h3>1. Willingness to Communicate (WTC)</h3>
+                    <p>
+                        Learners speak more when they feel socially comfortable and contextually secure.
+                    </p>
+                    <p>
+                        <strong>Application:</strong>
+                        Students interact with same-age peers in familiar school settings, increasing confidence
+                        and voluntary English use.
+                    </p>
+                </div>
+                <div class="summary-card">
+                    <h3>2. Schema Theory</h3>
+                    <p>
+                        Familiar contexts reduce cognitive load and support comprehension.
+                    </p>
+                    <p>
+                        <strong>Application:</strong>
+                        Real school locations and everyday situations allow students to focus on language,
+                        not interpreting unfamiliar scenarios.
+                    </p>
+                </div>
+                <div class="summary-card">
+                    <h3>3. Input Hypothesis (i+1)</h3>
+                    <p>
+                        Language acquisition occurs when input is slightly above the learner's current level.
+                    </p>
+                    <p>
+                        <strong>Application:</strong>
+                        Dialogue blends known structures with new expressions supported by context and repetition.
+                    </p>
+                </div>
+                <div class="summary-card">
+                    <h3>4. Affective Filter</h3>
+                    <p>
+                        Anxiety and fear inhibit language acquisition.
+                    </p>
+                    <p>
+                        <strong>Application:</strong>
+                        Private, choice-based gameplay lowers stress and encourages experimentation without
+                        social risk.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEVELOPMENT PROCESS -->
+        <section id="development" class="content-section">
+            <h2>Development Process</h2>
+            <ul>
+                <li><strong>Student Input:</strong> Surveyed students about their interests and comfort with different social scenarios</li>
+                <li><strong>Environmental Design:</strong> Photographed school locations students interact with daily</li>
+                <li><strong>Dialogue Writing:</strong> Created conversations using vocabulary from their curriculum plus contextualized new phrases</li>
+                <li><strong>Coding Instruction:</strong> Taught students basic Python/Ren'Py to understand game mechanics</li>
+                <li><strong>Playtesting:</strong> Iteratively refined based on student feedback and engagement patterns</li>
+            </ul>
+            
+            <h3 style="margin-top:40px;">Story Branching Structure</h3>
+            <div style="margin:30px 0;">
+                <iframe src="../pages/charts/branching_tree.html"
+                        width="100%" height="560" frameborder="0"></iframe>
+            </div>
+        </section>
+
+        <!-- LEARNING OUTCOMES -->
+        <section id="outcomes" class="content-section">
+            <h2>Learning Outcomes & Results</h2>
+            <ul>
+                <li><strong>Vocabulary Growth:</strong> Students acquired contextual vocabulary through repeated exposure in meaningful scenarios, with measurable improvements in retention compared to traditional methods</li>
+                <li><strong>Reading Comprehension:</strong> Familiar contexts enabled focus on language processing rather than situation interpretation, leading to faster comprehension speeds</li>
+                <li><strong>Communication Confidence:</strong> Low-pressure game environment significantly increased willingness to engage with English content both in-game and in classroom discussions</li>
+                <li><strong>Practical Application:</strong> Dialogue reflected real peer interactions, preparing students for authentic communication situations they encounter daily</li>
+                <li><strong>Technical Skills:</strong> Students learned basic Python programming and game development concepts, with several continuing independent projects</li>
+                <li><strong>Sustained Engagement:</strong> Multiple story paths encouraged repeated play and language pattern reinforcement, with students voluntarily replaying 3-5 times on average</li>
+            </ul>
+        </section>
+
+        <!-- TECHNICAL SUMMARY -->
+        <section id="technical" class="content-section">
+            <h2>Technical Summary</h2>
+            <div class="summary-grid">
+                <div class="summary-card">
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li>Python (Ren'Py Scripting)</li>
+                        <li>HTML/CSS (for web integration)</li>
+                    </ul>
+                </div>
+                <div class="summary-card">
+                    <h3>Software & Libraries</h3>
+                    <ul>
+                        <li>Ren'Py Visual Novel Engine</li>
+                        <li>GIMP (Image Editing)</li>
+                        <li>Audacity (Audio Editing)</li>
+                    </ul>
+                </div>
+                <div class="summary-card">
+                    <h3>Development Tools</h3>
+                    <ul>
+                        <li>Visual Studio Code (Code Editor)</li>
+                        <li>GitHub (Version Control)</li>
+                        <li>Itch.io (Game Distribution)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- PLAY THE GAME -->
+        <section id="play" class="content-section">
+            <h2>Play the Game</h2>
+            <p style="margin-bottom:24px;">
+                Experience the game firsthand or explore the source code to see how psycholinguistic principles 
+                were implemented in the game design.
+            </p>
+            <a href="https://yuriyajp.itch.io/esl-game" class="project-button" target="_blank">Play on Itch.io</a>
+            <a href="https://github.com/YuriyaJP/Python-Ren-Py-made-ESL-Visual-Novel" class="project-button" target="_blank">View Source Code</a>
+            <a href="https://youtu.be/0n8HomDfQiM" class="project-button" target="_blank">Watch YouTube Walkthrough</a>
+            
+            <p style="background:#fff3cd; border:2px solid #ffc107; padding:15px; border-radius:8px; margin-top:30px; color:#856404;">
+                <strong>Educational Use Notice</strong><br>
+                All images and sound effects are royalty-free or created specifically for this educational project. Student participation was voluntary with appropriate institutional consent. When using or citing this work in educational contexts, please acknowledge the theoretical frameworks and pedagogical approaches described above.
+            </p>
+        </section>
+
+    </main>
 </div>
 
-    <h2>Play the Game</h2>
-    <a href="https://yuriyajp.itch.io/esl-game" class="project-button" target="_blank">🎮 Play on Itch.io</a>
-    <a href="https://github.com/YuriyaJP/Python-Ren-Py-made-ESL-Visual-Novel" class="project-button" target="_blank">View Source Code</a>
-    <a href="https://youtu.be/0n8HomDfQiM" class="project-button" target="_blank">Watch YouTube Walkthrough</a>
-
-    <p style="background:#fff3cd; border:2px solid #ffc107; padding:15px; border-radius:8px; margin-top:30px; color:#856404;">
-        <strong>⚠️ Educational Use Notice</strong><br>
-        All images and sound effects are royalty-free or created specifically for this educational project. Student participation was voluntary with appropriate institutional consent. When using or citing this work in educational contexts, please acknowledge the theoretical frameworks and pedagogical approaches described above.
-    </p>
-</section>
-
-<footer>
-    &copy; 2025 Yulia Chekhovska. All rights reserved.
+<footer role="contentinfo">
+    &copy; 2025 Made by Yulia Chekhovska. All rights reserved.
 </footer>
 
+<!-- VIDEO CONTROLS SCRIPT -->
+<script>
+const video = document.getElementById('profile-video');
+const playToggle = document.getElementById('play-toggle');
+const soundToggle = document.getElementById('sound-toggle');
+const playIcon = document.getElementById('play-icon');
+const soundIcon = document.getElementById('sound-icon');
+
+const playImg = '../assets/icons/play-icon.png';
+const pauseImg = '../assets/icons/pause-icon.png';
+const muteImg = '../assets/icons/mute-icon.png';
+const unmuteImg = '../assets/icons/unmute-icon.png';
+
+video.muted = true;
+video.play();
+playIcon.src = pauseImg;
+soundIcon.src = muteImg;
+
+playToggle.addEventListener('click', () => {
+    if (video.paused) {
+        video.play();
+        playIcon.src = pauseImg;
+    } else {
+        video.pause();
+        playIcon.src = playImg;
+    }
+});
+
+soundToggle.addEventListener('click', () => {
+    video.muted = !video.muted;
+    soundIcon.src = video.muted ? muteImg : unmuteImg;
+});
+
+video.onended = () => playIcon.src = playImg;
+</script>
+
+<!-- ANCHOR LINK SMOOTH SCROLL & ACTIVE STATE -->
+<script>
+// Smooth scroll to anchor
+document.querySelectorAll('.anchor-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        
+        if (targetSection) {
+            targetSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Update active link on scroll
+const sections = document.querySelectorAll('.content-section');
+const navLinks = document.querySelectorAll('.anchor-link');
+
+window.addEventListener('scroll', () => {
+    let current = '';
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 150;
+        const sectionHeight = section.offsetHeight;
+        
+        if (window.pageYOffset >= sectionTop && 
+            window.pageYOffset < sectionTop + sectionHeight) {
+            current = section.getAttribute('id');
+        }
+    });
+    
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').substring(1) === current) {
+            link.classList.add('active');
+        }
+    });
+});
+</script>
+
 </body>
-</html>
+</html

@@ -9,17 +9,35 @@
 </head>
 <body class="project-page">
 
-<header>
-    <img src="../assets/images/profile/yulia.jpg" alt="Yulia Chekhovska" class="profile-media">
-    <h1>AI Usage in Japanese Workplace</h1>
-    <p style="max-width:800px;margin:8px auto 0;opacity:0.95">
-        A collection of Tableau dashboards and survey analytics delivered as part of a freelance data visualization project.
-    </p>
+<!-- SAME HEADER AS INDEX.HTML -->
+<header class="site-header" role="banner">
+    <div class="header-left">
+        <div class="video-wrapper">
+            <video id="profile-video" class="profile-media"
+                   autoplay muted playsinline
+                   poster="../assets/images/profile/yulia.jpg">
+                <source src="../assets/video/portfolio.mp4" type="video/mp4">
+                <img src="../assets/images/profile/yulia.jpg" alt="Profile image of Yulia Chekhovska">
+            </video>
+        </div>
+        <div class="control-btn-wrapper" role="group" aria-label="Video controls">
+            <button id="play-toggle" class="control-btn" aria-label="Play or pause video">
+                <img id="play-icon" src="../assets/icons/pause-icon.png" alt="">
+            </button>
+            <button id="sound-toggle" class="control-btn" aria-label="Mute or unmute video">
+                <img id="sound-icon" src="../assets/icons/mute-icon.png" alt="">
+            </button>
+        </div>
+    </div>
+    <div class="header-right">
+        <nav class="nav-tabs" role="navigation" aria-label="Main navigation">
+            <a href="../index.html#about" class="tab-btn">About</a>
+            <a href="../index.html#portfolio" class="tab-btn">Portfolio</a>
+            <a href="../index.html#media" class="tab-btn">Media</a>
+            <a href="../index.html#contact" class="tab-btn">Contact</a>
+        </nav>
+    </div>
 </header>
-
-<nav>
-    <a href="../index.html">Home</a>
-</nav>
 
 <section>
     <img src="../assets/images/projects/tableau-preview.png" alt="Tableau Visualization Preview">

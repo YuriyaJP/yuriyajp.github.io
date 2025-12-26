@@ -3,604 +3,720 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cost-Effectiveness of Youth Suicide Prevention Program based on Japan Police Suicide Statistics | Yulia Chekhovska</title>
-
-
-
+<title>Cost-Effectiveness of Youth Suicide Prevention Program | Yulia Chekhovska</title>
+<link rel="icon" type="image/png" href="../favicon.png">
 <link rel="stylesheet" href="../style.css">
 </head>
 <body class="project-page">
 
-<header>
-    <img src="../assets/images/profile/yulia.jpg" alt="Yulia Chekhovska" class="profile-media">
-    <p style="max-width:800px;margin:8px auto 0;opacity:0.95"></p>
-    <h1>Cost-Effectiveness of Youth Suicide Prevention Program based on Japan Police Suicide Statistics</h1>
+<!-- SAME HEADER AS INDEX.HTML -->
+<header class="site-header" role="banner">
+    <div class="header-left">
+        <div class="video-wrapper">
+            <video id="profile-video" class="profile-media"
+                   autoplay muted playsinline
+                   poster="../assets/images/profile/yulia.jpg">
+                <source src="../assets/video/portfolio.mp4" type="video/mp4">
+                <img src="../assets/images/profile/yulia.jpg" alt="Profile image of Yulia Chekhovska">
+            </video>
+        </div>
+        <div class="control-btn-wrapper" role="group" aria-label="Video controls">
+            <button id="play-toggle" class="control-btn" aria-label="Play or pause video">
+                <img id="play-icon" src="../assets/icons/pause-icon.png" alt="">
+            </button>
+            <button id="sound-toggle" class="control-btn" aria-label="Mute or unmute video">
+                <img id="sound-icon" src="../assets/icons/mute-icon.png" alt="">
+            </button>
+        </div>
+    </div>
+    <div class="header-right">
+        <nav class="nav-tabs" role="navigation" aria-label="Main navigation">
+            <a href="../index.html#about" class="tab-btn">About</a>
+            <a href="../index.html#portfolio" class="tab-btn">Portfolio</a>
+            <a href="../index.html#media" class="tab-btn">Media</a>
+            <a href="../index.html#contact" class="tab-btn">Contact</a>
+        </nav>
+    </div>
 </header>
 
-<nav>
-    <a href="../index.html">Home</a>
-</nav>
-
-<section>
-
-<img src="../assets/images/projects/japan-police-logo.png"
-     alt="Japan Police Logo"
-     style="width:130px; display:block; margin:0 auto; opacity:0.9">
-
-<h2>The Problem</h2>
-<p> A Tokyo-based mental health organization provides crisis intervention services and prevention programs aimed at reducing psychological distress and supporting at-risk individuals. As the organization seeks to engage more extensively with grant funders and evaluators, there is an opportunity to complement existing activity-based reporting (such as service utilization and program delivery) with additional outcome-oriented measures that many funders request.</p>
-<p> This project focuses on analyzing Japan's national suicide statistics and estimating the economic impact of youth suicide, with an emphasis on potential policy interventions and their effectiveness.</p>
-<br>
-
-<h2>Key Findings</h2>
-
-<div class="summary-grid">
-
-    <!-- National Context -->
-    <div class="summary-card">
-        <h3>Japan, 2024</h3>
-        <ul>
-            <li><strong>Youth population (ages 10–19):</strong> ~11,000,000</li>
-            <li><strong>Youth suicides:</strong> 799 deaths</li>
-            <li><strong>Suicide rate:</strong> ~7.3 per 100,000</li>
-        </ul>
-    </div>
-
-    <!-- Program Scale -->
-    <div class="summary-card">
-        <h3>Program Scale</h3>
-        <ul>
-            <li><strong>Youths reached:</strong> ~12,650</li>
-            <li><strong>National coverage:</strong> ~0.11%</li>
-            <li><strong>Channels:</strong> schools, workshops, crisis support</li>
-        </ul>
-    </div>
-
-    <!-- Estimated Impact -->
-    <div class="summary-card">
-        <h3>Estimated Impact</h3>
-        <ul>
-            <li><strong>Expected deaths (no intervention):</strong> ~0.92</li>
-            <li><strong>Assumed effectiveness:</strong> 25%</li>
-            <li><strong>Lives saved:</strong> ~0.23 (~1 life saved every 4–5 years)</li>
-            <li><strong>DALYs averted:</strong> ~15</li>
-        </ul>
-    </div>
-
-  <!-- Cost Effectiveness -->
-  <div class="summary-card">
-      <h3>Cost Effectiveness</h3>
+<!-- PROJECT CONTAINER -->
+<div class="project-container">
+    
+    <!-- ANCHOR NAVIGATION SIDEBAR -->
+    <nav class="anchor-nav" aria-label="Page sections">
+      <h3>On This Page</h3>
       <ul>
-          <li><strong>Total outreach & prevention cost (2024):</strong> ¥11,113,476</li>
-          <li><strong>Estimated lives saved:</strong> ~0.23</li>
-          <li><strong>DALYs averted:</strong> ~15</li>
-          <li><strong>Cost per DALY averted:</strong> ~¥720,000</li>
+          <li><a href="#overview" class="anchor-link active">Overview</a></li>
+          <li><a href="#findings" class="anchor-link">Key Findings</a></li>
+          <li><a href="#analysis" class="anchor-link">Data Analysis</a></li>
+          <li><a href="#methodology" class="anchor-link">Methodology</a></li>
+          <li><a href="#impact" class="anchor-link">Economic Impact</a></li>
+          <li><a href="#scaling" class="anchor-link">Scaling Scenarios</a></li>
+          <li><a href="#resources" class="anchor-link">Resources</a></li>
       </ul>
-  </div>
+  </nav>
 
+    <!-- MAIN CONTENT -->
+    <main class="project-content">
+        
+        <!-- TITLE CARD -->
+        <div class="title-card">
+            <h1>Cost-Effectiveness of Youth Suicide Prevention Program based on Japan Police Suicide Statistics</h1>
+            <p class="meta">
+                <span style="margin-left: 0;">Data Analysis, Public Health Policy, Cost-Effectiveness Modeling</span>
+            </p>
+        </div>
 
+        <!-- PROJECT IMAGE -->
+        <figure style="text-align:center; margin-bottom:40px;">
+            <img src="../assets/images/projects/japan-police-logo.png"
+                alt="Japan Police Logo"
+                style="max-width:520px; width:100%;">
+        </figure>
+
+        <!-- THE overview SECTION -->
+        <section id="overview" class="content-section">
+            <h2>Overview</h2>
+            <p> A Tokyo-based mental health organization provides crisis intervention services and prevention programs aimed at reducing psychological distress and supporting at-risk individuals. As the organization seeks to engage more extensively with grant funders and evaluators, there is an opportunity to complement existing activity-based reporting (such as service utilization and program delivery) with additional outcome-oriented measures that many funders request.</p>
+            <p> This project focuses on analyzing Japan's national suicide statistics and estimating the economic impact of youth suicide, with an emphasis on potential policy interventions and their effectiveness.</p>
+        </section>
+
+        <!-- KEY FINDINGS SECTION -->
+        <section id="findings" class="content-section">
+            <h2>Key Findings</h2>
+            <div class="summary-grid">
+                <!-- National Context -->
+                <div class="summary-card">
+                    <h3>Japan, 2024</h3>
+                    <ul>
+                        <li><strong>Youth population (ages 10–19):</strong> ~11,000,000</li>
+                        <li><strong>Youth suicides:</strong> 799 deaths</li>
+                        <li><strong>Suicide rate:</strong> ~7.3 per 100,000</li>
+                    </ul>
+                </div>
+                <!-- Program Scale -->
+                <div class="summary-card">
+                    <h3>Program Scale</h3>
+                    <ul>
+                        <li><strong>Youths reached:</strong> ~12,650</li>
+                        <li><strong>National coverage:</strong> ~0.11%</li>
+                        <li><strong>Channels:</strong> schools, workshops, crisis support</li>
+                    </ul>
+                </div>
+                <!-- Estimated Impact -->
+                <div class="summary-card">
+                    <h3>Estimated Impact</h3>
+                    <ul>
+                        <li><strong>Expected deaths (no intervention):</strong> ~0.92</li>
+                        <li><strong>Assumed effectiveness:</strong> 25%</li>
+                        <li><strong>Lives saved:</strong> ~0.23 (~1 life saved every 4–5 years)</li>
+                        <li><strong>DALYs averted:</strong> ~15</li>
+                    </ul>
+                </div>
+              <!-- Cost Effectiveness -->
+              <div class="summary-card">
+                  <h3>Cost Effectiveness</h3>
+                  <ul>
+                      <li><strong>Total outreach & prevention cost (2024):</strong> ¥11,113,476</li>
+                      <li><strong>Estimated lives saved:</strong> ~0.23</li>
+                      <li><strong>DALYs averted:</strong> ~15</li>
+                      <li><strong>Cost per DALY averted:</strong> ~¥720,000</li>
+                  </ul>
+              </div>
+            </div>
+            <p style="margin-top:20px; font-style:italic;">
+            Estimates are model-based, illustrative, and do not imply causality; actual outcomes may vary.
+            </p>
+        </section>
+
+        <!-- DATA analysis SECTION -->
+        <section id="analysis" class="content-section">
+            <h2>Interactive Data Charts: Age Group Analysis, Cost Loss Per Age Group, Suicide Leading Cause</h2>
+            <!-- Chart 1 -->
+            <div style="margin:40px 0;">
+                <iframe src="../pages/charts/suicide_trends_unified.html"
+                        width="100%" height="700" frameborder="0"></iframe>
+            </div>
+            <!-- Chart 2 -->
+            <div style="margin:40px 0;">
+                <iframe src="../pages/charts/economic_loss_by_age.html"
+                        width="100%" height="560" frameborder="0"></iframe>
+            </div>
+        </section>
+
+        <!-- SUICIDE CAUSES SECTION -->
+        <section id="analysis" class="content-section">
+            <h2>Biggest Causes of Suicide Among Youth (10-19) in 2024</h2>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <style>
+              .chart-container {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+              }
+              .chart-box {
+                width: 420px;
+                height: 420px;
+              }
+            </style>
+            <div class="chart-container">
+              <div class="chart-box">
+                <canvas id="youthCauseChart"></canvas>
+              </div>
+            </div>
+            <script>
+              const labels = [
+                "Family Problems",
+                "Health Problems",
+                "Economic & Living Problems",
+                "Work-Related Problems",
+                "Relationship Problems",
+                "School-Related Problems",
+                "Other"
+              ];
+              // ～19 years old (計)
+              const youthCauseData = [
+                148, // Family Problems
+                286, // Health Problems
+                31,  // Economic & Living Problems
+                34,  // Work-related Problems
+                85,  // Relationship Problems
+                346, // School-related Problems
+                84   // Other
+              ];
+              const colorPalette = [
+                "#1a5740", // deep green
+                "#267d5b",
+                "#2d8f6c",
+                "#6fbfa3",
+                "#9fd6c3",
+                "#145a32",
+                "#4aa382"
+              ];
+              new Chart(document.getElementById("youthCauseChart"), {
+                type: "pie",
+                data: {
+                  labels: labels,
+                  datasets: [{
+                    data: youthCauseData,
+                    backgroundColor: colorPalette
+                  }]
+                },
+                options: {
+                  responsive: true,
+                  maintainAspectRatio: false,
+                  plugins: {
+                    legend: {
+                      position: "bottom"
+                    },
+                    tooltip: {
+                      callbacks: {
+                        label: function (context) {
+                          const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                          const value = context.raw;
+                          const percentage = ((value / total) * 100).toFixed(1);
+                          return `${value} (${percentage}%)`;
+                        }
+                      }
+                    }
+                  }
+                }
+              });
+            </script>
+        </section>
+
+        <!-- PROGRAM methodology SECTION -->
+        <section id="methodology" class="content-section">
+            <h2>Program Methodology Costs Used in Analysis (Publicly Reported)</h2>
+            <div style="background:#f8f9fa; padding:20px; border-left:4px solid #449966; border-radius:5px; margin:20px 0; font-family:monospace; font-size:0.9em;">
+            <h3>Outreach & Prevention Expenditures (2024)</h3>
+            <table border="1" cellpadding="8" cellspacing="0" width="100%">
+              <tr>
+                <th align="left">Public Education on Health & Promotional Activities</th>
+                <td align="right">¥7,954,200</td>
+              </tr>
+              <tr>
+                <th align="left">Collaboration with Other Institutions / Outreach</th>
+                <td align="right">¥3,159,276</td>
+              </tr>
+              <tr>
+                <th align="left"><strong>Total Outreach & Prevention Costs Used</strong></th>
+                <td align="right"><strong>¥11,113,476</strong></td>
+              </tr>
+            </table>
+            <br>
+            <em>Program cost figures are derived from publicly disclosed nonprofit financial statements and are presented in aggregated form for analytical purposes.</em>
+            </div>
+        </section>
+
+        <!-- COST-EFFECTIVENESS SECTION -->
+        <section id="methodology" class="content-section">
+            <h2>Cost-Effectiveness of Youth Suicide Prevention Program (2024)</h2>
+            <div style="background:#f8f9fa; padding:20px; border-left:4px solid #449966; border-radius:5px; margin:20px 0; font-family:monospace; font-size:0.9em;">
+            <!-- Table 1: Youth Reach -->
+            <h3>Table 1: Youth Reach Calculation (2024)</h3>
+            <table border="1" cellpadding="8" cellspacing="0" width="100%">
+              <thead>
+                <tr>
+                  <th>Channel</th>
+                  <th>Calculation</th>
+                  <th>Youths Reached</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>School Awareness Packages (Indirect)</td>
+                  <td>145 schools × 300 students × 25% engagement</td>
+                  <td align="right">10,875</td>
+                </tr>
+                <tr>
+                  <td>Suicide Lifeline Workshops (Direct)</td>
+                  <td>9 workshops, verified attendance</td>
+                  <td align="right">500</td>
+                </tr>
+                <tr>
+                  <td>Crisis Hotline – Youth Callers (Direct)</td>
+                  <td>9,000 calls × 20% youth × 70% unique</td>
+                  <td align="right">1,260</td>
+                </tr>
+                <tr>
+                  <th><strong>Total Youths Reached</strong></th>
+                  <th>10,875 + 500 + 1,260</th>
+                  <th align="right"><strong>12,635</strong></th>
+                </tr>
+              </tbody>
+            </table>
+            <br><br>
+            <!-- Table 2: Complete Impact Calculation with Formulas -->
+            <h3>Table 2: Impact Calculation with Explicit Formulas (2024)</h3>
+            <table border="1" cellpadding="8" cellspacing="0" width="100%">
+              <thead>
+                <tr>
+                  <th>Step</th>
+                  <th>Parameter</th>
+                  <th>Formula / Calculation</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- National Context -->
+                <tr>
+                  <td colspan="4"><strong>A. National Baseline Data</strong></td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Youth population (ages 10-19)</td>
+                  <td>Japan census data</td>
+                  <td align="right">11,000,000</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Youth suicides (2024)</td>
+                  <td>National Police Agency data</td>
+                  <td align="right">799</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Youth suicide rate</td>
+                  <td>(799 ÷ 11,000,000) × 100,000</td>
+                  <td align="right"><strong>7.26 per 100,000</strong></td>
+                </tr>
+                
+                <!-- Baseline Risk -->
+                <tr>
+                  <td colspan="4"><strong>B. Baseline Risk in Reached Population</strong></td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Youths reached by program</td>
+                  <td>From Table 1</td>
+                  <td align="right">12,635</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Expected deaths (no intervention)</td>
+                  <td>12,635 × (7.26 ÷ 100,000)</td>
+                  <td align="right"><strong>0.917</strong></td>
+                </tr>
+                
+                <!-- Lives Saved -->
+                <tr>
+                  <td colspan="4"><strong>C. Lives Saved Calculation</strong></td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Intervention effectiveness</td>
+                  <td>Literature-based assumption</td>
+                  <td align="right">25%</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td><strong>Lives saved</strong></td>
+                  <td><strong>0.917 × 0.25</strong></td>
+                  <td align="right"><strong>0.229</strong></td>
+                </tr>
+                
+                <!-- DALY Calculation -->
+                <tr>
+                  <td colspan="4"><strong>D. DALY Calculation</strong></td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>Average age at prevention</td>
+                  <td>Assumption (youth program)</td>
+                  <td align="right">17 years</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>Life expectancy (Japan)</td>
+                  <td>WHO/MHLW data</td>
+                  <td align="right">84 years</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>Years of life lost per death</td>
+                  <td>84 - 17</td>
+                  <td align="right">67 years</td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td><strong>Total DALYs averted</strong></td>
+                  <td><strong>0.229 × 67</strong></td>
+                  <td align="right"><strong>15.34</strong></td>
+                </tr>
+                
+                <!-- Cost-Effectiveness -->
+                <tr>
+                  <td colspan="4"><strong>E. Cost-Effectiveness Metrics</strong></td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>Program cost (2024)</td>
+                  <td>Outreach + prevention expenditures</td>
+                  <td align="right">¥11,113,476</td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td><strong>Cost per life saved</strong></td>
+                  <td><strong>¥11,113,476 ÷ 0.229</strong></td>
+                  <td align="right"><strong>¥48,528,279</strong></td>
+                </tr>
+                <tr>
+                  <td>14</td>
+                  <td><strong>Cost per DALY averted (JPY)</strong></td>
+                  <td><strong>¥11,113,476 ÷ 15.34</strong></td>
+                  <td align="right"><strong>¥724,510</strong></td>
+                </tr>
+                <tr>
+                  <td>15</td>
+                  <td><strong>Cost per DALY averted (USD)</strong></td>
+                  <td><strong>¥724,510 ÷ 150 (exchange rate)</strong></td>
+                  <td align="right"><strong>$4,830</strong></td>
+                </tr>
+                
+                <!-- WHO Comparison -->
+                <tr>
+                  <td colspan="4"><strong>F. WHO Cost-Effectiveness Threshold</strong></td>
+                </tr>
+                <tr>
+                  <td>16</td>
+                  <td>WHO threshold (highly cost-effective)</td>
+                  <td>1× GDP per capita (Japan)</td>
+                  <td align="right">$34,000</td>
+                </tr>
+                <tr>
+                  <td>17</td>
+                  <td>Times below threshold</td>
+                  <td>$34,000 ÷ $4,830</td>
+                  <td align="right"><strong>7.0x below threshold</strong></td>
+                </tr>
+                <tr>
+                  <td>18</td>
+                  <td>Classification</td>
+                  <td>Cost per DALY < WHO threshold</td>
+                  <td align="right"><strong>Highly Cost-Effective</strong></td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <em>Interpretation: Program prevents 1 death every 4.37 years (0.23 deaths annually), averting 15.34 DALYs at $4,830 per DALY which is 7× below WHO's highly cost-effective threshold.</em>
+            </div>
+        </section>
+
+        <!-- ECONOMIC VALUE SECTION -->
+        <section id="impact" class="content-section">
+            <h2>Economic Impact Calculation (Per Life Saved)</h2>
+            <div style="background:#f8f9fa; padding:20px; border-left:4px solid #449966; border-radius:5px; margin:20px 0; font-family:monospace; font-size:0.9em;">
+            <h3>Table 3: Lifetime Economic Impact and ROI Calculation</h3>
+            <table border="1" cellpadding="8" cellspacing="0" width="100%">
+              <thead>
+                <tr>
+                  <th>Step</th>
+                  <th>Parameter</th>
+                  <th>Formula / Calculation</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="4"><strong>Per Life Saved</strong></td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Age at prevention</td>
+                  <td>Average youth program participant</td>
+                  <td align="right">17 years</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Retirement age (Japan)</td>
+                  <td>Standard retirement</td>
+                  <td align="right">65 years</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Working years remaining</td>
+                  <td>65 - 17</td>
+                  <td align="right">48 years</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Average annual salary</td>
+                  <td>Career average (Japan)</td>
+                  <td align="right">¥4,500,000</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td><strong>Lifetime gross earnings</strong></td>
+                  <td><strong>48 × ¥4,500,000</strong></td>
+                  <td align="right"><strong>¥216,000,000</strong></td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Effective tax rate</td>
+                  <td>Income + residence + social insurance</td>
+                  <td align="right">25%</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td><strong>Lifetime tax revenue</strong></td>
+                  <td><strong>¥216,000,000 × 0.25</strong></td>
+                  <td align="right"><strong>¥54,000,000</strong></td>
+                </tr>
+                
+                <tr>
+                  <td colspan="4"><strong>Aggregate Impact (2024)</strong></td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>Lives saved (2024)</td>
+                  <td>From Table 2, step 7</td>
+                  <td align="right">0.229</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td><strong>Total economic value saved</strong></td>
+                  <td><strong>0.229 × ¥216,000,000</strong></td>
+                  <td align="right"><strong>¥49,464,000</strong></td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td><strong>Total tax revenue saved</strong></td>
+                  <td><strong>0.229 × ¥54,000,000</strong></td>
+                  <td align="right"><strong>¥12,366,000</strong></td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td>Program cost (2024)</td>
+                  <td>From Table 2, step 12</td>
+                  <td align="right">¥11,113,476</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td><strong>Net economic benefit</strong></td>
+                  <td><strong>¥49,464,000 - ¥11,113,476</strong></td>
+                  <td align="right"><strong>¥38,350,524</strong></td>
+                </tr>
+                
+                <tr>
+                  <td colspan="4"><strong>Return on Investment</strong></td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td><strong>ROI (gross earnings basis)</strong></td>
+                  <td><strong>¥49,464,000 ÷ ¥11,113,476</strong></td>
+                  <td align="right"><strong>4.5x</strong></td>
+                </tr>
+                <tr>
+                  <td>14</td>
+                  <td><strong>ROI (tax revenue basis)</strong></td>
+                  <td><strong>¥12,366,000 ÷ ¥11,113,476</strong></td>
+                  <td align="right"><strong>1.1x</strong></td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <em>Interpretation: Every ¥1 invested returns ¥4.5 in lifetime earnings and ¥1.1 in tax revenue. Net economic benefit: ¥38.4M.</em>
+            </div>
+        </section>
+
+        <!-- SCALING SCENARIOS SECTION -->
+        <section id="scaling" class="content-section">
+            <h2>Scaling Scenarios (Illustrative)</h2>
+            <div style="background:#f8f9fa; padding:20px; border-left:4px solid #449966; border-radius:5px; margin:20px 0; font-family:monospace; font-size:0.9em;">
+            <h3>Table 4: Impact at Different Program Scales</h3>
+            <table border="1" cellpadding="8" cellspacing="0" width="100%">
+              <thead>
+                <tr>
+                  <th>Scenario</th>
+                  <th>Youths Reached</th>
+                  <th>Formula</th>
+                  <th>Lives Saved/Year</th>
+                  <th>DALYs Averted</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2024 Actual</td>
+                  <td align="right">12,635</td>
+                  <td>12,635 × 7.26/100k × 0.25</td>
+                  <td align="right">0.23</td>
+                  <td align="right">15</td>
+                </tr>
+                <tr>
+                  <td>2× Scale</td>
+                  <td align="right">25,000</td>
+                  <td>25,000 × 7.26/100k × 0.25</td>
+                  <td align="right">0.45</td>
+                  <td align="right">30</td>
+                </tr>
+                <tr>
+                  <td>4× Scale (High-Risk Schools)</td>
+                  <td align="right">50,000</td>
+                  <td>50,000 × 7.26/100k × 0.25</td>
+                  <td align="right">0.91</td>
+                  <td align="right">61</td>
+                </tr>
+                <tr>
+                  <td>8× Scale (Regional Program)</td>
+                  <td align="right">100,000</td>
+                  <td>100,000 × 7.26/100k × 0.25</td>
+                  <td align="right">1.82</td>
+                  <td align="right">122</td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <em>Note: Scaling assumes linear relationship and constant 25% effectiveness. Actual effectiveness may vary with program scale and implementation fidelity.</em>
+            </div>
+            <div style="margin:40px 0;">
+                <iframe src="../pages/charts/impact_contour_lives_saved.html"
+                        width="100%" height="560" frameborder="0"></iframe>
+            </div>
+        </section>
+
+        <!-- RESOURCES SECTION -->
+        <section id="resources" class="content-section">
+            <h2>Resources & Code</h2>
+            <p style="margin-bottom:20px">
+                Full data pipeline, analysis scripts, and methodology documentation are available below.
+            </p>
+            <p style="margin-top:14px">
+                <a href="https://www.npa.go.jp/publications/statistics/safetylife/jisatsu.html"
+                   class="project-button" target="_blank">Japan Police Data</a>
+                <a href="https://github.com/YuriyaJP/Public-Health-Data-Engineering-Project-Japan-Suicide-Statistics-Pipeline"
+                   class="project-button" target="_blank">View Code</a>
+                <a href="https://forum.effectivealtruism.org/posts/Sg7ovepZcmY8GKpo3/how-i-attempted-to-measure-the-impact-of-my-japan-nonprofit"
+                   class="project-button" target="_blank">Read Full Article</a>
+            </p>
+        </section>
+
+    </main>
 </div>
 
-<p style="margin-top:20px; font-style:italic;">
-Estimates are model-based, illustrative, and do not imply causality; actual outcomes may vary.
-</p>
+<footer role="contentinfo">
+    &copy; 2025 Made by Yulia Chekhovska. All rights reserved.
+</footer>
 
-<br>
-<h2>Interactive Data Charts: Age Group Analysis, Cost Loss Per Age Group, Suicide Leading Cause</h2>
-
-<!-- Chart 1 -->
-<div style="margin:40px 0;">
-    <iframe src="../pages/charts/suicide_trends_unified.html"
-            width="100%" height="700" frameborder="0"></iframe>
-</div>
-
-<!-- Chart 2 -->
-<div style="margin:40px 0;">
-    <iframe src="../pages/charts/economic_loss_by_age.html"
-            width="100%" height="560" frameborder="0"></iframe>
-</div>
-
-
-<!-- Youth (-19) Suicide Causes Pie Chart -->
-<h2>Biggest Causes of Suicide Among Youth (10-19) in 2024</h2>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<style>
-  .chart-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .chart-box {
-    width: 420px;
-    height: 420px;
-  }
-</style>
-
-<div class="chart-container">
-  <div class="chart-box">
-    <canvas id="youthCauseChart"></canvas>
-  </div>
-</div>
-
+<!-- VIDEO CONTROLS SCRIPT -->
 <script>
-  const labels = [
-    "Family Problems",
-    "Health Problems",
-    "Economic & Living Problems",
-    "Work-Related Problems",
-    "Relationship Problems",
-    "School-Related Problems",
-    "Other"
-  ];
+const video = document.getElementById('profile-video');
+const playToggle = document.getElementById('play-toggle');
+const soundToggle = document.getElementById('sound-toggle');
+const playIcon = document.getElementById('play-icon');
+const soundIcon = document.getElementById('sound-icon');
 
-  // ～19 years old (計)
-  const youthCauseData = [
-    148, // Family Problems
-    286, // Health Problems
-    31,  // Economic & Living Problems
-    34,  // Work-related Problems
-    85,  // Relationship Problems
-    346, // School-related Problems
-    84   // Other
-  ];
+const playImg = '../assets/icons/play-icon.png';
+const pauseImg = '../assets/icons/pause-icon.png';
+const muteImg = '../assets/icons/mute-icon.png';
+const unmuteImg = '../assets/icons/unmute-icon.png';
 
-  const colorPalette = [
-    "#1a5740", // deep green
-    "#267d5b",
-    "#2d8f6c",
-    "#6fbfa3",
-    "#9fd6c3",
-    "#145a32",
-    "#4aa382"
-  ];
+video.muted = true;
+video.play();
+playIcon.src = pauseImg;
+soundIcon.src = muteImg;
 
-  new Chart(document.getElementById("youthCauseChart"), {
-    type: "pie",
-    data: {
-      labels: labels,
-      datasets: [{
-        data: youthCauseData,
-        backgroundColor: colorPalette
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: {
-          position: "bottom"
-        },
-        tooltip: {
-          callbacks: {
-            label: function (context) {
-              const total = context.dataset.data.reduce((a, b) => a + b, 0);
-              const value = context.raw;
-              const percentage = ((value / total) * 100).toFixed(1);
-              return `${value} (${percentage}%)`;
-            }
-          }
-        }
-      }
+playToggle.addEventListener('click', () => {
+    if (video.paused) {
+        video.play();
+        playIcon.src = pauseImg;
+    } else {
+        video.pause();
+        playIcon.src = playImg;
     }
-  });
+});
+
+soundToggle.addEventListener('click', () => {
+    video.muted = !video.muted;
+    soundIcon.src = video.muted ? muteImg : unmuteImg;
+});
+
+video.onended = () => playIcon.src = playImg;
 </script>
-<br>
 
-<!-- ============================= -->
-<!-- Section 1: Program Costs -->
-<!-- ============================= -->
-<h2>Program Costs Used in Analysis (Publicly Reported)</h2>
-<div style="background:#f8f9fa; padding:20px; border-left:4px solid #449966; border-radius:5px; margin:20px 0; font-family:monospace; font-size:0.9em;">
+<!-- ANCHOR LINK SMOOTH SCROLL & ACTIVE STATE -->
+<script>
+// Smooth scroll to anchor
+document.querySelectorAll('.anchor-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        
+        if (targetSection) {
+            targetSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
 
-<h3>Outreach & Prevention Expenditures (2024)</h3>
-<table border="1" cellpadding="8" cellspacing="0" width="100%">
-  <tr>
-    <th align="left">Public Education on Health & Promotional Activities</th>
-    <td align="right">¥7,954,200</td>
-  </tr>
-  <tr>
-    <th align="left">Collaboration with Other Institutions / Outreach</th>
-    <td align="right">¥3,159,276</td>
-  </tr>
-  <tr>
-    <th align="left"><strong>Total Outreach & Prevention Costs Used</strong></th>
-    <td align="right"><strong>¥11,113,476</strong></td>
-  </tr>
-</table>
+// Update active link on scroll
+const sections = document.querySelectorAll('.content-section');
+const navLinks = document.querySelectorAll('.anchor-link');
 
-<br>
-<em>Program cost figures are derived from publicly disclosed nonprofit financial statements and are presented in aggregated form for analytical purposes.</em>
-
-</div>
-
-<!-- ============================= -->
-<!-- Section 2: Cost-Effectiveness Analysis -->
-<!-- ============================= -->
-<h2>Cost-Effectiveness of Youth Suicide Prevention Program (2024)</h2>
-<div style="background:#f8f9fa; padding:20px; border-left:4px solid #449966; border-radius:5px; margin:20px 0; font-family:monospace; font-size:0.9em;">
-
-<!-- Table 1: Youth Reach -->
-<h3>Table 1: Youth Reach Calculation (2024)</h3>
-<table border="1" cellpadding="8" cellspacing="0" width="100%">
-  <thead>
-    <tr>
-      <th>Channel</th>
-      <th>Calculation</th>
-      <th>Youths Reached</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>School Awareness Packages (Indirect)</td>
-      <td>145 schools × 300 students × 25% engagement</td>
-      <td align="right">10,875</td>
-    </tr>
-    <tr>
-      <td>Suicide Lifeline Workshops (Direct)</td>
-      <td>9 workshops, verified attendance</td>
-      <td align="right">500</td>
-    </tr>
-    <tr>
-      <td>Crisis Hotline – Youth Callers (Direct)</td>
-      <td>9,000 calls × 20% youth × 70% unique</td>
-      <td align="right">1,260</td>
-    </tr>
-    <tr>
-      <th><strong>Total Youths Reached</strong></th>
-      <th>10,875 + 500 + 1,260</th>
-      <th align="right"><strong>12,635</strong></th>
-    </tr>
-  </tbody>
-</table>
-
-<br><br>
-
-<!-- Table 2: Complete Impact Calculation with Formulas -->
-<h3>Table 2: Impact Calculation with Explicit Formulas (2024)</h3>
-<table border="1" cellpadding="8" cellspacing="0" width="100%">
-  <thead>
-    <tr>
-      <th>Step</th>
-      <th>Parameter</th>
-      <th>Formula / Calculation</th>
-      <th>Value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <!-- National Context -->
-    <tr>
-      <td colspan="4"><strong>A. National Baseline Data</strong></td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Youth population (ages 10-19)</td>
-      <td>Japan census data</td>
-      <td align="right">11,000,000</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Youth suicides (2024)</td>
-      <td>National Police Agency data</td>
-      <td align="right">799</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Youth suicide rate</td>
-      <td>(799 ÷ 11,000,000) × 100,000</td>
-      <td align="right"><strong>7.26 per 100,000</strong></td>
-    </tr>
+window.addEventListener('scroll', () => {
+    let current = '';
     
-    <!-- Baseline Risk -->
-    <tr>
-      <td colspan="4"><strong>B. Baseline Risk in Reached Population</strong></td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Youths reached by program</td>
-      <td>From Table 1</td>
-      <td align="right">12,635</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>Expected deaths (no intervention)</td>
-      <td>12,635 × (7.26 ÷ 100,000)</td>
-      <td align="right"><strong>0.917</strong></td>
-    </tr>
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 150;
+        const sectionHeight = section.offsetHeight;
+        
+        if (window.pageYOffset >= sectionTop && 
+            window.pageYOffset < sectionTop + sectionHeight) {
+            current = section.getAttribute('id');
+        }
+    });
     
-    <!-- Lives Saved -->
-    <tr>
-      <td colspan="4"><strong>C. Lives Saved Calculation</strong></td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td>Intervention effectiveness</td>
-      <td>Literature-based assumption</td>
-      <td align="right">25%</td>
-    </tr>
-    <tr>
-      <td>7</td>
-      <td><strong>Lives saved</strong></td>
-      <td><strong>0.917 × 0.25</strong></td>
-      <td align="right"><strong>0.229</strong></td>
-    </tr>
-    
-    <!-- DALY Calculation -->
-    <tr>
-      <td colspan="4"><strong>D. DALY Calculation</strong></td>
-    </tr>
-    <tr>
-      <td>8</td>
-      <td>Average age at prevention</td>
-      <td>Assumption (youth program)</td>
-      <td align="right">17 years</td>
-    </tr>
-    <tr>
-      <td>9</td>
-      <td>Life expectancy (Japan)</td>
-      <td>WHO/MHLW data</td>
-      <td align="right">84 years</td>
-    </tr>
-    <tr>
-      <td>10</td>
-      <td>Years of life lost per death</td>
-      <td>84 - 17</td>
-      <td align="right">67 years</td>
-    </tr>
-    <tr>
-      <td>11</td>
-      <td><strong>Total DALYs averted</strong></td>
-      <td><strong>0.229 × 67</strong></td>
-      <td align="right"><strong>15.34</strong></td>
-    </tr>
-    
-    <!-- Cost-Effectiveness -->
-    <tr>
-      <td colspan="4"><strong>E. Cost-Effectiveness Metrics</strong></td>
-    </tr>
-    <tr>
-      <td>12</td>
-      <td>Program cost (2024)</td>
-      <td>Outreach + prevention expenditures</td>
-      <td align="right">¥11,113,476</td>
-    </tr>
-    <tr>
-      <td>13</td>
-      <td><strong>Cost per life saved</strong></td>
-      <td><strong>¥11,113,476 ÷ 0.229</strong></td>
-      <td align="right"><strong>¥48,528,279</strong></td>
-    </tr>
-    <tr>
-      <td>14</td>
-      <td><strong>Cost per DALY averted (JPY)</strong></td>
-      <td><strong>¥11,113,476 ÷ 15.34</strong></td>
-      <td align="right"><strong>¥724,510</strong></td>
-    </tr>
-    <tr>
-      <td>15</td>
-      <td><strong>Cost per DALY averted (USD)</strong></td>
-      <td><strong>¥724,510 ÷ 150 (exchange rate)</strong></td>
-      <td align="right"><strong>$4,830</strong></td>
-    </tr>
-    
-    <!-- WHO Comparison -->
-    <tr>
-      <td colspan="4"><strong>F. WHO Cost-Effectiveness Threshold</strong></td>
-    </tr>
-    <tr>
-      <td>16</td>
-      <td>WHO threshold (highly cost-effective)</td>
-      <td>1× GDP per capita (Japan)</td>
-      <td align="right">$34,000</td>
-    </tr>
-    <tr>
-      <td>17</td>
-      <td>Times below threshold</td>
-      <td>$34,000 ÷ $4,830</td>
-      <td align="right"><strong>7.0x below threshold</strong></td>
-    </tr>
-    <tr>
-      <td>18</td>
-      <td>Classification</td>
-      <td>Cost per DALY < WHO threshold</td>
-      <td align="right"><strong>Highly Cost-Effective</strong></td>
-    </tr>
-  </tbody>
-</table>
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').substring(1) === current) {
+            link.classList.add('active');
+        }
+    });
+});
+</script>
 
-<br>
-<em>Interpretation: Program prevents 1 death every 4.37 years (0.23 deaths annually), averting 15.34 DALYs at $4,830 per DALY which is 7× below WHO's highly cost-effective threshold.</em>
-
-</div>
-
-<!-- ============================= -->
-<!-- Section 3: Economic Value Calculation -->
-<!-- ============================= -->
-<h2>Economic Value Calculation (Per Life Saved)</h2>
-<div style="background:#f8f9fa; padding:20px; border-left:4px solid #449966; border-radius:5px; margin:20px 0; font-family:monospace; font-size:0.9em;">
-
-<h3>Table 3: Lifetime Economic Value and ROI Calculation</h3>
-<table border="1" cellpadding="8" cellspacing="0" width="100%">
-  <thead>
-    <tr>
-      <th>Step</th>
-      <th>Parameter</th>
-      <th>Formula / Calculation</th>
-      <th>Value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td colspan="4"><strong>Per Life Saved</strong></td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Age at prevention</td>
-      <td>Average youth program participant</td>
-      <td align="right">17 years</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Retirement age (Japan)</td>
-      <td>Standard retirement</td>
-      <td align="right">65 years</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Working years remaining</td>
-      <td>65 - 17</td>
-      <td align="right">48 years</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Average annual salary</td>
-      <td>Career average (Japan)</td>
-      <td align="right">¥4,500,000</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td><strong>Lifetime gross earnings</strong></td>
-      <td><strong>48 × ¥4,500,000</strong></td>
-      <td align="right"><strong>¥216,000,000</strong></td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td>Effective tax rate</td>
-      <td>Income + residence + social insurance</td>
-      <td align="right">25%</td>
-    </tr>
-    <tr>
-      <td>7</td>
-      <td><strong>Lifetime tax revenue</strong></td>
-      <td><strong>¥216,000,000 × 0.25</strong></td>
-      <td align="right"><strong>¥54,000,000</strong></td>
-    </tr>
-    
-    <tr>
-      <td colspan="4"><strong>Aggregate Impact (2024)</strong></td>
-    </tr>
-    <tr>
-      <td>8</td>
-      <td>Lives saved (2024)</td>
-      <td>From Table 2, step 7</td>
-      <td align="right">0.229</td>
-    </tr>
-    <tr>
-      <td>9</td>
-      <td><strong>Total economic value saved</strong></td>
-      <td><strong>0.229 × ¥216,000,000</strong></td>
-      <td align="right"><strong>¥49,464,000</strong></td>
-    </tr>
-    <tr>
-      <td>10</td>
-      <td><strong>Total tax revenue saved</strong></td>
-      <td><strong>0.229 × ¥54,000,000</strong></td>
-      <td align="right"><strong>¥12,366,000</strong></td>
-    </tr>
-    <tr>
-      <td>11</td>
-      <td>Program cost (2024)</td>
-      <td>From Table 2, step 12</td>
-      <td align="right">¥11,113,476</td>
-    </tr>
-    <tr>
-      <td>12</td>
-      <td><strong>Net economic benefit</strong></td>
-      <td><strong>¥49,464,000 - ¥11,113,476</strong></td>
-      <td align="right"><strong>¥38,350,524</strong></td>
-    </tr>
-    
-    <tr>
-      <td colspan="4"><strong>Return on Investment</strong></td>
-    </tr>
-    <tr>
-      <td>13</td>
-      <td><strong>ROI (gross earnings basis)</strong></td>
-      <td><strong>¥49,464,000 ÷ ¥11,113,476</strong></td>
-      <td align="right"><strong>4.5x</strong></td>
-    </tr>
-    <tr>
-      <td>14</td>
-      <td><strong>ROI (tax revenue basis)</strong></td>
-      <td><strong>¥12,366,000 ÷ ¥11,113,476</strong></td>
-      <td align="right"><strong>1.1x</strong></td>
-    </tr>
-  </tbody>
-</table>
-
-<br>
-<em>Interpretation: Every ¥1 invested returns ¥4.5 in lifetime earnings and ¥1.1 in tax revenue. Net economic benefit: ¥38.4M.</em>
-
-</div>
-
-<!-- ============================= -->
-<!-- Section 4: Scaling Scenarios -->
-<!-- ============================= -->
-<h2>Scaling Scenarios (Illustrative)</h2>
-<div style="background:#f8f9fa; padding:20px; border-left:4px solid #449966; border-radius:5px; margin:20px 0; font-family:monospace; font-size:0.9em;">
-
-<h3>Table 4: Impact at Different Program Scales</h3>
-<table border="1" cellpadding="8" cellspacing="0" width="100%">
-  <thead>
-    <tr>
-      <th>Scenario</th>
-      <th>Youths Reached</th>
-      <th>Formula</th>
-      <th>Lives Saved/Year</th>
-      <th>DALYs Averted</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>2024 Actual</td>
-      <td align="right">12,635</td>
-      <td>12,635 × 7.26/100k × 0.25</td>
-      <td align="right">0.23</td>
-      <td align="right">15</td>
-    </tr>
-    <tr>
-      <td>2× Scale</td>
-      <td align="right">25,000</td>
-      <td>25,000 × 7.26/100k × 0.25</td>
-      <td align="right">0.45</td>
-      <td align="right">30</td>
-    </tr>
-    <tr>
-      <td>4× Scale (High-Risk Schools)</td>
-      <td align="right">50,000</td>
-      <td>50,000 × 7.26/100k × 0.25</td>
-      <td align="right">0.91</td>
-      <td align="right">61</td>
-    </tr>
-    <tr>
-      <td>8× Scale (Regional Program)</td>
-      <td align="right">100,000</td>
-      <td>100,000 × 7.26/100k × 0.25</td>
-      <td align="right">1.82</td>
-      <td align="right">122</td>
-    </tr>
-  </tbody>
-</table>
-
-<br>
-<em>Note: Scaling assumes linear relationship and constant 25% effectiveness. Actual effectiveness may vary with program scale and implementation fidelity.</em>
-
-</div>
-
-
-<div style="margin:40px 0;">
-    <iframe src="../pages/charts/impact_contour_lives_saved.html"
-            width="100%" height="560" frameborder="0"></iframe>
-</div>
-
-<p style="margin-top:14px">
-    <a href="https://www.npa.go.jp/publications/statistics/safetylife/jisatsu.html"
-       class="project-button" target="_blank">Japan Police Data</a>
-    <a href="https://github.com/YuriyaJP/Public-Health-Data-Engineering-Project-Japan-Suicide-Statistics-Pipeline"
-       class="project-button" target="_blank">View Code</a>
-    <a href="https://forum.effectivealtruism.org/posts/Sg7ovepZcmY8GKpo3/how-i-attempted-to-measure-the-impact-of-my-japan-nonprofit"
-       class="project-button" target="_blank">Read Full Article</a>
-</p>
-
-</section>
+</body>
+</html>
