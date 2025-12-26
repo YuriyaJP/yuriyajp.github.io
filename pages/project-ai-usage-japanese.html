@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tableau Visualizations | Yulia Chekhovska</title>
-
+<title>Generative AI Usage Among Licensed Professionals | Yulia Chekhovska</title>
+<link rel="icon" type="image/png" href="../favicon.png">
 <link rel="stylesheet" href="../style.css">
 </head>
+
 <body class="project-page">
 
-<!-- SAME HEADER AS INDEX.HTML -->
+<!-- HEADER -->
 <header class="site-header" role="banner">
     <div class="header-left">
         <div class="video-wrapper">
@@ -20,17 +21,17 @@
                 <img src="../assets/images/profile/yulia.jpg" alt="Profile image of Yulia Chekhovska">
             </video>
         </div>
-        <div class="control-btn-wrapper" role="group" aria-label="Video controls">
-            <button id="play-toggle" class="control-btn" aria-label="Play or pause video">
+        <div class="control-btn-wrapper" role="group">
+            <button id="play-toggle" class="control-btn">
                 <img id="play-icon" src="../assets/icons/pause-icon.png" alt="">
             </button>
-            <button id="sound-toggle" class="control-btn" aria-label="Mute or unmute video">
+            <button id="sound-toggle" class="control-btn">
                 <img id="sound-icon" src="../assets/icons/mute-icon.png" alt="">
             </button>
         </div>
     </div>
     <div class="header-right">
-        <nav class="nav-tabs" role="navigation" aria-label="Main navigation">
+        <nav class="nav-tabs">
             <a href="../index.html#about" class="tab-btn">About</a>
             <a href="../index.html#portfolio" class="tab-btn">Portfolio</a>
             <a href="../index.html#media" class="tab-btn">Media</a>
@@ -39,41 +40,140 @@
     </div>
 </header>
 
-<section>
-    <img src="../assets/images/projects/tableau-preview.png" alt="Tableau Visualization Preview">
-    <h2>Goal</h2>
-    <p>Showcase practical Tableau skills through a structured analytics report and applied visualization techniques.</p>
+<div class="project-container">
 
-    <h2>Tools Used</h2>
-    <p>Tableau Desktop, Tableau Public, Excel/Google Sheets, statistical analysis, custom visualization design.</p>
-
-    <h2>Project Overview</h2>
-    <p>This freelance project analyzed generative AI usage among 40 Japanese respondents, combining quantitative survey data and qualitative free-text responses.</p>
-
-    <h2>Process</h2>
+<!-- SIDEBAR -->
+<nav class="anchor-nav">
+    <h3>On This Page</h3>
     <ul>
-        <li>Collected, cleaned, and standardized Japanese-language survey responses.</li>
-        <li>Produced a 16-page Tableau report visualizing trends and usage patterns.</li>
-        <li>Conducted statistical analysis to identify key behaviors and sentiment themes.</li>
+        <li><a href="#overview" class="anchor-link active">Overview</a></li>
+        <li><a href="#findings" class="anchor-link">Key Findings</a></li>
+        <li><a href="#analysis" class="anchor-link">Data Analysis</a></li>
+        <li><a href="#methodology" class="anchor-link">Methodology</a></li>
+        <li><a href="#resources" class="anchor-link">Resources</a></li>
     </ul>
+</nav>
 
-    <h2>Results</h2>
-    <ul>
-        <li>Delivered a structured report with clear insights into generative AI adoption and perception.</li>
-        <li>Provided data-backed visuals that strengthened the client's understanding of user knowledge and use of AI tools in everyday life.</li>
-    </ul>
+<!-- MAIN CONTENT -->
+<main class="project-content">
 
-    <h2>PDF Report</h2>
-    <p>The report can be viewed directly below or downloaded for full resolution.</p>
+<!-- TITLE -->
+<div class="title-card">
+    <h1>Generative AI Usage Among Licensed Professionals in Japan</h1>
+    <p class="meta">
+        Data Analysis · Tableau · Survey Analytics · Qualitative Synthesis
+    </p>
+</div>
 
-    <iframe class="pdf-embed" src="../assets/pdf/tableau-visualizations.pdf"></iframe>
+<!-- IMAGE -->
+<figure style="text-align:center; margin-bottom:40px;">
+    <img src="../assets/images/projects/tableau-preview.png"
+         alt="Tableau Dashboard Preview"
+         style="max-width:720px; width:100%;">
+</figure>
 
-    <a href="../assets/pdf/tableau-visualizations.pdf" class="project-button" target="_blank">Download PDF</a>
-
-    <h2>Timeframe</h2>
-    <p>2024</p>
-
+<!-- OVERVIEW -->
+<section id="overview" class="content-section">
+    <h2>Overview</h2>
+    <p>
+        This freelance analytics project examines how licensed professionals in Japan
+        (such as lawyers, accountants, and consultants) perceive and use generative AI tools
+        like ChatGPT in their daily work.
+    </p>
+    <p>
+        The analysis combines structured survey data with free-text responses and was
+        delivered as a multi-page Tableau report designed for non-technical stakeholders.
+    </p>
 </section>
+
+<!-- KEY FINDINGS -->
+<section id="findings" class="content-section">
+    <h2>Key Findings</h2>
+
+    <div class="summary-grid">
+
+        <div class="summary-card">
+            <h3>Adoption Landscape</h3>
+            <ul>
+                <li>High awareness of generative AI tools</li>
+                <li>ChatGPT is the dominant platform</li>
+                <li>Clear split between active users and hesitant adopters</li>
+            </ul>
+        </div>
+
+        <div class="summary-card">
+            <h3>Primary Use Cases</h3>
+            <ul>
+                <li>Idea generation and thought structuring</li>
+                <li>Document drafting and summarization</li>
+                <li>Research and analytical support</li>
+            </ul>
+        </div>
+
+        <div class="summary-card">
+            <h3>Perceived Client Value</h3>
+            <ul>
+                <li>Improved proposal quality and accuracy</li>
+                <li>More time for core client problem-solving</li>
+                <li>Higher-quality information sharing</li>
+            </ul>
+        </div>
+
+        <div class="summary-card">
+            <h3>Barriers to Adoption</h3>
+            <ul>
+                <li>Difficulty imagining concrete use cases</li>
+                <li>Trust, accuracy, and security concerns</li>
+                <li>Organizational and policy restrictions</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <p style="margin-top:20px; font-style:italic;">
+        Findings are based on self-reported survey responses and qualitative coding of open-ended answers.
+    </p>
+</section>
+
+<!-- DATA ANALYSIS -->
+<section id="analysis" class="content-section">
+    <h2>Tableau Analysis</h2>
+    <p>
+        A 16-page Tableau report was produced to visualize usage patterns, sentiment,
+        tool adoption, and perceived value across respondent segments.
+    </p>
+
+    <iframe class="pdf-embed"
+            src="../assets/pdf/tableau-visualizations.pdf"
+            style="margin-top:30px;"></iframe>
+
+    <a href="../assets/pdf/tableau-visualizations.pdf"
+       class="project-button"
+       target="_blank">Download PDF</a>
+</section>
+
+<!-- METHODOLOGY -->
+<section id="methodology" class="content-section">
+    <h2>Methodology</h2>
+    <ul>
+        <li>Japanese-language survey design and cleaning</li>
+        <li>Quantitative aggregation of SA / MA responses</li>
+        <li>Qualitative coding of free-text answers</li>
+        <li>Custom Tableau dashboard and report design</li>
+    </ul>
+</section>
+
+<!-- RESOURCES -->
+<section id="resources" class="content-section">
+    <h2>Resources</h2>
+    <p>
+        This project demonstrates applied survey analytics, mixed-methods analysis,
+        and stakeholder-oriented visualization using Tableau.
+    </p>
+</section>
+
+</main>
+</div>
 
 <footer>
     &copy; 2025 Made by Yulia Chekhovska. All rights reserved.
