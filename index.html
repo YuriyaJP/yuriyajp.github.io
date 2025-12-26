@@ -443,25 +443,42 @@ modalClose.addEventListener('click', () => { mediaModal.style.display = 'none'; 
 
 
 <script>
-// PANEL SWITCHING
-const tabButtons2 = document.querySelectorAll('.tab-btn');
-const sections2 = document.querySelectorAll('section');
+// PANEL SWITCHING WITH HASH SUPPORT
 
-tabButtons2.forEach(btn => {
+const tabButtons = document.querySelectorAll('.tab-btn');
+const sections = document.querySelectorAll('section');
+
+function activateSection(target) {
+    // Update active tab
+    tabButtons.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.target === target);
+    });
+
+    // Update visible section
+    sections.forEach(sec => {
+        sec.classList.toggle('active-section', sec.id === target);
+    });
+}
+
+// Button click handling
+tabButtons.forEach(btn => {
     btn.addEventListener('click', () => {
         const target = btn.dataset.target;
 
-        tabButtons2.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+        // Update URL hash without page reload
+        history.replaceState(null, '', `#${target}`);
 
-        sections2.forEach(sec => {
-            sec.id === target
-                ? sec.classList.add('active-section')
-                : sec.classList.remove('active-section');
-        });
+        activateSection(target);
     });
 });
-document.querySelector('#about').classList.add('active-section');
+
+// On page load: use hash or default to "about"
+document.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.replace('#', '');
+    const target = document.getElementById(hash) ? hash : 'about';
+
+    activateSection(target);
+});
 </script>
 
 
