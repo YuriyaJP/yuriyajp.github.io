@@ -62,7 +62,7 @@
             <h1>Health Claim Perception and Consumer Risk: Meal Replacement Case Study</h1>
             <p class="meta">
                 <span class="status-badge wip">Work in Progress</span>
-                <span style="margin-left: 12px;">Machine Learning, NLP, Consumer Risk Analysis</span>
+                <span style="margin-left: 12px;">NLP, Consumer Risk Analysis</span>
             </p>
         </div>
 
@@ -73,6 +73,7 @@
                 style="max-width:520px; width:100%;">
         </figure>
 
+
         <!-- OVERVIEW SECTION -->
         <section id="overview" class="content-section">
             <h2>Project Overview</h2>
@@ -81,53 +82,200 @@
                 published on the YouTube video platform.
             </p>
             <p>
-                Using video transcripts and accompanying metadata, I examine how automated analytical systems 
-                interpret user-reported experiences such as digestion, taste, satiety, and perceived health effects, 
-                and where those systems risk misclassification or overgeneralization.
+                The dataset includes 684 comments across 21 videos from 2020–2025, with 24% discussing health effects ranging from mild digestive issues to more severe signals.
             </p>
             <p>
-                The emphasis is not on evaluating the truth of individual claims, but on identifying patterns, 
-                failure modes, and potential harm amplification when consumer health narratives are processed 
-                at scale by automated models.
+                About 24% of comments mention health-related effects, including mild digestive issues, allergic reactions, and weight/metabolic concerns. This indicates that a non-negligible portion of users experience or perceive adverse effects, which could impact brand reputation and trust if ignored. They should monitor these signals and consider reformulation, clearer labeling, or proactive guidance to reduce potential complaints.
+            </p>
+
+            <p>
+                The study highlights that automated sentiment and claim analysis can misclassify or amplify risk perceptions. For the business, this is a signal to integrate human oversight in monitoring systems, ensuring that AI-driven insights are interpreted carefully before making marketing or regulatory decisions.
             </p>
         </section>
 
-        <!-- CONTEXT SECTION -->
-        <section id="context" class="content-section">
-            <h2>Problem & Context</h2>
+                <!-- KEY FINDINGS SECTION -->
+        <section id="findings" class="content-section">
+            <h2>Key Findings</h2>
+
+            <div class="summary-grid">
+
+                <!-- Side Effect Prevalence -->
+                <div class="summary-card">
+                    <h3>Side Effect Prevalence</h3>
+                    <ul>
+                        <li><strong>Health-related mentions:</strong> 199</li>
+                        <li><strong>Affected comments:</strong> 164</li>
+                        <li><strong>Share of all comments:</strong> ~24%</li>
+                    </ul>
+                </div>
+
+                <!-- Distribution by Category -->
+                <div class="summary-card">
+                    <h3>Distribution by Category</h3>
+                    <ul>
+                        <li><strong>Allergic / immune:</strong> 78 mentions</li>
+                        <li><strong>Mild digestive:</strong> 44 mentions</li>
+                        <li><strong>Weight & metabolic:</strong> 42 mentions</li>
+                        <li><strong>Cognitive / neurological:</strong> 14 mentions</li>
+                    </ul>
+                </div>
+
+                <!-- Higher-Severity Signals -->
+                <div class="summary-card">
+                    <h3>Higher-Severity Signals</h3>
+                    <ul>
+                        <li><strong>Severe digestive:</strong> 6 mentions</li>
+                        <li><strong>Cardiovascular-related:</strong> 5 mentions</li>
+                        <li><strong>Energy & mood-related:</strong> 8 mentions</li>
+                    </ul>
+                </div>
+
+                <!-- Temporal Risk Analysis -->
+                <div class="summary-card">
+                    <h3>Temporal Risk Analysis</h3>
+                    <ul>
+                        <li><strong>Anomaly detection:</strong> Enabled</li>
+                        <li><strong>Significant spikes detected:</strong> None</li>
+                        <li><strong>Observed pattern:</strong> Stable baseline</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <p style="margin-top:20px; font-style:italic;">
+                Findings reflect consumer-reported experiences in public comments and do not imply medical causality or clinical diagnosis.
+                Results are intended for early risk monitoring and trend detection.
+            </p>
+        </section>
+
+        <figure style="text-align:center; margin-bottom:40px;">
+            <img src="../assets/images/projects/side_effects_summary.png"
+                alt="sied effects analysis"
+                style="max-width:849px; width:100%;">
+        </figure>
+
+        <!-- COMMENTS ANALYSIS EXECUTIVE SUMMARY -->
+        <section id="executive-summary" class="content-section">
+            <h2>Comments Analysis: Executive Summary</h2>
+
+            <div style="background:#f8f9fa; padding:20px; border-left:4px solid #449966; border-radius:5px; margin:20px 0; font-family:monospace; font-size:0.9em; line-height:1.4;">
+                
+                <h3>Dataset Overview</h3>
+                <ul>
+                    <li>Total Comments: 684</li>
+                    <li>Unique Authors: 646</li>
+                    <li>Unique Videos: 17</li>
+                    <li>Analysis Period: 2020-01-31 to 2025-12-21 (2151 days)</li>
+                </ul>
+
+                <h3>Engagement Metrics</h3>
+                <ul>
+                    <li>Total Likes: 4,256</li>
+                    <li>Average Likes per Comment: 6.22</li>
+                    <li>Median Likes per Comment: 1</li>
+                    <li>High Engagement Comments (top 25%): 193 (28.2%)</li>
+                    <li>Zero-Like Comments: 270 (39.5%)</li>
+                </ul>
+
+                <h3>Content Characteristics</h3>
+                <ul>
+                    <li>Average Comment Length: 36.3 words</li>
+                    <li>Median Comment Length: 22 words</li>
+                    <li>Longest Comment: 380 words</li>
+                    <li>Comments with Questions: 110 (16.1%)</li>
+                </ul>
+
+                <h3>Theme Analysis</h3>
+                <ul>
+                    <li>Most Discussed Theme: eating_disorder (326 mentions)</li>
+                    <li>Health Concerns: 25 comments (3.7%)</li>
+                    <li>Positive Health Mentions: 81 comments (11.8%)</li>
+                </ul>
+
+                <h3>Temporal Patterns</h3>
+                <ul>
+                    <li>Peak Activity Month: 2021-01</li>
+                    <li>Most Active Day: Tuesday</li>
+                    <li>Most Active Hour (UTC): 21:00</li>
+                </ul>
+
+                <h3>Key Insights</h3>
+                <ol>
+                    <li>Engagement: 28.2% of comments receive high engagement (top 25% of likes)</li>
+                    <li>Content Quality: Average comment is 36 words, indicating substantive discussion</li>
+                    <li>Health Discussion: 106 comments (15.5%) discuss health effects</li>
+                    <li>Community: 25 repeat commenters indicate an engaged user base</li>
+                </ol>
+
+            </div>
+        </section>
+
+
+        <!-- Visualization Section -->
+        <figure style="text-align:center; margin:40px 0;">
+            <img src="../assets/images/projects/01_temporal_patterns.png" 
+                alt="Comment volume over time" 
+                style="max-width:800px; width:100%; margin-bottom:20px;">
+            <figcaption>Temporal patterns of comment activity</figcaption>
+        </figure>
+
+        <figure style="text-align:center; margin:40px 0;">
+            <img src="../assets/images/projects/05_comparative_analysis.png" 
+                alt="High vs low engagement comparison" 
+                style="max-width:800px; width:100%; margin-bottom:20px;">
+            <figcaption>Comparison of high vs low engagement comments</figcaption>
+        </figure>
+
+        <figure style="text-align:center; margin:40px 0;">
+            <img src="../assets/images/projects/06_correlation_matrix.png" 
+                alt="Feature correlation matrix" 
+                style="max-width:800px; width:100%;">
+            <figcaption>Correlation matrix of key comment features</figcaption>
+        </figure>
+
+    </section>
+
+    <!-- BUSINESS INSIGHTS SECTION -->
+    <section id="business-insights" class="content-section">
+        <h2>Business Insights: Consumer Health & Engagement</h2>
+
+        <div style="background:#fff3e6; padding:20px; border-left:5px solid #ff6600; border-radius:6px; margin:20px 0; font-family:Arial, sans-serif; line-height:1.5;">
+
+            <h3><strong>⚠ Health Signals at a Glance</strong></h3>
             <ul>
-                <li>Analyzes publicly available consumer video reviews only</li>
-                <li>Does not provide medical, nutritional, or diagnostic advice</li>
-                <li>Does not assess the clinical validity of health claims</li>
-                <li>Focuses on risks in automated interpretation and aggregation</li>
+                <li><strong>24%</strong> of comments mention health effects</li>
+                <li>Higher-severity mentions: <strong>6 severe digestive</strong>, <strong>5 cardiovascular</strong>, <strong>8 energy/mood</strong></li>
+                <li>Action: Monitor signals & improve labeling for safety</li>
             </ul>
-        </section>
 
-        <!-- METHODOLOGY SECTION -->
-        <section id="methodology" class="content-section">
-            <h2>Methodology</h2>
-            <h3>Data Collection</h3>
-            <p>
-                Video transcripts and metadata were collected using the YouTube Data API v3. 
-                The dataset focuses on reviews of meal replacement products published between 2020–2024.
-            </p>
-            
-            <h3>Analysis Framework</h3>
-            <p>
-                The analysis pipeline includes:
-            </p>
+            <h3><strong> Sensitive Themes & Opportunity</strong></h3>
             <ul>
-                <li><strong>Claim Extraction:</strong> Identifying health-related statements using regex patterns and NLP</li>
-                <li><strong>Sentiment & Intensity Scoring:</strong> Evaluating emotional tone and claim strength</li>
-                <li><strong>Risk Classification:</strong> Flagging potential misinterpretations or harmful generalizations</li>
-                <li><strong>Aggregation Effects:</strong> Studying how automated summaries could amplify bias</li>
+                <li>Top theme: <strong>Eating disorders</strong> (326 mentions)</li>
+                <li>Positive health mentions: <strong>11.8%</strong>, Negative health: <strong>3.7%</strong></li>
+                <li>Action: Educate & communicate safe usage proactively</li>
             </ul>
 
-            <h3>Technical Stack</h3>
-            <p>
-                Python, pandas, scikit-learn, Hugging Face Transformers, YouTube Data API v3
-            </p>
-        </section>
+            <h3><strong>Engagement</strong></h3>
+            <ul>
+                <li>High engagement comments: <strong>28%</strong> of total</li>
+                <li>Repeat commenters: <strong>25</strong> (potential brand advocates)</li>
+                <li>Action: Activate top users for feedback & early signals</li>
+            </ul>
+
+            <h3><strong>Temporal Stability</strong></h3>
+            <ul>
+                <li>No acute spikes detected; baseline stable</li>
+                <li>Action: Focus on slow, strategic adjustments vs. reactive changes</li>
+            </ul>
+
+            <h3><strong> AI Monitoring Caution</strong></h3>
+            <ul>
+                <li>Automated claim extraction can misclassify & amplify perceived risk</li>
+                <li>Action: Combine AI with human review; track recurring patterns</li>
+            </ul>
+
+        </div>
+    </section>
 
         <!-- STATUS SECTION -->
         <section id="status" class="content-section">
