@@ -272,6 +272,11 @@ body.project-page section {
     padding: 40px 28px !important;  /* project-page card styling */
 }
 
+section {
+    scroll-margin-top: 120px; /* matches sticky header height */
+}
+
+
 /* =========================================================
    7. ABOUT
    ========================================================= */
@@ -431,56 +436,131 @@ body.project-page section {
 }
 
 /* =========================================================
-   9. MEDIA CAROUSEL
+   9. MEDIA TIMELINE (SIMPLIFIED)
    ========================================================= */
-.media-carousel {
+
+.media-timeline {
     position: relative;
-    width: 100%;
-    overflow: hidden;
-    margin: 30px 0;
+    padding-left: 80px;
+    margin-top: 40px;
 }
 
-.carousel-window { overflow: hidden; }
-
-.carousel-track {
-    display: flex;
-    gap: 20px;
-    transition: transform .2s ease;
-    will-change: transform;
-}
-
-.media-item { flex: 0 0 300px; }
-
-.media-thumb {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 8px;
-    cursor: zoom-in;
-    transition: transform .3s, box-shadow .3s;
-}
-
-.media-thumb:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}
-
-.carousel-prev,
-.carousel-next {
+/* Vertical line */
+.media-timeline::before {
+    content: "";
     position: absolute;
+    top: 0;
+    left: 32px;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 8, 2, 0.2),
+        rgba(103, 192, 85, 0.6),
+        rgba(1, 27, 3, 0.2)
+    );
+    border-radius: 4px;
+}
+
+/* Year headers */
+.media-timeline h3 {
+    position: relative;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin: 80px 0 30px;
+    padding-left: 40px;
+    letter-spacing: 0.05em;
+}
+
+/* Year dot */
+.media-timeline h3::before {
+    content: "";
+    position: absolute;
+    left: -58px;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0,0,0,0.4);
-    color: var(--white);
-    border: none;
-    padding: 12px 18px;
+    width: 18px;
+    height: 18px;
+    background: #013601;
     border-radius: 50%;
-    font-size: 2rem;
+    box-shadow: 0 0 0 6px rgba(19, 43, 26, 0.25);
+}
+
+/* Arrow indicator */
+.media-timeline h3::after {
+    content: "➤";
+    position: absolute;
+    left: -28px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #0c3a16;
+}
+
+/* Media grid */
+.media-item {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 60px;
+}
+
+/* Media images */
+.media-thumb {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    border-radius: 14px;
+    transition: transform .35s ease, box-shadow .35s ease;
     cursor: pointer;
 }
 
-.carousel-prev { left: 10px; }
-.carousel-next { right: 10px; }
+.media-item:hover .media-thumb {
+    transform: scale(1.05);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+}
+
+/* Captions */
+.media-item figcaption {
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+/*for wide images that must not be cropped */
+.media-thumb--contain {
+    object-fit: contain;
+    background: #0b0b0b; /* subtle neutral fill for blank space */
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .media-timeline {
+        padding-left: 50px;
+    }
+
+    .media-timeline::before {
+        left: 18px;
+    }
+
+    .media-timeline h3 {
+        font-size: 1.9rem;
+        padding-left: 30px;
+    }
+
+    .media-timeline h3::before {
+        left: -38px;
+    }
+
+    .media-timeline h3::after {
+        left: -16px;
+    }
+
+    .media-thumb {
+        height: 360px;
+    }
+}
+
 
 /* =========================================================
    10. CONTACT
@@ -672,40 +752,23 @@ body.project-page .project-button:active {
 /* =========================================================
    13. MEDIA MODAL
    ========================================================= */
-.media-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.85);
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
+
+.media-timeline .project-container {
+    display: flex;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 28px;
 }
 
-.media-modal-content {
-    position: relative;
-    max-width: 90%;
-    max-height: 90%;
+.media-timeline .anchor-nav {
+    flex: 0 0 220px;
+    height: fit-content;
 }
 
-#media-modal-img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.media-modal-close {
-    position: absolute;
-    top: 25px;
-    right: 30px;
-    font-size: 42px;
-    color: var(--white);
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 10000;
+.media-timeline .project-content {
+    flex: 1;
+    min-width: 0;
 }
 
 
@@ -971,6 +1034,64 @@ body.project-page .project-button:active {
         grid-template-columns: 1fr;
     }
 }
+.media-timeline .project-container {
+    align-items: flex-start;
+}
+
+.media-timeline .media-item {
+    margin-bottom: 40px;
+}
+
+.media-timeline .content-section h2 {
+    position: relative;
+}
+
+.media-timeline .content-section h2::before {
+    content: '';
+    position: absolute;
+    left: -24px;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    background: var(--accent-primary);
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.media-timeline .project-content {
+    position: relative;
+    padding-left: 48px;
+}
+
+/* Vertical line */
+.media-timeline .project-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 18px;
+    width: 2px;
+    background: var(--border-soft);
+}
+
+.media-timeline .content-section h2 {
+    position: relative;
+}
+
+/* Year dot */
+.media-timeline .content-section h2::before {
+    content: '';
+    position: absolute;
+    left: -38px;
+    top: 50%;
+    width: 12px;
+    height: 12px;
+    background: var(--accent-primary);
+    border-radius: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 0 0 4px rgba(0,0,0,0.04);
+}
+
 
 .new-badge {
     position: absolute;
