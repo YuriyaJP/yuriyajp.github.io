@@ -508,7 +508,7 @@ section {
 /* Media images */
 .media-thumb {
     width: 100%;
-    height: 520px;
+    height: 320px;
     object-fit: cover;
     border-radius: 14px;
     transition: transform .35s ease, box-shadow .35s ease;
@@ -604,6 +604,49 @@ section {
         padding: 10px 0;
     }
 }
+
+/* =========================================================
+   CONTACT – STRONG CTA BUTTONS
+   ========================================================= */
+
+#contact .contact-icons a {
+    padding: 14px 28px;          /* bigger click area */
+    font-size: 1.15rem;          /* stronger text */
+    border-radius: 32px;
+    min-width: 180px;
+    text-align: center;
+}
+
+#contact .contact-icons {
+    justify-content: center;     /* visual focus */
+    gap: 28px;                   /* more breathing room */
+}
+.contact-form-wrapper {
+    --form-height-desktop: 540px;
+    --form-height-mobile: 620px;
+
+    max-width: 720px;
+    margin: 48px auto 32px;
+    padding: 16px;
+    background: linear-gradient(135deg, #0f3f2f, #165c44);
+    border-radius: 18px;
+    box-shadow: var(--soft-shadow);
+}
+
+.airtable-embed {
+    width: 100%;
+    height: var(--form-height-desktop);
+    border: none;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+@media (max-width: 640px) {
+    .airtable-embed {
+        height: var(--form-height-mobile);
+    }
+}
+
 
 
 /* =========================================================
@@ -1322,6 +1365,51 @@ body.project-page .content-section img {
         font-size: 1.4rem;
     }
 }
+
+/* =========================================================
+   14. MEDIA MODAL (ACTUAL MODAL STYLES)
+   ========================================================= */
+
+.media-modal {
+    position: fixed;
+    inset: 0;
+    display: none;                 /* CRITICAL */
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+}
+
+.media-modal-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+}
+
+.media-modal-content img {
+    max-width: 100%;
+    max-height: 90vh;
+    display: block;
+    border-radius: 10px;
+}
+
+.media-modal-close {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    font-size: 32px;
+    line-height: 1;
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 0;
+}
+
+.media-modal[style*="display: none"] {
+    pointer-events: none;
+}
+
 
 /* =========================================================
    END OF STYLE.CSS
