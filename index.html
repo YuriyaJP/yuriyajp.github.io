@@ -7,341 +7,288 @@
 
 <title>Yulia Chekhovska</title>
 
-<link rel="icon" type="image/png" href="favicon.png">
-
-<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+<div class="projects-section full-bleed">
 <header class="site-header" role="banner">
     <div class="header-left">
+        <h1 class="site-title">Yulia Chekhovska</h1>
+    </div>
 
-        <div class="video-wrapper">
-            <video id="profile-video" class="profile-media"
-                   autoplay muted playsinline
-                   poster="assets/images/profile/yulia.jpg">
-                <source src="assets/video/portfolio.mp4" type="video/mp4">
-                <img src="assets/images/profile/yulia.jpg" alt="Profile image of Yulia Chekhovska">
-            </video>
-        </div>
-
-        <div class="control-btn-wrapper" role="group" aria-label="Video controls">
-            <button id="play-toggle" class="control-btn" aria-label="Play or pause video">
-                <img id="play-icon" src="assets/icons/pause-icon.png" alt="">
-            </button>
-            <button id="sound-toggle" class="control-btn" aria-label="Mute or unmute video">
-                <img id="sound-icon" src="assets/icons/mute-icon.png" alt="">
-            </button>
-        </div>
-
+    <div class="hero-cta">
+        <a href="https://calendly.com/julia-chekhovskaua/consultancy"
+        class="btn big">
+            Book Free Consultation
+        </a>
     </div>
 
     <div class="header-right">
-        <nav class="nav-tabs" role="navigation" aria-label="Main sections">
+        <nav class="nav-tabs" role="navigation">
             <button data-target="about" class="tab-btn active">About</button>
-            <button data-target="portfolio" class="tab-btn">Portfolio</button>
-            <button data-target="media" class="tab-btn">Media</button>
-            <button data-target="contact" class="tab-btn">Contact</button>
+            <button data-target="portfolio" class="tab-btn">Tools</button>
+            <button data-target="contact" class="tab-btn">Get in Touch</button>
         </nav>
     </div>
 </header>
 
 
-
-
 <main>
 
-<!-- ABOUT -->
-<section id="about" class="active-section" aria-labelledby="about-title">
+<!-- ========================= -->
+<!-- PORTFOLIO = TOOLS -->
+<!-- ========================= -->
+<section id="portfolio">
+
+    <h2>Tools & Resources</h2>
+
+    <div class="tools-grid">
+
+        <!-- PRODUCT 1 -->
+        <div class="tool-card">
+            <div class="tool-header">
+                <h3>M&E Framework Template Pack</h3>
+                <span class="price">$29</span>
+            </div>
+
+            <p class="tool-outcome">
+                Build a complete M&E system in hours, not weeks
+            </p>
+            <button class="btn secondary collapse-toggle">View Details</button>
+
+            <div class="tool-content">
+                <ul>
+                    <li>Theory of Change template</li>
+                    <li>Monitoring tracker (Google Sheets)</li>
+                    <li>Cost-effectiveness calculator</li>
+                </ul>
+
+                <a href="https://checkout.com/"
+                   class="buy-btn">Buy Now</a>
+            </div>
+        </div>
+
+
+        <!-- PRODUCT 2 (MOST POPULAR) -->
+        <div class="tool-card featured">
+            <div class="badge">Most Popular</div>
+
+            <div class="tool-header">
+                <h3>Cost-Effectiveness Analysis Guide</h3>
+                <span class="price">$49</span>
+            </div>
+
+            <p class="tool-outcome">
+                Prove impact rigorously and justify funding decisions
+            </p>
+
+            <button class="btn secondary collapse-toggle">View Details</button>
+
+            <div class="tool-content">
+                <ul>
+                    <li>20-page practical PDF guide</li>
+                    <li>Step-by-step CEA methodology</li>
+                    <li>Real example: suicide prevention analysis</li>
+                </ul>
+
+                <a href="https://checkout.com/"
+                   class="buy-btn">Buy Now</a>
+            </div>
+        </div>
+
+
+        <!-- PRODUCT 3 -->
+        <div class="tool-card">
+            <div class="tool-header">
+                <h3>Impact Evaluation Survey Templates</h3>
+                <span class="price">$19</span>
+            </div>
+
+            <p class="tool-outcome">
+                Launch high-quality surveys without reinventing methodology
+            </p>
+
+            <button class="btn secondary collapse-toggle">View Details</button>
+
+            <div class="tool-content">
+                <ul>
+                    <li>SurveyCTO logic examples</li>
+                    <li>Outcome question banks</li>
+                    <li>Ready-to-use evaluation surveys</li>
+                </ul>
+
+                <a href="https://checkout.com/"
+                   class="buy-btn">Buy Now</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="about" class="active-section">
+
+    <!-- HERO -->
+    <div class="about-hero">
+
+        <img src="assets/images/profile/yulia.jpg" 
+             class="about-photo"
+             alt="Yulia Chekhovska">
+
+        <div class="hero-text">
+            <h1>
+                Evaluate impact rigorously. Make better decisions under uncertainty.
+            </h1>
+
+            <p class="subtitle">
+                I help nonprofits and social enterprises design evaluation systems, research frameworks and cost-effectiveness models that scale impact.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- CONTENT CARD -->
     <article class="about-card">
-        <h2 id="about-title">About Me</h2>
-        <!-- JAPANESE SUMMARY FOR JAPANESE EMPLOYERS -->
-        <div class="jp-summary" style="
-            margin-top: 20px;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.04);
-            border-left: 4px solid #667eea;
-            border-radius: 6px;
-        ">
-            <h3 style="margin-top: 0;">概要（日本語）</h3>
 
-            <p>
-                顧客データや自由記述テキストを対象に、  
-                自然言語処理（NLP）および統計分析を用いて、  
-                事業改善・意思決定に直結するインサイトを抽出するデータ分析を行っています。
-            </p>
+        <h3>What I Deliver</h3>
+        <ul>
+            <li><strong>Cost-Effectiveness Analysis</strong></li>
+            <li><strong>M&E System Design</strong></li>
+            <li><strong>Grant-ready impact metrics</strong></li>
+            <li><strong>Impact evaluation & surveys</strong></li>
+        </ul>
 
-            <ul>
-                <li>対象データ：顧客レビュー、アンケート自由記述、行動ログ、テキスト・音声データ</li>
-                <li>主な手法：BERT／Sentence-BERT、クラスタリング、感情分析、行動分析</li>
-                <li>活用目的：マーケティング施策改善、顧客理解の深化、リスク検知、意思決定支援</li>
-            </ul>
+        <h3 style="margin-top:30px;">Who I Work With</h3>
+        <p>Nonprofits • Social enterprises • Foundations • Global health orgs • Early-stage startups</p>
 
-            <p>
-                ポートフォリオおよびコードの詳細は英語で記載していますが、  
-                日本語での業務コミュニケーション・要点説明が可能です（日本語能力試験N2）。
-            ぜひお気軽にお問い合わせください。
-            </p>
-        </div>
-        <!-- END OF JAPANESE SUMMARY -->
-
-        
-        <p style="font-size: 1.1em; margin-top: 30px; padding-top: 20px; border-top: 2px solid rgba(102, 126, 234, 0.2);">
-            <strong>I help companies understand their customers through data and behavioral science.</strong>
-        </p>
-        
-        <p style="margin-top: 20px;">
-            I combine behavioral science, NLP, and data analysis to extract actionable insights from customer feedback at scale. I've built systems that analyze thousands of customer reviews to detect emerging product risks, designed churn prediction models identifying at-risk customers 3 months in advance, and created automated sentiment analysis pipelines that turn messy qualitative data into clear business strategy.
-        </p>
-
-        <p style="margin-top: 20px;">
-            <strong>What I deliver:</strong> Customer sentiment analysis | Churn prediction models | LLM-powered feedback analysis | Behavioral segmentation | Purchase pattern analysis | Voice of Customer (VoC) programs
-        </p>
-
-        <p style="margin-top: 20px;">
-            <strong>Recent work:</strong> Built early warning system analyzing 1,000+ consumer health product reviews to detect safety issues before they became PR crises. Designed customer lifetime value optimization model tracking behavior across 7 segments, identifying 12% efficiency opportunity. Increased audience engagement 40% through data-driven behavioral segmentation.
-        </p>
-        
-        <p style="margin-top: 30px;"><strong>Based in Tokyo, Japan</strong> | Available for remote consulting worldwide</p>
-        
-        <p class="places">✈️ Worked across: Ukraine | Belgium | Germany | Japan | 18+ countries</p>
-        <p><strong>Languages I am fluent in:</strong> Ukrainian (native) | English (C1) | Japanese (N2) | German (C1)</p>
-        
-        <div style="margin-top: 30px; padding-top: 20px; border-top: 2px solid rgba(102, 126, 234, 0.2);">
-            <p><strong>Background:</strong></p>
-            <ul>
-                <li><strong>Behavioral Science:</strong> M.A. Psycholinguistics (understanding how people process information and make decisions)</li>
-                <li><strong>Technical Training:</strong> Data Science & AI (Le Wagon Tokyo), ML4Good AI Safety, MIT Data Analysis</li>
-                <li><strong>Research:</strong> Behavioral analysis, experimental design, statistical modeling</li>
-            </ul>
-            
-            <p><strong>Technical Skills:</strong> Python (NLP, sentiment analysis, predictive modeling) | SQL | LLM integration (GPT, Claude) | BERT & transformer models | Statistical analysis | Tableau/data visualization | Customer analytics platforms</p>
-            
-            <p style="margin-top: 20px;"><strong>Industries served:</strong> Consumer products | E-commerce | SaaS | Health tech | International development</p>
-        </div>
-
-        <div style="margin-top: 30px; padding: 20px; background: rgba(102, 126, 234, 0.05); border-radius: 8px;">
-            <p style="margin: 0;"><strong>Looking for:</strong> Customer insights projects | Behavioral analytics consulting | Churn prediction & retention optimization | Customer feedback analysis (reviews, surveys, support tickets) | Market research with advanced analytics</p>
-        </div>
     </article>
-</section>
 
-<!-- PORTFOLIO -->
-<section id="portfolio" aria-labelledby="portfolio-title">
-    <h2 id="portfolio-title">Portfolio</h2>
-    <br>
+<!-- PROJECTS (EVALUATION-FOCUSED) -->
+<div class="projects-section">
 
-    <div class="tag-filter" role="region" aria-label="Tag filters">
-        <strong>Filter by tags:</strong>
-        <div id="tag-list" style="display:inline-block;margin-left:12px"></div>
-        <button id="clear-tags" class="clear-tags">Clear</button>
+    <h3>Selected Research & Evaluation Work</h3>
+
+    <div class="projects-grid">
+
+        <div class="project-card">
+            <img src="assets/images/projects/japan-police-logo.png" alt="Japan Suicide Data Pipeline">
+            <h4>Youth Suicide Prevention Cost-Effectiveness (Japan)</h4>
+            <p class="project-outcome">
+                Evaluated intervention impact using national police data
+            </p>
+            <p class="project-desc">
+                Built cost-effectiveness model using Japanese police statistics to estimate outcomes and cost per life saved; identified key uncertainties and data limitations affecting reliability of conclusions.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <img src="assets/images/projects/portfolio_image2.png" alt="Curriculum Feedback NLP Analysis">
+            <h4>Curriculum Feedback Analysis (Japanese Education)</h4>
+            <p class="project-outcome">
+                Extracted decision-relevant insights from student feedback
+            </p>
+            <p class="project-desc">
+                Applied BERT-based semantic clustering to student curriculum feedback, identifying systematic issues and distinguishing signal from noise in qualitative data.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <img src="assets/images/projects/consumer-review.png" alt="Consumer Risk Analysis">
+            <h4>Consumer Risk Perception (Health Claims)</h4>
+            <p class="project-outcome">
+                Identified mismatch between perceived and actual product risk
+            </p>
+            <p class="project-desc">
+                Analysed consumer video reviews to understand how health claims are interpreted; found that messaging created misleading safety perceptions not aligned with evidence.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <img src="assets/images/projects/portfolio_image1.png" alt="Language Learning System">
+            <h4>Language Learning System (Psycholinguistics)</h4>
+            <p class="project-outcome">
+                Designed learning system grounded in cognitive principles
+            </p>
+            <p class="project-desc">
+                Developed digital language-learning framework based on psycholinguistic theory, focusing on retention, comprehension, and cognitive load rather than surface engagement metrics.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <img src="assets/images/projects/tableau-preview.png" alt="AI Usage Tableau">
+            <h4>AI Usage in Japanese Workplace</h4>
+            <p class="project-outcome">
+                Analysed adoption patterns and organisational differences
+            </p>
+            <p class="project-desc">
+                Conducted Tableau-based analysis of AI usage across organisations, identifying structural differences in adoption and highlighting gaps between reported and actual usage.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <!-- Optional: placeholder or leave empty if no image -->
+            <h4>Partnership System Evaluation & Risk Management</h4>
+            <p class="project-outcome">
+                Prevented contract disputes and stabilised £210K+ partnerships
+            </p>
+            <p class="project-desc">
+                Designed monitoring and escalation system across 19+ partnerships; identified early signals of relationship breakdown and intervened proactively, reducing disputes to zero over 6 months.
+            </p>
+        </div>
+
     </div>
+</div>
 
-    <div class="portfolio-images">
-
-        <article class="portfolio-item" data-tags="research,data-analysis" data-date="2023-06-15">
-
-            <figure>
-                <img src="assets/images/projects/portfolio_image1.png" alt="Language Learning Digital Novel">
-            </figure>
-
-            <p><strong>Psycholinguistic Language Learning Digital Novel</strong></p>
-            <a href="pages/project-esl.html" class="view-button">View Project</a>
-        </article>
-
-
-        <article class="portfolio-item" data-tags="machine-learning" data-date="2024-09-01">
-
-            <figure>
-                <img src="assets/images/projects/portfolio_image2.png" alt="Class Feedback NLP Analysis">
-            </figure>
-
-            <p><strong>BERT-Based Semantic Analysis of Japanese Student Curriculum Feedback</strong></p>
-            <a href="pages/project-feedback.html" class="view-button">View Project</a>
-        </article>
-
-        <article class="portfolio-item" data-tags="data-analysis" data-date="2025-12-20">
-            <figure>
-                <img src="assets/images/projects/japan-police-logo.png" alt="Japan Suicide Data Pipeline">
-            </figure>
-
-            <p><strong>Cost-Effectiveness of Youth Suicide Prevention Program: Police Statistics</strong></p>
-            <a href="pages/project-japan-suicides.html" class="view-button">View Project</a>
-        </article>
-
-
-        <article class="portfolio-item" data-tags="machine-learning" data-date="2025-12-25">
-            <figure>
-                <img src="assets/images/projects/consumer-review.png" alt="Analysis Consumer Video Reviews">
-            </figure>
-
-            <p><strong>Health Claim Perception and Consumer Risk: Meal Replacement Case Study</strong></p>
-            <a href="pages/project-ai-risk-customer-analysis.html" class="view-button">View Project</a>
-        </article>
-
-
-        <article class="portfolio-item" data-tags="data-analysis" data-date="2024-02-28">
-
-            <figure>
-                <img src="assets/images/projects/tableau-preview.png" alt="AI usage Tableau project">
-            </figure>
-
-            <p><strong>Tableau Analysis on AI Usage in Japanese Workplace</strong></p>
-            <a href="pages/project-ai-usage-japanese.html" class="view-button">View Project</a>
-        </article>
-
-    </div>
-</section>
-
-<!-- MEDIA -->
-<section id="media" class="media-timeline" aria-labelledby="media-title">
-    <h2 id="media-title">Media & Appearances</h2>
-
-    <!-- SIMPLE YEAR NAV -->
-
-    <!-- 2025 -->
-    <h3>2025</h3>
-
-    <figure class="media-item">
-        <img class="media-thumb media-thumb--contain"
-            src="assets/images/media/media_hackathon.jpeg"
-            alt="AI Agent Hackathon Tokyo">
-        <figcaption>
-            <strong>AI Agent Hackathon by MeltingPot Tokyo (2025)</strong><br>
-            <a href="https://drive.google.com/file/d/1GrNM1FUElC-b9ttu_akurB3PSnP6Qzn8/view"
-               class="view-button">View</a>
-        </figcaption>
-    </figure>
-
-    <!-- 2024 -->
-    <h3>2024</h3>
-
-    <figure class="media-item">
-        <img class="media-thumb"
-             src="assets/images/media/media_peace.jpeg"
-             alt="Peace Advocacy Global Voyage">
-        <figcaption>
-            <strong>Peace Advocacy Global Voyage With Peace Boat NPO (2024)</strong><br>
-            <a href="https://peaceboat.org/english/news/ukraine-peace-action"
-               class="view-button">View</a>
-        </figcaption>
-    </figure>
-
-    <figure class="media-item">
-        <img class="media-thumb media-thumb--contain"
-             src="assets/images/media/media_multicultural.jpg"
-             alt="TV appearance about multicultural society">
-        <figcaption>
-            <strong>Chiba TV Talk Show Guest on Multicultural Society (2024)</strong><br>
-            <a href="https://www.youtube.com/watch?v=pMyqlSq2knc"
-               class="view-button">View</a>
-        </figcaption>
-    </figure>
-
-    <!-- 2023 -->
-    <h3>2023</h3>
-
-    <figure class="media-item">
-        <img class="media-thumb media-thumb--contain"
-             src="assets/images/media/media_disinfo.png"
-             alt="Talks on Fake News and Disinformation">
-        <figcaption>
-            <strong>University Guest Lecturer on Fake News and Disinformation (2023–2025)</strong>
-        </figcaption>
-    </figure>
-
-    <!-- 2021 -->
-    <h3>2021</h3>
-
-    <figure class="media-item">
-        <img class="media-thumb media-thumb--contain"
-             src="assets/images/media/media_behavioral.jpg"
-             alt="Behavioural Academic Research Recording">
-        <figcaption>
-            <strong>Research on Behavioural Analysis: Recording (2022)</strong><br>
-            <a href="https://youtu.be/-qLAWglXBs8"
-               class="view-button">View</a>
-        </figcaption>
-    </figure>
-
-    <figure class="media-item">
-        <img class="media-thumb media-thumb--contain"
-             src="assets/images/media/media_chiba_mag.jpg"
-             alt="Magazine feature at Chiba International Bureau">
-        <figcaption>
-            <strong>Article for Chiba International Bureau Magazine (2021)</strong><br>
-            <a href="https://drive.google.com/file/d/1YopozC-wpRjBDK2Ni3T4cpvM1hmkRfGC/view"
-               class="view-button">View</a>
-        </figcaption>
-    </figure>
-
-
-    <!-- 2020 -->
-    <h3>2020</h3>
-
-    <figure class="media-item">
-        <img class="media-thumb media-thumb--contain"
-             src="assets/images/media/media_ascent.png"
-             alt="ASCENT Science Research Program Report">
-        <figcaption>
-            <strong>ASCENT Science Research Program Report (2020-2021)</strong><br>
-            <a href="https://drive.google.com/file/d/1Nieb43eknv-IgUyjuyN4JCSCxdPvcItq/view"
-               class="view-button">View</a>
-        </figcaption>
-    </figure>
 </section>
 
 
+<!-- ========================= -->
 <!-- CONTACT -->
- <section id="contact" aria-labelledby="contact-title">
+<!-- ========================= -->
+<section id="contact">
+
     <div class="contact-form-wrapper">
         <iframe
             class="airtable-embed"
             src="https://airtable.com/embed/appQvF7qMe7VtddZf/page2VRhtZD4KPNVW/form"
-            title="Contact form"
-            loading="lazy"
-            referrerpolicy="no-referrer"
             width="100%"
             height="540"
-            frameborder="0"
-            style="background: transparent; border: none; border-radius: 14px;">
+            frameborder="0">
         </iframe>
     </div>
 
-
-    <div class="contact-icons" role="list">
-        <a href="https://www.linkedin.com/in/yuliia-che/" role="listitem">LinkedIn</a>
-        <a href="https://github.com/YuriyaJP" role="listitem">GitHub</a>
-        <a href="https://calendly.com/julia-chekhovskaua/consultancy" role="listitem">Book a Call</a>
+    <div class="contact-icons">
+        <a href="https://www.linkedin.com/in/yuliia-che/">LinkedIn</a>
+        <a href="https://github.com/YuriyaJP">GitHub</a>
+        <a href="https://calendly.com/julia-chekhovskaua/consultancy">Book a Call</a>
     </div>
+
 </section>
 
 </main>
 
-<footer role="contentinfo">
-    &copy; 2025 Made by Yulia Chekhovska. All rights reserved.
+
+<footer>
+    &copy; Made by Yulia Chekhovska
 </footer>
 
 
-
-<!-- ========================================================= -->
-<!-- JAVASCRIPT SECTION                                        -->
-<!-- ========================================================= -->
-
+<!-- ========================= -->
+<!-- JAVASCRIPT -->
+<!-- ========================= -->
 <script>
 document.addEventListener('DOMContentLoaded', () => {
 
-    /* =========================================================
-       PANEL SWITCHING + HASH SUPPORT
-       ========================================================= */
+    /* ========================
+       SECTION SWITCHING
+    ======================== */
 
-    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabs = document.querySelectorAll('.tab-btn');
     const sections = document.querySelectorAll('main > section');
 
     function activateSection(target) {
-        tabButtons.forEach(btn => {
+        tabs.forEach(btn => {
             btn.classList.toggle('active', btn.dataset.target === target);
         });
 
@@ -350,181 +297,38 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Initial load (supports #about / #portfolio / #media ONLY)
-    const rawHash = window.location.hash.replace('#', '');
-    let initialTarget = 'about';
-
-    if (rawHash && document.getElementById(rawHash)) {
-        initialTarget = rawHash;
-    }
-
-    activateSection(initialTarget);
-
-    // Tab click handling
-    tabButtons.forEach(btn => {
+    tabs.forEach(btn => {
         btn.addEventListener('click', () => {
-            const target = btn.dataset.target;
-            history.replaceState(null, '', `#${target}`);
-            activateSection(target);
+            activateSection(btn.dataset.target);
         });
     });
 
-    /* =========================================================
-       VIDEO CONTROLS
-       ========================================================= */
+    activateSection('about');
 
-    const video = document.getElementById('profile-video');
-    if (video) {
-        const playToggle = document.getElementById('play-toggle');
-        const soundToggle = document.getElementById('sound-toggle');
-        const playIcon = document.getElementById('play-icon');
-        const soundIcon = document.getElementById('sound-icon');
 
-        const playImg = 'assets/icons/play-icon.png';
-        const pauseImg = 'assets/icons/pause-icon.png';
-        const muteImg = 'assets/icons/mute-icon.png';
-        const unmuteImg = 'assets/icons/unmute-icon.png';
+    /* ========================
+       COLLAPSIBLE TOOL CARDS
+    ======================== */
 
-        video.muted = true;
-        video.play();
-        playIcon.src = pauseImg;
-        soundIcon.src = muteImg;
+    const toggles = document.querySelectorAll('.collapse-toggle');
 
-        playToggle.addEventListener('click', () => {
-            if (video.paused) {
-                video.play();
-                playIcon.src = pauseImg;
+    toggles.forEach(btn => {
+        btn.addEventListener('click', () => {
+
+            const content = btn.nextElementSibling;
+
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+                btn.textContent = 'View Details';
             } else {
-                video.pause();
-                playIcon.src = playImg;
+                content.style.display = 'block';
+                btn.textContent = 'Hide Details';
             }
         });
-
-        soundToggle.addEventListener('click', () => {
-            video.muted = !video.muted;
-            soundIcon.src = video.muted ? muteImg : unmuteImg;
-        });
-    }
-
-    /* =========================================================
-       PORTFOLIO TAG FILTERING (UNCHANGED LOGIC)
-       ========================================================= */
-
-    const items = document.querySelectorAll('.portfolio-item');
-    const tagList = document.getElementById('tag-list');
-    const clearTagsBtn = document.getElementById('clear-tags');
-    const container = document.querySelector('.portfolio-images');
-
-    if (items.length) {
-        let activeTags = new Set();
-        let allTags = new Set();
-
-        items.forEach(item =>
-            item.dataset.tags.split(',').forEach(tag => allTags.add(tag))
-        );
-
-        allTags.forEach(tag => {
-            const btn = document.createElement('button');
-            btn.className = 'tag-btn';
-            btn.textContent = tag;
-            btn.dataset.tag = tag;
-            tagList.appendChild(btn);
-        });
-
-        tagList.addEventListener('click', e => {
-            if (!e.target.classList.contains('tag-btn')) return;
-            const tag = e.target.dataset.tag;
-            activeTags.has(tag) ? activeTags.delete(tag) : activeTags.add(tag);
-            e.target.classList.toggle('active');
-            filterProjects();
-        });
-
-        clearTagsBtn.addEventListener('click', () => {
-            activeTags.clear();
-            document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
-            filterProjects();
-        });
-
-        function filterProjects() {
-            const today = new Date();
-            const threshold = new Date();
-            threshold.setMonth(today.getMonth() - 6);
-
-            const visible = [];
-
-            items.forEach(item => {
-                const tags = item.dataset.tags.split(',');
-                const match = [...activeTags].every(tag => tags.includes(tag));
-
-                item.style.display = activeTags.size === 0 || match ? 'block' : 'none';
-
-                if (item.style.display === 'block') visible.push(item);
-
-                const itemDate = new Date(item.dataset.date);
-                let badge = item.querySelector('.new-badge');
-
-                if (itemDate >= threshold) {
-                    if (!badge) {
-                        badge = document.createElement('span');
-                        badge.className = 'new-badge';
-                        badge.textContent = 'NEW';
-                        item.querySelector('figure').appendChild(badge);
-                    }
-                } else if (badge) {
-                    badge.remove();
-                }
-            });
-
-            visible
-                .sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date))
-                .forEach(item => container.appendChild(item));
-        }
-
-        filterProjects();
-    }
-
-    /* =========================================================
-       MEDIA MODAL (CLEAN, SINGLE IMPLEMENTATION)
-       ========================================================= */
-
-    const thumbs = document.querySelectorAll('.media-thumb');
-    if (thumbs.length) {
-
-        const mediaModal = document.createElement('div');
-        mediaModal.className = 'media-modal';
-        mediaModal.innerHTML = `
-            <button class="media-modal-close" aria-label="Close">&times;</button>
-            <div class="media-modal-content">
-                <img id="media-modal-img" alt="">
-                <div id="media-modal-caption" class="caption"></div>
-            </div>
-        `;
-        document.body.appendChild(mediaModal);
-
-        const modalImg = mediaModal.querySelector('#media-modal-img');
-        const modalCaption = mediaModal.querySelector('#media-modal-caption');
-        const modalClose = mediaModal.querySelector('.media-modal-close');
-
-        thumbs.forEach(img => {
-            img.addEventListener('click', () => {
-                modalImg.src = img.src;
-                modalCaption.textContent = img.alt;
-                mediaModal.style.display = 'flex';
-            });
-        });
-
-        modalClose.addEventListener('click', () => {
-            mediaModal.style.display = 'none';
-        });
-
-        mediaModal.addEventListener('click', e => {
-            if (e.target === mediaModal) {
-                mediaModal.style.display = 'none';
-            }
-        });
-    }
+    });
 
 });
 </script>
 
-
+</body>
+</html>
