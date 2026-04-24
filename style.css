@@ -472,3 +472,61 @@ html {
     background: #2563eb; /* blue accent */
     border-radius: 2px;
 }
+
+/* =========================
+   15. ABOUT MOBILE FIX
+========================= */
+@media (max-width: 768px) {
+
+    .about-hero.enhanced {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
+        align-items: center;
+        margin-bottom: 28px;
+    }
+
+    .hero-right {
+        width: 100%;
+    }
+
+    .hero-right h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        margin-bottom: 16px;
+    }
+
+    .about-photo.large {
+        width: 220px;
+        max-width: 75vw;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 18px;
+        box-shadow: var(--shadow-card);
+    }
+
+    .timeline {
+        text-align: left;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .timeline p {
+        font-size: 0.95rem;
+        line-height: 1.55;
+        margin-bottom: 12px;
+    }
+
+    .readable {
+        max-width: 100%;
+    }
+
+    section {
+        padding: 42px 18px;
+    }
+}
