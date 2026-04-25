@@ -8,99 +8,9 @@
 
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="stylesheet" href="../style.css">
-
-<style>
-.project-container{
-    max-width:1100px;
-    margin:0 auto;
-    padding:50px 20px;
-    display:grid;
-    grid-template-columns:230px 1fr;
-    gap:28px;
-}
-
-.anchor-nav{
-    position:sticky;
-    top:110px;
-    align-self:start;
-}
-
-.anchor-nav ul{
-    list-style:none;
-    margin-top:12px;
-}
-
-.anchor-nav li{margin-bottom:10px;}
-
-.anchor-link{
-    text-decoration:none;
-    color:var(--text-secondary);
-    font-weight:600;
-}
-
-.anchor-link.active{color:var(--accent);}
-
-.project-content section{
-    display:block;
-    opacity:1;
-    transform:none;
-    padding:0;
-    margin:0 0 24px 0;
-    max-width:none;
-}
-
-.title-card,
-.content-section{
-    background:var(--white);
-    border:1px solid var(--border-soft);
-    border-radius:var(--radius);
-    padding:28px;
-    box-shadow:var(--shadow-soft);
-}
-
-.summary-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:18px;
-}
-
-.summary-card{
-    background:var(--bg-card);
-    border:1px solid var(--border-soft);
-    border-radius:14px;
-    padding:18px;
-}
-
-.project-image{
-    width:100%;
-    border-radius:14px;
-    margin-top:18px;
-}
-
-.project-button{
-    display:inline-block;
-    padding:12px 18px;
-    border-radius:28px;
-    background:linear-gradient(135deg,#1a5740,var(--accent-hover));
-    color:#fff;
-    text-decoration:none;
-    font-weight:700;
-}
-
-@media(max-width:900px){
-    .project-container{
-        grid-template-columns:1fr;
-    }
-
-    .anchor-nav{
-        position:relative;
-        top:auto;
-    }
-}
-</style>
 </head>
 
-<body>
+<body class="project-page">
 
 <header class="site-header">
     <div class="header-left">
@@ -109,139 +19,149 @@
 
     <div class="header-right">
         <nav class="nav-tabs" role="navigation">
-
-            <button class="tab-btn"
-                onclick="window.location.href='../index.html#about'">
-                About
-            </button>
-
-            <button class="tab-btn"
-                onclick="window.location.href='../index.html#portfolio'">
-                Tools
-            </button>
-
-            <button class="tab-btn"
-                onclick="window.location.href='../index.html#contact'">
-                Get in Touch
-            </button>
-
+            <button class="tab-btn" onclick="window.location.href='../index.html#about'">About</button>
+            <button class="tab-btn" onclick="window.location.href='../index.html#portfolio'">Tools</button>
+            <button class="tab-btn" onclick="window.location.href='../index.html#contact'">Get in Touch</button>
         </nav>
     </div>
 </header>
 
 <div class="project-container">
 
-<nav class="anchor-nav card">
-    <h3>Sections</h3>
-    <ul>
-        <li><a href="#overview" class="anchor-link active">Overview</a></li>
-        <li><a href="#results" class="anchor-link">Results</a></li>
-        <li><a href="#images" class="anchor-link">Charts</a></li>
-        <li><a href="#resources" class="anchor-link">Code</a></li>
-    </ul>
-</nav>
+    <nav class="anchor-nav card">
+        <h3>Sections</h3>
+        <ul>
+            <li><a href="#overview" class="anchor-link active">Overview</a></li>
+            <li><a href="#results" class="anchor-link">Results</a></li>
+            <li><a href="#images" class="anchor-link">Charts</a></li>
+            <li><a href="#resources" class="anchor-link">Code</a></li>
+        </ul>
+    </nav>
 
-<main class="project-content">
+    <main class="project-content">
 
-<section class="title-card">
-    <h1>YouTube Comment Analysis</h1>
-    <p class="subtitle">Python • API Data • NLP</p>
-</section>
+        <section>
+            <h1>YouTube Comment Analysis</h1>
+            <p class="subtitle">Python • API Data • NLP</p>
+        </section>
 
-<section id="overview" class="content-section">
-    <h2>Overview</h2>
+        <section id="overview">
+            <h2>Overview</h2>
 
-    <p>
-        Collected public YouTube comments from meal replacement review videos using YouTube API.
-    </p>
+            <p>
+                Collected public YouTube comments from meal replacement
+                review videos using the YouTube API.
+            </p>
 
-    <p>
-        Cleaned comment data and analyzed sentiment, recurring complaints, trust signals, and engagement patterns.
-    </p>
-</section>
+            <p>
+                Cleaned comment data and analyzed sentiment, recurring complaints,
+                trust signals, and engagement patterns.
+            </p>
 
-<section id="results" class="content-section">
-    <h2>Results</h2>
+            <p>
+                Identified side effects mentioned by users and their correlation
+                with engagement metrics.
+            </p>
+        </section>
 
-    <div class="summary-grid">
+        <section id="results">
+            <h2>Results</h2>
 
-        <div class="summary-card">
-            <h3>Source</h3>
-            <p>21 videos</p>
-        </div>
+            <div class="summary-grid">
 
-        <div class="summary-card">
-            <h3>Dataset</h3>
-            <p>684 comments</p>
-        </div>
+                <div class="summary-card">
+                    <h3>Source</h3>
+                    <p>21 videos</p>
+                </div>
 
-        <div class="summary-card">
-            <h3>Insight</h3>
-            <p>Negative experiences created stronger engagement</p>
-        </div>
+                <div class="summary-card">
+                    <h3>Dataset</h3>
+                    <p>684 comments</p>
+                </div>
 
-        <div class="summary-card">
-            <h3>Use Case</h3>
-            <p>Voice-of-customer analytics</p>
-        </div>
+                <div class="summary-card">
+                    <h3>Insight</h3>
+                    <p>Negative experiences created stronger engagement</p>
+                </div>
 
-    </div>
-</section>
+                <div class="summary-card">
+                    <h3>Use Case</h3>
+                    <p>Voice-of-customer analytics</p>
+                </div>
 
-<section id="images" class="content-section">
-    <h2>Charts</h2>
+            </div>
+        </section>
 
-    <img src="../assets/images/projects/01_temporal_patterns.png" class="project-image" alt="Temporal patterns">
+        <section id="images">
+            <h2>Charts</h2>
 
-    <img src="../assets/images/projects/05_comparative_analysis.png" class="project-image" alt="Comparative analysis">
+            <img src="../assets/images/projects/01_temporal_patterns.png"
+                 class="project-image"
+                 alt="Temporal patterns">
 
-    <img src="../assets/images/projects/06_correlation_matrix.png" class="project-image" alt="Correlation matrix">
-</section>
+            <img src="../assets/images/projects/05_comparative_analysis.png"
+                 class="project-image"
+                 alt="Comparative analysis">
 
-<section id="resources" class="content-section">
-    <h2>Code</h2>
+            <img src="../assets/images/projects/06_correlation_matrix.png"
+                 class="project-image"
+                 alt="Correlation matrix">
 
-    <a href="https://github.com/YuriyaJP/health-narrative-in-youtube-customer-review-analysis"
-       class="project-button"
-       target="_blank">
-       View GitHub Repository
-    </a>
-</section>
+            <img src="../assets/images/projects/side_effects_summary.png"
+                 class="project-image"
+                 alt="Side effects">
+        </section>
 
-</main>
+        <section id="resources">
+            <h2>Code</h2>
+
+            <a href="https://github.com/YuriyaJP/health-narrative-in-youtube-customer-review-analysis"
+               class="project-button"
+               target="_blank">
+               View GitHub Repository
+            </a>
+        </section>
+
+    </main>
+
 </div>
 
-<footer style="text-align:center;padding:30px;">
-&copy; 2026 Made by Yulia Chekhovska
+<footer style="text-align:center; padding:30px;">
+    &copy; 2026 Made by Yulia Chekhovska
 </footer>
 
 <script>
-document.querySelectorAll('.anchor-link').forEach(link=>{
-    link.addEventListener('click',e=>{
+document.querySelectorAll('.anchor-link').forEach(link => {
+    link.addEventListener('click', e => {
         e.preventDefault();
-        const id=link.getAttribute('href').substring(1);
-        document.getElementById(id).scrollIntoView({behavior:'smooth'});
+
+        const id = link.getAttribute('href').substring(1);
+
+        document.getElementById(id).scrollIntoView({
+            behavior: 'smooth'
+        });
     });
 });
 
-const sections=document.querySelectorAll('.content-section');
-const links=document.querySelectorAll('.anchor-link');
+const sections = document.querySelectorAll('.project-content section[id]');
+const links = document.querySelectorAll('.anchor-link');
 
-window.addEventListener('scroll',()=>{
-    let current='';
+window.addEventListener('scroll', () => {
+    let current = '';
 
-    sections.forEach(section=>{
-        const top=section.offsetTop-140;
-        const height=section.offsetHeight;
+    sections.forEach(section => {
+        const top = section.offsetTop - 140;
+        const height = section.offsetHeight;
 
-        if(scrollY>=top && scrollY<top+height){
-            current=section.id;
+        if (scrollY >= top && scrollY < top + height) {
+            current = section.id;
         }
     });
 
-    links.forEach(link=>{
+    links.forEach(link => {
         link.classList.remove('active');
-        if(link.getAttribute('href')==='#'+current){
+
+        if (link.getAttribute('href') === '#' + current) {
             link.classList.add('active');
         }
     });

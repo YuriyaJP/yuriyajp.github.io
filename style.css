@@ -531,3 +531,148 @@ html {
     }
 }
 
+/* =========================
+   16. PROJECT PAGE SYSTEM
+========================= */
+
+.project-container{
+    max-width:1100px;
+    margin:0 auto;
+    padding:50px 20px;
+    display:grid;
+    grid-template-columns:230px 1fr;
+    gap:28px;
+}
+
+.project-content{
+    min-width:0;
+}
+
+.project-content section{
+    display:block;
+    opacity:1;
+    transform:none;
+    padding:0;
+    margin:0 0 24px 0;
+    max-width:none;
+}
+
+/* Sidebar */
+.anchor-nav{
+    position:sticky;
+    top:110px;
+    align-self:start;
+}
+
+.anchor-nav ul{
+    list-style:none;
+    padding:0;
+    margin-top:12px;
+}
+
+.anchor-nav li{
+    margin-bottom:10px;
+}
+
+.anchor-link{
+    text-decoration:none;
+    color:var(--text-secondary);
+    font-weight:600;
+    transition:var(--trans);
+}
+
+.anchor-link:hover{
+    color:var(--text-primary);
+}
+
+.anchor-link.active{
+    color:var(--accent);
+}
+
+/* Content Cards */
+.title-card,
+.content-section{
+    background:var(--white);
+    border:1px solid var(--border-soft);
+    border-radius:var(--radius);
+    padding:28px;
+    box-shadow:var(--shadow-soft);
+}
+
+/* Metric cards */
+.summary-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:18px;
+    align-items:start;
+}
+
+.summary-card{
+    background:var(--bg-card);
+    border:1px solid var(--border-soft);
+    border-radius:14px;
+    padding:18px;
+    min-width:0;
+}
+
+.summary-card h3,
+.summary-card p,
+.summary-card li,
+.summary-card ul{
+    max-width:none;
+    width:100%;
+    overflow-wrap:anywhere;
+    word-break:break-word;
+}
+
+.summary-card ul{
+    padding-left:18px;
+}
+
+/* Images */
+.project-image{
+    width:100%;
+    border-radius:14px;
+    margin-top:18px;
+}
+
+/* Buttons */
+.project-button{
+    display:inline-block;
+    padding:12px 18px;
+    border-radius:28px;
+    background:linear-gradient(135deg,#1a5740,var(--accent-hover));
+    color:#fff;
+    text-decoration:none;
+    font-weight:700;
+    margin-right:10px;
+    margin-bottom:10px;
+}
+
+body.project-page .project-content section{
+    display:block;
+    opacity:1;
+    transform:none;
+}
+
+body.project-page .project-container{
+    max-width:1100px;
+    margin:0 auto;
+}
+
+/* Mobile */
+@media(max-width:900px){
+
+    .project-container{
+        grid-template-columns:1fr;
+    }
+
+    .anchor-nav{
+        position:relative;
+        top:auto;
+    }
+
+    .summary-grid{
+        grid-template-columns:1fr;
+    }
+}

@@ -9,98 +9,9 @@
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="stylesheet" href="../style.css">
 
-<style>
-.project-container{
-    max-width:1100px;
-    margin:0 auto;
-    padding:50px 20px;
-    display:grid;
-    grid-template-columns:230px 1fr;
-    gap:28px;
-}
-
-.anchor-nav{
-    position:sticky;
-    top:110px;
-    align-self:start;
-}
-
-.anchor-nav ul{
-    list-style:none;
-    margin-top:12px;
-}
-
-.anchor-nav li{margin-bottom:10px;}
-
-.anchor-link{
-    text-decoration:none;
-    color:var(--text-secondary);
-    font-weight:600;
-}
-
-.anchor-link.active{color:var(--accent);}
-
-.project-content section{
-    display:block;
-    opacity:1;
-    transform:none;
-    padding:0;
-    margin:0 0 24px 0;
-    max-width:none;
-}
-
-.title-card,
-.content-section{
-    background:var(--white);
-    border:1px solid var(--border-soft);
-    border-radius:var(--radius);
-    padding:28px;
-    box-shadow:var(--shadow-soft);
-}
-
-.summary-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:18px;
-}
-
-.summary-card{
-    background:var(--bg-card);
-    border:1px solid var(--border-soft);
-    border-radius:14px;
-    padding:18px;
-}
-
-.project-image{
-    width:100%;
-    border-radius:14px;
-    margin-top:18px;
-}
-
-.project-button{
-    display:inline-block;
-    padding:12px 18px;
-    border-radius:28px;
-    background:linear-gradient(135deg,#1a5740,var(--accent-hover));
-    color:#fff;
-    text-decoration:none;
-    font-weight:700;
-}
-
-@media(max-width:900px){
-    .project-container{
-        grid-template-columns:1fr;
-    }
-
-    .anchor-nav{
-        position:relative;
-        top:auto;
-    }
-}
-</style>
 </head>
 
-<body>
+<body class="project-page">
 
 <header class="site-header">
     <div class="header-left">
@@ -108,30 +19,17 @@
     </div>
 
     <div class="header-right">
-        <nav class="nav-tabs" role="navigation">
-
-            <button class="tab-btn"
-                onclick="window.location.href='../index.html#about'">
-                About
-            </button>
-
-            <button class="tab-btn"
-                onclick="window.location.href='../index.html#portfolio'">
-                Tools
-            </button>
-
-            <button class="tab-btn"
-                onclick="window.location.href='../index.html#contact'">
-                Get in Touch
-            </button>
-
+        <nav class="nav-tabs">
+            <button class="tab-btn" onclick="window.location.href='../index.html#about'">About</button>
+            <button class="tab-btn" onclick="window.location.href='../index.html#portfolio'">Tools</button>
+            <button class="tab-btn" onclick="window.location.href='../index.html#contact'">Get in Touch</button>
         </nav>
     </div>
 </header>
 
 <div class="project-container">
 
-    <nav class="anchor-nav">
+    <nav class="anchor-nav card">
         <h3>On This Page</h3>
         <ul>
             <li><a href="#overview" class="anchor-link active">Overview</a></li>
@@ -144,30 +42,31 @@
 
     <main class="project-content">
 
-        <section class="title-card">
+        <section>
             <h1>Youth Suicide Prevention Cost-Effectiveness</h1>
-            <p class="subtitle">
-                Public Policy • Python • Data Modelling • Impact Evaluation
-            </p>
+            <p class="subtitle">Public Policy • Python • Data Modelling • Impact Evaluation</p>
         </section>
 
-        <section id="overview" class="content-section">
+        <section id="overview">
             <h2>Overview</h2>
 
             <p>
-                Independent impact analysis using Japanese police suicide statistics and nonprofit outreach data. Extracted police suicide data from 120+ Japanese PDF reports, built a structured database, and modelled hotline, school outreach, and workshop impact under uncertainty.
+                Independent impact analysis using Japanese police suicide statistics and nonprofit outreach data.
+                Extracted police suicide data from 120+ Japanese PDF reports, built a structured database,
+                and modelled hotline, school outreach, and workshop impact under uncertainty.
             </p>
 
             <p>
-                Goal: estimate how many youth lives may be saved through workshops, hotline support, and school awareness outreach.
+                Goal: estimate how many youth lives may be saved through workshops,
+                hotline support, and school awareness outreach.
             </p>
 
             <img src="../assets/images/projects/japan-police-logo.png"
-                 alt="Japan Police Statistics"
-                 style="width:100%; border-radius:14px; margin-top:18px;">
+                 class="project-image"
+                 alt="Japan Police Statistics">
         </section>
 
-        <section id="findings" class="content-section">
+        <section id="findings">
             <h2>Key Findings</h2>
 
             <div class="summary-grid">
@@ -199,7 +98,7 @@
             </div>
         </section>
 
-        <section id="charts" class="content-section">
+        <section id="charts">
             <h2>Interactive Charts</h2>
 
             <iframe src="../pages/charts/suicide_trends_unified.html"
@@ -215,7 +114,7 @@
                     frameborder="0"></iframe>
         </section>
 
-        <section id="model" class="content-section">
+        <section id="model">
             <h2>Model Logic</h2>
 
             <div class="summary-grid">
@@ -247,27 +146,20 @@
             </p>
         </section>
 
-        <section id="resources" class="content-section">
+        <section id="resources">
             <h2>Resources</h2>
 
             <a href="https://www.npa.go.jp/publications/statistics/safetylife/jisatsu.html"
                class="project-button"
-               target="_blank">
-               Japan Police Data
-            </a>
+               target="_blank">Japan Police Data</a>
 
             <a href="https://github.com/YuriyaJP/Public-Health-Data-Engineering-Project-Japan-Suicide-Statistics-Pipeline"
                class="project-button"
-               target="_blank">
-               View Code
-            </a>
+               target="_blank">View Code</a>
 
             <a href="https://forum.effectivealtruism.org/posts/Sg7ovepZcmY8GKpo3/how-i-attempted-to-measure-the-impact-of-my-japan-nonprofit"
                class="project-button"
-               target="_blank">
-               Full Article
-            </a>
-
+               target="_blank">Full Article</a>
         </section>
 
     </main>
@@ -278,39 +170,6 @@
     &copy; 2026 Made by Yulia Chekhovska
 </footer>
 
-<script>
-document.querySelectorAll('.anchor-link').forEach(link=>{
-    link.addEventListener('click',function(e){
-        e.preventDefault();
-        const id=this.getAttribute('href').substring(1);
-        document.getElementById(id).scrollIntoView({behavior:'smooth'});
-    });
-});
-
-const sections=document.querySelectorAll('.content-section');
-const links=document.querySelectorAll('.anchor-link');
-
-window.addEventListener('scroll',()=>{
-    let current='';
-
-    sections.forEach(section=>{
-        const top=section.offsetTop-140;
-        const height=section.offsetHeight;
-
-        if(scrollY>=top && scrollY<top+height){
-            current=section.id;
-        }
-    });
-
-    links.forEach(link=>{
-        link.classList.remove('active');
-
-        if(link.getAttribute('href')==='#'+current){
-            link.classList.add('active');
-        }
-    });
-});
-</script>
-
 </body>
+
 </html>
