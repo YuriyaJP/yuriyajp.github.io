@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>YouTube Comment Analysis | Yulia Chekhovska</title>
+
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="stylesheet" href="../style.css">
+
+<style>
+.project-container{
+    max-width:1100px;
+    margin:0 auto;
+    padding:50px 20px;
+    display:grid;
+    grid-template-columns:230px 1fr;
+    gap:28px;
+}
+
+.anchor-nav{
+    position:sticky;
+    top:110px;
+    align-self:start;
+}
+
+.anchor-nav ul{
+    list-style:none;
+    margin-top:12px;
+}
+
+.anchor-nav li{margin-bottom:10px;}
+
+.anchor-link{
+    text-decoration:none;
+    color:var(--text-secondary);
+    font-weight:600;
+}
+
+.anchor-link.active{color:var(--accent);}
+
+.project-content section{
+    display:block;
+    opacity:1;
+    transform:none;
+    padding:0;
+    margin:0 0 24px 0;
+    max-width:none;
+}
+
+.title-card,
+.content-section{
+    background:var(--white);
+    border:1px solid var(--border-soft);
+    border-radius:var(--radius);
+    padding:28px;
+    box-shadow:var(--shadow-soft);
+}
+
+.summary-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;
+}
+
+.summary-card{
+    background:var(--bg-card);
+    border:1px solid var(--border-soft);
+    border-radius:14px;
+    padding:18px;
+}
+
+.project-image{
+    width:100%;
+    border-radius:14px;
+    margin-top:18px;
+}
+
+.project-button{
+    display:inline-block;
+    padding:12px 18px;
+    border-radius:28px;
+    background:linear-gradient(135deg,#1a5740,var(--accent-hover));
+    color:#fff;
+    text-decoration:none;
+    font-weight:700;
+}
+
+@media(max-width:900px){
+    .project-container{
+        grid-template-columns:1fr;
+    }
+
+    .anchor-nav{
+        position:relative;
+        top:auto;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="header-left">
+        <h2 style="margin:0;">Yulia Chekhovska</h2>
+    </div>
+
+    <div class="header-right">
+        <nav class="nav-tabs" role="navigation">
+
+            <button class="tab-btn"
+                onclick="window.location.href='../index.html#about'">
+                About
+            </button>
+
+            <button class="tab-btn"
+                onclick="window.location.href='../index.html#portfolio'">
+                Tools
+            </button>
+
+            <button class="tab-btn"
+                onclick="window.location.href='../index.html#contact'">
+                Get in Touch
+            </button>
+
+        </nav>
+    </div>
+</header>
+
+<div class="project-container">
+
+    <nav class="anchor-nav">
+        <h3>On This Page</h3>
+        <ul>
+            <li><a href="#overview" class="anchor-link active">Overview</a></li>
+            <li><a href="#findings" class="anchor-link">Key Findings</a></li>
+            <li><a href="#charts" class="anchor-link">Charts</a></li>
+            <li><a href="#model" class="anchor-link">Model</a></li>
+            <li><a href="#resources" class="anchor-link">Resources</a></li>
+        </ul>
+    </nav>
+
+    <main class="project-content">
+
+        <section class="title-card">
+            <h1>Youth Suicide Prevention Cost-Effectiveness</h1>
+            <p class="subtitle">
+                Public Policy • Python • Data Modelling • Impact Evaluation
+            </p>
+        </section>
+
+        <section id="overview" class="content-section">
+            <h2>Overview</h2>
+
+            <p>
+                Independent impact analysis using Japanese police suicide statistics and nonprofit outreach data. Extracted police suicide data from 120+ Japanese PDF reports, built a structured database, and modelled hotline, school outreach, and workshop impact under uncertainty.
+            </p>
+
+            <p>
+                Goal: estimate how many youth lives may be saved through workshops, hotline support, and school awareness outreach.
+            </p>
+
+            <img src="../assets/images/projects/japan-police-logo.png"
+                 alt="Japan Police Statistics"
+                 style="width:100%; border-radius:14px; margin-top:18px;">
+        </section>
+
+        <section id="findings" class="content-section">
+            <h2>Key Findings</h2>
+
+            <div class="summary-grid">
+
+                <div class="summary-card">
+                    <h3>National Context</h3>
+                    <p>799 youth suicides in Japan (ages 10–19)</p>
+                    <p>Rate: 7.26 per 100,000</p>
+                </div>
+
+                <div class="summary-card">
+                    <h3>Program Reach</h3>
+                    <p>12,635 youths reached</p>
+                    <p>Schools, workshops, hotline</p>
+                </div>
+
+                <div class="summary-card">
+                    <h3>Estimated Impact</h3>
+                    <p>0.23 lives saved / year</p>
+                    <p>~1 life every 4.4 years</p>
+                </div>
+
+                <div class="summary-card">
+                    <h3>Cost Efficiency</h3>
+                    <p>15.3 DALYs averted</p>
+                    <p>¥724k per DALY</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="charts" class="content-section">
+            <h2>Interactive Charts</h2>
+
+            <iframe src="../pages/charts/suicide_trends_unified.html"
+                    width="100%"
+                    height="620"
+                    frameborder="0"></iframe>
+
+            <br><br>
+
+            <iframe src="../pages/charts/economic_loss_by_age.html"
+                    width="100%"
+                    height="560"
+                    frameborder="0"></iframe>
+        </section>
+
+        <section id="model" class="content-section">
+            <h2>Model Logic</h2>
+
+            <div class="summary-grid">
+
+                <div class="summary-card">
+                    <h3>Step 1</h3>
+                    <p>Estimate baseline suicide risk from national statistics.</p>
+                </div>
+
+                <div class="summary-card">
+                    <h3>Step 2</h3>
+                    <p>Estimate youths reached across all channels.</p>
+                </div>
+
+                <div class="summary-card">
+                    <h3>Step 3</h3>
+                    <p>Apply 25% intervention effectiveness assumption.</p>
+                </div>
+
+                <div class="summary-card">
+                    <h3>Step 4</h3>
+                    <p>Convert lives saved into DALYs and cost-effectiveness.</p>
+                </div>
+
+            </div>
+
+            <p style="margin-top:18px;">
+                Conservative model with explicit assumptions. Designed for decision-makers and funders.
+            </p>
+        </section>
+
+        <section id="resources" class="content-section">
+            <h2>Resources</h2>
+
+            <a href="https://www.npa.go.jp/publications/statistics/safetylife/jisatsu.html"
+               class="project-button"
+               target="_blank">
+               Japan Police Data
+            </a>
+
+            <a href="https://github.com/YuriyaJP/Public-Health-Data-Engineering-Project-Japan-Suicide-Statistics-Pipeline"
+               class="project-button"
+               target="_blank">
+               View Code
+            </a>
+
+            <a href="https://forum.effectivealtruism.org/posts/Sg7ovepZcmY8GKpo3/how-i-attempted-to-measure-the-impact-of-my-japan-nonprofit"
+               class="project-button"
+               target="_blank">
+               Full Article
+            </a>
+
+        </section>
+
+    </main>
+
+</div>
+
+<footer style="text-align:center; padding:30px;">
+    &copy; 2026 Made by Yulia Chekhovska
+</footer>
+
+<script>
+document.querySelectorAll('.anchor-link').forEach(link=>{
+    link.addEventListener('click',function(e){
+        e.preventDefault();
+        const id=this.getAttribute('href').substring(1);
+        document.getElementById(id).scrollIntoView({behavior:'smooth'});
+    });
+});
+
+const sections=document.querySelectorAll('.content-section');
+const links=document.querySelectorAll('.anchor-link');
+
+window.addEventListener('scroll',()=>{
+    let current='';
+
+    sections.forEach(section=>{
+        const top=section.offsetTop-140;
+        const height=section.offsetHeight;
+
+        if(scrollY>=top && scrollY<top+height){
+            current=section.id;
+        }
+    });
+
+    links.forEach(link=>{
+        link.classList.remove('active');
+
+        if(link.getAttribute('href')==='#'+current){
+            link.classList.add('active');
+        }
+    });
+});
+</script>
+
+</body>
+</html>
