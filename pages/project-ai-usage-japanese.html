@@ -14,12 +14,6 @@
 <header class="site-header" role="banner">
     <div class="header-left">
         <div class="video-wrapper">
-            <video id="profile-video" class="profile-media"
-                   autoplay muted playsinline
-                   poster="../assets/images/profile/yulia.jpg">
-                <source src="../assets/video/portfolio.mp4" type="video/mp4">
-                <img src="../assets/images/profile/yulia.jpg" alt="Profile image of Yulia Chekhovska">
-            </video>
         </div>
         <div class="control-btn-wrapper" role="group">
             <button id="play-toggle" class="control-btn">
@@ -31,12 +25,9 @@
         </div>
     </div>
     <div class="header-right">
-        <nav class="nav-tabs">
-            <a href="../index.html#about" class="tab-btn">About</a>
-            <a href="../index.html#portfolio" class="tab-btn">Portfolio</a>
-            <a href="../index.html#media" class="tab-btn">Media</a>
-            <a href="../index.html#contact" class="tab-btn">Contact</a>
-        </nav>
+        <button class="tab-btn" onclick="window.location.href='../index.html#home'">Home</button>
+        <button class="tab-btn" onclick="window.location.href='../index.html#projects'">Projects</button>
+        <button class="tab-btn" onclick="window.location.href='../index.html#contact'">Contact</button>
     </div>
 </header>
 
