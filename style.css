@@ -194,10 +194,9 @@ section.active-section {
 }
 
 .hero-photo {
-    width: 120px;
-    height: 120px;
+    width: 400px;     
+    height: auto;       
     border-radius: 50%;
-    object-fit: cover;
 }
 
 .hero-subtitle {
