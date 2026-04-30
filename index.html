@@ -1,281 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Yulia Chekhovska</title>
-
+<title>© 2026 Yulia Chekhovska</title>
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/svg+xml" href="favicon.png">
 </head>
 
 <body>
-<div class="projects-section full-bleed">
-<header class="site-header" role="banner">
+
+<!-- =================== HEADER =================== -->
+<header class="site-header">
     <div class="header-left">
         <h1 class="site-title">Yulia Chekhovska</h1>
     </div>
-    
-    <div class="hero-cta">
-        <a href="https://calendly.com/julia-chekhovskaua/consultancy"
-        class="btn big">
-            Book Consultation
-        </a>
-    </div>
-
-    <div class="header-right">
-        <nav class="nav-tabs" role="navigation">
-            <button data-target="about" class="tab-btn active">About</button>
-            <button data-target="portfolio" class="tab-btn">Tools</button>
-            <button data-target="contact" class="tab-btn">Get in Touch</button>
-        </nav>
-    </div>
+    <nav class="header-right">
+        <button data-target="home" class="tab-btn active">Home</button>
+        <button data-target="research" class="tab-btn">Research</button>
+        <button data-target="projects" class="tab-btn">Projects</button>
+        <button data-target="contact" class="tab-btn">Contact</button>
+    </nav>
 </header>
-
 
 <main>
 
-<!-- ========================= -->
-<!-- PORTFOLIO = TOOLS -->
-<!-- ========================= -->
-<section id="portfolio">
-
-    <h2>Tools & Resources</h2>
-
-    <div class="tools-grid">
-
-        <!-- PRODUCT 1 -->
-        <div class="tool-card">
-            <div class="tool-header">
-                <h3>M&E Framework Consultation</h3>
-                <span class="price"></span>
+<!-- =================== HOME / HERO =================== -->
+<section id="home" class="active-section">
+    
+    <div class="hero-section">
+        <div class="hero-content">
+            <div class="hero-photo-container">
+                <img src="assets/images/profile/yulia.jpg" alt="Yulia Chekhovska" class="hero-photo">
             </div>
-
-            <p class="tool-outcome">
-                Building monitoring systems that track progress.
-            </p>
-            <button class="btn secondary collapse-toggle">View Details</button>
-
-            <div class="tool-content">
-                <ul>
-                    <li>Framework design</li>
-                    <li>Monitoring tracker</li>
-                </ul>
-
-                <a href="https://calendly.com/julia-chekhovskaua/consultancy"
-                   class="buy-btn">Book a Call</a>
+            
+            <div class="hero-text">
+                <h1>Yulia Chekhovska</h1>
+                
+                <p class="hero-subtitle">
+                    Social Impact Analyst working on mental health programme evaluation. Currently working at Tokyo English Lifeline (Japan's leading mental health nonprofit).
+                </p>
+                
+                <p class="hero-location">
+                    Available for consulting • Working remotely worldwide
+                </p>
             </div>
         </div>
+    </div>
 
+    <!-- EXPERTISE GRID -->
+    <div class="section-block">
+        
+        <h2>Research Focus</h2>
 
-        <!-- PRODUCT 2 (MOST POPULAR) -->
-        <div class="tool-card">
+        <div class="expertise-grid">
 
-            <div class="tool-header">
-                <h3>Cost-Effectiveness Analysis Consultation</h3>
-                <span class="price"></span>
-            </div>
-
-            <p class="tool-outcome">
-                For orgs that need to analyse cost-effectivness of their own interventions.
-            </p>
-
-            <button class="btn secondary collapse-toggle">View Details</button>
-
-            <div class="tool-content">
+            <div class="expertise-card card">
+                <h3>Cost-Effectiveness Analysis</h3>
                 <ul>
-                    <li>Understanding the cost-effectiveness framework</li>
-                    <li>Methodology for conducting CEA</li>
-                    <li>Real example: suicide prevention cost analysis</li>
+                    <li>DALY-based impact modelling</li>
+                    <li>Intervention comparison under uncertainty</li>
+                    <li>Sensitivity analysis and assumption testing</li>
                 </ul>
-
-                <a href="https://calendly.com/julia-chekhovskaua/consultancy"
-                   class="buy-btn">Book a Call</a>
-            </div>
-        </div>
-
-
-        <!-- PRODUCT 3 -->
-        <div class="tool-card">
-            <div class="tool-header">
-                <h3>Building Salesforce Integrations for Operations</h3>
-                <span class="price"></span>
             </div>
 
-            <p class="tool-outcome">
-                Set up Salesforce admin objects for integration with operations.
-            </p>
-
-            <button class="btn secondary collapse-toggle">View Details</button>
-
-            <div class="tool-content">
+            <div class="expertise-card card">
+                <h3>Evidence Synthesis</h3>
                 <ul>
-                    <li>Custom Salesforce objects for tracking operations</li>
-                    <li>Centralising sheets to a single source of truth</li>
-                    <li>Maintaining data integrity across systems</li>
+                    <li>Integration of heterogeneous data sources</li>
+                    <li>Critical evaluation of empirical studies</li>
+                    <li>Working with incomplete or uncertain data</li>
                 </ul>
-
-                <a href="https://calendly.com/julia-chekhovskaua/consultancy"
-                   class="buy-btn">Book a Call</a>
             </div>
-        </div>
 
+            <div class="expertise-card card">
+                <h3>Quantitative Methods</h3>
+                <ul>
+                    <li>Python (data extraction, analysis, NLP)</li>
+                    <li>SQL / SOQL (data querying, reporting)</li>
+                    <li>Statistical modelling and inference</li>
+                </ul>
+            </div>
+
+            <div class="expertise-card card">
+                <h3>Domain</h3>
+                <ul>
+                    <li>Mental health and suicide prevention</li>
+                    <li>Service delivery and programme evaluation</li>
+                    <li>Wellbeing measurement</li>
+                </ul>
+            </div>
+
+        </div>
+        </div>
+    </div>
+
+    <!-- BACKGROUND -->
+    <div class="section-block">
+        <h2>Background</h2>
+        
+        <div class="background-compact card">
+            <p><strong>Current:</strong> Impact analysis at mental health nonprofit, conducting 
+            cost-effectiveness research on wellbeing interventions and programme evaluations</p>
+            
+            <p><strong>Education:</strong> Research Fellowship in Behavioural Analysis (Chiba University) | 
+            MA German Linguistics (Heinrich Heine University Düsseldorf, Germany) | 
+            BA Psycholinguistics (Kyiv National University, Ukraine) | Data Science & AI (Le Wagon)</p>
+            
+            <p><strong>Technical:</strong> Python, SOQL for Salesforce, Excel, basic R</p>
+            
+            <p><strong>Languages:</strong> English (fluent), Ukrainian (native), German (C1), 
+            Japanese (N2/business level)</p>
+            
+            <p><strong>Research Focus:</strong> Mental health intervention effectiveness, wellbeing measurement, willingness to communicate non-parametric quantitative analysis</p>
+        </div>
     </div>
 
 </section>
 
-<section id="about" class="active-section">
-
-
-        <!-- HERO -->
-    <div class="about-hero enhanced">
-
-        <div class="hero-left">
-            <img src="assets/images/profile/yulia.jpg" 
-                class="about-photo large"
-                alt="Yulia Chekhovska">
+<!-- =================== RESEARCH =================== -->
+<section id="research">
+    
+    <h2>Published Research</h2>
+    
+    <div class="research-featured card">
+        <h3>Cost-Effectiveness of Youth Suicide Prevention in Japan</h3>
+        <p class="research-meta">Published on Effective Altruism Forum, 2025</p>
+        
+        <p class="research-desc">
+            Quantitative evaluation modeling intervention impact using DALYs averted, 
+            cost per life saved, and sensitivity analysis. Scraped data from 
+            24+ fragmented government data sources (National Police Agency reports) 
+            to build cost-effectiveness estimates for hotline services, school outreach, 
+            and community workshops.
+        </p>
+        
+        <div class="research-methods">
+            <strong>Methods:</strong> Fermi estimation, data extraction from PDFs using 
+            Python, analysed yearly trends and sources of suicide per age group, regional disparities
         </div>
-
-        <div class="hero-right">
-            <h1>
-                Hi! I'm Yulia.
-            </h1>
-
-            <p class="subtitle">
-                I design evaluation systems and cost-effectiveness models that help organisations make better decisions with imperfect data.
-            </p>
-            <div class="timeline">
-
-                <p><strong>2017</strong>: I earned a BA in psycholinguistics (Taras Shevchenko National University of Kyiv), researching how societies respond to major socioeconomic shifts and reshape their everyday language over generations from the 1950s to 2016.</p>
-
-                <p><strong>2018-2021</strong>: MA in Computational Linguistics (Heinrich Heine University Düsseldorf), seminars in Python. Fluent in German (C1 level).</p>
-
-                <p><strong>2022</strong>: Double MA in Statistical Methods in Behavioural Science (Chiba University), fluent in Japanese (B2 level).</p>
-                <p><strong>2024</strong>: Global Voyage on a cruise ship. Travelled around 4 continents with a peacekeeping mission.</p>
-
-                <p><strong>2025</strong>: Finished an intensive Data Science & AI training (Le Wagon Tokyo). Started working at a mental health nonprofit in Tokyo.</p>
-                <p><strong>2025</strong>: Published cost-effectiveness research on youth suicide prevention programme using police suicide public data to estimate intervention impact. (EA Forum)</p>
-
-                <p><strong>How I work</strong>: Remote-friendly, international, fast-learning, pragmatic, and comfortable operating across technical and non-technical teams.</p>
-            </div>
+        
+        <div class="research-impact">
+            <strong>Key Approach:</strong> Modeled three intervention 
+            types (hotlines, school programs, workshops) and their impact, calculated cost per DALY under 
+            multiple persistence assumptions
         </div>
-
-    </div>
-
-    <!-- CONTENT CARD -->
-    <article class="about-card">
-
-    </article>
-
-    <!-- PROJECTS -->
-    <div class="projects-section">
-
-        <h3>Selected Work</h3>
-
-        <div class="projects-grid">
-
-            <!-- PROJECT 1 -->
-            <div class="project-card card">
-                <img src="assets/images/projects/cost-effectiveness.png" alt="Impact model">
-
-                <h4>Youth Suicide Prevention Impact Model</h4>
-
-                <p class="project-outcome">
-                    Built a cost-effectiveness model estimating lives saved and cost per DALY for youth mental health interventions in Japan.
-                </p>
-
-                <p class="project-desc">
-                    Extracted police suicide data from 120+ Japanese PDF reports, built a structured database, and modelled hotline, school outreach, and workshop impact.
-                </p>
-                <a href="pages/project-cost-effectiveness-modeling.html" class="btn secondary" style="margin-top:auto;">
-                    View Project
-                </a>
-            </div>
-
-            <!-- PROJECT 2 -->
-            <div class="project-card card">
-                <img src="assets/images/projects/feedback.png" alt="Education NLP">
-
-                <h4>Education Feedback NLP Evaluation</h4>
-
-                <p class="project-outcome">
-                    Analyzed 300+ student responses to identify which learning projects increased or reduced satisfaction.
-                </p>
-
-                <p class="project-desc">
-                    Used BERT sentiment analysis and topic categorisation on Japanese free-text feedback, then recommended replacing a low-performing curriculum component.
-                </p>
-                <a href="pages/project-feedback.html" class="btn secondary" style="margin-top:auto;">
-                    View Project
-                </a>
-            </div>
-
-            <!-- PROJECT 3 -->
-            <div class="project-card card">
-                <img src="assets/images/projects/salesforce.png" alt="Salesforce system">
-
-                <h4>Nonprofit Revenue & Reporting Automation</h4>
-
-                <p class="project-outcome">
-                    Built live reporting systems across donations, sponsorships, outreach sales, events, and partnerships.
-                </p>
-
-                <p class="project-desc">
-                    Managed over 6,000 donations and ~2,000 donor records. Connected Salesforce, Google Sheets, Apps Script, and internal trackers to automate quarterly reporting and contact expiry reminders.
-                </p>
-            </div>
-
-
-            <!-- PROJECT 4 -->
-            <div class="project-card card">
-                <img src="assets/images/projects/donor-preview.png" alt="YouTube comment analysis">
-
-                <h4>Health Review YouTube Comment Analysis</h4>
-
-                <p class="project-outcome">
-                    Built a Python pipeline collecting and analyzing YouTube comments from meal replacement product review channels.
-                </p>
-
-                <p class="project-desc">
-                    Used public API data to collect audience feedback into dataset for exploring complaint patterns, satisfaction themes, and consumer trust signals.
-                </p>
-
-                <a href="pages/project-youtube-comment-analysis.html" class="btn secondary" style="margin-top:auto;">
-                    View Project
-                </a>
-            </div>
-
-            <!-- PROJECT 5 -->
-            <div class="project-card card">
-                <img src="assets/images/projects/partnerships.png" alt="Global outreach">
-
-                <h4>International Stakeholder Engagement</h4>
-
-                <p class="project-outcome">
-                    Delivered 50+ workshops and presentations across 18 countries to NGOs, universities, embassies, and policy institutions.
-                </p>
-
-                <p class="project-desc">
-                    Presented in English and Japanese on conflict, propaganda, nuclear nonproliferation, and humanitarian issues, while supporting fundraising and partnership development.
-                </p>
-                <a href="https://peaceboat.org/english/project/ukraine-youth-ambassadors" class="btn secondary" style="margin-top:auto;">
-                    Read Article
-                </a>
-            </div>
-
-        </div>
-
+        
+        <a href="https://forum.effectivealtruism.org/posts/Sg7ovepZcmY8GKpo3/" 
+           class="btn" target="_blank">
+            Read Full Analysis →
+        </a>
     </div>
 
 </section>
 
-
+<!-- =================== PROJECTS =================== -->
+<section id="projects">
+    
+    <h2>Selected Projects</h2>
+    
+    <div class="projects-grid">
+        
+        <!-- PROJECT 1 -->
+        <div class="project-card card">
+            <img src="assets/images/projects/cost-effectiveness.png" alt="EA Model">
+            <div class="project-content-block">
+                <h4>Mental Health Intervention Cost-Effectiveness Model</h4>
+                
+                <p class="project-outcome">
+                <strong>Outcome:</strong> Built a model estimating cost per DALY across three interventions of suicide prevention programme
+                </p>
+                
+                <p class="project-methods">
+                    <strong>Methods:</strong> Extracted suicide data from 24+ Japanese 
+                    government PDFs using Python, built structured database, modeled 
+                    hotline impact, school outreach effectiveness, and workshop outcomes
+                </p>
+                
+                <p class="project-tools">
+                    <strong>Tools:</strong> Python (data extraction), Excel (modeling), 
+                    DALYs framework, Fermi estimation
+                </p>
+                
+                <a href="pages/project-cost-effectiveness-modeling.html" class="btn secondary">
+                    View Details →
+                </a>
+            </div>
+        </div>
+        
+        <!-- PROJECT 2 -->
+        <div class="project-card card">
+            <img src="assets/images/projects/feedback.png" alt="NLP Analysis">
+            <div class="project-content-block">
+                <h4>Programme Evaluation of End-of-Year Curriculum</h4>
+                
+                <p class="project-outcome">
+                    <strong>Outcome:</strong> Identified curriculum project 
+                    satisfaction vs dissatisfaction points across 120+ participant responses
+                </p>
+                
+                <p class="project-methods">
+                    <strong>Methods:</strong> Applied BERT sentiment analysis to
+                    free-text feedback, quantified satisfaction results, recommended 
+                    programme changes based on findings
+                </p>
+                
+                <p class="project-tools">
+                    <strong>Tools:</strong> Python, BERT (transformers), statistical analysis
+                </p>
+                
+                <a href="pages/project-feedback.html" class="btn secondary">
+                    View Details →
+                </a>
+            </div>
+        </div>
+        
+        <!-- PROJECT 3 -->
+        <div class="project-card card">
+            <img src="assets/images/projects/salesforce.png" alt="Data Analysis">
+            <div class="project-content-block">
+                <h4>Mental Health Service Donor Analysis</h4>
+                
+                <p class="project-outcome">
+                    <strong>Outcome:</strong> Analysed mental health donor 
+                    records to identify retention patterns and service effectiveness gaps, moved all data from multiple donor platforms to dashboards for streamlined reporting and analysis
+                </p>
+                
+                <p class="project-methods">
+                    <strong>Methods:</strong> Database queries, platform integration, donor retention, App Script for data transfer
+                 </p>
+                
+                <p class="project-tools">
+                    <strong>Tools:</strong> SQL, Salesforce, Excel, Google App Script
+                </p>
+            </div>
+        </div>
+        
+        <!-- PROJECT 4 -->
+        <div class="project-card card">
+            <img src="assets/images/projects/donor-preview.png" alt="Data Pipeline">
+            <div class="project-content-block">
+                <h4>Health Product Consumer Feedback Data Pipeline</h4>
+                
+                <p class="project-outcome">
+                    <strong>Outcome:</strong> Built pipeline collecting YouTube 
+                    comments for health product satisfaction analysis overtime
+                </p>
+                
+                <p class="project-methods">
+                    <strong>Methods:</strong> Python API integration, sentiment analysis
+                </p>
+                
+                <p class="project-tools">
+                    <strong>Tools:</strong> Python, YouTube API, NLP pipelines
+                </p>
+                
+                <a href="pages/project-youtube-comment-analysis.html" class="btn secondary">
+                    View Details →
+                </a>
+            </div>
+        </div>
+        
+    </div>
 </section>
-<!-- ========================= -->
-<!-- CONTACT -->
-<!-- ========================= -->
+
+<!-- =================== CONTACT =================== -->
 <section id="contact">
 
     <div class="contact-form-wrapper">
@@ -287,34 +276,29 @@
             frameborder="0">
         </iframe>
     </div>
-
-    <div class="contact-icons">
-        <a href="https://www.linkedin.com/in/yuliia-che/"
-        class="btn big">LinkedIn</a>
-        <a href="https://github.com/YuriyaJP" class="btn big">GitHub</a>
-        <a href="https://calendly.com/julia-chekhovskaua/consultancy" class="btn big">Book a Call</a>
+    
+    <h2>Get in Touch</h2>
+    
+    <p class="contact-intro">
+        Interested in wellbeing research? Want to know more? Let's connect.
+    </p>
+    
+    <div class="contact-links">
+        <a href="https://www.linkedin.com/in/yuliia-che/" class="btn" target="_blank">LinkedIn</a>
+        <a href="https://github.com/YuriyaJP" class="btn" target="_blank">GitHub</a>
+        <a href="https://forum.effectivealtruism.org/users/yulia-chekhovska" class="btn" target="_blank">EA Forum</a>
     </div>
-
 </section>
 
 </main>
 
-
 <footer>
-    &copy; Made by Yulia Chekhovska
+    © 2026 Yulia Chekhovska
 </footer>
 
-
-<!-- ========================= -->
 <!-- JAVASCRIPT -->
-<!-- ========================= -->
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-
-    /* ========================
-       SECTION SWITCHING
-    ======================== */
-
     const tabs = document.querySelectorAll('.tab-btn');
     const sections = document.querySelectorAll('main > section');
 
@@ -334,30 +318,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    activateSection('about');
-
-
-    /* ========================
-       COLLAPSIBLE TOOL CARDS
-    ======================== */
-
-    const toggles = document.querySelectorAll('.collapse-toggle');
-
-    toggles.forEach(btn => {
-        btn.addEventListener('click', () => {
-
-            const content = btn.nextElementSibling;
-
-            if (content.style.display === 'block') {
-                content.style.display = 'none';
-                btn.textContent = 'View Details';
-            } else {
-                content.style.display = 'block';
-                btn.textContent = 'Hide Details';
-            }
-        });
-    });
-
+    activateSection('home');
 });
 </script>
 
